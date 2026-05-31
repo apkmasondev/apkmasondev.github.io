@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const skills = [
-  { name: 'Android Studio / Kotlin', level: 85 },
+  { name: 'Środowisko Android Studio', level: 75 },
   { name: 'AI Prompting (Claude / ChatGPT)', level: 95 },
   { name: 'AntiGravity Framework', level: 90 },
-  { name: 'Git & GitHub', level: 80 }
+  { name: 'Google Umiejętności Jutra 2.0', level: 100 }
 ];
 
 const About = () => {
@@ -41,12 +41,12 @@ const About = () => {
             </div>
 
             <div>
-              <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: '#fff' }}>Hobbysta, który ulepsza rzeczywistość kodem.</h3>
+              <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: '#fff' }}>Cześć, jestem Krzysztof! Lider na co dzień, kreator AI po godzinach.</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-                Programowanie na Androida to moja pasja, którą rozwijam po godzinach etatowej pracy. Nie jestem tradycyjnym programistą klepiącym kod od zera przez miesiące – wykorzystuję nowoczesne narzędzia sztucznej inteligencji i framework AntiGravity.
+                Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam wielkim zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji.
               </p>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '3rem', lineHeight: 1.8 }}>
-                Dzięki AI jestem w stanie przekształcić każdy szalony pomysł w działającą, pełnoprawną aplikację w niezwykle krótkim czasie. Skupiam się na architekturze i logice biznesowej, podczas gdy LLM pomaga mi w pisaniu boilerplate'u.
+                Nie jestem klasycznym programistą, który pisze kod od zera. Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <strong style={{ color: '#fff' }}>Google Umiejętności Jutra 2.0</strong>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych i frameworka AntiGravity, płynnie poruszam się w środowisku Android Studio i błyskawicznie dowożę gotowe projekty.
               </p>
 
               <div>
