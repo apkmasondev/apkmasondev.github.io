@@ -70,13 +70,13 @@ body {
   animation: float 10s ease-in-out infinite alternate;
 }
 .orb-1 {
-  top: -10%; left: -10%;
-  width: 400px; height: 400px;
+  top: 5%; left: 15%;
+  width: 500px; height: 500px;
   background: var(--accent-secondary);
 }
 .orb-2 {
-  bottom: 20%; right: -5%;
-  width: 500px; height: 500px;
+  top: 30%; right: 10%;
+  width: 600px; height: 600px;
   background: var(--accent-color);
   animation-delay: -5s;
 }
