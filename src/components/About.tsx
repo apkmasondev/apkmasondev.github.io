@@ -4,6 +4,8 @@ const skills = [
   { name: 'Środowisko Android Studio', level: 75 },
   { name: 'AI Prompting (Claude / ChatGPT)', level: 95 },
   { name: 'AntiGravity Framework', level: 90 },
+  { name: 'MS Excel – automatyzacja i analityka z AI', level: 85 },
+  { name: 'Microsoft Copilot Studio', level: 80 },
   { name: 'Google Umiejętności Jutra 2.0', level: 100 }
 ];
 
