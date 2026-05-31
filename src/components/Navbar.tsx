@@ -14,8 +14,10 @@ const Navbar = () => {
   }, []);
 
   const navStyle = {
-    background: isScrolled ? 'rgba(10, 10, 15, 0.9)' : 'transparent',
-    boxShadow: isScrolled ? '0 4px 30px rgba(0, 0, 0, 0.5)' : 'none',
+    background: (isScrolled || mobileMenuOpen) ? 'rgba(5, 5, 8, 0.95)' : 'transparent',
+    backdropFilter: (isScrolled || mobileMenuOpen) ? 'blur(20px)' : 'none',
+    WebkitBackdropFilter: (isScrolled || mobileMenuOpen) ? 'blur(20px)' : 'none',
+    boxShadow: (isScrolled || mobileMenuOpen) ? '0 4px 30px rgba(0, 0, 0, 0.5)' : 'none',
     transition: 'all 0.3s ease'
   };
 
