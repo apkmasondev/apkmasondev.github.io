@@ -24,16 +24,16 @@ const About = () => {
             <div style={{ position: 'relative' }}>
               <div style={{ 
                 width: '100%', 
-                aspectRatio: '1/1', 
+                aspectRatio: '3/4', 
                 borderRadius: '20px', 
-                background: 'linear-gradient(45deg, var(--bg-card), rgba(244, 63, 94, 0.1))',
-                border: '2px dashed var(--border-color)',
+                background: 'var(--bg-card)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
               }}>
-                <span style={{ color: 'var(--text-muted)', fontSize: '1.2rem' }}>[ Miejsce na Twoje zdjęcie ]</span>
+                <img src="/profile.jpg" alt="Krzysztof" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               {/* Decorative elements behind photo */}
               <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '100px', height: '100px', borderTop: '4px solid var(--accent-color)', borderLeft: '4px solid var(--accent-color)', borderRadius: '20px 0 0 0', zIndex: -1 }}></div>
