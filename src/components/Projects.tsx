@@ -33,7 +33,7 @@ const Projects = () => {
         >
           <h2 className="section-title">Projekty & Aplikacje</h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '2rem' }}>
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}

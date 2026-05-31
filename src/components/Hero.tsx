@@ -53,7 +53,7 @@ const Hero = () => {
             Hobbystyczny programista Android zafascynowany możliwościami AI. Tworzę aplikacje z pomocą AntiGravity i dużych modeli językowych, zamieniając pomysły w kod w rekordowym tempie po godzinach.
           </p>
 
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#projects" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
               Zobacz portfolio <ArrowRight size={20} />
             </a>

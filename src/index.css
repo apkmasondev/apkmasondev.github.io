@@ -196,6 +196,9 @@ h1, h2, h3 {
 
 /* Responsive */
 @media (max-width: 850px) {
+  .container {
+    padding: 0 1rem;
+  }
   .nav-links {
     display: none; /* simple mobile nav */
   }
