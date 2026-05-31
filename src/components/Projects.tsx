@@ -5,12 +5,11 @@ const projects = [
   {
     title: 'ScrollDebt',
     description: 'Aplikacja zamieniająca bezmyślne doomscrolling w brutalne przebudzenie. Śledzi zmarnowany czas, wytyka wady za pomocą "Brutal Truth" i pomaga odzyskać kontrolę nad życiem. Zero zbierania danych, 100% offline.',
-    image: '/scrolldebt_mockup.png', // The image we copied
+    image: '/scrolldebt_mockup.png',
     tags: ['Android', 'Kotlin', 'AntiGravity'],
     link: 'https://apkmasondev.github.io/scrolldebt-site/',
     isApp: true
   },
-  // Add space for future projects here
   {
     title: 'Coming Soon',
     description: 'Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce...',
@@ -33,39 +32,46 @@ const Projects = () => {
         >
           <h2 className="section-title">Projekty & Aplikacje</h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '2rem' }}>
+          <div className="responsive-grid">
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className="card"
+                className="glass-card"
                 whileHover={{ y: -10 }}
-                style={{ display: 'flex', flexDirection: 'column', padding: 0, overflow: 'hidden' }}
+                style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: '240px', background: '#151520', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    style={{ width: '100%', height: '100%', objectFit: project.isApp ? 'contain' : 'cover', padding: project.isApp ? '1rem' : '0' }} 
+                    style={{ 
+                      width: '100%', height: '100%', 
+                      objectFit: project.isApp ? 'contain' : 'cover', 
+                      padding: project.isApp ? '1.5rem' : '0',
+                      transition: 'transform 0.5s ease'
+                    }} 
+                    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+                    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                   />
-                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to bottom, transparent, var(--bg-card))' }}></div>
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent, var(--bg-card))' }}></div>
                 </div>
 
                 <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <div style={{ display: 'flex', gap: '10px', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', gap: '10px', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
                     {project.tags.map(tag => (
-                      <span key={tag} style={{ fontSize: '0.8rem', padding: '4px 10px', background: 'rgba(244, 63, 94, 0.1)', color: 'var(--accent-color)', borderRadius: '20px', border: '1px solid rgba(244, 63, 94, 0.2)' }}>
+                      <span key={tag} className="mono-tag" style={{ fontSize: '0.75rem', borderColor: 'var(--accent-glow)', color: 'var(--accent-color)' }}>
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>{project.title}</h3>
-                  <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', flexGrow: 1, lineHeight: 1.6 }}>
+                  <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#fff' }}>{project.title}</h3>
+                  <p className="text-muted mb-4" style={{ flexGrow: 1 }}>
                     {project.description}
                   </p>
 
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ alignSelf: 'flex-start', fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
-                    {project.isApp ? <><Smartphone size={16} /> Strona Aplikacji</> : <><ExternalLink size={16} /> Zobacz szczegóły</>}
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>
+                    {project.isApp ? <><Smartphone size={18} /> Strona Aplikacji</> : <><ExternalLink size={18} /> Zobacz szczegóły</>}
                   </a>
                 </div>
               </motion.div>
