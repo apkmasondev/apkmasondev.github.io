@@ -16,8 +16,10 @@ const Hero = () => {
     }
 
     if (subIndex === 0 && reverse) {
-      setReverse(false);
-      setIndex((prev) => (prev + 1) % words.length);
+      setTimeout(() => {
+        setReverse(false);
+        setIndex((prev) => (prev + 1) % words.length);
+      }, 0);
       return;
     }
 
