@@ -46,8 +46,8 @@ const Projects = () => {
                     alt={project.title} 
                     style={{ 
                       width: '100%', height: '100%', 
-                      objectFit: project.isApp ? 'contain' : 'cover', 
-                      padding: project.isApp ? '1.5rem' : '0',
+                      objectFit: 'cover', 
+                      padding: '0',
                       transition: 'transform 0.5s ease'
                     }} 
                     onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
