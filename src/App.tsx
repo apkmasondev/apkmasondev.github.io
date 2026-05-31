@@ -10,6 +10,8 @@ function App() {
   return (
     <>
       <div className="bg-animation">
+        <div className="glow-orb orb-1"></div>
+        <div className="glow-orb orb-2"></div>
         <div className="particles"></div>
       </div>
       
