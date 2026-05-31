@@ -6,7 +6,7 @@ async function makeCircular() {
     const radius = size / 2;
     const circleSvg = `<svg width="${size}" height="${size}"><circle cx="${radius}" cy="${radius}" r="${radius}"/></svg>`;
 
-    await sharp('public/logo_am.jpg')
+    await sharp('public/apkmason_logo_premium.png')
       .resize(size, size)
       .composite([{
         input: Buffer.from(circleSvg),
