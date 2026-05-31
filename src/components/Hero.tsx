@@ -53,11 +53,11 @@ const Hero = () => {
             {`${words[index].substring(0, subIndex)}${subIndex === words[index].length + 1 ? "" : "|"}`}
           </h2>
 
-          <p style={{ maxWidth: '650px', margin: '0 auto 3.5rem auto', fontSize: '1.15rem', color: 'var(--text-muted)', lineHeight: 1.8 }}>
-            Hobbystyczny programista Android zafascynowany możliwościami sztucznej inteligencji. Tworzę innowacyjne aplikacje z pomocą frameworka AntiGravity i potężnych modeli językowych, zamieniając pomysły w kod w rekordowym tempie po godzinach.
+          <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
+            Hobbystyczny programista Android zafascynowany możliwościami sztucznej inteligencji. Tworzę innowacyjne aplikacje z pomocą środowiska AntiGravity i potężnych modeli językowych, zamieniając pomysły w kod w rekordowym tempie po godzinach.
           </p>
 
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3.5rem' }}>
             <a href="#projects" className="btn btn-primary">
               Zobacz portfolio <ArrowRight size={20} />
             </a>
