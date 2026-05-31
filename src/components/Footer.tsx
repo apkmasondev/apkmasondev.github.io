@@ -8,7 +8,7 @@ const Footer = () => {
           
           <div style={{ maxWidth: '300px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-              <img src="/logo_am_red.png" alt="Logo" style={{ height: '30px', width: '30px', objectFit: 'cover', borderRadius: '50%' }} />
+              <img src="/apkmason_logo_premium.png" alt="Logo" style={{ height: '30px', width: '30px', objectFit: 'cover', borderRadius: '50%' }} />
               <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white' }}>ApkMason.dev</span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>
