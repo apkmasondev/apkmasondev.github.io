@@ -3,22 +3,22 @@ import { Lightbulb, Code2, Cpu, Rocket } from 'lucide-react';
 
 const steps = [
   {
-    icon: <Lightbulb size={28} />,
+    icon: <Lightbulb size={24} />,
     title: 'Pomysł & Koncept',
     desc: 'Wszystko zaczyna się od problemu. Wymyślam szkielet aplikacji i główne ficzery.'
   },
   {
-    icon: <Cpu size={28} />,
+    icon: <Cpu size={24} />,
     title: 'Prompting LLM',
     desc: 'Używam modeli językowych do szybkiego wygenerowania boilerplate\'u i powtarzalnego kodu.'
   },
   {
-    icon: <Code2 size={28} />,
+    icon: <Code2 size={24} />,
     title: 'AntiGravity Build',
     desc: 'Integruję wygenerowane moduły za pomocą frameworka AntiGravity, skupiając się na logice.'
   },
   {
-    icon: <Rocket size={28} />,
+    icon: <Rocket size={24} />,
     title: 'Testy & Deploy',
     desc: 'Szybkie testy na urządzeniu, optymalizacja i publikacja gotowej aplikacji.'
   }
@@ -50,11 +50,11 @@ const Workflow = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.15 }}
-                  style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}
+                  style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}
                 >
                   <div className="flex-center" style={{ 
-                    minWidth: '70px', 
-                    height: '70px', 
+                    minWidth: '50px', 
+                    height: '50px', 
                     borderRadius: '20px', 
                     background: 'linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(244, 63, 94, 0.1))',
                     border: '1px solid var(--accent-glow)',
@@ -71,11 +71,11 @@ const Workflow = () => {
               ))}
             </div>
 
-            <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(5, 5, 8, 0.5)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.5rem' }}>
+            <div style={{ marginTop: '3rem', padding: '1.5rem', background: 'rgba(5, 5, 8, 0.5)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
                 <Code2 size={20} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.95rem' }}>Przykładowy prompt</span>
               </div>
-              <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '1rem', lineHeight: 1.6, display: 'block' }}>
+              <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.95rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
                 "Napisz moduł w Kotlinie do śledzenia czasu spędzanego w apkach. Użyj AccessibilityService. Podaj gotowy boilerplate z obsługą uprawnień."
               </code>
             </div>
