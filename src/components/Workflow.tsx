@@ -15,7 +15,7 @@ const steps = [
   {
     icon: <Code2 size={24} />,
     title: 'AntiGravity Build',
-    desc: 'Integruję wygenerowane moduły za pomocą frameworka AntiGravity, skupiając się na logice.'
+    desc: 'Integruję wygenerowane moduły za pomocą asystenta AntiGravity IDE, skupiając się na logice.'
   },
   {
     icon: <Rocket size={24} />,
