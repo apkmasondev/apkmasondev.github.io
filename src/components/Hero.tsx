@@ -54,7 +54,7 @@ const Hero = () => {
           </h2>
 
           <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.15rem', lineHeight: 1.6 }}>
-            Projektuję zjawiskowe strony, buduję aplikacje i generuję multimedia. Wykorzystuję potęgę sztucznej inteligencji, by zamieniać odważne pomysły w cyfrową rzeczywistość z prędkością światła.
+            Projektuję zjawiskowe strony, buduję aplikacje i generuję multimedia. Wykorzystuję potęgę sztucznej inteligencji, by błyskawicznie przekuwać odważne wizje w gotowe produkty cyfrowe.
           </p>
 
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3.5rem' }}>
