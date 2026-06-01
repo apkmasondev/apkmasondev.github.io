@@ -11,6 +11,14 @@ const projects = [
     isApp: true
   },
   {
+    title: 'BRIXCORE (Landing Page)',
+    description: 'Ekskluzywny Landing Page "Build The Impossible" zaprojektowany całkowicie przy pomocy sztucznej inteligencji dla marki premium modułowych klocków. Wykorzystuje zaawansowane animacje i Glassmorphism dla uzyskania nowoczesnego wyglądu.',
+    image: 'https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?auto=format&fit=crop&w=1000&q=80',
+    tags: ['Web Design', 'AI Generated', 'HTML/CSS'],
+    link: 'https://apkmasondev.github.io/brixcore/',
+    isApp: false
+  },
+  {
     title: 'Coming Soon',
     description: 'Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce...',
     image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
