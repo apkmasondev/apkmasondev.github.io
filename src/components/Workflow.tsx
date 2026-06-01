@@ -120,13 +120,13 @@ const Workflow = () => {
         >
           <h2 className="section-title">Jak tworzę z AI?</h2>
           
-          <div className="glass-card" style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(2rem, 5vw, 4rem)' }}>
+          <div className="glass-card" style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(1rem, 4vw, 4rem)' }}>
             
-            <p style={{ textAlign: 'center', fontSize: '1.2rem', marginBottom: '4rem', color: 'var(--text-main)', fontWeight: 500 }}>
+            <p style={{ textAlign: 'center', fontSize: 'clamp(1rem, 3vw, 1.2rem)', marginBottom: '3rem', color: 'var(--text-main)', fontWeight: 500 }}>
               Od oprogramowania, przez nowoczesne witryny, aż po eksperymenty muzyczne. Mój wszechstronny workflow z AI pozwala mi budować mądrzej, szybciej i bez ograniczeń.
             </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
               {steps.map((step, idx) => (
                 <motion.div 
                   key={idx}
@@ -137,9 +137,9 @@ const Workflow = () => {
                   style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}
                 >
                   <div className="flex-center" style={{ 
-                    minWidth: '50px', 
-                    height: '50px', 
-                    borderRadius: '20px', 
+                    minWidth: '40px', 
+                    height: '40px', 
+                    borderRadius: '16px', 
                     background: 'linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(244, 63, 94, 0.1))',
                     border: '1px solid var(--accent-glow)',
                     color: 'var(--accent-color)',
@@ -147,19 +147,19 @@ const Workflow = () => {
                   }}>
                     {step.icon}
                   </div>
-                  <div>
-                    <h4 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: '#fff' }}>{step.title}</h4>
-                    <p className="text-muted" style={{ fontSize: '1.05rem' }}>{step.desc}</p>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <h4 style={{ fontSize: 'clamp(1.1rem, 4vw, 1.4rem)', marginBottom: '0.5rem', color: '#fff', wordBreak: 'break-word' }}>{step.title}</h4>
+                    <p className="text-muted" style={{ fontSize: 'clamp(0.95rem, 3vw, 1.05rem)' }}>{step.desc}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <div style={{ marginTop: '3rem', padding: '1.5rem', background: 'rgba(5, 5, 8, 0.5)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-                <Code2 size={20} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.95rem' }}>Przykładowy prompt</span>
+            <div style={{ marginTop: '3rem', padding: 'clamp(1rem, 3vw, 1.5rem)', background: 'rgba(5, 5, 8, 0.5)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)', overflowX: 'hidden' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                <Code2 size={18} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>Przykładowy prompt</span>
               </div>
-              <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.95rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word', minHeight: '3rem' }}>
+              <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.85rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word', minHeight: '3rem' }}>
                 "{text}<motion.span animate={{ opacity: [1, 0, 1] }} transition={{ repeat: Infinity, duration: 0.8 }}>|</motion.span>"
               </code>
             </div>
