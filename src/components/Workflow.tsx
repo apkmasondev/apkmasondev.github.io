@@ -29,22 +29,57 @@ const Workflow = () => {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    const sequence = [
-      ...Array.from("Wygeneruj interalty"),
-      "BACKSPACE",
-      "BACKSPACE",
-      "BACKSPACE",
-      ...Array.from("aktywny Landing Page w React z płynnymi animacjami oraz efektem Glassmorphism.")
+    const prompts = [
+      [
+        ...Array.from("Wygeneruj interalty"),
+        "BACKSPACE", "BACKSPACE", "BACKSPACE",
+        ...Array.from("aktywny Landing Page w React z płynnymi animacjami oraz efektem Glassmorphism.")
+      ],
+      [
+        ...Array.from("Napisz architekturę MVVM w Kotlinie dla apkim"),
+        "BACKSPACE", "BACKSPACE", "BACKSPACE",
+        ...Array.from("likacji z mapami offline. Dodaj bazę Room.")
+      ],
+      [
+        ...Array.from("Skonstruuj potężną funkcję LAMBDA w Excle"),
+        "BACKSPACE", "BACKSPACE",
+        ...Array.from("elu, która automatycznie filtruje i analizuje dane.")
+      ]
     ];
 
+    let promptIndex = 0;
     let currentIndex = 0;
     let currentText = "";
+    let isDeleting = false;
     const timeoutIds: ReturnType<typeof setTimeout>[] = [];
 
     const typeChar = () => {
-      if (currentIndex >= sequence.length) return;
+      const currentSequence = prompts[promptIndex];
 
-      const char = sequence[currentIndex];
+      if (isDeleting) {
+        currentText = currentText.slice(0, -1);
+        setText(currentText);
+
+        if (currentText.length === 0) {
+          isDeleting = false;
+          currentIndex = 0;
+          promptIndex = (promptIndex + 1) % prompts.length;
+          timeoutIds.push(setTimeout(typeChar, 800)); // Czas przed nowym tekstem
+          return;
+        }
+
+        timeoutIds.push(setTimeout(typeChar, 15)); // Szybkie usuwanie
+        return;
+      }
+
+      if (currentIndex >= currentSequence.length) {
+        // Zakończono pisanie, czekaj przed kasowaniem
+        isDeleting = true;
+        timeoutIds.push(setTimeout(typeChar, 3500));
+        return;
+      }
+
+      const char = currentSequence[currentIndex];
       if (char === "BACKSPACE") {
         currentText = currentText.slice(0, -1);
       } else {
@@ -58,7 +93,7 @@ const Workflow = () => {
       if (char === "BACKSPACE") delay = 40; // fast backspace
       
       // Pause before realizing mistake
-      if (sequence[currentIndex] === "BACKSPACE" && sequence[currentIndex - 1] !== "BACKSPACE") {
+      if (currentSequence[currentIndex] === "BACKSPACE" && currentSequence[currentIndex - 1] !== "BACKSPACE") {
         delay += 400; 
       }
       
@@ -68,7 +103,7 @@ const Workflow = () => {
       timeoutIds.push(setTimeout(typeChar, delay));
     };
 
-    // Delay start to allow scrolling to section
+    // Delay start
     timeoutIds.push(setTimeout(typeChar, 1500));
 
     return () => timeoutIds.forEach(clearTimeout);
