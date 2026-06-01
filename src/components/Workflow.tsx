@@ -36,14 +36,14 @@ const Workflow = () => {
         ...Array.from("aktywny Landing Page w React z płynnymi animacjami oraz efektem Glassmorphism.")
       ],
       [
-        ...Array.from("Napisz architekturę MVVM w Kotlinie dla apkim"),
-        "BACKSPACE", "BACKSPACE", "BACKSPACE",
-        ...Array.from("likacji z mapami offline. Dodaj bazę Room.")
+        ...Array.from("Napisz w Kotlim"),
+        "BACKSPACE",
+        ...Array.from("nie przejrzysty ekran logowania z walidacją e-mail.")
       ],
       [
-        ...Array.from("Skonstruuj potężną funkcję LAMBDA w Excle"),
-        "BACKSPACE", "BACKSPACE",
-        ...Array.from("elu, która automatycznie filtruje i analizuje dane.")
+        ...Array.from("Napisz makro VBA, które tworzy atbel"),
+        "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE",
+        ...Array.from("tabele przestawne i wylicza zapotrzebowanie FTE.")
       ]
     ];
 
