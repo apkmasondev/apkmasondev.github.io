@@ -78,9 +78,15 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>
-                    {project.isApp ? <><Smartphone size={18} /> Strona Aplikacji</> : <><ExternalLink size={18} /> Zobacz szczegóły</>}
-                  </a>
+                  {project.link !== '#' ? (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>
+                      {project.isApp ? <><Smartphone size={18} /> Strona Aplikacji</> : <><ExternalLink size={18} /> Zobacz szczegóły</>}
+                    </a>
+                  ) : (
+                    <span className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem', opacity: 0.5, cursor: 'not-allowed' }}>
+                      Wkrótce...
+                    </span>
+                  )}
                 </div>
               </motion.div>
             ))}
