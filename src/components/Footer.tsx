@@ -9,7 +9,7 @@ const Footer = () => {
           <div style={{ maxWidth: '300px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
               <img src="/apkmason_logo_premium.png" alt="Logo" style={{ height: '30px', width: '30px', objectFit: 'cover', borderRadius: '50%' }} />
-              <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white' }}>ApkMason.dev</span>
+              <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}><span className="text-gradient">ApkMason</span><span style={{ color: 'white' }}>.dev</span></span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>
               Tworzę aplikacje szybciej, mądrzej i z wykorzystaniem AI.

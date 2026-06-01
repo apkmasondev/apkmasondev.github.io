@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
           
           <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 800, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
-            Cześć, jestem <span className="text-gradient">ApkMason</span>
+            Cześć, jestem <span className="text-gradient">ApkMason</span><span style={{ color: 'white' }}>.dev</span>
           </h1>
           
           <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', color: 'var(--text-muted)', marginBottom: '2.5rem', minHeight: '3.5rem' }}>
