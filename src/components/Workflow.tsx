@@ -5,22 +5,22 @@ const steps = [
   {
     icon: <Lightbulb size={24} />,
     title: 'Koncept & Architektura',
-    desc: 'Wszystko zaczyna się od wizji. Rozpisuję cel projektu, wymyślam szkielet aplikacji, docelowy układ Landing Page\'a czy klimat i gatunek utworu muzycznego.'
+    desc: 'Wszystko zaczyna się od wizji. Rozpisuję cel i zamieniam go w solidny fundament pod aplikację, stronę lub utwór.'
   },
   {
     icon: <Cpu size={24} />,
     title: 'Prompting & Generowanie',
-    desc: 'Zatrudniam modele LLM (jak Claude, ChatGPT) lub generatory pokroju Suno AI do wyprodukowania potężnych bloków kodu, tekstów czy ścieżek audio.'
+    desc: 'Zatrudniam czołowe modele (Claude, ChatGPT, Suno AI), by błyskawicznie przetopić koncepcję na kod, tekst lub dźwięk.'
   },
   {
     icon: <Code2 size={24} />,
     title: 'AntiGravity & Integracja',
-    desc: 'Biorę wygenerowane, zaawansowane "puzzle" i składam je w całość za pomocą środowiska AntiGravity IDE, czuwając nad ostateczną logiką.'
+    desc: 'Traktuję wygenerowane elementy jak puzzle. Składam je w dopracowaną całość za pomocą środowiska AntiGravity IDE.'
   },
   {
     icon: <Rocket size={24} />,
     title: 'Szlifowanie & Publikacja',
-    desc: 'Wykonuję kluczowe ręczne poprawki UX/UI, optymalizuję wydajność, dopieszczam brzmienie i ostatecznie publikuję gotowe dzieło dla świata.'
+    desc: 'Ostatnie 20% to rzemiosło. Dopieszczam UX/UI, optymalizuję detale i wypuszczam gotowy produkt w świat.'
   }
 ];
 
@@ -39,7 +39,7 @@ const Workflow = () => {
           <div className="glass-card" style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(2rem, 5vw, 4rem)' }}>
             
             <p style={{ textAlign: 'center', fontSize: '1.2rem', marginBottom: '4rem', color: 'var(--text-main)', fontWeight: 500 }}>
-              Jako entuzjasta nowej technologii postawiłem na wszechstronny workflow. Pozwala mi to nie tylko programować zaawansowane aplikacje z prędkością światła, ale również projektować imponujące strony i generować kompletną muzykę.
+              Od oprogramowania, przez nowoczesne witryny, aż po eksperymenty muzyczne. Mój wszechstronny workflow z AI pozwala mi budować mądrzej, szybciej i bez ograniczeń.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
