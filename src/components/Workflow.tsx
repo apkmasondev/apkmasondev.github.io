@@ -76,7 +76,7 @@ const Workflow = () => {
                 <Code2 size={20} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.95rem' }}>Przykładowy prompt</span>
               </div>
               <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.95rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                "Wygeneruj Landing Page w React z efektem Glassmorphism oraz mroczny podkład muzyczny w Suno AI."
+                "Wygeneruj interaktywny Landing Page w React z płynnymi animacjami oraz efektem Glassmorphism."
               </code>
             </div>
 
