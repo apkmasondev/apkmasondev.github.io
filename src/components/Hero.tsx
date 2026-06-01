@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
           
           <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 800, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
-            Cześć, <span style={{ fontSize: '0.65em', opacity: 0.9, fontWeight: 600 }}>jestem</span> <span className="text-gradient">ApkMason</span><span style={{ color: 'white', fontSize: '0.6em', opacity: 0.9 }}>.dev</span>
+            Cześć, <span style={{ fontSize: '0.8em', opacity: 0.9, fontWeight: 600 }}>jestem</span> <span className="text-gradient">ApkMason</span><span style={{ color: 'white', fontSize: '0.6em', opacity: 0.9 }}>.dev</span>
           </h1>
           
           <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', color: 'var(--text-muted)', marginBottom: '2.5rem', minHeight: '3.5rem' }}>
