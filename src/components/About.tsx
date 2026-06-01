@@ -4,8 +4,10 @@ const skills = [
   { name: 'Środowisko Android Studio', level: 75 },
   { name: 'AI Prompting (Claude / ChatGPT)', level: 95 },
   { name: 'Środowisko AntiGravity (IDE)', level: 90 },
-  { name: 'MS Excel – zaawansowana obsługa z AI', level: 85 },
+  { name: 'AI Web Design (Landing Pages)', level: 85 },
+  { name: 'Generowanie muzyki (Suno AI)', level: 80 },
   { name: 'Microsoft Copilot Studio', level: 80 },
+  { name: 'MS Excel – analityka z AI', level: 85 },
   { name: 'Google Umiejętności Jutra 2.0', level: 100 }
 ];
 
@@ -46,7 +48,7 @@ const About = () => {
                   Lider na co dzień, <span className="text-gradient">kreator AI</span> po godzinach.
                 </h3>
                 <p className="text-muted mb-2">
-                  Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam dużym zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji.
+                  Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam dużym zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji. Nie ograniczam się tylko do kodu – projektuję zaawansowane Landing Page, generuję utwory muzyczne przy pomocy Suno AI i swobodnie eksploruję inne dziedziny, w których algorytmy spotykają się z kreatywnością.
                 </p>
                 <p className="text-muted">
                   Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <strong>Google Umiejętności Jutra 2.0</strong>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych i asystenta AI AntiGravity, płynnie poruszam się w środowisku Android Studio i błyskawicznie dowożę gotowe projekty.
@@ -55,7 +57,7 @@ const About = () => {
 
               <div className="glass-card">
                 <h4 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', color: 'white' }}>Mój Stack / Umiejętności</h4>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
                   {skills.map(skill => (
                     <div key={skill.name}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.9rem', fontWeight: 500 }}>
