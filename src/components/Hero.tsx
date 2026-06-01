@@ -53,8 +53,8 @@ const Hero = () => {
             {`${words[index].substring(0, subIndex)}${subIndex === words[index].length + 1 ? "" : "|"}`}
           </h2>
 
-          <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
-            Wszechstronny twórca cyfrowy zafascynowany nieograniczonymi możliwościami sztucznej inteligencji. Przy pomocy środowiska AntiGravity i potężnych modeli LLM buduję innowacyjne aplikacje, projektuję zjawiskowe strony i generuję multimedia, zamieniając odważne pomysły w rzeczywistość po godzinach.
+          <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.15rem', lineHeight: 1.6 }}>
+            Projektuję zjawiskowe strony, buduję aplikacje i generuję multimedia. Wykorzystuję potęgę sztucznej inteligencji, by zamieniać odważne pomysły w cyfrową rzeczywistość z prędkością światła.
           </p>
 
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3.5rem' }}>
