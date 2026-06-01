@@ -4,23 +4,23 @@ import { Lightbulb, Code2, Cpu, Rocket } from 'lucide-react';
 const steps = [
   {
     icon: <Lightbulb size={24} />,
-    title: 'Pomysł & Koncept',
-    desc: 'Wszystko zaczyna się od problemu. Wymyślam szkielet aplikacji i główne ficzery.'
+    title: 'Koncept & Architektura',
+    desc: 'Wszystko zaczyna się od wizji. Rozpisuję cel projektu, wymyślam szkielet aplikacji, docelowy układ Landing Page\'a czy klimat i gatunek utworu muzycznego.'
   },
   {
     icon: <Cpu size={24} />,
-    title: 'Prompting LLM',
-    desc: 'Używam modeli językowych do szybkiego wygenerowania boilerplate\'u i powtarzalnego kodu.'
+    title: 'Prompting & Generowanie',
+    desc: 'Zatrudniam modele LLM (jak Claude, ChatGPT) lub generatory pokroju Suno AI do wyprodukowania potężnych bloków kodu, tekstów czy ścieżek audio.'
   },
   {
     icon: <Code2 size={24} />,
-    title: 'AntiGravity Build',
-    desc: 'Integruję wygenerowane moduły za pomocą asystenta AntiGravity IDE, skupiając się na logice.'
+    title: 'AntiGravity & Integracja',
+    desc: 'Biorę wygenerowane, zaawansowane "puzzle" i składam je w całość za pomocą środowiska AntiGravity IDE, czuwając nad ostateczną logiką.'
   },
   {
     icon: <Rocket size={24} />,
-    title: 'Testy & Deploy',
-    desc: 'Szybkie testy na urządzeniu, optymalizacja i publikacja gotowej aplikacji.'
+    title: 'Szlifowanie & Publikacja',
+    desc: 'Wykonuję kluczowe ręczne poprawki UX/UI, optymalizuję wydajność, dopieszczam brzmienie i ostatecznie publikuję gotowe dzieło dla świata.'
   }
 ];
 
@@ -34,12 +34,12 @@ const Workflow = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Jak buduję z AI?</h2>
+          <h2 className="section-title">Jak tworzę z AI?</h2>
           
           <div className="glass-card" style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(2rem, 5vw, 4rem)' }}>
             
             <p style={{ textAlign: 'center', fontSize: '1.2rem', marginBottom: '4rem', color: 'var(--text-main)', fontWeight: 500 }}>
-              Tradycyjny development jest świetny, ale jako hobbysta postawiłem na nowoczesny workflow, który pozwala mi dowozić projekty z prędkością światła.
+              Jako entuzjasta nowej technologii postawiłem na wszechstronny workflow. Pozwala mi to nie tylko programować zaawansowane aplikacje z prędkością światła, ale również projektować imponujące strony i generować kompletną muzykę.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
