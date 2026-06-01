@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
 
-const words = ["Android Developer.", "AI Enthusiast.", "ApkMason."];
+const words = ["Android Developer.", "Web Designer.", "AI Creator.", "ApkMason."];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -54,7 +54,7 @@ const Hero = () => {
           </h2>
 
           <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
-            Hobbystyczny programista Android zafascynowany możliwościami sztucznej inteligencji. Tworzę innowacyjne aplikacje z pomocą środowiska AntiGravity i potężnych modeli językowych, zamieniając pomysły w kod w rekordowym tempie po godzinach.
+            Wszechstronny twórca cyfrowy zafascynowany nieograniczonymi możliwościami sztucznej inteligencji. Przy pomocy środowiska AntiGravity i potężnych modeli LLM buduję innowacyjne aplikacje, projektuję zjawiskowe strony i generuję multimedia, zamieniając odważne pomysły w rzeczywistość po godzinach.
           </p>
 
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3.5rem' }}>
