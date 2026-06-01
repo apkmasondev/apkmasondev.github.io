@@ -76,7 +76,7 @@ const Workflow = () => {
                 <Code2 size={20} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.95rem' }}>Przykładowy prompt</span>
               </div>
               <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.95rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                "Napisz moduł w Kotlinie do śledzenia czasu spędzanego w apkach. Użyj AccessibilityService. Podaj gotowy boilerplate z obsługą uprawnień."
+                "Zbuduj nowoczesny Landing Page w React z efektem Glassmorphism. Wygeneruj do niego chwytliwy tekst marketingowy i mroczny, synthwave'owy podkład w Suno AI."
               </code>
             </div>
 
