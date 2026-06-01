@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Code2, Cpu, Rocket } from 'lucide-react';
 
@@ -25,6 +26,54 @@ const steps = [
 ];
 
 const Workflow = () => {
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    const sequence = [
+      ...Array.from("Wygeneruj interalty"),
+      "BACKSPACE",
+      "BACKSPACE",
+      "BACKSPACE",
+      ...Array.from("aktywny Landing Page w React z płynnymi animacjami oraz efektem Glassmorphism.")
+    ];
+
+    let currentIndex = 0;
+    let currentText = "";
+    const timeoutIds: ReturnType<typeof setTimeout>[] = [];
+
+    const typeChar = () => {
+      if (currentIndex >= sequence.length) return;
+
+      const char = sequence[currentIndex];
+      if (char === "BACKSPACE") {
+        currentText = currentText.slice(0, -1);
+      } else {
+        currentText += char;
+      }
+      
+      setText(currentText);
+      currentIndex++;
+
+      let delay = 30 + Math.random() * 60; // 30-90ms
+      if (char === "BACKSPACE") delay = 40; // fast backspace
+      
+      // Pause before realizing mistake
+      if (sequence[currentIndex] === "BACKSPACE" && sequence[currentIndex - 1] !== "BACKSPACE") {
+        delay += 400; 
+      }
+      
+      // Pause after sentences or words
+      if (char === "." || char === ",") delay += 200;
+
+      timeoutIds.push(setTimeout(typeChar, delay));
+    };
+
+    // Delay start to allow scrolling to section
+    timeoutIds.push(setTimeout(typeChar, 1500));
+
+    return () => timeoutIds.forEach(clearTimeout);
+  }, []);
+
   return (
     <section className="section" id="workflow">
       <div className="container">
@@ -75,8 +124,8 @@ const Workflow = () => {
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
                 <Code2 size={20} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.95rem' }}>Przykładowy prompt</span>
               </div>
-              <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.95rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                "Wygeneruj interaktywny Landing Page w React z płynnymi animacjami oraz efektem Glassmorphism."
+              <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.95rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word', minHeight: '3rem' }}>
+                "{text}<motion.span animate={{ opacity: [1, 0, 1] }} transition={{ repeat: Infinity, duration: 0.8 }}>|</motion.span>"
               </code>
             </div>
 
