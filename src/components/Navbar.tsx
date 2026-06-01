@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
         <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img src="/apkmason_logo_premium.png" alt="ApkMason.dev Logo" style={{ height: '40px', width: '40px', objectFit: 'cover', borderRadius: '50%' }} />
-          <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}><span className="text-gradient">ApkMason</span><span style={{ color: 'white' }}>.dev</span></span>
+          <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}><span className="text-gradient">ApkMason</span><span style={{ color: 'white', fontSize: '0.7em', opacity: 0.9 }}>.dev</span></span>
         </a>
 
         {/* Desktop Menu */}
