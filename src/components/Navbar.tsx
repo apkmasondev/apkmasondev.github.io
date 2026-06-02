@@ -21,24 +21,29 @@ const Navbar = () => {
     document.documentElement.lang = lng;
   };
 
-  const LanguageSwitcher = () => (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>
-      <Globe size={16} color="var(--text-muted)" aria-hidden="true" />
+  const LanguageSwitcher = () => {
+    const isPl = i18n.language === 'pl';
+    return (
       <button 
-        onClick={() => changeLanguage('pl')} 
-        style={{ background: 'none', border: 'none', color: i18n.language === 'pl' ? 'var(--accent-color)' : 'var(--text-muted)', fontWeight: i18n.language === 'pl' ? 'bold' : 'normal', cursor: 'pointer', padding: 0 }}
+        onClick={() => changeLanguage(isPl ? 'en' : 'pl')}
+        style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: '0.5rem', 
+          fontFamily: 'var(--font-mono)', 
+          fontSize: '0.9rem',
+          background: 'none',
+          border: 'none',
+          color: 'var(--text-main)',
+          cursor: 'pointer',
+          padding: 0
+        }}
       >
-        PL
+        <Globe size={16} color="var(--accent-color)" aria-hidden="true" />
+        <span style={{ fontWeight: 'bold', letterSpacing: '1px' }}>{isPl ? 'EN' : 'PL'}</span>
       </button>
-      <span style={{ color: 'var(--text-muted)' }}>|</span>
-      <button 
-        onClick={() => changeLanguage('en')} 
-        style={{ background: 'none', border: 'none', color: i18n.language.startsWith('en') ? 'var(--accent-color)' : 'var(--text-muted)', fontWeight: i18n.language.startsWith('en') ? 'bold' : 'normal', cursor: 'pointer', padding: 0 }}
-      >
-        EN
-      </button>
-    </div>
-  );
+    );
+  };
 
   const navStyle = {
     background: (isScrolled || mobileMenuOpen) ? 'rgba(5, 5, 8, 0.95)' : 'transparent',
@@ -64,9 +69,8 @@ const Navbar = () => {
           <LanguageSwitcher />
         </div>
 
-        {/* Mobile Menu Toggle & Switcher */}
-        <div className="mobile-menu-btn-container" style={{ display: 'none', alignItems: 'center', gap: '1rem' }}>
-          <LanguageSwitcher />
+        {/* Mobile Menu Toggle */}
+        <div className="mobile-menu-btn-container" style={{ display: 'none' }}>
           <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Zamknij menu" : "Otwórz menu"} style={{ display: 'block' }}>
             {mobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
           </button>
@@ -78,6 +82,9 @@ const Navbar = () => {
             <a href="#about" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-main)', textDecoration: 'none', padding: '0.5rem 0' }}>{t('navbar.about')}</a>
             <a href="#projects" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-main)', textDecoration: 'none', padding: '0.5rem 0' }}>{t('navbar.projects')}</a>
             <a href="#workflow" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-main)', textDecoration: 'none', padding: '0.5rem 0' }}>{t('navbar.workflow')}</a>
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem', marginTop: '0.5rem' }}>
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </div>
