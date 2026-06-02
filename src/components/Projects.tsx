@@ -23,6 +23,14 @@ const Projects = () => {
       isApp: false
     },
     {
+      title: 'SKINCARE',
+      description: t('projects.items.skincare.desc'),
+      image: '/skincare_mockup.png',
+      tags: ['Web Design', '3D Animation', 'Premium'],
+      link: 'https://apkmasondev.github.io/skincare/',
+      isApp: false
+    },
+    {
       title: t('projects.items.soon.title'),
       description: t('projects.items.soon.desc'),
       image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
