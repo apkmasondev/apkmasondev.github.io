@@ -34,9 +34,8 @@ const About = () => {
                 overflow: 'hidden',
                 position: 'relative'
               }}>
-                <img src="/profile.jpg" alt="Krzysztof" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.15)' }} />
+                <img src="/profile.jpg" alt="Krzysztof" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.15)' }} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(5,5,8,0.8), transparent)' }}></div>
-                <h3 style={{ position: 'absolute', bottom: '20px', left: '20px', color: 'white', fontSize: '1.5rem', fontWeight: 800 }}>Krzysztof</h3>
               </div>
             </div>
 
@@ -51,7 +50,7 @@ const About = () => {
                   Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam dużym zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji. Nie ograniczam się tylko do kodu – projektuję zaawansowane Landing Page, generuję utwory muzyczne przy pomocy Suno AI i swobodnie eksploruję inne dziedziny, w których algorytmy spotykają się z kreatywnością.
                 </p>
                 <p className="text-muted">
-                  Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <strong>Google Umiejętności Jutra 2.0</strong>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych i asystenta AI AntiGravity, płynnie poruszam się w środowisku Android Studio i błyskawicznie dowożę gotowe projekty.
+                  Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <strong>Google Umiejętności Jutra 2.0</strong>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych i środowiska AntiGravity IDE, płynnie poruszam się w Android Studio i błyskawicznie dowożę gotowe projekty.
                 </p>
               </div>
 

@@ -52,6 +52,7 @@ const Projects = () => {
                   <img 
                     src={project.image} 
                     alt={project.title} 
+                    loading="lazy"
                     style={{ 
                       width: '100%', height: '100%', 
                       objectFit: 'cover', 
@@ -80,7 +81,7 @@ const Projects = () => {
 
                   {project.link !== '#' ? (
                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>
-                      {project.isApp ? <><Smartphone size={18} /> Strona Aplikacji</> : <><ExternalLink size={18} /> Zobacz szczegóły</>}
+                      {project.isApp ? <><Smartphone size={18} aria-hidden="true" /> Strona Aplikacji</> : <><ExternalLink size={18} aria-hidden="true" /> Zobacz szczegóły</>}
                     </a>
                   ) : (
                     <span className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem', opacity: 0.5, cursor: 'not-allowed' }}>
