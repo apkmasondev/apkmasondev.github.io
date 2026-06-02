@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
-
-const words = ["Android Developer.", "Web Designer.", "AI Creator.", "ApkMason."];
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
+
+  const words = useMemo(() => t('hero.roles', { returnObjects: true }) as string[], [t]);
 
   useEffect(() => {
     if (subIndex === words[index].length + 1 && !reverse) {
@@ -41,12 +43,12 @@ const Hero = () => {
           <div className="flex-center mb-4">
             <div className="mono-tag">
               <Terminal size={16} color="var(--accent-color)" />
-              <span>Hello World_</span>
+              <span>{t('hero.hello')}</span>
             </div>
           </div>
           
           <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 800, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
-            Cześć, <span style={{ fontSize: '0.8em', opacity: 0.9, fontWeight: 600 }}>jestem</span> <span className="text-gradient">Krzysztof</span>
+            {t('hero.hi')} <span style={{ fontSize: '0.8em', opacity: 0.9, fontWeight: 600 }}>{t('hero.iam')}</span> <span className="text-gradient">{t('hero.name')}</span>
           </h1>
           
           <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', color: 'var(--text-muted)', marginBottom: '2.5rem', minHeight: '3.5rem' }}>
@@ -54,15 +56,15 @@ const Hero = () => {
           </h2>
 
           <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.15rem', lineHeight: 1.6 }}>
-            Projektuję zjawiskowe strony, buduję aplikacje i generuję multimedia. Wykorzystuję potęgę sztucznej inteligencji, by błyskawicznie przekuwać odważne wizje w gotowe produkty cyfrowe.
+            {t('hero.description')}
           </p>
 
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3.5rem' }}>
             <a href="#projects" className="btn btn-primary">
-              Zobacz portfolio <ArrowRight size={20} />
+              {t('hero.btnProjects')} <ArrowRight size={20} />
             </a>
             <a href="#workflow" className="btn btn-secondary">
-              Mój Workflow z AI
+              {t('hero.btnWorkflow')}
             </a>
           </div>
         </motion.div>

@@ -1,34 +1,37 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Smartphone } from 'lucide-react';
-
-const projects = [
-  {
-    title: 'ScrollDebt',
-    description: 'Aplikacja zamieniająca bezmyślne doomscrolling w brutalne przebudzenie. Śledzi zmarnowany czas, wytyka wady za pomocą "Brutal Truth" i pomaga odzyskać kontrolę nad życiem. Zero zbierania danych, 100% offline.',
-    image: '/scrolldebt_mockup.png',
-    tags: ['Android', 'Kotlin', 'AntiGravity'],
-    link: 'https://apkmasondev.github.io/scrolldebt-site/',
-    isApp: true
-  },
-  {
-    title: 'BRIXCORE',
-    description: 'Ekskluzywny projekt Landing Page wygenerowany przy pomocy AI dla luksusowej marki klocków. Wykorzystuje nowoczesny Glassmorphism i potężne animacje CSS.',
-    image: '/brixcore_ship.png',
-    tags: ['Web Design', 'AI Generated', 'UI/UX'],
-    link: 'https://apkmasondev.github.io/brixcore/',
-    isApp: false
-  },
-  {
-    title: 'Coming Soon',
-    description: 'Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce...',
-    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
-    tags: ['AI Powered'],
-    link: '#',
-    isApp: false
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      title: 'ScrollDebt',
+      description: t('projects.items.scrolldebt.desc'),
+      image: '/scrolldebt_mockup.png',
+      tags: ['Android', 'Kotlin', 'AntiGravity'],
+      link: 'https://apkmasondev.github.io/scrolldebt-site/',
+      isApp: true
+    },
+    {
+      title: 'BRIXCORE',
+      description: t('projects.items.brixcore.desc'),
+      image: '/brixcore_ship.png',
+      tags: ['Web Design', 'AI Generated', 'UI/UX'],
+      link: 'https://apkmasondev.github.io/brixcore/',
+      isApp: false
+    },
+    {
+      title: t('projects.items.soon.title'),
+      description: t('projects.items.soon.desc'),
+      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
+      tags: ['AI Powered'],
+      link: '#',
+      isApp: false
+    }
+  ];
+
   return (
     <section className="section" id="projects">
       <div className="container">
@@ -38,7 +41,7 @@ const Projects = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Projekty & Aplikacje</h2>
+          <h2 className="section-title">{t('projects.title')}</h2>
           
           <div className="responsive-grid">
             {projects.map((project, idx) => (
@@ -81,11 +84,11 @@ const Projects = () => {
 
                   {project.link !== '#' ? (
                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>
-                      {project.isApp ? <><Smartphone size={18} aria-hidden="true" /> Strona Aplikacji</> : <><ExternalLink size={18} aria-hidden="true" /> Zobacz szczegóły</>}
+                      {project.isApp ? <><Smartphone size={18} aria-hidden="true" /> {t('projects.btnApp')}</> : <><ExternalLink size={18} aria-hidden="true" /> {t('projects.btnDetails')}</>}
                     </a>
                   ) : (
                     <span className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem', opacity: 0.5, cursor: 'not-allowed' }}>
-                      Wkrótce...
+                      {t('projects.btnSoon')}
                     </span>
                   )}
                 </div>

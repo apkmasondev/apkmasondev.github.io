@@ -1,51 +1,38 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Lightbulb, Code2, Cpu, Rocket } from 'lucide-react';
-
-const steps = [
-  {
-    icon: <Lightbulb size={24} />,
-    title: 'Koncept & Architektura',
-    desc: 'Wszystko zaczyna się od wizji. Rozpisuję cel i zamieniam go w solidny fundament pod aplikację, stronę lub utwór.'
-  },
-  {
-    icon: <Cpu size={24} />,
-    title: 'Prompting & Generowanie',
-    desc: 'Zatrudniam czołowe modele (Claude, ChatGPT, Suno AI), by błyskawicznie przetopić koncepcję na kod, tekst lub dźwięk.'
-  },
-  {
-    icon: <Code2 size={24} />,
-    title: 'AntiGravity & Integracja',
-    desc: 'Traktuję wygenerowane elementy jak puzzle. Składam je w dopracowaną całość za pomocą środowiska AntiGravity IDE.'
-  },
-  {
-    icon: <Rocket size={24} />,
-    title: 'Szlifowanie & Publikacja',
-    desc: 'Ostatnie 20% to rzemiosło. Dopieszczam UX/UI, optymalizuję detale i wypuszczam gotowy produkt w świat.'
-  }
-];
+import { Target, Lightbulb, Zap, Rocket, Code2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Workflow = () => {
+  const { t } = useTranslation();
   const [text, setText] = useState('');
 
+  const steps = [
+    {
+      icon: <Target size={32} color="var(--accent-color)" />,
+      title: t('workflow.steps.step1.title'),
+      desc: t('workflow.steps.step1.desc')
+    },
+    {
+      icon: <Lightbulb size={32} color="var(--accent-secondary)" />,
+      title: t('workflow.steps.step2.title'),
+      desc: t('workflow.steps.step2.desc')
+    },
+    {
+      icon: <Zap size={32} color="#8b5cf6" />,
+      title: t('workflow.steps.step3.title'),
+      desc: t('workflow.steps.step3.desc')
+    },
+    {
+      icon: <Rocket size={32} color="#10b981" />,
+      title: t('workflow.steps.step4.title'),
+      desc: t('workflow.steps.step4.desc')
+    }
+  ];
+
   useEffect(() => {
-    const prompts = [
-      [
-        ...Array.from("Wygeneruj interalty"),
-        "BACKSPACE", "BACKSPACE", "BACKSPACE",
-        ...Array.from("aktywny Landing Page w React z płynnymi animacjami oraz efektem Glassmorphism.")
-      ],
-      [
-        ...Array.from("Napisz w Kotlim"),
-        "BACKSPACE",
-        ...Array.from("nie przejrzysty ekran logowania z walidacją e-mail.")
-      ],
-      [
-        ...Array.from("Napisz makro VBA, które tworzy atbel"),
-        "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE",
-        ...Array.from("tabele przestawne i wylicza zapotrzebowanie FTE.")
-      ]
-    ];
+    const rawPrompts = t('workflow.prompts', { returnObjects: true }) as string[];
+    const prompts = rawPrompts.map(p => Array.from(p));
 
     let promptIndex = 0;
     let currentIndex = 0;
@@ -64,16 +51,15 @@ const Workflow = () => {
           isDeleting = false;
           currentIndex = 0;
           promptIndex = (promptIndex + 1) % prompts.length;
-          timeoutIds.push(setTimeout(typeChar, 800)); // Czas przed nowym tekstem
+          timeoutIds.push(setTimeout(typeChar, 800));
           return;
         }
 
-        timeoutIds.push(setTimeout(typeChar, 15)); // Szybkie usuwanie
+        timeoutIds.push(setTimeout(typeChar, 15));
         return;
       }
 
       if (currentIndex >= currentSequence.length) {
-        // Zakończono pisanie, czekaj przed kasowaniem
         isDeleting = true;
         timeoutIds.push(setTimeout(typeChar, 3500));
         return;
@@ -89,25 +75,22 @@ const Workflow = () => {
       setText(currentText);
       currentIndex++;
 
-      let delay = 30 + Math.random() * 60; // 30-90ms
-      if (char === "BACKSPACE") delay = 40; // fast backspace
+      let delay = 30 + Math.random() * 60;
+      if (char === "BACKSPACE") delay = 40;
       
-      // Pause before realizing mistake
       if (currentSequence[currentIndex] === "BACKSPACE" && currentSequence[currentIndex - 1] !== "BACKSPACE") {
         delay += 400; 
       }
       
-      // Pause after sentences or words
       if (char === "." || char === ",") delay += 200;
 
       timeoutIds.push(setTimeout(typeChar, delay));
     };
 
-    // Delay start
     timeoutIds.push(setTimeout(typeChar, 1500));
 
     return () => timeoutIds.forEach(clearTimeout);
-  }, []);
+  }, [t]);
 
   return (
     <section className="section" id="workflow">
@@ -118,14 +101,12 @@ const Workflow = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Jak tworzę z AI?</h2>
+          <h2 className="section-title">{t('workflow.title')}</h2>
+          <p style={{ textAlign: 'center', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto 4rem', fontSize: '1.1rem', lineHeight: 1.6 }}>
+            {t('workflow.desc')}
+          </p>
           
           <div className="glass-card" style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(1rem, 4vw, 4rem)' }}>
-            
-            <p style={{ textAlign: 'center', fontSize: 'clamp(1rem, 3vw, 1.2rem)', marginBottom: '3rem', color: 'var(--text-main)', fontWeight: 500 }}>
-              Od oprogramowania, przez nowoczesne witryny, aż po eksperymenty muzyczne. Mój wszechstronny workflow z AI pozwala mi budować mądrzej, szybciej i bez ograniczeń.
-            </p>
-
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
               {steps.map((step, idx) => (
                 <motion.div 

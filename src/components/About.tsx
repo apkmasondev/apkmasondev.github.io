@@ -1,17 +1,19 @@
 import { motion } from 'framer-motion';
-
-const skills = [
-  { name: 'Środowisko Android Studio', level: 75 },
-  { name: 'AI Prompting (Claude / ChatGPT)', level: 95 },
-  { name: 'Środowisko AntiGravity (IDE)', level: 90 },
-  { name: 'AI Web Design (Landing Pages)', level: 85 },
-  { name: 'Generowanie muzyki (Suno AI)', level: 80 },
-  { name: 'Microsoft Copilot Studio', level: 80 },
-  { name: 'MS Excel – analityka z AI', level: 85 },
-  { name: 'Google Umiejętności Jutra 2.0', level: 100 }
-];
+import { useTranslation, Trans } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+  
+  const skills = [
+    { name: t('about.skills.android'), level: 75 },
+    { name: t('about.skills.prompting'), level: 95 },
+    { name: t('about.skills.antigravity'), level: 90 },
+    { name: t('about.skills.webdesign'), level: 85 },
+    { name: t('about.skills.music'), level: 80 },
+    { name: t('about.skills.copilot'), level: 80 },
+    { name: t('about.skills.excel'), level: 85 },
+    { name: t('about.skills.google'), level: 100 }
+  ];
   return (
     <section className="section" id="about">
       <div className="container">
@@ -21,7 +23,7 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">O Mnie</h2>
+          <h2 className="section-title">{t('about.title')}</h2>
           
           <div className="responsive-grid" style={{ alignItems: 'stretch' }}>
             
@@ -44,18 +46,18 @@ const About = () => {
               
               <div className="glass-card">
                 <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>
-                  Lider na co dzień, <span className="text-gradient">kreator AI</span> po godzinach.
+                  <Trans i18nKey="about.subtitle" components={{ 1: <span className="text-gradient" /> }} />
                 </h3>
                 <p className="text-muted mb-2">
-                  Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam dużym zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji. Nie ograniczam się tylko do kodu – projektuję zaawansowane Landing Pages, generuję utwory muzyczne przy pomocy Suno AI i swobodnie eksploruję inne dziedziny, w których algorytmy spotykają się z kreatywnością.
+                  {t('about.p1')}
                 </p>
                 <p className="text-muted">
-                  Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <strong>Google Umiejętności Jutra 2.0</strong>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych, płynnie poruszam się w środowisku AntiGravity IDE i błyskawicznie dowożę gotowe projekty.
+                  <Trans i18nKey="about.p2" components={{ 1: <strong /> }} />
                 </p>
               </div>
 
               <div className="glass-card">
-                <h4 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', color: 'white' }}>Mój Stack / Umiejętności</h4>
+                <h4 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', color: 'white' }}>{t('about.stackTitle')}</h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
                   {skills.map(skill => (
                     <div key={skill.name}>

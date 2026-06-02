@@ -1,24 +1,26 @@
-import { Code2, Mail, Smartphone } from 'lucide-react';
+import { Mail, Code2, Smartphone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '4rem 0 2rem 0', marginTop: '4rem', background: '#050508' }}>
       <div className="container">
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '2rem', marginBottom: '3rem' }}>
           
-          <div style={{ maxWidth: '300px' }}>
+          <div style={{ flex: '1 1 300px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-              <img src="/apkmason_logo_premium.png" alt="Logo" style={{ height: '30px', width: '30px', objectFit: 'cover', borderRadius: '50%' }} />
+              <img src="/apkmason_logo_premium.png" alt="ApkMason.dev Logo" loading="lazy" style={{ height: '32px', width: '32px', objectFit: 'cover', borderRadius: '50%' }} />
               <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}><span className="text-gradient">ApkMason</span><span style={{ color: 'white', fontSize: '0.7em', opacity: 0.9 }}>.dev</span></span>
             </div>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-              Tworzę aplikacje szybciej, mądrzej i z wykorzystaniem AI.
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+              {t('footer.subtitle')}
             </p>
           </div>
 
           <div style={{ display: 'flex', gap: '3rem' }}>
-            <div>
-              <h4 style={{ color: '#fff', marginBottom: '1rem', fontSize: '1rem' }}>Kontakt</h4>
+            <div style={{ flex: '1 1 200px' }}>
+              <h4 style={{ color: 'white', marginBottom: '1.2rem', fontSize: '1.1rem' }}>{t('footer.contact')}</h4>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                 <li>
                   <a href="mailto:apkmason.dev@gmail.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}>
@@ -41,10 +43,22 @@ const Footer = () => {
           
         </div>
         
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '2rem', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-            &copy; {new Date().getFullYear()} ApkMason.dev — Built with Vite & React.
-          </p>
+        <div style={{ 
+          borderTop: '1px solid rgba(255,255,255,0.05)', 
+          marginTop: '3rem', 
+          paddingTop: '2rem', 
+          display: 'flex', 
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '1rem',
+          color: 'var(--text-muted)',
+          fontSize: '0.9rem'
+        }}>
+          <p>&copy; {new Date().getFullYear()} ApkMason.dev. All rights reserved.</p>
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+            <span>{t('footer.builtWith')}</span>
+          </div>
         </div>
       </div>
     </footer>
