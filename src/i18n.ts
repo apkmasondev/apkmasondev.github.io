@@ -8,7 +8,7 @@ const resources = {
       navbar: {
         about: "O mnie",
         projects: "Projekty",
-        workflow: "Mój Proces (AI)"
+        workflow: "Warsztat AI"
       },
       hero: {
         hello: "Hello World_",
@@ -95,7 +95,7 @@ const resources = {
       navbar: {
         about: "About me",
         projects: "Projects",
-        workflow: "My AI Workflow"
+        workflow: "AI Workflow"
       },
       hero: {
         hello: "Hello World_",
