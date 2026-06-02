@@ -51,11 +51,11 @@ const Projects = () => {
         >
           <h2 className="section-title">{t('projects.title')}</h2>
           
-          <div className="projects-gallery">
+          <div className="projects-grid">
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className="glass-card gallery-card"
+                className="glass-card"
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
