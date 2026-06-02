@@ -138,7 +138,7 @@ const Workflow = () => {
 
             <div style={{ marginTop: '3rem', padding: 'clamp(1rem, 3vw, 1.5rem)', background: 'rgba(5, 5, 8, 0.5)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)', overflowX: 'hidden' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '1rem', flexWrap: 'wrap' }}>
-                <Code2 size={18} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>Przykładowy prompt</span>
+                <Code2 size={18} color="var(--text-muted)" /> <span className="text-muted" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>{t('workflow.samplePrompt')}</span>
               </div>
               <code style={{ color: '#a78bfa', fontFamily: 'var(--font-mono)', fontSize: '0.85rem', lineHeight: 1.6, display: 'block', whiteSpace: 'pre-wrap', wordBreak: 'break-word', minHeight: '3rem' }}>
                 "{text}<motion.span animate={{ opacity: [1, 0, 1] }} transition={{ repeat: Infinity, duration: 0.8 }}>|</motion.span>"
