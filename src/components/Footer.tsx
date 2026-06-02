@@ -22,17 +22,17 @@ const Footer = () => {
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                 <li>
                   <a href="mailto:apkmason.dev@gmail.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}>
-                    <Mail size={16} /> apkmason.dev@gmail.com
+                    <Mail size={16} aria-hidden="true" /> apkmason.dev@gmail.com
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/apkmasondev" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}>
-                    <Code2 size={16} /> GitHub Profile
+                    <Code2 size={16} aria-hidden="true" /> GitHub Profile
                   </a>
                 </li>
                 <li>
                   <a href="https://play.google.com/store/apps/dev?id=apkmason" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}>
-                    <Smartphone size={16} /> Google Play
+                    <Smartphone size={16} aria-hidden="true" /> Google Play
                   </a>
                 </li>
               </ul>
