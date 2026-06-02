@@ -103,15 +103,15 @@ const resources = {
         iam: "I'm",
         name: "Krzysztof",
         roles: ["Android Developer.", "Web Designer.", "AI Creator.", "ApkMason."],
-        description: "I design stunning websites, build applications, and generate multimedia. I leverage the power of artificial intelligence to instantly forge bold visions into ready-made digital products.",
+        description: "I design stunning websites, build applications, and generate multimedia. I leverage the power of artificial intelligence to instantly forge bold visions into polished digital products.",
         btnProjects: "View portfolio",
         btnWorkflow: "My AI Workflow"
       },
       about: {
         title: "About Me",
         subtitle: "Leader by day, <1>AI Creator</1> by night.",
-        p1: "On a daily basis, I work in a thriving e-commerce corporation, where as a leader I manage a large team of technicians. When I close my work laptop, I immerse myself in the infinite possibilities of artificial intelligence. I don't limit myself to code – I design advanced Landing Pages, generate music tracks using Suno AI, and freely explore other domains where algorithms meet creativity.",
-        p2: "Graduating from the <1>Google Umiejętności Jutra 2.0</1> (Skills of Tomorrow) training program became a huge inspiration for me. That's what fueled my experiments. Today, thanks to the support of powerful language models, I navigate the AntiGravity IDE smoothly and deliver ready projects in a flash.",
+        p1: "In my daily work, I lead a large technical team at a thriving e-commerce corporation. When I close my work laptop, I immerse myself in the infinite possibilities of artificial intelligence. I don't limit myself to code – I design advanced Landing Pages, generate music tracks using Suno AI, and freely explore other domains where algorithms meet creativity.",
+        p2: "Completing the <1>Google Umiejętności Jutra 2.0</1> (Skills of Tomorrow) training program was a huge inspiration for me and fueled my initial experiments. Today, empowered by powerful language models, I seamlessly navigate the AntiGravity IDE and rapidly deliver polished projects.",
         stackTitle: "My Stack / Skills",
         skills: {
           android: "Android Studio Environment",
@@ -126,7 +126,7 @@ const resources = {
       },
       projects: {
         title: "Projects & Apps",
-        btnApp: "App Website",
+        btnApp: "Live App",
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
@@ -166,7 +166,7 @@ const resources = {
         },
         prompts: [
           "Generate an interactive React Landing Page with smooth animations and a Glassmorphism effect.",
-          "Write a clean login screen in Kotlin with e-mail validation.",
+          "Write a clean login screen in Kotlin with email validation.",
           "Write a VBA macro that creates pivot tables and calculates FTE demand."
         ]
       },
