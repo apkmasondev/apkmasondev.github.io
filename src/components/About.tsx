@@ -47,10 +47,10 @@ const About = () => {
                   Lider na co dzień, <span className="text-gradient">kreator AI</span> po godzinach.
                 </h3>
                 <p className="text-muted mb-2">
-                  Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam dużym zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji. Nie ograniczam się tylko do kodu – projektuję zaawansowane Landing Page, generuję utwory muzyczne przy pomocy Suno AI i swobodnie eksploruję inne dziedziny, w których algorytmy spotykają się z kreatywnością.
+                  Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam dużym zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji. Nie ograniczam się tylko do kodu – projektuję zaawansowane Landing Pages, generuję utwory muzyczne przy pomocy Suno AI i swobodnie eksploruję inne dziedziny, w których algorytmy spotykają się z kreatywnością.
                 </p>
                 <p className="text-muted">
-                  Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <strong>Google Umiejętności Jutra 2.0</strong>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych i środowiska AntiGravity IDE, płynnie poruszam się w Android Studio i błyskawicznie dowożę gotowe projekty.
+                  Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <strong>Google Umiejętności Jutra 2.0</strong>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych, płynnie poruszam się w środowisku AntiGravity IDE i błyskawicznie dowożę gotowe projekty.
                 </p>
               </div>
 
