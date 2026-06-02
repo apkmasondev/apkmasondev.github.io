@@ -170,6 +170,42 @@ body {
   gap: 2rem;
 }
 
+/* Projects Gallery */
+.projects-gallery {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0 2rem 0;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) rgba(255, 255, 255, 0.05);
+  -webkit-overflow-scrolling: touch;
+}
+
+.projects-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-gallery::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+.projects-gallery::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.projects-gallery::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+.gallery-card {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -367,5 +403,12 @@ h1, h2, h3, h4, h5, h6 {
   .bento-grid {
     display: flex;
     flex-direction: column;
+  }
+  .gallery-card {
+    flex: 0 0 85vw;
+    scroll-snap-align: center;
+  }
+  .projects-gallery {
+    scroll-padding: 0 7.5vw;
   }
 }

@@ -51,11 +51,11 @@ const Projects = () => {
         >
           <h2 className="section-title">{t('projects.title')}</h2>
           
-          <div className="responsive-grid">
+          <div className="projects-gallery">
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className="glass-card"
+                className="glass-card gallery-card"
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
