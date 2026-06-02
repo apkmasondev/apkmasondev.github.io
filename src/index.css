@@ -170,48 +170,11 @@ body {
   gap: 2rem;
 }
 
-/* Projects Gallery */
-.projects-gallery {
-  display: flex;
+/* Projects Grid (2x2) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
-  overflow-x: auto;
-  padding: 1rem 1rem 3rem 1rem;
-  margin: 0 -1rem;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 1rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) transparent;
-  -webkit-overflow-scrolling: touch;
-  
-  /* Premium Edge Fade */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-}
-
-.projects-gallery::-webkit-scrollbar {
-  height: 4px;
-}
-
-.projects-gallery::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.projects-gallery::-webkit-scrollbar-thumb {
-  background: rgba(251, 146, 60, 0.4);
-  border-radius: 10px;
-}
-
-.projects-gallery::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-color);
-}
-
-.projects-gallery::-webkit-scrollbar-button {
-  display: none;
-}
-
-.gallery-card {
-  flex: 0 0 340px;
-  scroll-snap-align: start;
 }
 
 .btn {
@@ -412,11 +375,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
   }
-  .gallery-card {
-    flex: 0 0 85vw;
-    scroll-snap-align: center;
-  }
-  .projects-gallery {
-    scroll-padding: 0 7.5vw;
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
