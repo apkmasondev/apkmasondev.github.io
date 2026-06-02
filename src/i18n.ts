@@ -49,6 +49,9 @@ const resources = {
           brixcore: {
             desc: "Ekskluzywny projekt Landing Page wygenerowany przy pomocy AI dla luksusowej marki klocków. Wykorzystuje nowoczesny Glassmorphism i potężne animacje CSS."
           },
+          skincare: {
+            desc: "Luksusowy Landing Page dla marki kosmetycznej. Zaprojektowany w standardzie Premium z wykorzystaniem trendów na 2026 rok, w tym kinetycznej typografii i trójwymiarowej animacji scroll-driven 3D."
+          },
           soon: {
             title: "Coming Soon",
             desc: "Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce..."
@@ -135,6 +138,9 @@ const resources = {
           },
           brixcore: {
             desc: "An exclusive Landing Page project generated with AI for a luxury brick brand. Features modern Glassmorphism and powerful CSS animations."
+          },
+          skincare: {
+            desc: "A luxury skincare brand Landing Page. Designed in Premium standard following 2026 trends, featuring kinetic typography and scroll-driven 3D animations."
           },
           soon: {
             title: "Coming Soon",
