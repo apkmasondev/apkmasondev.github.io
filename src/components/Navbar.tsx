@@ -57,7 +57,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu & Switcher */}
-        <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
+        <div className="nav-links">
           <a href="#about">{t('navbar.about')}</a>
           <a href="#projects">{t('navbar.projects')}</a>
           <a href="#workflow">{t('navbar.workflow')}</a>
