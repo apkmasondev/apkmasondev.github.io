@@ -173,32 +173,40 @@ body {
 /* Projects Gallery */
 .projects-gallery {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   overflow-x: auto;
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 1rem 3rem 1rem;
+  margin: 0 -1rem;
   scroll-snap-type: x mandatory;
-  scroll-padding: 0;
+  scroll-padding: 0 1rem;
   scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) rgba(255, 255, 255, 0.05);
+  scrollbar-color: var(--accent-color) transparent;
   -webkit-overflow-scrolling: touch;
+  
+  /* Premium Edge Fade */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
 .projects-gallery::-webkit-scrollbar {
-  height: 8px;
+  height: 4px;
 }
 
 .projects-gallery::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 10px;
+  background: transparent;
 }
 
 .projects-gallery::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(251, 146, 60, 0.4);
   border-radius: 10px;
 }
 
 .projects-gallery::-webkit-scrollbar-thumb:hover {
   background: var(--accent-color);
+}
+
+.projects-gallery::-webkit-scrollbar-button {
+  display: none;
 }
 
 .gallery-card {

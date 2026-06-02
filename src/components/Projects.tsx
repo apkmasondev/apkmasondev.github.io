@@ -27,7 +27,7 @@ const Projects = () => {
       description: t('projects.items.skincare.desc'),
       image: '/skincare_mockup.png',
       tags: ['Web Design', '3D Animation', 'Premium'],
-      link: 'https://apkmasondev.github.io/skincare/',
+      link: 'https://apkmasondev.github.io/skincare_demo/',
       isApp: false
     },
     {
