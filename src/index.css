@@ -152,6 +152,12 @@ body {
   opacity: 1;
 }
 
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2.5rem;
+}
+
 /* Projects Grid (2x2) */
 .projects-grid {
   display: grid;
@@ -354,6 +360,10 @@ h1, h2, h3, h4, h5, h6 {
   .section-title {
     font-size: 2.2rem;
     margin-bottom: 2.5rem;
+  }
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .projects-grid {
     grid-template-columns: 1fr;
