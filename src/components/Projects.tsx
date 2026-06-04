@@ -31,12 +31,21 @@ const Projects = () => {
       isApp: false
     },
     {
+      title: 'Piątunio w Korpo',
+      description: t('projects.items.piatunio.desc'),
+      image: '/piatunio_mockup.png',
+      tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
+      link: 'https://apkmasondev.github.io/piatunio/',
+      isApp: true
+    },
+    {
       title: t('projects.items.soon.title'),
       description: t('projects.items.soon.desc'),
       image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
       tags: ['AI Powered'],
       link: '#',
-      isApp: false
+      isApp: false,
+      isSoon: true
     }
   ];
 
@@ -55,11 +64,11 @@ const Projects = () => {
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className="glass-card"
+                className={`glass-card ${project.isSoon ? 'col-span-2' : ''}`}
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', height: project.isSoon ? '140px' : '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={project.image} 
                     alt={project.title} 

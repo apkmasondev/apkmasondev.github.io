@@ -52,6 +52,9 @@ const resources = {
           skincare: {
             desc: "Luksusowy Landing Page dla marki kosmetycznej. Zaprojektowany w standardzie Premium z wykorzystaniem trendów na 2026 rok, w tym kinetycznej typografii i trójwymiarowej animacji scroll-driven 3D."
           },
+          piatunio: {
+            desc: "Zabawna gra Hyper-Casual w stylu Cyberpunk-Korpo na systemy Android. Przetrwaj w labiryncie biurek do piątkowego popołudnia. Posiada mechanikę klasycznego Pac-Mana, sterowanie gestami oraz pixel-artową oprawę retro z udźwiękowieniem 8-bit."
+          },
           soon: {
             title: "Coming Soon",
             desc: "Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce..."
@@ -141,6 +144,9 @@ const resources = {
           },
           skincare: {
             desc: "A luxury skincare brand Landing Page. Designed in Premium standard following 2026 trends, featuring kinetic typography and scroll-driven 3D animations."
+          },
+          piatunio: {
+            desc: "A fun Hyper-Casual Cyberpunk-Corporate game for Android. Survive the desk maze until Friday afternoon. Features classic Pac-Man mechanics, gesture controls, and pixel-art retro graphics with 8-bit sound."
           },
           soon: {
             title: "Coming Soon",

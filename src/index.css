@@ -177,6 +177,10 @@ body {
   gap: 2.5rem;
 }
 
+.col-span-2 {
+  grid-column: span 2;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -378,5 +382,8 @@ h1, h2, h3, h4, h5, h6 {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .col-span-2 {
+    grid-column: span 1;
   }
 }
