@@ -18,11 +18,11 @@ const Hero = () => {
     }
 
     if (subIndex === 0 && reverse) {
-      setTimeout(() => {
+      const id = setTimeout(() => {
         setReverse(false);
         setIndex((prev) => (prev + 1) % words.length);
       }, 0);
-      return;
+      return () => clearTimeout(id);
     }
 
     const timeout = setTimeout(() => {
@@ -30,7 +30,7 @@ const Hero = () => {
     }, Math.max(reverse ? 50 : 100, Math.random() * 150));
 
     return () => clearTimeout(timeout);
-  }, [subIndex, index, reverse]);
+  }, [subIndex, index, reverse, words]);
 
   return (
     <section className="section" id="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>

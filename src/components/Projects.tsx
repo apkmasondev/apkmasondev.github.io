@@ -2,14 +2,24 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Smartphone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  link: string;
+  isApp: boolean;
+  isSoon?: boolean;
+}
+
 const Projects = () => {
   const { t } = useTranslation();
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'ScrollDebt',
       description: t('projects.items.scrolldebt.desc'),
-      image: '/scrolldebt_mockup.png',
+      image: '/scrolldebt_mockup.webp',
       tags: ['Android', 'Kotlin', 'AntiGravity'],
       link: 'https://apkmasondev.github.io/scrolldebt-site/',
       isApp: true
@@ -17,7 +27,7 @@ const Projects = () => {
     {
       title: 'BRIXCORE',
       description: t('projects.items.brixcore.desc'),
-      image: '/brixcore_ship.png',
+      image: '/brixcore_ship.webp',
       tags: ['Web Design', 'AI Generated', 'UI/UX'],
       link: 'https://apkmasondev.github.io/brixcore/',
       isApp: false
@@ -25,7 +35,7 @@ const Projects = () => {
     {
       title: 'SKINCARE',
       description: t('projects.items.skincare.desc'),
-      image: '/skincare_mockup.png',
+      image: '/skincare_mockup.webp',
       tags: ['Web Design', '3D Animation', 'Premium'],
       link: 'https://apkmasondev.github.io/skincare_demo/',
       isApp: false
@@ -33,7 +43,7 @@ const Projects = () => {
     {
       title: 'Piątunio w Korpo',
       description: t('projects.items.piatunio.desc'),
-      image: '/piatunio_mockup.png',
+      image: '/piatunio_mockup.webp',
       tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
       link: 'https://apkmasondev.github.io/piatunio/',
       isApp: true
@@ -41,7 +51,7 @@ const Projects = () => {
     {
       title: t('projects.items.soon.title'),
       description: t('projects.items.soon.desc'),
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
+      image: '/coming_soon.webp',
       tags: ['AI Powered'],
       link: '#',
       isApp: false,
