@@ -45,7 +45,7 @@ const Projects = () => {
       description: t('projects.items.piatunio.desc'),
       image: '/piatunio_mockup.webp',
       tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
-      link: 'https://apkmasondev.github.io/piatunio/',
+      link: 'https://apkmasondev.github.io/piatuniowkorpo/',
       isApp: true
     },
     {
