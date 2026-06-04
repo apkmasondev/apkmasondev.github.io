@@ -59,6 +59,9 @@ const resources = {
           piatunio: {
             desc: "Zabawna gra Hyper-Casual w stylu Cyberpunk-Korpo na systemy Android. Przetrwaj w labiryncie biurek do piątkowego popołudnia. Posiada mechanikę klasycznego Pac-Mana, sterowanie gestami oraz pixel-artową oprawę retro z udźwiękowieniem 8-bit."
           },
+          suno: {
+            desc: "Odkryj moją bibliotekę utworów muzycznych wygenerowanych w pełni za pomocą Suno AI. Eksperymenty z brzmieniem, wokalem i nowoczesnymi gatunkami."
+          },
           soon: {
             title: "Coming Soon",
             desc: "Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce..."
@@ -157,6 +160,9 @@ const resources = {
           },
           piatunio: {
             desc: "A fun Hyper-Casual Cyberpunk-Corporate game for Android. Survive the desk maze until Friday afternoon. Features classic Pac-Man mechanics, gesture controls, and pixel-art retro graphics with 8-bit sound."
+          },
+          suno: {
+            desc: "Discover my library of music tracks generated entirely using Suno AI. Experiments with sound, vocals, and modern genres."
           },
           soon: {
             title: "Coming Soon",
