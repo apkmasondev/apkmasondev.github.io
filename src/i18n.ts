@@ -8,7 +8,11 @@ const resources = {
       navbar: {
         about: "O mnie",
         projects: "Projekty",
-        workflow: "Warsztat AI"
+        workflow: "Warsztat AI",
+        skip: "Przejdź do głównej treści",
+        ariaHome: "Strona główna",
+        ariaMenuOpen: "Otwórz menu",
+        ariaMenuClose: "Zamknij menu"
       },
       hero: {
         hello: "Hello World_",
@@ -92,7 +96,9 @@ const resources = {
       footer: {
         subtitle: "Tworzę aplikacje szybciej, mądrzej i z wykorzystaniem AI.",
         contact: "Kontakt",
-        builtWith: "Zbudowane przy użyciu Vite & React."
+        builtWith: "Zbudowane przy użyciu Vite & React.",
+        rights: "Wszelkie prawa zastrzeżone.",
+        googlePlay: "Wkrótce w Google Play"
       }
     }
   },
@@ -101,7 +107,11 @@ const resources = {
       navbar: {
         about: "About me",
         projects: "Projects",
-        workflow: "AI Workflow"
+        workflow: "AI Workflow",
+        skip: "Skip to main content",
+        ariaHome: "Home",
+        ariaMenuOpen: "Open menu",
+        ariaMenuClose: "Close menu"
       },
       hero: {
         hello: "Hello World_",
@@ -185,7 +195,9 @@ const resources = {
       footer: {
         subtitle: "Building apps faster, smarter, and with AI.",
         contact: "Contact",
-        builtWith: "Built with Vite & React."
+        builtWith: "Built with Vite & React.",
+        rights: "All rights reserved.",
+        googlePlay: "Coming soon to Google Play"
       }
     }
   }

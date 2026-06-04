@@ -10,7 +10,7 @@ const Footer = () => {
           
           <div style={{ flex: '1 1 300px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-              <img src="/apkmason_logo_premium.png" alt="ApkMason.dev Logo" loading="lazy" style={{ height: '32px', width: '32px', objectFit: 'cover', borderRadius: '50%' }} />
+              <img src="/apkmason_logo_premium.webp" alt="ApkMason.dev Logo" loading="lazy" style={{ height: '32px', width: '32px', objectFit: 'cover', borderRadius: '50%' }} />
               <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}><span className="text-gradient">ApkMason</span><span style={{ color: 'white', fontSize: '0.7em', opacity: 0.9 }}>.dev</span></span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
@@ -33,9 +33,9 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://play.google.com/store/apps/dev?id=apkmason" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}>
+                  <span title={t('footer.googlePlay')} style={{ color: 'var(--text-muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', opacity: 0.5, cursor: 'not-allowed' }}>
                     <Smartphone size={16} aria-hidden="true" /> Google Play
-                  </a>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -55,7 +55,7 @@ const Footer = () => {
           color: 'var(--text-muted)',
           fontSize: '0.9rem'
         }}>
-          <p>&copy; {new Date().getFullYear()} ApkMason.dev. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ApkMason.dev. {t('footer.rights')}</p>
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
             <span>{t('footer.builtWith')}</span>
           </div>
