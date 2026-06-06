@@ -62,6 +62,9 @@ const resources = {
           suno: {
             desc: "Odkryj moją bibliotekę utworów muzycznych wygenerowanych w pełni za pomocą Suno AI. Eksperymenty z brzmieniem, wokalem i nowoczesnymi gatunkami."
           },
+          budzet: {
+            desc: "Nowoczesna i błyskawiczna aplikacja desktopowa offline-first do zarządzania finansami (Zero-Based Budgeting). Zbudowana w oparciu o Tauri i Rust. Zapewnia 100% prywatności i niezależności."
+          },
           soon: {
             title: "Coming Soon",
             desc: "Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce..."
@@ -163,6 +166,9 @@ const resources = {
           },
           suno: {
             desc: "Discover my library of music tracks generated entirely using Suno AI. Experiments with sound, vocals, and modern genres."
+          },
+          budzet: {
+            desc: "A modern, lightning-fast offline-first desktop app for personal finance management (Zero-Based Budgeting). Built with Tauri and Rust. Ensures 100% privacy and independence."
           },
           soon: {
             title: "Coming Soon",
