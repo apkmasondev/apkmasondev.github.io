@@ -47,15 +47,6 @@ const Projects = () => {
       tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
       link: 'https://apkmasondev.github.io/piatuniowkorpo/',
       isApp: true
-    },
-    {
-      title: 'Suno AI Music',
-      description: t('projects.items.suno.desc'),
-      image: '/suno_mockup.webp',
-      tags: ['AI Music', 'Suno', 'Audio'],
-      link: 'https://suno.com/@kriss8812',
-      isApp: false
-    },
     {
       title: 'Budżet Domowy',
       description: t('projects.items.budzet.desc'),
@@ -71,6 +62,14 @@ const Projects = () => {
       tags: ['Android', 'Kotlin Compose', 'Whisper API', 'GPT-4o', 'Room DB'],
       link: 'https://apkmasondev.github.io/recai_landing_page/',
       isApp: true
+    },
+    {
+      title: 'Suno AI Music',
+      description: t('projects.items.suno.desc'),
+      image: '/suno_mockup.webp',
+      tags: ['AI Music', 'Suno', 'Audio'],
+      link: 'https://suno.com/@kriss8812',
+      isApp: false
     },
     {
       title: t('projects.items.soon.title'),
@@ -98,11 +97,11 @@ const Projects = () => {
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className={`glass-card ${project.isSoon ? 'col-span-2' : ''}`}
+                className="glass-card"
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: project.isSoon ? '140px' : '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={project.image} 
                     alt={project.title} 
