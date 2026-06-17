@@ -47,6 +47,7 @@ const Projects = () => {
       tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
       link: 'https://apkmasondev.github.io/piatuniowkorpo/',
       isApp: true
+    },
     {
       title: 'Budżet Domowy',
       description: t('projects.items.budzet.desc'),
