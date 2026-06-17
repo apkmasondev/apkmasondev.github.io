@@ -65,6 +65,14 @@ const Projects = () => {
       isApp: true
     },
     {
+      title: 'RecAI',
+      description: t('projects.items.recai.desc'),
+      image: '/recai_mockup.webp',
+      tags: ['Android', 'Kotlin Compose', 'Whisper API', 'GPT-4o', 'Room DB'],
+      link: 'https://apkmasondev.github.io/recai_landing_page/',
+      isApp: true
+    },
+    {
       title: t('projects.items.soon.title'),
       description: t('projects.items.soon.desc'),
       image: '/coming_soon.webp',

@@ -65,6 +65,9 @@ const resources = {
           budzet: {
             desc: "Nowoczesna i błyskawiczna aplikacja desktopowa offline-first do zarządzania finansami (Zero-Based Budgeting). Zbudowana w oparciu o Tauri i Rust. Zapewnia 100% prywatności i niezależności."
           },
+          recai: {
+            desc: "Prywatny dyktafon na system Android (Kotlin & Jetpack Compose). Pozwala na nagrywanie w tle (Foreground Service) i lokalny zapis WAV, a także na transkrypcję Whisper i automatyczne podsumowania GPT-4o mini bezpośrednio z OpenAI przy użyciu własnego klucza API zapisanego w sprzętowym Keystore."
+          },
           soon: {
             title: "Coming Soon",
             desc: "Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce..."
@@ -169,6 +172,9 @@ const resources = {
           },
           budzet: {
             desc: "A modern, lightning-fast offline-first desktop app for personal finance management (Zero-Based Budgeting). Built with Tauri and Rust. Ensures 100% privacy and independence."
+          },
+          recai: {
+            desc: "A private voice recorder for Android (Kotlin & Jetpack Compose). Features background recording (Foreground Service) and local WAV storage, as well as Whisper transcription and automatic GPT-4o mini summaries directly from OpenAI using your own API key securely saved in hardware Keystore."
           },
           soon: {
             title: "Coming Soon",
