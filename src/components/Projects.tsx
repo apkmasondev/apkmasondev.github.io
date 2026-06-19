@@ -65,6 +65,14 @@ const Projects = () => {
       isApp: true
     },
     {
+      title: 'PCVerse',
+      description: t('projects.items.pcverse.desc'),
+      image: '/pcverse_mockup.webp',
+      tags: ['React', 'Three.js', 'React Three Fiber', 'Tailwind'],
+      link: 'https://apkmasondev.github.io/pcverse/',
+      isApp: false
+    },
+    {
       title: 'Suno AI Music',
       description: t('projects.items.suno.desc'),
       image: '/suno_mockup.webp',
@@ -98,11 +106,11 @@ const Projects = () => {
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className="glass-card"
+                className={`glass-card ${project.isSoon ? 'col-span-2' : ''}`}
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', height: project.isSoon ? '140px' : '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={project.image} 
                     alt={project.title} 
