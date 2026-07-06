@@ -62,6 +62,9 @@ const resources = {
           pcverse: {
             desc: "Interaktywny, trójwymiarowy przewodnik edukacyjny po podzespołach komputera PC. Zbudowany w React z użyciem Three.js i React Three Fiber. Posiada dynamiczną animację rozłożenia części (Exploded View), interaktywne zbliżenia kamery i responsywny neonowy interfejs."
           },
+          topseven: {
+            desc: "Edukacyjna aplikacja mobilna na system Android (Kotlin & Jetpack Compose) prezentująca skondensowaną wiedzę w formie interaktywnych zestawień. Zawiera 147 faktów w 21 kategoriach tematycznych, tryb fiszek do nauki oraz wbudowany interaktywny słowniczek trudnych pojęć w stylu Glassmorphism."
+          },
           suno: {
             desc: "Odkryj moją bibliotekę utworów muzycznych wygenerowanych w pełni za pomocą Suno AI. Eksperymenty z brzmieniem, wokalem i nowoczesnymi gatunkami."
           },
@@ -172,6 +175,9 @@ const resources = {
           },
           pcverse: {
             desc: "An interactive, 3D educational guide to PC components. Built in React using Three.js and React Three Fiber. Features a dynamic Exploded View animation, interactive camera focus, and a responsive neon UI."
+          },
+          topseven: {
+            desc: "An educational mobile app for Android (Kotlin & Jetpack Compose) that presents condensed knowledge in interactive lists. Features 147 key facts across 21 thematic categories, an interactive flashcards learning mode, and a built-in glassmorphic glossary for difficult terms."
           },
           suno: {
             desc: "Discover my library of music tracks generated entirely using Suno AI. Experiments with sound, vocals, and modern genres."
