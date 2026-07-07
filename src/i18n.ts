@@ -65,6 +65,9 @@ const resources = {
           topseven: {
             desc: "Edukacyjna aplikacja mobilna na system Android (Kotlin & Jetpack Compose) prezentująca skondensowaną wiedzę w formie interaktywnych zestawień. Zawiera 147 faktów w 21 kategoriach tematycznych, tryb fiszek do nauki oraz wbudowany interaktywny słowniczek trudnych pojęć w stylu Glassmorphism."
           },
+          poznajai: {
+            desc: "Interaktywny, nowoczesny przewodnik dla początkujących rozpoczynających naukę sztucznej inteligencji. Zbudowany z użyciem czystego HTML5, CSS3 i Vanilla JS. Oferuje dynamiczną, rysowaną w miarę scrollowania oś czasu, efekt 3D Tilt dla kart, parallax podążający za myszką oraz pełny tryb ciemny."
+          },
           suno: {
             desc: "Odkryj moją bibliotekę utworów muzycznych wygenerowanych w pełni za pomocą Suno AI. Eksperymenty z brzmieniem, wokalem i nowoczesnymi gatunkami."
           },
@@ -178,6 +181,9 @@ const resources = {
           },
           topseven: {
             desc: "An educational mobile app for Android (Kotlin & Jetpack Compose) that presents condensed knowledge in interactive lists. Features 147 key facts across 21 thematic categories, an interactive flashcards learning mode, and a built-in glassmorphic glossary for difficult terms."
+          },
+          poznajai: {
+            desc: "An interactive, modern guide for beginners starting their journey with artificial intelligence. Built with pure HTML5, CSS3, and Vanilla JS. Features a dynamic scroll-drawn timeline, 3D Tilt card effects, parallax tracking mouse movements, and full dark theme support."
           },
           suno: {
             desc: "Discover my library of music tracks generated entirely using Suno AI. Experiments with sound, vocals, and modern genres."
