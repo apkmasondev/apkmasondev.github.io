@@ -81,6 +81,14 @@ const Projects = () => {
       isApp: true
     },
     {
+      title: 'Poznaj AI',
+      description: t('projects.items.poznajai.desc'),
+      image: '/poznaj_ai_mockup.webp',
+      tags: ['HTML5', 'CSS3', 'Vanilla JS'],
+      link: 'https://apkmasondev.github.io/poznaj_ai/',
+      isApp: false
+    },
+    {
       title: 'Suno AI Music',
       description: t('projects.items.suno.desc'),
       image: '/suno_mockup.webp',
@@ -114,11 +122,11 @@ const Projects = () => {
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className="glass-card"
+                className={`glass-card ${project.isSoon ? 'col-span-2' : ''}`}
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', height: project.isSoon ? '140px' : '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={project.image} 
                     alt={project.title} 
