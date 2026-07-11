@@ -17,59 +17,11 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      title: 'ScrollDebt',
-      description: t('projects.items.scrolldebt.desc'),
-      image: '/scrolldebt_mockup.webp',
-      tags: ['Android', 'Kotlin', 'AntiGravity'],
-      link: 'https://apkmasondev.github.io/scrolldebt-site/',
-      isApp: true
-    },
-    {
-      title: 'BRIXCORE',
-      description: t('projects.items.brixcore.desc'),
-      image: '/brixcore_ship.webp',
-      tags: ['Web Design', 'AI Generated', 'UI/UX'],
-      link: 'https://apkmasondev.github.io/brixcore/',
-      isApp: false
-    },
-    {
-      title: 'SKINCARE',
-      description: t('projects.items.skincare.desc'),
-      image: '/skincare_mockup.webp',
-      tags: ['Web Design', '3D Animation', 'Premium'],
-      link: 'https://apkmasondev.github.io/skincare_demo/',
-      isApp: false
-    },
-    {
-      title: 'Piątunio w Korpo',
-      description: t('projects.items.piatunio.desc'),
-      image: '/piatunio_mockup.webp',
-      tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
-      link: 'https://apkmasondev.github.io/piatuniowkorpo/',
-      isApp: true
-    },
-    {
-      title: 'Budżet Domowy',
-      description: t('projects.items.budzet.desc'),
-      image: '/budzet_mockup.webp',
-      tags: ['Rust', 'Tauri', 'React', 'SQLite'],
-      link: 'https://apkmasondev.github.io/budzet_domowy/',
-      isApp: true
-    },
-    {
-      title: 'RecAI',
-      description: t('projects.items.recai.desc'),
-      image: '/recai_mockup.webp',
-      tags: ['Android', 'Kotlin Compose', 'Whisper API', 'GPT-4o', 'Room DB'],
-      link: 'https://apkmasondev.github.io/recai_landing_page/',
-      isApp: true
-    },
-    {
-      title: 'PCVerse',
-      description: t('projects.items.pcverse.desc'),
-      image: '/pcverse_mockup.webp',
-      tags: ['React', 'Three.js', 'React Three Fiber', 'Tailwind'],
-      link: 'https://apkmasondev.github.io/pcverse/',
+      title: 'Poznaj AI',
+      description: t('projects.items.poznajai.desc'),
+      image: '/poznaj_ai_mockup.webp',
+      tags: ['HTML5', 'CSS3', 'Vanilla JS'],
+      link: 'https://apkmasondev.github.io/poznaj_ai/',
       isApp: false
     },
     {
@@ -81,12 +33,60 @@ const Projects = () => {
       isApp: true
     },
     {
-      title: 'Poznaj AI',
-      description: t('projects.items.poznajai.desc'),
-      image: '/poznaj_ai_mockup.webp',
-      tags: ['HTML5', 'CSS3', 'Vanilla JS'],
-      link: 'https://apkmasondev.github.io/poznaj_ai/',
+      title: 'PCVerse',
+      description: t('projects.items.pcverse.desc'),
+      image: '/pcverse_mockup.webp',
+      tags: ['React', 'Three.js', 'React Three Fiber', 'Tailwind'],
+      link: 'https://apkmasondev.github.io/pcverse/',
       isApp: false
+    },
+    {
+      title: 'RecAI',
+      description: t('projects.items.recai.desc'),
+      image: '/recai_mockup.webp',
+      tags: ['Android', 'Kotlin Compose', 'Whisper API', 'GPT-4o', 'Room DB'],
+      link: 'https://apkmasondev.github.io/recai_landing_page/',
+      isApp: true
+    },
+    {
+      title: 'Budżet Domowy',
+      description: t('projects.items.budzet.desc'),
+      image: '/budzet_mockup.webp',
+      tags: ['Rust', 'Tauri', 'React', 'SQLite'],
+      link: 'https://apkmasondev.github.io/budzet_domowy/',
+      isApp: true
+    },
+    {
+      title: 'Piątunio w Korpo',
+      description: t('projects.items.piatunio.desc'),
+      image: '/piatunio_mockup.webp',
+      tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
+      link: 'https://apkmasondev.github.io/piatuniowkorpo/',
+      isApp: true
+    },
+    {
+      title: 'SKINCARE',
+      description: t('projects.items.skincare.desc'),
+      image: '/skincare_mockup.webp',
+      tags: ['Web Design', '3D Animation', 'Premium'],
+      link: 'https://apkmasondev.github.io/skincare_demo/',
+      isApp: false
+    },
+    {
+      title: 'BRIXCORE',
+      description: t('projects.items.brixcore.desc'),
+      image: '/brixcore_ship.webp',
+      tags: ['Web Design', 'AI Generated', 'UI/UX'],
+      link: 'https://apkmasondev.github.io/brixcore/',
+      isApp: false
+    },
+    {
+      title: 'ScrollDebt',
+      description: t('projects.items.scrolldebt.desc'),
+      image: '/scrolldebt_mockup.webp',
+      tags: ['Android', 'Kotlin', 'AntiGravity'],
+      link: 'https://apkmasondev.github.io/scrolldebt-site/',
+      isApp: true
     },
     {
       title: 'Suno AI Music',
