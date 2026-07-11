@@ -9,7 +9,7 @@ const About = () => {
     { name: t('about.skills.prompting'), level: 95 },
     { name: t('about.skills.antigravity'), level: 90 },
     { name: t('about.skills.webdesign'), level: 85 },
-    { name: t('about.skills.music'), level: 80 },
+    { name: t('about.skills.codex'), level: 80 },
     { name: t('about.skills.copilot'), level: 80 },
     { name: t('about.skills.excel'), level: 85 },
     { name: t('about.skills.google'), level: 100 }
