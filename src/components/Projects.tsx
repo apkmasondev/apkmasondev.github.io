@@ -9,7 +9,7 @@ interface Project {
   tags: string[];
   link: string;
   isApp: boolean;
-  isSoon?: boolean;
+  isWide?: boolean;
 }
 
 const Projects = () => {
@@ -102,16 +102,8 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false
-    },
-    {
-      title: t('projects.items.soon.title'),
-      description: t('projects.items.soon.desc'),
-      image: '/coming_soon.webp',
-      tags: ['AI Powered'],
-      link: '#',
       isApp: false,
-      isSoon: true
+      isWide: true
     }
   ];
 
@@ -130,11 +122,11 @@ const Projects = () => {
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className="glass-card"
+                className={`glass-card ${project.isWide ? 'col-span-2' : ''}`}
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', height: project.isWide ? '140px' : '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={project.image} 
                     alt={project.title} 

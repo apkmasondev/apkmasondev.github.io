@@ -79,10 +79,6 @@ const resources = {
           },
           recai: {
             desc: "Prywatny dyktafon na system Android (Kotlin & Jetpack Compose). Pozwala na nagrywanie w tle (Foreground Service) i lokalny zapis WAV, a także na transkrypcję Whisper i automatyczne podsumowania GPT-4o mini bezpośrednio z OpenAI przy użyciu własnego klucza API zapisanego w sprzętowym Keystore."
-          },
-          soon: {
-            title: "Coming Soon",
-            desc: "Kolejna innowacyjna aplikacja rozwijana przy pomocy sztucznej inteligencji. Więcej szczegółów wkrótce..."
           }
         }
       },
@@ -199,10 +195,6 @@ const resources = {
           },
           recai: {
             desc: "A private voice recorder for Android (Kotlin & Jetpack Compose). Features background recording (Foreground Service) and local WAV storage, as well as Whisper transcription and automatic GPT-4o mini summaries directly from OpenAI using your own API key securely saved in hardware Keystore."
-          },
-          soon: {
-            title: "Coming Soon",
-            desc: "Another innovative application developed using artificial intelligence. More details soon..."
           }
         }
       },
