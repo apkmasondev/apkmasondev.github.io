@@ -122,47 +122,39 @@ const Projects = () => {
             {projects.map((project, idx) => (
               <motion.div 
                 key={idx}
-                className={`glass-card ${project.isWide ? 'col-span-2' : ''}`}
+                className={`glass-card project-card ${project.isWide ? 'col-span-2' : ''}`}
                 whileHover={{ y: -10 }}
-                style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
+                <div className="project-image-container">
                   <img 
                     src={project.image} 
                     alt={project.title} 
                     loading="lazy"
-                    style={{ 
-                      width: '100%', height: '100%', 
-                      objectFit: 'cover', 
-                      padding: '0',
-                      transition: 'transform 0.5s ease'
-                    }} 
-                    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-                    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                    className="project-image"
                   />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent, var(--bg-card))' }}></div>
+                  <div className="project-image-overlay"></div>
                 </div>
 
-                <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <div style={{ display: 'flex', gap: '10px', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+                <div className="project-card-content">
+                  <div className="project-tags">
                     {project.tags.map(tag => (
-                      <span key={tag} className="mono-tag" style={{ fontSize: '0.75rem', borderColor: 'var(--accent-glow)', color: 'var(--accent-color)' }}>
+                      <span key={tag} className="mono-tag">
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#fff' }}>{project.title}</h3>
-                  <p className="text-muted mb-4" style={{ flexGrow: 1 }}>
+                  <h3>{project.title}</h3>
+                  <p className="text-muted mb-4">
                     {project.description}
                   </p>
 
                   {project.link !== '#' ? (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
                       {project.isApp ? <><Smartphone size={18} aria-hidden="true" /> {t('projects.btnApp')}</> : <><ExternalLink size={18} aria-hidden="true" /> {t('projects.btnDetails')}</>}
                     </a>
                   ) : (
-                    <span className="btn btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.6rem 1.2rem', fontSize: '0.95rem', opacity: 0.5, cursor: 'not-allowed' }}>
+                    <span className="btn btn-secondary disabled">
                       {t('projects.btnSoon')}
                     </span>
                   )}
