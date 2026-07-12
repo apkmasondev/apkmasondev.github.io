@@ -126,7 +126,7 @@ const Projects = () => {
                 whileHover={{ y: -10 }}
                 style={{ display: 'flex', flexDirection: 'column', padding: 0 }}
               >
-                <div style={{ width: '100%', height: project.isWide ? '140px' : '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', height: '240px', background: 'rgba(0,0,0,0.5)', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={project.image} 
                     alt={project.title} 
