@@ -1,3 +1,10 @@
+/* ==========================================================================
+   PORTFOLIO STYLESHEET (index.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Theme & Global Custom Properties
+   -------------------------------------------------------------------------- */
 :root {
   --bg-dark: #050508;
   --bg-card: rgba(20, 20, 30, 0.4);
@@ -15,6 +22,9 @@
   --font-mono: 'Space Mono', monospace;
 }
 
+/* --------------------------------------------------------------------------
+   2. Reset & Base Styles
+   -------------------------------------------------------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,7 +44,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Background Animation */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   3. Background Animations
+   -------------------------------------------------------------------------- */
 .bg-animation {
   position: fixed;
   top: 0;
@@ -58,7 +75,6 @@ body {
   animation: scrollBackground 40s linear infinite;
 }
 
-/* Subtle glow orbs */
 .glow-orb {
   position: absolute;
   border-radius: 50%;
@@ -67,11 +83,13 @@ body {
   opacity: 0.4;
   animation: float 10s ease-in-out infinite alternate;
 }
+
 .orb-1 {
   top: 5%; left: 15%;
   width: 500px; height: 500px;
   background: var(--accent-secondary);
 }
+
 .orb-2 {
   top: 30%; right: 10%;
   width: 600px; height: 600px;
@@ -89,7 +107,9 @@ body {
   100% { transform: translate(30px, 50px); }
 }
 
-/* Layout Utilities */
+/* --------------------------------------------------------------------------
+   4. Layout & Grid System
+   -------------------------------------------------------------------------- */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -118,7 +138,25 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Premium Components */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+/* --------------------------------------------------------------------------
+   5. Premium Glass Bento Cards
+   -------------------------------------------------------------------------- */
 .glass-card {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
@@ -152,28 +190,13 @@ body {
   opacity: 1;
 }
 
-.responsive-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 2.5rem;
-}
-
-/* Projects Grid (2x2) */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-}
-
-.col-span-2 {
-  grid-column: span 2;
-}
-
-/* Project Card Specifics */
-.project-card {
+/* --------------------------------------------------------------------------
+   6. Project Card Subcomponents
+   -------------------------------------------------------------------------- */
+.glass-card.project-card {
   display: flex;
   flex-direction: column;
-  padding: 0 !important;
+  padding: 0; /* Overrides glass-card padding cleanly via class specificity */
 }
 
 .project-image-container {
@@ -188,12 +211,17 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding: 0;
   transition: transform 0.5s ease;
 }
 
 .project-image:hover {
   transform: scale(1.05);
+}
+
+.project-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, var(--bg-card));
 }
 
 .project-card-content {
@@ -237,12 +265,9 @@ body {
   cursor: not-allowed;
 }
 
-.project-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent, var(--bg-card));
-}
-
+/* --------------------------------------------------------------------------
+   7. Interactive Buttons
+   -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -297,12 +322,9 @@ body {
   transform: translateY(-2px);
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  line-height: 1.2;
-}
-
+/* --------------------------------------------------------------------------
+   8. Typography & Text Styles
+   -------------------------------------------------------------------------- */
 .text-gradient {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
   -webkit-background-clip: text;
@@ -323,7 +345,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
 }
 
-/* Navbar */
+/* --------------------------------------------------------------------------
+   9. Header Navigation
+   -------------------------------------------------------------------------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -399,7 +423,9 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Utilities */
+/* --------------------------------------------------------------------------
+   10. General Utility Classes & Accessibility
+   -------------------------------------------------------------------------- */
 .flex-center {
   display: flex;
   align-items: center;
@@ -414,40 +440,6 @@ h1, h2, h3, h4, h5, h6 {
 .mb-2 { margin-bottom: 1rem; }
 .mb-4 { margin-bottom: 2rem; }
 
-/* Responsive */
-@media (max-width: 850px) {
-  .container {
-    padding: 0 1.5rem;
-  }
-  .nav-links {
-    display: none;
-  }
-  .mobile-menu-btn-container {
-    display: flex !important;
-  }
-  .mobile-menu-btn {
-    display: block;
-  }
-  .section {
-    padding: 5rem 0 3rem 0;
-  }
-  .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 2.5rem;
-  }
-  .responsive-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .col-span-2 {
-    grid-column: span 1;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -459,6 +451,7 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   border-width: 0;
 }
+
 .focus\:not-sr-only:focus {
   position: static;
   width: auto;
@@ -471,4 +464,48 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-card);
   color: white;
   z-index: 1000;
+}
+
+/* --------------------------------------------------------------------------
+   11. Responsive Design (Media Queries)
+   -------------------------------------------------------------------------- */
+@media (max-width: 850px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-btn-container {
+    display: flex !important;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .section {
+    padding: 5rem 0 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .col-span-2 {
+    grid-column: span 1;
+  }
 }
