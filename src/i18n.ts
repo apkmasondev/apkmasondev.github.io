@@ -65,6 +65,9 @@ const resources = {
           topseven: {
             desc: "Edukacyjna aplikacja mobilna na system Android (Kotlin & Jetpack Compose) prezentująca skondensowaną wiedzę w formie interaktywnych zestawień. Zawiera 147 faktów w 21 kategoriach tematycznych, tryb fiszek do nauki oraz wbudowany interaktywny słowniczek trudnych pojęć w stylu Glassmorphism."
           },
+          sfera: {
+            desc: "Interaktywna, trójwymiarowa sfera wiedzy prezentująca kolekcję obrazów i ciekawostek rozmieszczonych algorytmem Fibonacciego. Stworzona w czystym JS z lokalnym Three.js i WebGL. Projekt powstał jako efekt uboczny testowania modelu ChatGPT 5.6 SOL."
+          },
           poznajai: {
             desc: "Interaktywny, nowoczesny przewodnik dla początkujących rozpoczynających naukę sztucznej inteligencji. Zbudowany z użyciem czystego HTML5, CSS3 i Vanilla JS. Oferuje dynamiczną, rysowaną w miarę scrollowania oś czasu, efekt 3D Tilt dla kart, parallax podążający za myszką oraz pełny tryb ciemny."
           },
@@ -181,6 +184,9 @@ const resources = {
           },
           topseven: {
             desc: "An educational mobile app for Android (Kotlin & Jetpack Compose) that presents condensed knowledge in interactive lists. Features 147 key facts across 21 thematic categories, an interactive flashcards learning mode, and a built-in glassmorphic glossary for difficult terms."
+          },
+          sfera: {
+            desc: "An interactive 3D sphere of knowledge displaying a collection of facts and images distributed using the Fibonacci sphere algorithm. Built in pure JS with local Three.js and WebGL. This project is a side effect of testing the ChatGPT 5.6 SOL model."
           },
           poznajai: {
             desc: "An interactive, modern guide for beginners starting their journey with artificial intelligence. Built with pure HTML5, CSS3, and Vanilla JS. Features a dynamic scroll-drawn timeline, 3D Tilt card effects, parallax tracking mouse movements, and full dark theme support."
