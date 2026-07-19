@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   const LanguageSwitcher = () => {
-    const isPl = i18n.language === 'pl';
+    const isPl = i18n.language && i18n.language.startsWith('pl');
     return (
       <button 
         onClick={() => changeLanguage(isPl ? 'en' : 'pl')}
