@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          allergen: {
+            desc: "Kolejny hobbistyczny projekt stworzony przy pomocy AI. Aplikacja Android porównująca dane o produkcie z lokalnym profilem alergenów i diety. Działa w pełni offline i gwarantuje prywatność."
+          },
           scrolldebt: {
             desc: "Aplikacja zamieniająca bezmyślne doomscrolling w brutalne przebudzenie. Śledzi zmarnowany czas, wytyka wady za pomocą \"Brutal Truth\" i pomaga odzyskać kontrolę nad życiem. Zero zbierania danych, 100% offline."
           },
@@ -163,6 +166,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          allergen: {
+            desc: "Another hobby project created with AI. An Android application comparing product data with a local allergen and diet profile. Works fully offline and guarantees privacy."
+          },
           scrolldebt: {
             desc: "An app that turns mindless doomscrolling into a brutal awakening. It tracks wasted time, points out flaws using 'Brutal Truth', and helps you regain control over your life. Zero data collection, 100% offline."
           },

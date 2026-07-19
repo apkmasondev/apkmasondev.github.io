@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'Allergen & Diet Guard',
+      description: t('projects.items.allergen.desc'),
+      image: '/allergen_mockup.webp',
+      tags: ['Android', 'Kotlin Compose', 'Room DB'],
+      link: 'https://apkmasondev.github.io/AllergenGuard/',
+      isApp: true
+    },
+    {
       title: 'Sfera',
       description: t('projects.items.sfera.desc'),
       image: '/sfera_mockup.webp',
@@ -102,8 +110,7 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false,
-      isWide: true
+      isApp: false
     }
   ];
 
