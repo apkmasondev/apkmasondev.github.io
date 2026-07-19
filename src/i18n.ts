@@ -48,7 +48,7 @@ const resources = {
         btnSoon: "Wkrótce...",
         items: {
           allergen: {
-            desc: "Kolejny hobbistyczny projekt stworzony przy pomocy AI. Aplikacja Android analizująca skład za pomocą otwartej bazy Open Food Facts i porównująca go z lokalnym profilem alergenów i diety. Działa w pełni offline i gwarantuje prywatność."
+            desc: "Hobbystyczny projekt stworzony z AI. Aplikacja Android analizująca skład (Open Food Facts) pod kątem Twojego profilu alergenów. Dane użytkownika i historia pozostają w 100% offline."
           },
           scrolldebt: {
             desc: "Aplikacja zamieniająca bezmyślne doomscrolling w brutalne przebudzenie. Śledzi zmarnowany czas, wytyka wady za pomocą \"Brutal Truth\" i pomaga odzyskać kontrolę nad życiem. Zero zbierania danych, 100% offline."
@@ -167,7 +167,7 @@ const resources = {
         btnSoon: "Coming Soon...",
         items: {
           allergen: {
-            desc: "Another hobby project created with AI. An Android application that analyzes ingredients via the open database Open Food Facts and compares them with a local allergen and diet profile. Works fully offline and guarantees privacy."
+            desc: "Hobby AI project. An Android app analyzing ingredients (Open Food Facts) against your personal allergen profile. User data and scan history remain 100% offline."
           },
           scrolldebt: {
             desc: "An app that turns mindless doomscrolling into a brutal awakening. It tracks wasted time, points out flaws using 'Brutal Truth', and helps you regain control over your life. Zero data collection, 100% offline."
