@@ -99,7 +99,7 @@ const Projects = () => {
     {
       title: 'BRIXCORE',
       description: t('projects.items.brixcore.desc'),
-      image: '/brixcore_ship.webp',
+      image: '/brixcore_mockup.webp',
       tags: ['Web Design', 'AI Generated', 'UI/UX'],
       link: 'https://apkmasondev.github.io/brixcore/',
       isApp: false
