@@ -28,7 +28,7 @@ const resources = {
         title: "O Mnie",
         subtitle: "Lider na co dzień, <1>kreator AI</1> po godzinach.",
         p1: "Na co dzień pracuję w prężnie działającej korporacji w branży e-commerce, gdzie jako lider zarządzam dużym zespołem techników. Kiedy zamykam służbowego laptopa, zanurzam się w nieskończonych możliwościach sztucznej inteligencji. Nie ograniczam się tylko do kodu – projektuję zaawansowane Landing Pages, generuję multimedia przy pomocy AI i swobodnie eksploruję inne dziedziny, w których algorytmy spotykają się z kreatywnością.",
-        p2: "Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <1>Google Umiejętności Jutra 2.0</1>. To właśnie ono napędziło mnie do eksperymentów. Dziś, dzięki wsparciu potężnych modeli językowych, płynnie poruszam się w środowisku AntiGravity IDE i błyskawicznie dowożę gotowe projekty.",
+        p2: "Ogromną inspiracją stało się dla mnie ukończenie programu szkoleniowego <1>Google Umiejętności Jutra 2.0</1>. To właśnie ono napędziło mnie do eksperymentów. Dziś, łącząc możliwości AntiGravity IDE, Codex i potężnych modeli AI, hobbystycznie realizuję mnóstwo projektów w błyskawicznym tempie.",
         stackTitle: "Mój Stack / Umiejętności",
         skills: {
           android: "Środowisko Android Studio",
@@ -147,7 +147,7 @@ const resources = {
         title: "About Me",
         subtitle: "Leader by day, <1>AI Creator</1> by night.",
         p1: "In my daily work, I lead a large technical team at a thriving e-commerce corporation. When I close my work laptop, I immerse myself in the infinite possibilities of artificial intelligence. I don't limit myself to code – I design advanced Landing Pages, generate multimedia using AI, and freely explore other domains where algorithms meet creativity.",
-        p2: "Completing the <1>Google Umiejętności Jutra 2.0</1> (Skills of Tomorrow) training program was a huge inspiration for me and fueled my initial experiments. Today, empowered by powerful language models, I seamlessly navigate the AntiGravity IDE and rapidly deliver polished projects.",
+        p2: "Completing the <1>Google Umiejętności Jutra 2.0</1> (Skills of Tomorrow) training program was a huge inspiration for me and fueled my initial experiments. Today, by combining the capabilities of AntiGravity IDE, Codex, and powerful AI models, I realize a multitude of hobby projects at lightning speed.",
         stackTitle: "My Stack / Skills",
         skills: {
           android: "Android Studio Environment",
