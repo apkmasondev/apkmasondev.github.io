@@ -9,22 +9,22 @@ const Workflow = () => {
 
   const steps = [
     {
-      icon: <Waypoints size={32} color="var(--accent-color)" />,
+      icon: <Waypoints size={32} color="url(#icon-gradient)" />,
       title: t('workflow.steps.step1.title'),
       desc: t('workflow.steps.step1.desc')
     },
     {
-      icon: <Sparkles size={32} color="var(--accent-secondary)" />,
+      icon: <Sparkles size={32} color="url(#icon-gradient)" />,
       title: t('workflow.steps.step2.title'),
       desc: t('workflow.steps.step2.desc')
     },
     {
-      icon: <Layers size={32} color="#8b5cf6" />,
+      icon: <Layers size={32} color="url(#icon-gradient)" />,
       title: t('workflow.steps.step3.title'),
       desc: t('workflow.steps.step3.desc')
     },
     {
-      icon: <Diamond size={32} color="#10b981" />,
+      icon: <Diamond size={32} color="url(#icon-gradient)" />,
       title: t('workflow.steps.step4.title'),
       desc: t('workflow.steps.step4.desc')
     }
@@ -94,6 +94,12 @@ const Workflow = () => {
 
   return (
     <section className="section" id="workflow">
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="var(--accent-color)" />
+          <stop offset="100%" stopColor="var(--accent-secondary)" />
+        </linearGradient>
+      </svg>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
