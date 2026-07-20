@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          vibeshift: {
+            desc: "Kolejny efekt uboczny eksperymentów z Codexem. Nowoczesny, interaktywny landing page poświęcony filozofii vibe codingu i programowaniu z udziałem sztucznej inteligencji. Zbudowany z wykorzystaniem HTML5, Vanilla JS, GSAP i Lenis dla maksymalnej płynności."
+          },
           allergen: {
             desc: "Hobbystyczny projekt stworzony z AI. Aplikacja Android analizująca skład (Open Food Facts) pod kątem Twojego profilu alergenów. Dane użytkownika i historia pozostają w 100% offline."
           },
@@ -166,6 +169,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          vibeshift: {
+            desc: "Another side effect of experiments with Codex. A modern, interactive landing page dedicated to the philosophy of vibe coding and AI-assisted programming. Built using HTML5, Vanilla JS, GSAP, and Lenis for maximum smoothness."
+          },
           allergen: {
             desc: "Hobby AI project. An Android app analyzing ingredients (Open Food Facts) against your personal allergen profile. User data and scan history remain 100% offline."
           },

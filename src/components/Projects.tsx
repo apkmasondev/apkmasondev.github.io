@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'VIBE//SHIFT',
+      description: t('projects.items.vibeshift.desc'),
+      image: '/vibeshift_mockup.webp',
+      tags: ['Vibe Coding', 'GSAP', 'Vanilla JS'],
+      link: 'https://apkmasondev.github.io/vibe_shift/',
+      isApp: false
+    },
+    {
       title: 'Allergen & Diet Guard',
       description: t('projects.items.allergen.desc'),
       image: '/allergen_mockup.webp',
@@ -110,7 +118,8 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false
+      isApp: false,
+      isWide: true
     }
   ];
 
