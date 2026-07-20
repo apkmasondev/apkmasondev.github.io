@@ -36,7 +36,7 @@ const About = () => {
                 overflow: 'hidden',
                 position: 'relative'
               }}>
-                <img src="/profile.jpg" alt="Krzysztof" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.15)' }} />
+                <img src="/profile.jpg" alt="Krzysztof" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(5,5,8,0.8), transparent)' }}></div>
               </div>
             </div>

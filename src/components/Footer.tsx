@@ -10,7 +10,7 @@ const Footer = () => {
           
           <div style={{ flex: '1 1 300px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-              <img src="/apkmason_logo_premium.webp" alt="ApkMason.dev Logo" loading="lazy" style={{ height: '32px', width: '32px', objectFit: 'cover', borderRadius: '50%' }} />
+              <img src="/logo.svg" alt="ApkMason.dev Logo" loading="lazy" style={{ height: '32px', width: '32px', objectFit: 'cover', borderRadius: '50%' }} />
               <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}><span className="text-gradient">ApkMason</span><span style={{ color: 'white', fontSize: '0.7em', opacity: 0.9 }}>.dev</span></span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
