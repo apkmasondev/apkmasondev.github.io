@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, Zap, Rocket, Code2 } from 'lucide-react';
+import { Waypoints, Sparkles, Layers, Diamond, Code2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Workflow = () => {
@@ -9,22 +9,22 @@ const Workflow = () => {
 
   const steps = [
     {
-      icon: <Target size={32} color="var(--accent-color)" />,
+      icon: <Waypoints size={32} color="var(--accent-color)" />,
       title: t('workflow.steps.step1.title'),
       desc: t('workflow.steps.step1.desc')
     },
     {
-      icon: <Lightbulb size={32} color="var(--accent-secondary)" />,
+      icon: <Sparkles size={32} color="var(--accent-secondary)" />,
       title: t('workflow.steps.step2.title'),
       desc: t('workflow.steps.step2.desc')
     },
     {
-      icon: <Zap size={32} color="#8b5cf6" />,
+      icon: <Layers size={32} color="#8b5cf6" />,
       title: t('workflow.steps.step3.title'),
       desc: t('workflow.steps.step3.desc')
     },
     {
-      icon: <Rocket size={32} color="#10b981" />,
+      icon: <Diamond size={32} color="#10b981" />,
       title: t('workflow.steps.step4.title'),
       desc: t('workflow.steps.step4.desc')
     }

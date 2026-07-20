@@ -95,19 +95,19 @@ const resources = {
         steps: {
           step1: {
             title: "Koncept & Architektura",
-            desc: "Wszystko zaczyna się od wizji. Rozpisuję cel i zamieniam go w solidny fundament pod aplikację, stronę lub utwór."
+            desc: "Zaczynam od szerokiej perspektywy. Projektuję architekturę rozwiązania, dobieram odpowiednie modele AI i buduję solidny fundament technologiczny."
           },
           step2: {
-            title: "Prompting & Generowanie",
-            desc: "Zatrudniam czołowe modele (Claude, ChatGPT, Suno AI), by błyskawicznie przetopić koncepcję na kod, tekst lub dźwięk."
+            title: "Vibe Coding & Prompting",
+            desc: "Współpracuję z flagowymi modelami (jak Claude, Gemini, czy GPT), wykorzystując zaawansowany prompting, by błyskawicznie przekuć pomysły w wysokiej jakości kod i multimedia."
           },
           step3: {
-            title: "AntiGravity & Integracja",
-            desc: "Traktuję wygenerowane elementy jak puzzle. Składam je w dopracowaną całość za pomocą środowiska AntiGravity IDE."
+            title: "Integracja (AntiGravity & Codex)",
+            desc: "Traktuję wygenerowane komponenty jak części precyzyjnego mechanizmu. Składam je w harmonijną całość, pracując płynnie w środowiskach AntiGravity IDE oraz Codex."
           },
           step4: {
-            title: "Szlifowanie & Publikacja",
-            desc: "Ostatnie 20% to rzemiosło. Dopieszczam UX/UI, optymalizuję detale i wypuszczam gotowy produkt w świat."
+            title: "Szlifowanie & Wdrożenie",
+            desc: "Ostatnie 20% to cyfrowe rzemiosło. Dopieszczam UX/UI, optymalizuję detale i wdrażam bezbłędnie działający produkt na produkcję."
           }
         },
         prompts: [
@@ -217,19 +217,19 @@ const resources = {
         steps: {
           step1: {
             title: "Concept & Architecture",
-            desc: "Everything starts with a vision. I outline the goal and turn it into a solid foundation for an app, website, or track."
+            desc: "I start with a broad perspective. I design the solution architecture, select appropriate AI models, and build a solid technological foundation."
           },
           step2: {
-            title: "Prompting & Generation",
-            desc: "I employ top models (Claude, ChatGPT, Suno AI) to instantly forge the concept into code, text, or sound."
+            title: "Vibe Coding & Prompting",
+            desc: "I collaborate with flagship models (like Claude, Gemini, or GPT) using advanced prompting to instantly forge ideas into high-quality code and multimedia."
           },
           step3: {
-            title: "AntiGravity & Integration",
-            desc: "I treat the generated elements like puzzle pieces. I assemble them into a refined whole using the AntiGravity IDE."
+            title: "Integration (AntiGravity & Codex)",
+            desc: "I treat the generated components like parts of a precision mechanism. I assemble them into a harmonious whole, working seamlessly across AntiGravity IDE and Codex."
           },
           step4: {
-            title: "Polishing & Publication",
-            desc: "The final 20% is craftsmanship. I polish the UX/UI, optimize details, and release the finished product to the world."
+            title: "Polishing & Deployment",
+            desc: "The final 20% is digital craftsmanship. I polish the UX/UI, optimize details, and deploy a flawlessly functioning product to production."
           }
         },
         prompts: [
