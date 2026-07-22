@@ -22,7 +22,8 @@ const Projects = () => {
       image: '/spacescale_mockup.webp',
       tags: ['Three.js', 'Vite', 'WebGL', 'PWA', '3D'],
       link: 'https://space-scale-explorer.krzychu1988.chatgpt.site/',
-      isApp: false
+      isApp: false,
+      isWide: true
     },
     {
       title: 'VIBE//SHIFT',
