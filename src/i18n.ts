@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          spacescale: {
+            desc: "Interaktywna aplikacja edukacyjna pokazująca 42 rzędy wielkości — od protonu (10⁻¹⁵ m) po obserwowalny Wszechświat (≈10²⁷ m). Logarytmiczna podróż przez kosmos z obracanymi modelami 3D dla 28 obiektów, porównywarką i pełnym trybem PWA offline."
+          },
           vibeshift: {
             desc: "Kolejny efekt uboczny eksperymentów z Codexem. Nowoczesny, interaktywny landing page poświęcony filozofii vibe codingu i programowaniu z udziałem sztucznej inteligencji. Zbudowany z wykorzystaniem HTML5, Vanilla JS, GSAP i Lenis dla maksymalnej płynności."
           },
@@ -169,6 +172,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          spacescale: {
+            desc: "An interactive educational app presenting 42 orders of magnitude — from a proton (10⁻¹⁵ m) to the observable Universe (≈10²⁷ m). Features a logarithmic 3D journey, an object comparator, and full PWA offline support."
+          },
           vibeshift: {
             desc: "Another side effect of experiments with Codex. A modern, interactive landing page dedicated to the philosophy of vibe coding and AI-assisted programming. Built using HTML5, Vanilla JS, GSAP, and Lenis for maximum smoothness."
           },
