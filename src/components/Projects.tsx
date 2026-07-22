@@ -22,8 +22,7 @@ const Projects = () => {
       image: '/spacescale_mockup.webp',
       tags: ['Three.js', 'Vite', 'WebGL', 'PWA', '3D'],
       link: 'https://space-scale-explorer.krzychu1988.chatgpt.site/',
-      isApp: false,
-      isWide: true
+      isApp: false
     },
     {
       title: 'VIBE//SHIFT',
@@ -127,8 +126,7 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false,
-      isWide: true
+      isApp: false
     }
   ];
 
