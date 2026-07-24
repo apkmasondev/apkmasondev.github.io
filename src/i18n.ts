@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          sandtosilicon: {
+            desc: "Nowoczesna, interaktywna strona przedstawiająca proces przemiany krzemu z ziaren piasku w microchip/procesor sterowany ruchem przewijania (scroll-driven video scrubbing). Projekt powstał podczas zabawy z modelem Flash 3.6, a plan i koncept strony przygotował model GPT 5.6 SOL. Niska jakość filmu wynika z generowania go na budżetowych modelach."
+          },
           spacescale: {
             desc: "Interaktywna aplikacja edukacyjna pokazująca 42 rzędy wielkości — od protonu (10⁻¹⁵ m) po obserwowalny Wszechświat (≈10²⁷ m). Logarytmiczna podróż przez kosmos z obracanymi modelami 3D dla 28 obiektów, porównywarką i pełnym trybem PWA offline."
           },
@@ -172,6 +175,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          sandtosilicon: {
+            desc: "A modern, interactive website showcasing the transformation of silicon from sand to a microchip using scroll-driven video scrubbing. Built during experiments with Flash 3.6, with site planning by GPT 5.6 SOL. (Low video quality due to budget AI video generation models)."
+          },
           spacescale: {
             desc: "An interactive educational app presenting 42 orders of magnitude — from a proton (10⁻¹⁵ m) to the observable Universe (≈10²⁷ m). Features a logarithmic 3D journey, an object comparator, and full PWA offline support."
           },

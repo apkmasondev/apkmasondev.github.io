@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'From Sand to Silicon',
+      description: t('projects.items.sandtosilicon.desc'),
+      image: '/sand_to_silicon_mockup.webp',
+      tags: ['Scroll-Driven', 'GSAP', 'Flash 3.6', 'GPT 5.6 SOL'],
+      link: 'https://apkmasondev.github.io/sand_to_silicon/',
+      isApp: false
+    },
+    {
       title: 'Space Scale',
       description: t('projects.items.spacescale.desc'),
       image: '/spacescale_mockup.webp',
@@ -126,7 +134,8 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false
+      isApp: false,
+      isWide: true
     }
   ];
 
