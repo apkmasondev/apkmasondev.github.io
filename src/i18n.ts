@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          evophone: {
+            desc: "Interaktywna strona scroll-driven przedstawiająca ewolucję telefonu i mobilnych technologii od lat 90. po przyszłość. Projekt stanowi kontynuację eksperymentów i modyfikację mechaniki poprzedniego projektu (wideo sterowane scrollem), przeniesioną na nową tematykę."
+          },
           sandtosilicon: {
             desc: "Nowoczesna, interaktywna strona przedstawiająca proces przemiany krzemu z ziaren piasku w microchip/procesor sterowany ruchem przewijania (scroll-driven video scrubbing). Projekt powstał podczas zabawy z modelem Flash 3.6, a plan i koncept strony przygotował model GPT 5.6 SOL. Niska jakość filmu wynika z generowania go na budżetowych modelach."
           },
@@ -175,6 +178,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          evophone: {
+            desc: "An interactive scroll-driven website showcasing the evolution of mobile phones from the late 90s into the future. A continuation of experiments and a thematic evolution of the previous scroll-driven video mechanics."
+          },
           sandtosilicon: {
             desc: "A modern, interactive website showcasing the transformation of silicon from sand to a microchip using scroll-driven video scrubbing. Built during experiments with Flash 3.6, with site planning by GPT 5.6 SOL. (Low video quality due to budget AI video generation models)."
           },

@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'Evolution of the Phone',
+      description: t('projects.items.evophone.desc'),
+      image: '/evo_phone_mockup.webp',
+      tags: ['Scroll-Driven', 'GSAP', 'TypeScript', 'Vite'],
+      link: 'https://apkmasondev.github.io/evo_phone/',
+      isApp: false
+    },
+    {
       title: 'From Sand to Silicon',
       description: t('projects.items.sandtosilicon.desc'),
       image: '/sand_to_silicon_mockup.webp',
@@ -134,8 +142,7 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false,
-      isWide: true
+      isApp: false
     }
   ];
 
