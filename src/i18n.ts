@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          ascent: {
+            desc: "Interaktywna, kinowa strona typu scroll-driven przedstawiająca symboliczną ewolucję człowieka. Projekt stworzony w całości przy pomocy modelu GPT 5.6 SOL HIGH (obecna niska jakość wideo wynika z darmowych zasobów Google Flow, jednak w przyszłości planuję wypróbowanie płatnych modeli z Highsfield)."
+          },
           insidetheinternet: {
             desc: "Interaktywna wizualizacja cyfrowej infrastruktury przedstawiająca podróż pakietu danych po sieci po kliknięciu myszką. Stanowi kolejną część eksperymentów ze stronami typu scroll-driven. Projekt przygotowany z udziałem modeli Flash 3.6 oraz GPT 5.6 Terra (niska jakość wideo wynika z korzystania z ograniczonych zasobów Google Flow)."
           },
@@ -181,6 +184,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          ascent: {
+            desc: "An interactive, cinematic scroll-driven website depicting the symbolic evolution of humanity. Created entirely with GPT 5.6 SOL HIGH (currently low video quality due to free Google Flow resources, though I plan to test paid Highsfield models in the future)."
+          },
           insidetheinternet: {
             desc: "An interactive visualization of digital infrastructure depicting a data packet's journey through the internet upon a click. Part of continuing experiments with scroll-driven experiences. Built using Flash 3.6 & GPT 5.6 Terra (low video quality due to limited Google Flow resources)."
           },
