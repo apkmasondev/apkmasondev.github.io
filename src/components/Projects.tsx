@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'ASCENT — The Human Journey',
+      description: t('projects.items.ascent.desc'),
+      image: '/ascent_human_journey_mockup.webp',
+      tags: ['Scroll-Driven', 'Cinematic', 'GPT 5.6 SOL', 'Vite'],
+      link: 'https://apkmasondev.github.io/ascent-human-journey/',
+      isApp: false
+    },
+    {
       title: 'Inside the Internet',
       description: t('projects.items.insidetheinternet.desc'),
       image: '/inside_the_internet_mockup.webp',
@@ -150,8 +158,7 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false,
-      isWide: true
+      isApp: false
     }
   ];
 
