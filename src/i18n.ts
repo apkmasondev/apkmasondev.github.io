@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          insidetheinternet: {
+            desc: "Interaktywna wizualizacja cyfrowej infrastruktury przedstawiająca podróż pakietu danych po sieci po kliknięciu myszką. Stanowi kolejną część eksperymentów ze stronami typu scroll-driven. Projekt przygotowany z udziałem modeli Flash 3.6 oraz GPT 5.6 Terra (niska jakość wideo wynika z korzystania z ograniczonych zasobów Google Flow)."
+          },
           evophone: {
             desc: "Interaktywna strona scroll-driven przedstawiająca ewolucję telefonu i mobilnych technologii od lat 90. po przyszłość. Projekt stanowi kontynuację eksperymentów i modyfikację mechaniki poprzedniego projektu (wideo sterowane scrollem), przeniesioną na nową tematykę."
           },
@@ -178,6 +181,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          insidetheinternet: {
+            desc: "An interactive visualization of digital infrastructure depicting a data packet's journey through the internet upon a click. Part of continuing experiments with scroll-driven experiences. Built using Flash 3.6 & GPT 5.6 Terra (low video quality due to limited Google Flow resources)."
+          },
           evophone: {
             desc: "An interactive scroll-driven website showcasing the evolution of mobile phones from the late 90s into the future. A continuation of experiments and a thematic evolution of the previous scroll-driven video mechanics."
           },
