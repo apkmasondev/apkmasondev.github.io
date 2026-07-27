@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          spark: {
+            desc: "Filmowa, scroll-driven opowieść o rozwoju ludzkości — od pierwszego ognia, przez energię i obliczenia, aż po eksplorację kosmosu. Kolejny projekt z serii scroll-driven, stworzony we współpracy modeli GPT 5.6 SOL HIGH oraz Omni Flash (Google Flow)."
+          },
           ascent: {
             desc: "Interaktywna, kinowa strona typu scroll-driven przedstawiająca symboliczną ewolucję człowieka. Projekt stworzony w całości przy pomocy modelu GPT 5.6 SOL HIGH (obecna niska jakość wideo wynika z darmowych zasobów Google Flow, jednak w przyszłości planuję wypróbowanie płatnych modeli z Highsfield)."
           },
@@ -184,6 +187,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          spark: {
+            desc: "A cinematic scroll-driven journey through human progress — from the first spark of fire to energy, computing, and deep space exploration. Part of the scroll-driven series, created with GPT 5.6 SOL HIGH & Omni Flash (Google Flow)."
+          },
           ascent: {
             desc: "An interactive, cinematic scroll-driven website depicting the symbolic evolution of humanity. Created entirely with GPT 5.6 SOL HIGH (currently low video quality due to free Google Flow resources, though I plan to test paid Highsfield models in the future)."
           },

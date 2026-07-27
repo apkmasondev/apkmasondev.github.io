@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'SPARK — From Fire to the Stars',
+      description: t('projects.items.spark.desc'),
+      image: '/spark_mockup.webp',
+      tags: ['Scroll-Driven', 'Next.js', 'GPT 5.6 SOL', 'Omni Flash'],
+      link: 'https://apkmasondev.github.io/spark/',
+      isApp: false
+    },
+    {
       title: 'ASCENT — The Human Journey',
       description: t('projects.items.ascent.desc'),
       image: '/ascent_human_journey_mockup.webp',
@@ -158,7 +166,8 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false
+      isApp: false,
+      isWide: true
     }
   ];
 
