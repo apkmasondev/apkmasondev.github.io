@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          btd: {
+            desc: "Interaktywne doświadczenie typu scroll-driven powstałe z chęci głębszego eksplorowania tej dziedziny i budowania klimatycznych opowieści. Łączy obraz z subtelnym tłem dźwiękowym oraz wyborem trzech tajemniczych dróg (Przyszłość, Nieznane, Cień). Projekt zrealizowany we współpracy modeli GPT 5.6 SOL HIGH i Omni Flash (Google Flow), z audytem kodu przeprowadzonym przez Opus 4.6."
+          },
           spark: {
             desc: "Filmowa, scroll-driven opowieść o rozwoju ludzkości — od pierwszego ognia, przez energię i obliczenia, aż po eksplorację kosmosu. Kolejny projekt z serii scroll-driven, stworzony we współpracy modeli GPT 5.6 SOL HIGH oraz Omni Flash (Google Flow)."
           },
@@ -187,6 +190,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          btd: {
+            desc: "An interactive scroll-driven experience created out of a desire to explore this domain deeper and build atmospheric digital stories. Combines video scrubbing with subtle background audio and a choice of three mysterious pathways (Future, Unknown, Shadow). Created with GPT 5.6 SOL HIGH & Omni Flash (Google Flow), audited by Opus 4.6."
+          },
           spark: {
             desc: "A cinematic scroll-driven journey through human progress — from the first spark of fire to energy, computing, and deep space exploration. Part of the scroll-driven series, created with GPT 5.6 SOL HIGH & Omni Flash (Google Flow)."
           },
