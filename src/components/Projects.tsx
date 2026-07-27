@@ -20,7 +20,7 @@ const Projects = () => {
       title: 'Beyond the Door',
       description: t('projects.items.btd.desc'),
       image: '/btd_mockup.webp',
-      tags: ['Scroll-Driven', 'Immersive Audio', 'GPT 5.6 SOL', 'Opus 4.6'],
+      tags: ['Scroll-Driven', 'Immersive', 'GPT 5.6 SOL', 'Opus 4.6'],
       link: 'https://apkmasondev.github.io/btd/',
       isApp: false
     },
