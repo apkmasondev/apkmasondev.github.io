@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'Beyond the Door',
+      description: t('projects.items.btd.desc'),
+      image: '/btd_mockup.webp',
+      tags: ['Scroll-Driven', 'Immersive Audio', 'GPT 5.6 SOL', 'Opus 4.6'],
+      link: 'https://apkmasondev.github.io/btd/',
+      isApp: false
+    },
+    {
       title: 'SPARK — From Fire to the Stars',
       description: t('projects.items.spark.desc'),
       image: '/spark_mockup.webp',
@@ -166,8 +174,7 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false,
-      isWide: true
+      isApp: false
     }
   ];
 
