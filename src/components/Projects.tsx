@@ -17,6 +17,14 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'Mechanika Czasu',
+      description: t('projects.items.time.desc'),
+      image: '/mechanika_czasu_mockup.webp',
+      tags: ['Scroll-Driven', 'Google Flow', 'GPT 5.6 SOL', 'VEO'],
+      link: 'https://apkmasondev.github.io/time/',
+      isApp: false
+    },
+    {
       title: 'Beyond the Door',
       description: t('projects.items.btd.desc'),
       image: '/btd_mockup.webp',
@@ -174,7 +182,8 @@ const Projects = () => {
       image: '/suno_mockup.webp',
       tags: ['AI Music', 'Suno', 'Audio'],
       link: 'https://suno.com/@kriss8812',
-      isApp: false
+      isApp: false,
+      isWide: true
     }
   ];
 
