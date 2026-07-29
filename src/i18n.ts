@@ -47,6 +47,9 @@ const resources = {
         btnDetails: "Zobacz szczegóły",
         btnSoon: "Wkrótce...",
         items: {
+          time: {
+            desc: "Scroll-driven opowieść o zegarku mechanicznym, powstała w ramach zabawy i ciągłych eksperymentów z nowoczesnymi narzędziami generatywnymi. Doświadczenie przeprowadza od nieruchomego kadru hero, przez montaż precyzyjnych elementów, aż po pracę kół zębatych mechanizmu. Projekt bada łączenie możliwości Google Flow (miks modeli VEO i Omni Flash) przy wsparciu GPT 5.6 SOL HIGH oraz Flash 3.6."
+          },
           btd: {
             desc: "Interaktywne doświadczenie typu scroll-driven powstałe z chęci głębszego eksplorowania tej dziedziny i budowania klimatycznych opowieści. Łączy obraz z subtelnym tłem dźwiękowym oraz wyborem trzech tajemniczych dróg (Przyszłość, Nieznane, Cień). Projekt zrealizowany we współpracy modeli GPT 5.6 SOL HIGH i Omni Flash (Google Flow), z audytem kodu przeprowadzonym przez Opus 4.6."
           },
@@ -190,6 +193,9 @@ const resources = {
         btnDetails: "View Details",
         btnSoon: "Coming Soon...",
         items: {
+          time: {
+            desc: "A scroll-driven narrative exploring a mechanical watch, created through playful experimentation with modern generative tools. The experience transitions from a static hero shot, through precise component assembly, into glowing working watch gears. Focuses on combining Google Flow (mix of VEO & Omni Flash) powered by GPT 5.6 SOL HIGH and Flash 3.6."
+          },
           btd: {
             desc: "An interactive scroll-driven experience created out of a desire to explore this domain deeper and build atmospheric digital stories. Combines video scrubbing with subtle background audio and a choice of three mysterious pathways (Future, Unknown, Shadow). Created with GPT 5.6 SOL HIGH & Omni Flash (Google Flow), audited by Opus 4.6."
           },
