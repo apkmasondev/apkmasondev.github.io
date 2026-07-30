@@ -1,0 +1,17 @@
+{
+  "name": "ApkMason.dev Portfolio",
+  "short_name": "ApkMason",
+  "description": "AI Creator portfolio featuring interactive digital experiences, apps, 3D websites and multimedia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070707",
+  "theme_color": "#070707",
+  "icons": [
+    {
+      "src": "/favicon_rounded.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

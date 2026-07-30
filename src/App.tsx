@@ -1,46 +1,56 @@
-
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Workflow from './components/Workflow';
-import Footer from './components/Footer';
-import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { AboutSection } from './components/AboutSection';
+import { FeaturedWork } from './components/FeaturedWork';
+import { HeroForge } from './components/HeroForge';
+import { Manifesto } from './components/Manifesto';
+import { ProcessSection } from './components/ProcessSection';
+import { ProjectArchive } from './components/ProjectArchive';
+import { SiteFooter } from './components/SiteFooter';
+import { SiteHeader } from './components/SiteHeader';
+import { copy } from './content';
+import type { Language } from './data/projects';
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState<Language>(() => {
+    const savedLanguage = window.localStorage.getItem('apkmason-language');
+
+    if (savedLanguage === 'pl' || savedLanguage === 'en') {
+      return savedLanguage;
+    }
+
+    return window.navigator.language.toLowerCase().startsWith('en') ? 'en' : 'pl';
+  });
+  const text = copy[language];
 
   useEffect(() => {
-    document.documentElement.lang = i18n.language;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', t('hero.description'));
-    }
-  }, [i18n.language, t]);
+    document.documentElement.lang = language;
+    document.title = 'ApkMason.dev — AI Creator';
+
+    const description = language === 'pl'
+      ? 'Portfolio Krzysztofa — AI Creatora projektującego interaktywne doświadczenia cyfrowe, aplikacje, strony 3D i multimedia.'
+      : 'Krzysztof’s portfolio — an AI Creator designing interactive digital experiences, apps, 3D websites and multimedia.';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
+  }, [language]);
+
+  const changeLanguage = (nextLanguage: Language) => {
+    setLanguage(nextLanguage);
+    window.localStorage.setItem('apkmason-language', nextLanguage);
+  };
 
   return (
     <>
-      <a href="#hero" className="sr-only focus:not-sr-only">
-        {t('navbar.skip')}
-      </a>
-      
-      <div className="bg-animation">
-        <div className="glow-orb orb-1"></div>
-        <div className="glow-orb orb-2"></div>
-        <div className="particles"></div>
-      </div>
-      
-      <Navbar />
-      
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Workflow />
+      <a className="skip-link" href="#main">{text.a11y.skip}</a>
+      <SiteHeader language={language} onLanguageChange={changeLanguage} />
+      <main id="main">
+        <HeroForge language={language} />
+        <Manifesto language={language} />
+        <FeaturedWork language={language} />
+        <ProjectArchive language={language} />
+        <ProcessSection language={language} />
+        <AboutSection language={language} />
       </main>
-
-      <Footer />
+      <SiteFooter language={language} />
     </>
   );
 }
