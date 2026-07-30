@@ -53,8 +53,8 @@ export const copy: Record<Language, Copy> = {
       subtitle: 'Interaktywne doświadczenia, aplikacje 3D i multimedia tworzone na styku kodu, motion designu i AI.',
       scroll: 'Przewiń, aby uruchomić',
       stages: [
-        { label: '01 / IDEA', title: 'Zaczyna się od iskry.', body: 'Nie od frameworka. Nie od szablonu. Od pomysłu, który domaga się własnej formy.' },
-        { label: '02 / SYSTEM', title: 'Nadaję jej strukturę.', body: 'Architektura, obraz, interakcja i technologia zaczynają pracować jak jeden mechanizm.' },
+        { label: '01 / IDEA', title: 'Zaczyna się od impulsu.', body: 'Nie od frameworka. Nie od szablonu. Od pomysłu, który domaga się własnej formy.' },
+        { label: '02 / SYSTEM', title: 'Nadaję mu strukturę.', body: 'Architektura, obraz, interakcja i technologia zaczynają pracować jak jeden mechanizm.' },
         { label: '03 / MOTION', title: 'Ruch staje się językiem.', body: 'Scroll nie przesuwa strony. Prowadzi historię, zmienia perspektywę i buduje napięcie.' },
         { label: '04 / EXPERIENCE', title: 'Portal jest otwarty.', body: 'Wejdź do kolekcji eksperymentów, aplikacji i cyfrowych opowieści.' },
       ],
@@ -136,7 +136,7 @@ export const copy: Record<Language, Copy> = {
       subtitle: 'Interactive experiences, 3D applications and multimedia created where code, motion design and AI meet.',
       scroll: 'Scroll to activate',
       stages: [
-        { label: '01 / IDEA', title: 'It begins with a spark.', body: 'Not with a framework. Not with a template. With an idea that demands a form of its own.' },
+        { label: '01 / IDEA', title: 'It begins with an impulse.', body: 'Not with a framework. Not with a template. With an idea that demands a form of its own.' },
         { label: '02 / SYSTEM', title: 'I give it structure.', body: 'Architecture, image, interaction and technology begin working as a single mechanism.' },
         { label: '03 / MOTION', title: 'Movement becomes language.', body: 'Scroll does not move a page. It guides a story, changes perspective and builds tension.' },
         { label: '04 / EXPERIENCE', title: 'The portal is open.', body: 'Enter a collection of experiments, applications and digital stories.' },
