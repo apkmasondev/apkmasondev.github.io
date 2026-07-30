@@ -18,7 +18,10 @@
   font-family: var(--font-display);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+}
+
+.accent-word {
+  color: var(--signal);
 }
 
 *,

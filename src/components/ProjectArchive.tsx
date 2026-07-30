@@ -26,7 +26,10 @@ export function ProjectArchive({ language }: { language: Language }) {
       <header className="section-heading section-heading--split">
         <div>
           <p className="eyebrow">{text.overline} / {String(projects.length).padStart(2, '0')}</p>
-          <h2 id="archive-title">{text.title}</h2>
+          <h2 id="archive-title">
+            {text.titleLead}
+            <span className="accent-word">{text.titleAccent}</span>
+          </h2>
         </div>
         <div className="section-index-note">
           <span>{String(featuredProjects.length + 1).padStart(2, '0')}—{String(projects.length).padStart(2, '0')}</span>

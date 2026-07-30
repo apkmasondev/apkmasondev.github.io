@@ -15,7 +15,10 @@ export function SiteFooter({ language }: { language: Language }) {
       </div>
       <div className="footer-main section-shell">
         <p className="eyebrow">{contact.overline}</p>
-        <h2>{contact.title}</h2>
+        <h2>
+          {contact.titleLead}
+          <span className="accent-word">{contact.titleAccent}</span>
+        </h2>
         <SignalCaption className="footer-signal-caption">{contact.body}</SignalCaption>
         <div className="contact-links">
           <a className="contact-primary" href="mailto:apkmason.dev@gmail.com">

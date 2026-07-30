@@ -11,10 +11,11 @@ type Copy = {
     stages: { label: string; title: string; body: string }[];
   };
   intro: { overline: string; line1: string; line2: string; body: string };
-  featured: { overline: string; title: string; body: string; open: string };
+  featured: { overline: string; titleLead: string; titleAccent: string; body: string; open: string };
   archive: {
     overline: string;
-    title: string;
+    titleLead: string;
+    titleAccent: string;
     body: string;
     open: string;
     filters: Record<'all' | ProjectCategory, string>;
@@ -32,7 +33,7 @@ type Copy = {
     p2: string;
     capabilities: string[];
   };
-  contact: { overline: string; title: string; body: string; email: string; github: string };
+  contact: { overline: string; titleLead: string; titleAccent: string; body: string; email: string; github: string };
   footer: { statement: string; top: string; legal: string };
   a11y: { skip: string; menuOpen: string; menuClose: string; language: string };
 };
@@ -67,13 +68,15 @@ export const copy: Record<Language, Copy> = {
     },
     featured: {
       overline: 'Selected work',
-      title: 'Projekty, które najlepiej pokazują kierunek.',
+      titleLead: 'Projekty, które najlepiej pokazują ',
+      titleAccent: 'kierunek.',
       body: 'Sześć realizacji. Jeden wspólny mianownik: cyfrowy produkt musi mieć własny głos.',
       open: 'Otwórz projekt',
     },
     archive: {
       overline: 'Project universe',
-      title: 'Reszta nie jest tłem.',
+      titleLead: 'Reszta nie jest ',
+      titleAccent: 'tłem.',
       body: 'Żywe archiwum prób, narzędzi i kierunków, które ukształtowały mój obecny warsztat.',
       open: 'Zobacz',
       filters: {
@@ -104,7 +107,8 @@ export const copy: Record<Language, Copy> = {
     },
     contact: {
       overline: 'Next chapter',
-      title: 'Masz pomysł, który zasługuje na własny świat?',
+      titleLead: 'Masz pomysł, który zasługuje na własny ',
+      titleAccent: 'świat?',
       body: 'Porozmawiajmy o interaktywnej stronie, aplikacji albo eksperymencie, którego jeszcze nie ma.',
       email: 'Napisz wiadomość',
       github: 'Zobacz GitHub',
@@ -150,13 +154,15 @@ export const copy: Record<Language, Copy> = {
     },
     featured: {
       overline: 'Selected work',
-      title: 'Projects that best define the direction.',
+      titleLead: 'Projects that best define the ',
+      titleAccent: 'direction.',
       body: 'Six projects. One shared principle: a digital product must have a voice of its own.',
       open: 'Open project',
     },
     archive: {
       overline: 'Project universe',
-      title: 'Everything else still matters.',
+      titleLead: 'Everything else is not ',
+      titleAccent: 'background.',
       body: 'A living archive of experiments, tools and directions that shaped the craft I use today.',
       open: 'View',
       filters: {
@@ -187,7 +193,8 @@ export const copy: Record<Language, Copy> = {
     },
     contact: {
       overline: 'Next chapter',
-      title: 'Have an idea that deserves a world of its own?',
+      titleLead: 'Have an idea that deserves a ',
+      titleAccent: 'world of its own?',
       body: 'Let’s talk about an interactive website, an application or an experiment that does not exist yet.',
       email: 'Send a message',
       github: 'View GitHub',
