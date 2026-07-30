@@ -45,8 +45,10 @@ body {
   color: var(--paper);
 }
 
+html.menu-open,
 body.menu-open {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 button,
@@ -147,8 +149,16 @@ video {
 .site-header.is-open {
   min-height: 68px;
   border-color: var(--line);
+}
+
+.site-header.is-compact {
   background: rgba(7, 7, 7, 0.78);
   backdrop-filter: blur(22px) saturate(140%);
+}
+
+.site-header.is-open {
+  background: var(--ink);
+  backdrop-filter: none;
 }
 
 .brand {
@@ -1698,20 +1708,29 @@ video {
   .mobile-nav {
     position: fixed;
     inset: 68px 0 0;
+    z-index: 1;
     display: flex;
+    height: calc(100dvh - 68px);
     visibility: hidden;
     flex-direction: column;
     justify-content: center;
     gap: 0;
     padding: 6vw;
     opacity: 0;
-    background: rgba(7, 7, 7, 0.97);
-    transition: opacity 300ms ease, visibility 300ms;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(255, 77, 46, 0.055), transparent 20rem),
+      var(--ink);
+    transition: opacity 250ms ease, visibility 0s linear 250ms;
   }
 
   .site-header.is-open .mobile-nav {
     visibility: visible;
     opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0s;
   }
 
   .mobile-nav a {

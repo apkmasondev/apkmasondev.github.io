@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- mobilne menu działa jako nieprzezroczysty panel całego viewportu, blokuje
+  przewijanie dokumentu i nie dziedziczy kontekstu `backdrop-filter` nagłówka,
 - hero pomija źródła wideo i przechodzi na pełnoekranowy poster przy
   `prefers-reduced-motion` lub aktywnym trybie `Save-Data`,
 - poster hero jest pobierany z wysokim priorytetem jako krytyczny obraz
