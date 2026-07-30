@@ -12,8 +12,11 @@ export function SiteFooter({ language }: { language: Language }) {
       <div className="contact-orbit" aria-hidden="true">
         <span />
         <i />
-        <div className="contact-orbit-inner">
+        <div className="contact-orbit-middle">
           <b />
+        </div>
+        <div className="contact-orbit-inner">
+          <u />
         </div>
       </div>
       <div className="footer-main section-shell">
