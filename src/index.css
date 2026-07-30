@@ -169,7 +169,8 @@ video {
   border-radius: 50%;
 }
 
-.brand em {
+.brand em,
+.footer-brand em {
   color: var(--signal-soft);
   font-style: normal;
 }
