@@ -107,8 +107,8 @@ export const copy: Record<Language, Copy> = {
     },
     contact: {
       overline: 'Next chapter',
-      titleLead: 'Masz pomysł, który zasługuje na własny ',
-      titleAccent: 'świat?',
+      titleLead: 'Masz pomysł, który zasługuje ',
+      titleAccent: 'na własny świat?',
       body: 'Porozmawiajmy o interaktywnej stronie, aplikacji albo eksperymencie, którego jeszcze nie ma.',
       email: 'Napisz wiadomość',
       github: 'Zobacz GitHub',
@@ -193,8 +193,8 @@ export const copy: Record<Language, Copy> = {
     },
     contact: {
       overline: 'Next chapter',
-      titleLead: 'Have an idea that deserves a ',
-      titleAccent: 'world of its own?',
+      titleLead: 'Have an idea that deserves ',
+      titleAccent: 'a world of its own?',
       body: 'Let’s talk about an interactive website, an application or an experiment that does not exist yet.',
       email: 'Send a message',
       github: 'View GitHub',
