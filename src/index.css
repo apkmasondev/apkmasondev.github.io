@@ -1511,7 +1511,7 @@ video {
   }
 }
 
-.contact-orbit-inner {
+.contact-orbit-middle {
   position: absolute;
   inset: 15%;
   border: 1px solid rgba(255, 77, 46, 0.13);
@@ -1521,23 +1521,36 @@ video {
   will-change: transform;
 }
 
-.contact-orbit-inner b {
+.contact-orbit-middle b {
   position: absolute;
   top: -4px;
   left: calc(50% - 3.5px);
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #e5b869;
-  box-shadow: 0 0 16px 3px rgba(229, 184, 105, 0.7);
+  background: #cbc6bd;
+  box-shadow: 0 0 12px 2px rgba(203, 198, 189, 0.55);
 }
 
-.contact-orbit::before {
-  content: '';
+.contact-orbit-inner {
   position: absolute;
   inset: 34%;
   border: 1px solid rgba(255, 77, 46, 0.13);
   border-radius: 50%;
+  animation: orbit-spin 28s linear infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.contact-orbit-inner u {
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 3.5px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff765d;
+  box-shadow: 0 0 10px 2px rgba(255, 118, 93, 0.5);
 }
 
 .contact-orbit span {
