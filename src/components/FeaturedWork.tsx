@@ -24,7 +24,7 @@ export function FeaturedWork({ language }: { language: Language }) {
             key={project.id}
             style={{ '--card-index': index, '--project-accent': project.accent } as CSSProperties}
           >
-            <img src={project.image} alt="" loading={index < 2 ? 'eager' : 'lazy'} decoding="async" />
+            <img src={project.image} alt="" loading="lazy" decoding="async" />
             <div className="featured-shade" aria-hidden="true" />
             <div className="featured-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
             <div className="featured-content">

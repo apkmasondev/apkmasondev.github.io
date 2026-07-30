@@ -8,6 +8,12 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- hero pomija źródła wideo i przechodzi na pełnoekranowy poster przy
+  `prefers-reduced-motion` lub aktywnym trybie `Save-Data`,
+- poster hero jest pobierany z wysokim priorytetem jako krytyczny obraz
+  pierwszego ekranu,
+- wszystkie obrazy głównych kart projektów są ładowane leniwie i nie konkurują
+  już z zasobami pierwszego ekranu,
 - główny ornament podpisów został przerysowany z osi zakończonej kropkami na
   większy wariant technicznego narożnika używanego w całym interfejsie,
 - opisy etapów procesu oraz głównych kart projektów otrzymały wspólny,

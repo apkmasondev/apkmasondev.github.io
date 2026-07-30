@@ -313,6 +313,20 @@ video {
   transform: translateY(0);
 }
 
+.hero-forge.is-static {
+  height: 100svh;
+}
+
+.hero-forge.is-static .hero-stage-wrap,
+.hero-forge.is-static .hero-progress {
+  display: none;
+}
+
+.hero-forge.is-static .hero-opening {
+  opacity: 1;
+  transform: none;
+}
+
 .hero-opening {
   align-items: flex-start;
   justify-content: flex-end;
