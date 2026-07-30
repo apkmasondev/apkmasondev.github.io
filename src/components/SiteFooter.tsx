@@ -32,7 +32,7 @@ export function SiteFooter({ language }: { language: Language }) {
       <div className="footer-bottom section-shell">
         <div className="footer-brand">
           <img src="/logo.svg" alt="" width="32" height="32" />
-          <span>APKMASON.DEV</span>
+          <span>APKMASON<em>.DEV</em></span>
         </div>
         <p>{footer.statement}</p>
         <p>© {new Date().getFullYear()} ApkMason.dev. {footer.legal}</p>
