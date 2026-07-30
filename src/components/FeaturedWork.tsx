@@ -10,7 +10,10 @@ export function FeaturedWork({ language }: { language: Language }) {
     <section className="featured section-shell" id="featured" aria-labelledby="featured-title">
       <header className="section-heading">
         <p className="eyebrow">{text.overline} / {String(featuredProjects.length).padStart(2, '0')}</p>
-        <h2 id="featured-title">{text.title}</h2>
+        <h2 id="featured-title">
+          {text.titleLead}
+          <span className="accent-word">{text.titleAccent}</span>
+        </h2>
         <div className="section-index-note">
           <span>01—{String(featuredProjects.length).padStart(2, '0')}</span>
           <p>{text.body}</p>
