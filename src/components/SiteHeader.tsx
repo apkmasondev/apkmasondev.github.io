@@ -22,12 +22,14 @@ export function SiteHeader({ language, onLanguageChange }: SiteHeaderProps) {
 
   useEffect(() => {
     document.body.classList.toggle('menu-open', menuOpen);
+    document.documentElement.classList.toggle('menu-open', menuOpen);
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setMenuOpen(false);
     };
     window.addEventListener('keydown', onKeyDown);
     return () => {
       document.body.classList.remove('menu-open');
+      document.documentElement.classList.remove('menu-open');
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [menuOpen]);
