@@ -1502,17 +1502,42 @@ video {
   will-change: transform;
 }
 
-.contact-orbit::before,
-.contact-orbit::after {
-  content: '';
+@keyframes orbit-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.contact-orbit-inner {
   position: absolute;
   inset: 15%;
   border: 1px solid rgba(255, 77, 46, 0.13);
   border-radius: 50%;
+  animation: orbit-spin-reverse 42s linear infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
 }
 
-.contact-orbit::after {
+.contact-orbit-inner b {
+  position: absolute;
+  top: 12%;
+  left: 76%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e5b869;
+  box-shadow: 0 0 16px 3px rgba(229, 184, 105, 0.7);
+}
+
+.contact-orbit::before {
+  content: '';
+  position: absolute;
   inset: 34%;
+  border: 1px solid rgba(255, 77, 46, 0.13);
+  border-radius: 50%;
 }
 
 .contact-orbit span {
