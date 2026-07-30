@@ -12,6 +12,9 @@ export function SiteFooter({ language }: { language: Language }) {
       <div className="contact-orbit" aria-hidden="true">
         <span />
         <i />
+        <div className="contact-orbit-inner">
+          <b />
+        </div>
       </div>
       <div className="footer-main section-shell">
         <p className="eyebrow">{contact.overline}</p>
