@@ -48,6 +48,20 @@ export const projects: Project[] = [
     accent: '#be6cff',
   },
   {
+    id: 'origin',
+    title: 'ORIGIN — The Cycle of Becoming',
+    description: {
+      pl: 'Pełnoekranowa opowieść filmowa sterowana scrollem — od pierwotnej eksplozji materii po świetlistą formę i kosmiczny wir.',
+      en: 'A cinematic fullscreen story driven by scroll — from a primal explosion of matter to a luminous form and cosmic vortex.',
+    },
+    image: '/origin_mockup.webp',
+    link: 'https://apkmasondev.github.io/origin/',
+    tags: ['Scroll-driven', 'Cinematic', 'Canvas'],
+    category: 'story',
+    featured: true,
+    accent: '#ff6b35',
+  },
+  {
     id: 'spark',
     title: 'SPARK',
     description: {
