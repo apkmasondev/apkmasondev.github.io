@@ -104,7 +104,9 @@ export function HeroForge({ language }: HeroForgeProps) {
         >
           {shouldLoadVideo && (
             <>
+              <source media="(max-width: 767px)" src="/hero-monolith-mobile.webm" type="video/webm" />
               <source media="(max-width: 767px)" src="/hero-monolith-mobile.mp4" type="video/mp4" />
+              <source src="/hero-monolith-desktop.webm" type="video/webm" />
               <source src="/hero-monolith-desktop.mp4" type="video/mp4" />
             </>
           )}
