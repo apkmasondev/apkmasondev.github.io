@@ -11,7 +11,7 @@ zmodyfikowana.
 
 - film hero sterowany przewijaniem z osobnym źródłem desktop i mobile,
 - statyczny fallback dla `prefers-reduced-motion`,
-- sześć wyróżnionych case studies i filtrowalne archiwum,
+- siedem wyróżnionych case studies i filtrowalne archiwum,
 - polska i angielska wersja treści,
 - semantyczny HTML, obsługa klawiatury i widoczne stany focus,
 - kompletne metadane Open Graph, Twitter Card i schema.org,

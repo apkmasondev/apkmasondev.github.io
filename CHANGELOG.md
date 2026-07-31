@@ -8,6 +8,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- dodano projekt „ORIGIN — The Cycle of Becoming” jako siódmą kartę w sekcji wyróżnionej oraz zaktualizowano odwołania z 6 na 7 projektów,
 - mobilne menu działa jako nieprzezroczysty panel całego viewportu, blokuje
   przewijanie dokumentu i nie dziedziczy kontekstu `backdrop-filter` nagłówka,
 - hero pomija źródła wideo i przechodzi na pełnoekranowy poster przy
