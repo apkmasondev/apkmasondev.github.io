@@ -743,6 +743,7 @@ video {
 .section-index-note {
   position: relative;
   align-self: end;
+  width: min(100%, 390px);
   max-width: 390px;
   padding-top: 1.15rem;
   border-top: 1px solid var(--line);
@@ -759,9 +760,10 @@ video {
 
 .section-index-note p {
   margin: 0;
-  color: #aaa7a1;
+  color: #b4b1ab;
   font-size: clamp(1rem, 1.3vw, 1.16rem);
   line-height: 1.7;
+  text-wrap: pretty;
 }
 
 .featured-stack {
@@ -1942,6 +1944,11 @@ video {
     padding-block: 7rem;
   }
 
+  .featured,
+  .archive {
+    padding-block: 6.25rem;
+  }
+
   .manifesto-art {
     opacity: 0.86;
   }
@@ -1980,8 +1987,8 @@ video {
   .section-heading,
   .section-heading--split {
     grid-template-columns: 1fr;
-    gap: 1.7rem;
-    margin-bottom: 4rem;
+    gap: 1.4rem;
+    margin-bottom: 3.5rem;
   }
 
   .section-heading .eyebrow {
@@ -1989,12 +1996,13 @@ video {
   }
 
   .section-index-note {
-    max-width: min(84vw, 430px);
+    width: min(100%, 430px);
+    max-width: 430px;
     padding-top: 0.9rem;
   }
 
   .section-index-note > span {
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
   }
 
   .section-heading h2,
