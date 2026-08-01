@@ -8,6 +8,11 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- w sekcji wyróżnionej „Mechanika Czasu” zastąpiono projektem „FRUIT ENERGY”,
+  a „SPARK” projektem „THE IRIS”; obie wcześniejsze realizacje zachowano w
+  archiwum,
+- dodano do archiwum projekt „From Vertex to Reality” wraz z opisami PL/EN i
+  zoptymalizowaną grafiką,
 - ujednolicono szerokość linii, tekstu i rytm odstępów w notach sekcji
   wybranych projektów oraz archiwum,
 - delikatnie podniesiono kontrast opisów i ograniczono nadmiar pionowej
