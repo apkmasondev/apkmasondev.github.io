@@ -153,7 +153,7 @@ export const projects: Project[] = [
     image: '/vertex_mockup.webp',
     link: 'https://apkmason.dev/vertex/',
     tags: ['GSAP', '3D pipeline', 'Video scrubbing'],
-    category: 'spatial',
+    category: 'story',
     accent: '#65c7ff',
   },
   {
