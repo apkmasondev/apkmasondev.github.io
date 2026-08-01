@@ -8,6 +8,10 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zaktualizowano Vite i zależności pośrednie do wersji bez znanych podatności
+  raportowanych przez `npm audit`,
+- w sekcji wyróżnionej „From Sand to Silicon” zastąpiono projektem „PCVerse”,
+  a poprzednią realizację zachowano w archiwum,
 - dodano projekt „ORIGIN — The Cycle of Becoming” jako siódmą kartę w sekcji wyróżnionej oraz zaktualizowano odwołania z 6 na 7 projektów,
 - mobilne menu działa jako nieprzezroczysty panel całego viewportu, blokuje
   przewijanie dokumentu i nie dziedziczy kontekstu `backdrop-filter` nagłówka,
@@ -38,8 +42,8 @@ stosują [Semantic Versioning](https://semver.org/).
 - liczniki projektów, historii i wyróżnionych realizacji są teraz wyliczane
   automatycznie z danych,
 - uproszczono przełączanie języka i dodano trwałe zapamiętywanie wyboru,
-- dopiski sekcji „Selected work” i „Project universe” tworzą teraz wspólny
-  system indeksów 01—06 oraz 07—21 zamiast przypadkowych bloków tekstu,
+- dopiski sekcji „Selected work” i „Project universe” tworzą wspólny,
+  automatycznie aktualizowany system indeksów oparty na danych projektów,
 - przypadkowe współrzędne w hero zastąpiono znaczącą deklaracją
   „Human directed — AI accelerated”,
 - sekcję O mnie przebudowano w autorskie „identity dossier” z nową hierarchią
@@ -60,6 +64,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Removed
 
+- nieużywane pliki demonstracyjne React/Vite pozostałe po inicjalizacji projektu,
 - pięć nieużywanych wariantów faviconu, logo i grafiki Open Graph,
 - dwie nadmiarowe paczki oznaczone przez npm jako `extraneous`,
 - powielony markup ornamentu sygnału.
