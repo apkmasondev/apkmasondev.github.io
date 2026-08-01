@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- doprecyzowano opisy projektów „PCVerse” i „From Vertex to Reality” w obu
+  wersjach językowych,
 - zaktualizowano grafikę karty wyróżnionego projektu „THE IRIS”,
 - w sekcji wyróżnionej „Mechanika Czasu” zastąpiono projektem „FRUIT ENERGY”,
   a „SPARK” projektem „THE IRIS”; obie wcześniejsze realizacje zachowano w
