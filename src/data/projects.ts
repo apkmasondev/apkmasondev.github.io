@@ -79,8 +79,8 @@ export const projects: Project[] = [
     id: 'pcverse',
     title: 'PCVerse',
     description: {
-      pl: 'Interaktywny przewodnik 3D po podzespołach komputera z widokiem eksplodowanym.',
-      en: 'An interactive 3D guide to PC components with an exploded-view experience.',
+      pl: 'Interaktywny przewodnik 3D po podzespołach komputera, pokazujący ich rozmieszczenie i wzajemne połączenia.',
+      en: 'An interactive 3D guide to PC components, showing how they are arranged and connected.',
     },
     image: '/pcverse_mockup.webp',
     link: 'https://apkmasondev.github.io/pcverse/',
@@ -147,8 +147,8 @@ export const projects: Project[] = [
     id: 'vertex-to-reality',
     title: 'From Vertex to Reality',
     description: {
-      pl: 'Kinowa podróż przez budowę świata 3D — od wierzchołków i topologii po shadery, światło i finalny render.',
-      en: 'A cinematic journey through building a 3D world — from vertices and topology to shaders, lighting and the final render.',
+      pl: 'Uproszczona podróż przez budowę świata 3D — od wierzchołków i topologii po shadery, światło i finalny render.',
+      en: 'A simplified journey through building a 3D world — from vertices and topology to shaders, lighting and the final render.',
     },
     image: '/vertex_mockup.webp',
     link: 'https://apkmason.dev/vertex/',
