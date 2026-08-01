@@ -8,6 +8,17 @@ export function Manifesto({ language }: { language: Language }) {
 
   return (
     <section className="manifesto" aria-labelledby="manifesto-title">
+      <picture className="manifesto-art" aria-hidden="true">
+        <source media="(max-width: 767px)" srcSet="/manifesto-faultline-mobile.webp" />
+        <img
+          src="/manifesto-faultline-desktop.webp"
+          alt=""
+          width="1664"
+          height="935"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
       <div className="section-shell">
         <div className="section-index">
           <span>{text.overline}</span>

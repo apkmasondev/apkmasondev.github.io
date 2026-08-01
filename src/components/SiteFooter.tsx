@@ -10,13 +10,13 @@ export function SiteFooter({ language }: { language: Language }) {
   return (
     <footer className="site-footer" id="contact">
       <div className="contact-orbit" aria-hidden="true">
-        <span />
-        <i />
-        <div className="contact-orbit-middle">
-          <b />
+        <span className="contact-orbit-core" />
+        <span className="contact-orbit-satellite contact-orbit-satellite--outer" />
+        <div className="contact-orbit-ring contact-orbit-ring--middle">
+          <span className="contact-orbit-satellite contact-orbit-satellite--middle" />
         </div>
-        <div className="contact-orbit-inner">
-          <u />
+        <div className="contact-orbit-ring contact-orbit-ring--inner">
+          <span className="contact-orbit-satellite contact-orbit-satellite--inner" />
         </div>
       </div>
       <div className="footer-main section-shell">
