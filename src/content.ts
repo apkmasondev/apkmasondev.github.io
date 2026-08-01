@@ -70,7 +70,7 @@ export const copy: Record<Language, Copy> = {
       overline: 'Selected work',
       titleLead: 'Projekty, które najlepiej pokazują ',
       titleAccent: 'kierunek.',
-      body: 'Siedem realizacji. Jeden wspólny mianownik: cyfrowy produkt musi mieć własny głos.',
+      body: 'Wybrane realizacje. Jeden wspólny mianownik: cyfrowy produkt musi mieć własny głos.',
       open: 'Otwórz projekt',
     },
     archive: {
@@ -156,7 +156,7 @@ export const copy: Record<Language, Copy> = {
       overline: 'Selected work',
       titleLead: 'Projects that best define the ',
       titleAccent: 'direction.',
-      body: 'Seven projects. One shared principle: a digital product must have a voice of its own.',
+      body: 'Selected projects. One shared principle: a digital product must have a voice of its own.',
       open: 'Open project',
     },
     archive: {

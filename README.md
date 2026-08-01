@@ -4,7 +4,7 @@ Nowe portfolio Krzysztofa / ApkMason.dev. Strona została zaprojektowana jako
 kinowe, scroll-driven doświadczenie prezentujące projekty webowe, 3D i
 aplikacje bez utraty czytelności na urządzeniach mobilnych.
 
-Stara wersja znajduje się w sąsiednim katalogu `portfolio-site` i nie została
+Stara wersja znajduje się w sąsiednim katalogu `portfolio-site-stara-wersja` i nie została
 zmodyfikowana.
 
 ## Najważniejsze elementy
