@@ -529,19 +529,47 @@ video {
 
 .manifesto {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
+  margin-top: -1px;
   padding-block: clamp(8rem, 15vw, 16rem);
-  background:
-    radial-gradient(circle at 77% 37%, rgba(255, 77, 46, 0.1), transparent 19rem),
-    linear-gradient(135deg, #0d0d0c, #080808 70%);
+  background: linear-gradient(180deg, #030303 0%, #080807 52%, #050505 100%);
   color: var(--paper);
+}
+
+.manifesto-art {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.manifesto-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: saturate(0.84) contrast(1.03);
+}
+
+.manifesto-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #030303 0%, rgba(3, 3, 3, 0.08) 17%, transparent 57%, rgba(3, 3, 3, 0.24) 76%, #030303 100%),
+    linear-gradient(90deg, rgba(3, 3, 3, 0.44), rgba(3, 3, 3, 0.12) 42%, transparent 70%);
 }
 
 .manifesto::before {
   content: '';
   position: absolute;
+  z-index: 1;
   inset: 0;
-  opacity: 0.25;
+  opacity: 0.16;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
@@ -552,21 +580,15 @@ video {
 .manifesto::after {
   content: '';
   position: absolute;
-  top: 16%;
-  right: -10vw;
-  width: min(48vw, 760px);
-  aspect-ratio: 1;
-  border: 1px solid rgba(255, 77, 46, 0.11);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 7vw rgba(255, 77, 46, 0.025),
-    0 0 0 14vw rgba(255, 77, 46, 0.018);
+  z-index: 1;
+  inset: 0;
+  background: radial-gradient(ellipse at 69% 40%, rgba(255, 77, 46, 0.035), transparent 30%);
   pointer-events: none;
 }
 
 .manifesto .section-shell {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .manifesto .section-index {
@@ -1507,9 +1529,11 @@ video {
   aspect-ratio: 1;
   border: 1px solid rgba(255, 77, 46, 0.18);
   border-radius: 50%;
-  animation: orbit-spin 60s linear infinite;
+  animation: orbit-spin 74s linear infinite;
   transform-origin: 50% 50%;
+  transition: border-color 900ms ease, opacity 900ms ease;
   will-change: transform;
+  pointer-events: none;
 }
 
 @keyframes orbit-spin-reverse {
@@ -1521,51 +1545,53 @@ video {
   }
 }
 
-.contact-orbit-middle {
+.contact-orbit-ring {
   position: absolute;
+  border: 1px solid rgba(255, 77, 46, 0.13);
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  transition: border-color 900ms ease, opacity 900ms ease;
+  will-change: transform;
+}
+
+.contact-orbit-ring--middle {
   inset: 15%;
-  border: 1px solid rgba(255, 77, 46, 0.13);
-  border-radius: 50%;
-  animation: orbit-spin-reverse 42s linear infinite;
-  transform-origin: 50% 50%;
-  will-change: transform;
+  animation: orbit-spin-reverse 52s linear infinite;
 }
 
-.contact-orbit-middle b {
-  position: absolute;
-  top: -2px;
-  left: calc(50% - 2px);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #cbc6bd;
-  opacity: 0.65;
-  box-shadow: 0 0 6px 1px rgba(203, 198, 189, 0.4);
-}
-
-.contact-orbit-inner {
-  position: absolute;
+.contact-orbit-ring--inner {
   inset: 34%;
-  border: 1px solid rgba(255, 77, 46, 0.13);
-  border-radius: 50%;
-  animation: orbit-spin 28s linear infinite;
-  transform-origin: 50% 50%;
-  will-change: transform;
+  animation: orbit-spin 34s linear infinite;
 }
 
-.contact-orbit-inner u {
+.contact-orbit-satellite {
   position: absolute;
   top: -2px;
   left: calc(50% - 2px);
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff765d;
   opacity: 0.6;
+  transition: top 1100ms var(--ease-out), opacity 900ms ease, box-shadow 900ms ease;
+}
+
+.contact-orbit-satellite--outer {
+  background: var(--signal);
+  box-shadow: 0 0 6px 1px rgba(255, 77, 46, 0.4);
+}
+
+.contact-orbit-satellite--middle {
+  background: #cbc6bd;
+  opacity: 0.54;
+  box-shadow: 0 0 6px 1px rgba(203, 198, 189, 0.34);
+}
+
+.contact-orbit-satellite--inner {
+  background: #ff765d;
   box-shadow: 0 0 6px 1px rgba(255, 118, 93, 0.4);
 }
 
-.contact-orbit span {
+.contact-orbit-core {
   position: absolute;
   top: calc(50% - 6px);
   left: calc(50% - 6px);
@@ -1574,18 +1600,35 @@ video {
   border-radius: 50%;
   background: var(--signal);
   box-shadow: 0 0 80px 20px rgba(255, 77, 46, 0.25);
+  transition: transform 900ms var(--ease-out), box-shadow 900ms ease;
 }
 
-.contact-orbit i {
-  position: absolute;
-  top: -2px;
-  left: calc(50% - 2px);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--signal);
-  opacity: 0.6;
-  box-shadow: 0 0 6px 1px rgba(255, 77, 46, 0.4);
+@keyframes orbit-core-breathe {
+  0%, 100% {
+    transform: scale(1.08);
+  }
+  50% {
+    transform: scale(1.22);
+  }
+}
+
+.site-footer:has(.contact-primary:is(:hover, :focus-visible)) .contact-orbit {
+  border-color: rgba(255, 77, 46, 0.28);
+}
+
+.site-footer:has(.contact-primary:is(:hover, :focus-visible)) .contact-orbit-ring--middle {
+  border-color: rgba(255, 77, 46, 0.22);
+}
+
+.site-footer:has(.contact-primary:is(:hover, :focus-visible)) .contact-orbit-core {
+  animation: orbit-core-breathe 3.2s ease-in-out infinite;
+  box-shadow: 0 0 96px 26px rgba(255, 77, 46, 0.34);
+}
+
+.site-footer:has(.contact-primary:is(:hover, :focus-visible)) .contact-orbit-satellite--middle {
+  top: 5%;
+  opacity: 0.82;
+  box-shadow: 0 0 10px 2px rgba(203, 198, 189, 0.45);
 }
 
 .footer-main {
@@ -1899,6 +1942,16 @@ video {
     padding-block: 7rem;
   }
 
+  .manifesto-art {
+    opacity: 0.86;
+  }
+
+  .manifesto-art::after {
+    background:
+      linear-gradient(180deg, #030303 0%, rgba(3, 3, 3, 0.1) 15%, transparent 48%, rgba(3, 3, 3, 0.28) 72%, #030303 100%),
+      linear-gradient(90deg, rgba(3, 3, 3, 0.7), rgba(3, 3, 3, 0.22) 62%, transparent 100%);
+  }
+
   .manifesto-copy {
     padding-block: 4rem;
   }
@@ -1908,19 +1961,19 @@ video {
     line-height: 0.86;
   }
 
-  .proof-strip {
+  .manifesto .proof-strip {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .proof-strip div {
+  .manifesto .proof-strip div {
     min-height: 130px;
   }
 
-  .proof-strip div:nth-child(2) {
+  .manifesto .proof-strip div:nth-child(2) {
     border-right: 0;
   }
 
-  .proof-strip div:nth-child(-n + 2) {
+  .manifesto .proof-strip div:nth-child(-n + 2) {
     border-bottom: 1px solid var(--line);
   }
 
@@ -2170,5 +2223,15 @@ video {
   .hero-opening {
     opacity: 1;
     transform: none;
+  }
+
+  .contact-orbit,
+  .contact-orbit-ring,
+  .site-footer:has(.contact-primary:is(:hover, :focus-visible)) .contact-orbit-core {
+    animation: none;
+  }
+
+  .site-footer:has(.contact-primary:is(:hover, :focus-visible)) .contact-orbit-satellite--middle {
+    top: -2px;
   }
 }

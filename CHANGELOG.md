@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- finałowe orbity poruszają się w spokojniejszych, zróżnicowanych rytmach i
+  reagują subtelnym skupieniem sygnału na hover oraz focus głównego CTA,
 - zaktualizowano Vite i zależności pośrednie do wersji bez znanych podatności
   raportowanych przez `npm audit`,
 - w sekcji wyróżnionej „From Sand to Silicon” zastąpiono projektem „PCVerse”,
@@ -53,6 +55,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- autorski przekrój „Human Faultline” płynnie łączący finał filmu hero z
+  Manifestem, z osobnymi lekkimi wariantami WebP dla desktopu i mobile,
 - instrukcja dodawania nowych projektów wraz z gotowym szablonem wpisu,
 - udokumentowany audyt wizualny i checklista przedwdrożeniowa,
 - generatywny obiekt „Forge Signal” z płynną sześciusekundową pętlą, renderowany
@@ -64,10 +68,17 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Removed
 
+- koncentryczne okręgi w Manifeście, które konkurowały z nowym motywem
+  materiałowego przekroju,
 - nieużywane pliki demonstracyjne React/Vite pozostałe po inicjalizacji projektu,
 - pięć nieużywanych wariantów faviconu, logo i grafiki Open Graph,
 - dwie nadmiarowe paczki oznaczone przez npm jako `extraneous`,
 - powielony markup ornamentu sygnału.
+
+### Fixed
+
+- mobilny pasek statystyk Manifestu układa się teraz w pełną siatkę 2 × 2 bez
+  ucinania czwartej wartości,
 
 ### Planned
 
