@@ -8,6 +8,10 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- ujednolicono szerokość linii, tekstu i rytm odstępów w notach sekcji
+  wybranych projektów oraz archiwum,
+- delikatnie podniesiono kontrast opisów i ograniczono nadmiar pionowej
+  przestrzeni tych sekcji na urządzeniach mobilnych,
 - finałowe orbity poruszają się w spokojniejszych, zróżnicowanych rytmach i
   reagują subtelnym skupieniem sygnału na hover oraz focus głównego CTA,
 - zaktualizowano Vite i zależności pośrednie do wersji bez znanych podatności
