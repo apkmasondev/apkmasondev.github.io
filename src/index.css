@@ -287,7 +287,6 @@ video {
   z-index: -3;
   object-fit: cover;
   object-position: 58% center;
-  filter: saturate(0.92) contrast(1.06);
 }
 
 .hero-vignette {
