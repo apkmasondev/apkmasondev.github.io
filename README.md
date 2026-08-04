@@ -74,7 +74,8 @@ dwie wersje zoptymalizowane do scrubbingu:
 - `hero-monolith-desktop.mp4`,
 - `hero-monolith-mobile.mp4`.
 
-Obie są pozbawione ścieżki audio, mają `faststart` i częste klatki kluczowe.
+Obie są pozbawione ścieżki audio, mają `faststart`, GOP=1 oraz grading koloru
+wypalony bezpośrednio w obraz, aby ograniczyć koszt renderowania hero.
 
 ## Dokumentacja
 

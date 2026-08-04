@@ -8,6 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zoptymalizowano filmy hero pod słabsze CPU: zmniejszono rozdzielczość i
+  bitrate przy zachowaniu GOP=1, grading przeniesiono z CSS do plików wideo,
+  a elementowi `video` nadano wysoki priorytet pobierania,
 - doprecyzowano opisy projektów „PCVerse” i „From Vertex to Reality” w obu
   wersjach językowych,
 - zaktualizowano grafikę karty wyróżnionego projektu „THE IRIS”,

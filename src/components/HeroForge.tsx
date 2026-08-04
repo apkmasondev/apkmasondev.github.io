@@ -14,6 +14,8 @@ type NavigatorWithConnection = Navigator & {
   };
 };
 
+const heroVideoPriority = { fetchpriority: 'high' } as const;
+
 function canLoadHeroVideo() {
   if (typeof window === 'undefined') return false;
 
@@ -93,6 +95,7 @@ export function HeroForge({ language }: HeroForgeProps) {
     >
       <div className="hero-sticky">
         <video
+          {...heroVideoPriority}
           ref={videoRef}
           className="hero-video"
           muted
