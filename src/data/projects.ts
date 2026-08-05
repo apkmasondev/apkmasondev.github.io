@@ -320,9 +320,9 @@ export const projects: Project[] = [
       en: 'A luxury scroll-driven product experience for premium skincare powered by an inertia motion engine.',
     },
     image: '/skincare_mockup.webp',
-    link: 'https://apkmasondev.github.io/skincare/',
+    link: 'https://apkmason.dev/skincare_demo/',
     tags: ['Scroll-driven', 'Luxury UI', 'Motion'],
-    category: 'story',
+    category: 'experiment',
     accent: '#e8bfb3',
   },
   {
