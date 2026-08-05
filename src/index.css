@@ -1338,11 +1338,24 @@ video {
 
 .about-portrait {
   position: relative;
+  display: block;
+  width: 100%;
   aspect-ratio: 4 / 5;
+  padding: 0;
   overflow: hidden;
+  border: 0;
   background: #0d0d0d;
+  color: inherit;
+  cursor: pointer;
   box-shadow: 0 35px 90px rgba(0, 0, 0, 0.5);
+  font: inherit;
   isolation: isolate;
+  text-align: initial;
+}
+
+.about-portrait:focus-visible {
+  outline: 1px solid var(--signal);
+  outline-offset: 4px;
 }
 
 .about-portrait::after {
@@ -1356,7 +1369,8 @@ video {
   pointer-events: none;
 }
 
-.about-portrait img {
+.about-portrait video {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1366,7 +1380,8 @@ video {
   transition: filter 900ms ease, transform 1.2s var(--ease-out);
 }
 
-.about:hover .about-portrait img {
+.about-portrait:hover video,
+.about-portrait:focus-visible video {
   filter: grayscale(0.25) sepia(0.04) contrast(1.08) brightness(0.94);
   transform: scale(1.04);
 }
