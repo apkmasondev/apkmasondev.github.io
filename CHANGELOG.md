@@ -8,6 +8,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zaktualizowano projekt „Skin Elixir” w portfolio o nową grafikę 3D, zaktualizowany adres URL oraz nowy opis doświadczenia kosmetycznego premium,
 - zoptymalizowano filmy hero pod słabsze CPU: zmniejszono rozdzielczość i
   bitrate przy zachowaniu GOP=1, grading przeniesiono z CSS do plików wideo,
   a elementowi `video` nadano wysoki priorytet pobierania,
