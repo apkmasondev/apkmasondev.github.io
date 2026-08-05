@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zastąpiono projekt „From Vertex to Reality” nowym luksusowym projektem scroll-driven „Pure Form” (URL: https://apkmason.dev/Pure_form/, kategoria: experiment) wraz z dedykowaną grafiką 3D,
+- zaktualizowano plik karty profilowej w portfolio (profile.jpg),
 - zastąpiono statyczny portret interaktywną, bezdźwięczną sekwencją wideo:
   uruchamianą po najechaniu na desktopie i po dotknięciu na mobile,
 - zaktualizowano projekt „Skin Elixir” w portfolio o nową grafikę 3D, adres URL https://apkmason.dev/skincare_demo/ oraz kategorię experiment,
