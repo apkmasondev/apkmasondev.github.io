@@ -314,15 +314,15 @@ export const projects: Project[] = [
   },
   {
     id: 'skincare',
-    title: 'SKINCARE',
+    title: 'Skin Elixir',
     description: {
-      pl: 'Luksusowy koncept e-commerce łączący kinetyczną typografię z ruchem 3D.',
-      en: 'A luxury e-commerce concept combining kinetic typography with 3D motion.',
+      pl: 'Luksusowe doświadczenie produktowe kosmetyków premium sterowane scrollem i inercyjnym silnikiem ruchu.',
+      en: 'A luxury scroll-driven product experience for premium skincare powered by an inertia motion engine.',
     },
     image: '/skincare_mockup.webp',
-    link: 'https://apkmasondev.github.io/skincare_demo/',
-    tags: ['Web design', '3D'],
-    category: 'experiment',
+    link: 'https://apkmasondev.github.io/skincare/',
+    tags: ['Scroll-driven', 'Luxury UI', 'Motion'],
+    category: 'story',
     accent: '#e8bfb3',
   },
   {
