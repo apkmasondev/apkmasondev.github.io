@@ -46,8 +46,7 @@ export function AboutSection({ language }: { language: Language }) {
           <video
             ref={videoRef}
             src="/profile.mp4"
-            poster="/profile.jpg"
-            preload="metadata"
+            preload="auto"
             muted
             playsInline
             aria-hidden="true"
