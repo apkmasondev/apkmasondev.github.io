@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = 'ApkMason.dev — AI Creator';
+    document.title = 'APKMason.dev — AI · Pixels · Kinetics';
 
     const description = language === 'pl'
       ? 'Portfolio Krzysztofa — AI Creatora projektującego interaktywne doświadczenia cyfrowe, aplikacje, strony 3D i multimedia.'

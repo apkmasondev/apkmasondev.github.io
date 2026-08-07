@@ -8,6 +8,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zaktualizowano tytuł strony i meta-tagi Open Graph / Twitter na „APKMason.dev — AI · Pixels · Kinetics”,
 - zamieniono pozycjami karty projektów „Mechanika Czasu” oraz „FRUIT ENERGY” w siatce portfolio,
 - zamieniono pozycjami karty projektów „Skin Elixir” oraz „Pure Form” w siatce portfolio,
 - zastąpiono grafikę 3D projektu „SPARK” nową, bezbłędną wersją bez artefaktów podwójnych krawędzi (spark_mockup.webp),
