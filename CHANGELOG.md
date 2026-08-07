@@ -8,6 +8,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- wycofano projekt „ScrollDebt”, wstawiono w jego miejsce projekt „From Vertex to Reality” (<https://apkmason.dev/vertex/>) oraz zamieniono miejscami pozycje „Allergen & Diet Guard” z „Skin Elixir”,
 - zaktualizowano tytuł strony i meta-tagi Open Graph / Twitter na „APKMason.dev — AI · Pixels · Kinetics”,
 - zamieniono pozycjami karty projektów „Mechanika Czasu” oraz „FRUIT ENERGY” w siatce portfolio,
 - zamieniono pozycjami karty projektów „Skin Elixir” oraz „Pure Form” w siatce portfolio,
