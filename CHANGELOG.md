@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zastąpiono grafikę 3D projektu „SPARK” nową, bezbłędną wersją bez artefaktów podwójnych krawędzi (spark_mockup.webp),
+- zaktualizowano projekt „BRIXCORE” (nowy opis kinowego doświadczenia wyboru rdzenia FORGE/EVOLVE oraz dedykowana grafika 3D), zamieniono go miejscami z projektem „FRUIT ENERGY” i zmieniono kategorię FRUIT ENERGY na experiment,
 - zastąpiono projekt „From Vertex to Reality” nowym luksusowym projektem scroll-driven „Pure Form” (URL: <https://apkmason.dev/Pure_form/>, kategoria: experiment) wraz z dedykowaną grafiką 3D,
 - zaktualizowano plik karty profilowej w portfolio (profile.jpg),
 - zastąpiono statyczny portret interaktywną, bezdźwięczną sekwencją wideo:

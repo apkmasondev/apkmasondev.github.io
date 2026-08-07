@@ -20,18 +20,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'fruit-energy',
-    title: 'FRUIT ENERGY',
+    id: 'brixcore',
+    title: 'BRIXCORE',
     description: {
-      pl: 'Kinowy reveal fikcyjnego napoju energetycznego, łączący produktową narrację, motion direction i sterowanie scrollem.',
-      en: 'A cinematic reveal for a fictional energy drink, combining product storytelling, motion direction and scroll control.',
+      pl: 'Jednoekranowe, interaktywne kinowe doświadczenie wyboru — wybierz rdzeń FORGE lub EVOLVE i poznaj swoją ścieżkę.',
+      en: 'A one-screen, choice-driven cinematic experience — pick the FORGE or EVOLVE core to reveal your path.',
     },
-    image: '/fruit_mockup.webp',
-    link: 'https://apkmason.dev/fruit/',
-    tags: ['Scroll-driven', 'Product story', 'AI video'],
-    category: 'story',
+    image: '/brixcore_mockup.webp',
+    link: 'https://apkmasondev.github.io/brixcore/',
+    tags: ['Choice-driven', 'Interactive', 'Cinematic'],
+    category: 'experiment',
     featured: true,
-    accent: '#ff6a2f',
+    accent: '#ff845d',
   },
   {
     id: 'beyond-the-door',
@@ -326,17 +326,17 @@ export const projects: Project[] = [
     accent: '#e8bfb3',
   },
   {
-    id: 'brixcore',
-    title: 'BRIXCORE',
+    id: 'fruit-energy',
+    title: 'FRUIT ENERGY',
     description: {
-      pl: 'Eksperymentalny landing page dla wyimaginowanej marki luksusowych klocków.',
-      en: 'An experimental landing page for an imagined luxury brick brand.',
+      pl: 'Kinowy reveal fikcyjnego napoju energetycznego, łączący produktową narrację, motion direction i sterowanie scrollem.',
+      en: 'A cinematic reveal for a fictional energy drink, combining product storytelling, motion direction and scroll control.',
     },
-    image: '/brixcore_mockup.webp',
-    link: 'https://apkmasondev.github.io/brixcore/',
-    tags: ['Art direction', 'AI'],
+    image: '/fruit_mockup.webp',
+    link: 'https://apkmason.dev/fruit/',
+    tags: ['Scroll-driven', 'Product story', 'AI video'],
     category: 'experiment',
-    accent: '#ff845d',
+    accent: '#ff6a2f',
   },
   {
     id: 'suno',
