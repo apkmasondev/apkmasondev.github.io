@@ -784,24 +784,25 @@ video {
   }
 
   .section-index-note::before {
-    background-image: url('/monolith-field-v3.webp');
+    background-image: url('/monolith-surface-v4.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.76;
+    opacity: 0.78;
   }
 
   .section-index-note::after {
     background:
-      radial-gradient(ellipse 92% 88% at 54% 52%, rgba(7, 7, 7, 0.08) 0%, rgba(7, 7, 7, 0.16) 48%, rgba(7, 7, 7, 0.76) 78%, var(--ink) 100%),
-      linear-gradient(90deg, rgba(7, 7, 7, 0.48) 0%, rgba(7, 7, 7, 0.16) 42%, rgba(7, 7, 7, 0.12) 70%, rgba(7, 7, 7, 0.52) 100%);
+      linear-gradient(90deg, var(--ink) 0%, rgba(7, 7, 7, 0.24) 14%, rgba(7, 7, 7, 0.24) 86%, var(--ink) 100%),
+      linear-gradient(180deg, var(--ink) 0%, rgba(7, 7, 7, 0.12) 22%, rgba(7, 7, 7, 0.12) 78%, var(--ink) 100%),
+      linear-gradient(rgba(7, 7, 7, 0.24), rgba(7, 7, 7, 0.24));
   }
 
   .featured .section-index-note::before {
-    background-position: center 32%;
+    background-position: center 28%;
   }
 
   .archive .section-index-note::before {
-    background-position: center 68%;
+    background-position: center 72%;
   }
 }
 
