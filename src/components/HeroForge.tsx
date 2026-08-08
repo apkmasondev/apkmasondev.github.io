@@ -14,7 +14,7 @@ type NavigatorWithConnection = Navigator & {
   };
 };
 
-const heroVideoPriority = { fetchpriority: 'high' } as const;
+const heroVideoPriority = { fetchPriority: 'high' } as const;
 
 function canLoadHeroVideo() {
   if (typeof window === 'undefined') return false;

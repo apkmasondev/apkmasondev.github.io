@@ -34,7 +34,7 @@ type Copy = {
     capabilities: string[];
   };
   contact: { overline: string; titleLead: string; titleAccent: string; body: string; email: string; github: string };
-  footer: { statement: string; top: string; legal: string };
+  footer: { signature: [string, string, string]; top: string; legal: string };
   a11y: { skip: string; menuOpen: string; menuClose: string; language: string };
 };
 
@@ -114,7 +114,7 @@ export const copy: Record<Language, Copy> = {
       github: 'Zobacz GitHub',
     },
     footer: {
-      statement: 'Forged with curiosity, code and AI.',
+      signature: ['AI', 'Pixels', 'Kinetics'],
       top: 'Do góry',
       legal: 'Wszelkie prawa zastrzeżone.',
     },
@@ -200,7 +200,7 @@ export const copy: Record<Language, Copy> = {
       github: 'View GitHub',
     },
     footer: {
-      statement: 'Forged with curiosity, code and AI.',
+      signature: ['AI', 'Pixels', 'Kinetics'],
       top: 'Back to top',
       legal: 'All rights reserved.',
     },
