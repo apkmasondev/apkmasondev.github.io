@@ -8,6 +8,10 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- EDM Music Festival zastąpił THE IRIS wśród wyróżnionych realizacji; końcówkę
+  archiwum uporządkowano jako Budżet Domowy, Top Seven i RecAI,
+- zastąpiono niejednoznaczny ślad monolitu zwartą, asymetryczną bryłą z
+  subtelnymi pomarańczowymi żyłami, lepiej powiązaną z motywem przewodnim,
 - wycofano projekt „Suno AI Music”, przeniesiono projekt „ASCENT — The Human Journey” na nową pozycję oraz dodano nowy projekt „EDM Music Festival” (<https://apkmason.dev/edm/>, kategoria: experiment) wraz z dedykowaną grafiką 3D (edm_mockup.webp),
 - delikatnie zwiększono czytelność materialnych śladów monolitu w notach
   sekcji, zachowując gradientową ochronę kontrastu tekstu,
