@@ -8,6 +8,11 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zaktualizowano pośrednią zależność `nanoid` do wersji bez podatności
+  `GHSA-2v37-7h3g-55p8`; `npm audit` ponownie raportuje zero problemów,
+- zaktualizowano workflow GitHub Pages do akcji opartych na Node 24, wyrównano
+  środowisko CI z wymaganiami projektu i zastąpiono instalację zależności
+  deterministycznym `npm ci`,
 - generyczne hasło w stopce zastąpiono sygnaturą marki
   „APK / AI · Pixels · Kinetics” z dyskretnie wyróżnionymi inicjałami,
 - zaktualizowano opis projektu „APKMASON ARC” (usunięcie odniesienia do jednego kadru na rzecz opisu płynnej narracji produktowej),
