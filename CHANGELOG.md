@@ -8,15 +8,15 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- wersjonowana nazwa nowej grafiki monolitu wymusza odświeżenie zasobu po
-  wdrożeniu i eliminuje wyświetlanie poprzedniej wersji z cache,
-- EDM Music Festival zastąpił THE IRIS wśród wyróżnionych realizacji; końcówkę
-  archiwum uporządkowano jako Budżet Domowy, Top Seven i RecAI,
-- zastąpiono niejednoznaczny ślad monolitu zwartą, asymetryczną bryłą z
-  subtelnymi pomarańczowymi żyłami, lepiej powiązaną z motywem przewodnim,
+- noty sekcji otrzymały nową grafikę monolitu zaprojektowaną jako materialne
+  tło pod tekstem, z czterostronnym wygaszeniem do czerni i wersjonowanym
+  adresem zasobu eliminującym poprzednie wersje z cache,
+- wśród wyróżnionych EDM Music Festival zastąpił THE IRIS, a Skin Elixir
+  przesunięto na piątą pozycję,
+- w archiwum zamieniono miejscami VIBE//SHIFT z APKMASON ARC oraz Allergen &
+  Diet Guard z THE IRIS; końcówka pozostaje uporządkowana jako Budżet Domowy,
+  Top Seven i RecAI,
 - wycofano projekt „Suno AI Music”, przeniesiono projekt „ASCENT — The Human Journey” na nową pozycję oraz dodano nowy projekt „EDM Music Festival” (<https://apkmason.dev/edm/>, kategoria: experiment) wraz z dedykowaną grafiką 3D (edm_mockup.webp),
-- delikatnie zwiększono czytelność materialnych śladów monolitu w notach
-  sekcji, zachowując gradientową ochronę kontrastu tekstu,
 - zaktualizowano pośrednią zależność `nanoid` do wersji bez podatności
   `GHSA-2v37-7h3g-55p8`; `npm audit` ponownie raportuje zero problemów,
 - zaktualizowano workflow GitHub Pages do akcji opartych na Node 24, wyrównano
