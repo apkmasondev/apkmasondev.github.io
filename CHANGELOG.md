@@ -8,6 +8,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- wycofano projekt „Suno AI Music”, przeniesiono projekt „ASCENT — The Human Journey” na nową pozycję oraz dodano nowy projekt „EDM Music Festival” (<https://apkmason.dev/edm/>, kategoria: experiment) wraz z dedykowaną grafiką 3D (edm_mockup.webp),
 - delikatnie zwiększono czytelność materialnych śladów monolitu w notach
   sekcji, zachowując gradientową ochronę kontrastu tekstu,
 - zaktualizowano pośrednią zależność `nanoid` do wersji bez podatności
