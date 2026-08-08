@@ -8,7 +8,13 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- zastąpiono projekt „ASCENT — The Human Journey” nowym interaktywnym manifestem cyfrowym „APK://GENESIS” (<https://apkmasondev.github.io/apk_genesis/>, kategoria: story) wraz z nową grafiką 3D ze sferą AI (genesis_mockup.webp),
+- fraza „na własny świat?” w sekcji kontaktowej otrzymała subtelny, statyczny
+  gradient domykający motyw „nowych światów”, z zachowaniem trybu wymuszonych
+  kolorów,
+- projekt „ASCENT — The Human Journey” zastąpiono „APK://GENESIS”, który
+  otwiera teraz siedem wyróżnionych realizacji; „Sfera” została przeniesiona do
+  archiwum, a opis GENESIS oparto na konkretnych elementach projektu: wideo,
+  typografii i dźwięku,
 - nagłówek sekcji „O mnie” otrzymał znaczeniową hierarchię koloru: ciepłą biel
   dla pracy dziennej, kamienny szary dla przejścia oraz statyczny gradient
   prowadzący do firmowego pomarańczu na frazie „nowe światy”,
