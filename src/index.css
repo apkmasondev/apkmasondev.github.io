@@ -1496,11 +1496,33 @@ video {
   display: block;
 }
 
-.about-copy h2 > span:last-child {
+.about-title-lead {
+  color: #f3f0ea;
+}
+
+.about-copy h2 > .about-title-after {
   margin-top: 0.12em;
-  color: #c9c5bd;
+  color: #9d9892;
   font-size: 0.74em;
   line-height: 1.02;
+}
+
+.about-title-accent {
+  display: inline-block;
+  background: linear-gradient(105deg, #d8c8bd 0%, var(--signal) 100%);
+  background-clip: text;
+  color: #d8c8bd;
+  white-space: nowrap;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (forced-colors: active) {
+  .about-title-accent {
+    background: none;
+    color: CanvasText;
+    -webkit-text-fill-color: CanvasText;
+  }
 }
 
 .about-narrative {
@@ -2256,7 +2278,7 @@ video {
     font-size: clamp(2.8rem, 12vw, 4.8rem);
   }
 
-  .about-copy h2 > span:last-child {
+  .about-copy h2 > .about-title-after {
     font-size: 0.8em;
   }
 

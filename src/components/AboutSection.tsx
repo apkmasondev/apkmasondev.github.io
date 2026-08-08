@@ -68,8 +68,11 @@ export function AboutSection({ language }: { language: Language }) {
       <div className="about-copy">
         <p className="eyebrow">{text.overline}</p>
         <h2 id="about-title">
-          <span>{text.titleLines[0]}</span>
-          <span>{text.titleLines[1]}</span>
+          <span className="about-title-lead">{text.titleLead}</span>
+          <span className="about-title-after">
+            {text.titleBridge}{' '}
+            <span className="about-title-accent">{text.titleAccent}</span>
+          </span>
         </h2>
         <div className="about-narrative">
           <p><span>01 / SCALE</span>{text.p1}</p>
