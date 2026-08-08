@@ -23,8 +23,8 @@ export const projects: Project[] = [
     id: 'apk-genesis',
     title: 'APK://GENESIS',
     description: {
-      pl: 'Cyfrowy manifest ApkMason.dev: sterowana scrollem opowieść o AI, obrazie i ruchu, zbudowana z wideo, typografii i dźwięku.',
-      en: 'A digital manifesto for ApkMason.dev: a scroll-driven story about AI, imagery and motion, built from video, typography and sound.',
+      pl: 'Cyfrowy manifest APKMason.dev: sterowana scrollem opowieść o AI, obrazie i ruchu, zbudowana z wideo, typografii i dźwięku.',
+      en: 'A digital manifesto for APKMason.dev: a scroll-driven story about AI, imagery and motion, built from video, typography and sound.',
     },
     image: '/genesis_mockup.webp',
     link: 'https://apkmasondev.github.io/apk_genesis/',
