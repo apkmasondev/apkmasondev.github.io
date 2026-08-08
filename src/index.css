@@ -765,6 +765,46 @@ video {
   text-wrap: pretty;
 }
 
+@media (min-width: 768px) {
+  .section-index-note {
+    isolation: isolate;
+    min-height: 11.5rem;
+    overflow: hidden;
+    padding-right: 1.5rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .section-index-note::before,
+  .section-index-note::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 1px 0 0;
+    pointer-events: none;
+  }
+
+  .section-index-note::before {
+    background-image: url('/monolith-trace.webp');
+    background-repeat: no-repeat;
+    background-size: 125% auto;
+    opacity: 0.78;
+  }
+
+  .section-index-note::after {
+    background:
+      linear-gradient(90deg, var(--ink) 0%, rgba(7, 7, 7, 0.92) 48%, rgba(7, 7, 7, 0.18) 100%),
+      linear-gradient(180deg, var(--ink) 0%, transparent 24%, transparent 74%, var(--ink) 100%);
+  }
+
+  .featured .section-index-note::before {
+    background-position: right 18%;
+  }
+
+  .archive .section-index-note::before {
+    background-position: right 84%;
+  }
+}
+
 .featured-stack {
   position: relative;
 }
@@ -1734,6 +1774,42 @@ video {
 
 .footer-brand img {
   border-radius: 50%;
+}
+
+.footer-signature,
+.footer-signature-words,
+.footer-signature-word {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.footer-signature {
+  gap: 0.65rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-signature-mark {
+  color: #99958e;
+}
+
+.footer-signature-words {
+  gap: 0.45rem;
+}
+
+.footer-signature-word {
+  gap: 0;
+}
+
+.footer-signature-word:not(:last-child)::after {
+  content: '·';
+  margin-left: 0.45rem;
+  color: #4e4c48;
+}
+
+.footer-signature-word strong {
+  color: #b8b4ad;
+  font-weight: 500;
 }
 
 .footer-bottom a {

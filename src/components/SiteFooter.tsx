@@ -40,7 +40,16 @@ export function SiteFooter({ language }: { language: Language }) {
           <img src="/logo.svg" alt="" width="32" height="32" />
           <span>APKMASON<em>.DEV</em></span>
         </div>
-        <p>{footer.statement}</p>
+        <p className="footer-signature" aria-label={`APK — ${footer.signature.join(', ')}`}>
+          <span className="footer-signature-mark" aria-hidden="true">APK /</span>
+          <span className="footer-signature-words" aria-hidden="true">
+            {footer.signature.map((word) => (
+              <span className="footer-signature-word" key={word}>
+                <strong>{word.charAt(0)}</strong>{word.slice(1)}
+              </span>
+            ))}
+          </span>
+        </p>
         <p>© {new Date().getFullYear()} ApkMason.dev. {footer.legal}</p>
         <a href="#top">{footer.top} <ArrowUp aria-hidden="true" /></a>
       </div>

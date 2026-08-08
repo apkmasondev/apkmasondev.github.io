@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- generyczne hasło w stopce zastąpiono sygnaturą marki
+  „APK / AI · Pixels · Kinetics” z dyskretnie wyróżnionymi inicjałami,
 - zaktualizowano opis projektu „APKMASON ARC” (usunięcie odniesienia do jednego kadru na rzecz opisu płynnej narracji produktowej),
 - zastąpiono projekt „Piątunio w Korpo” nowym projektem konceptualnym głośnika przestrzennego „APKMASON ARC” (<https://apkmasondev.github.io/arc/>, kategoria: experiment) wraz z dedykowaną grafiką 3D,
 - wycofano projekt „ScrollDebt”, wstawiono w jego miejsce projekt „From Vertex to Reality” (<https://apkmason.dev/vertex/>) oraz zamieniono miejscami pozycje „Allergen & Diet Guard” z „Skin Elixir”,
@@ -84,6 +86,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- dodano dyskretne „echo monolitu” w notach sekcji wyróżnionych projektów i
+  archiwum: dwa odmienne kadry jednego lekkiego assetu WebP, ładowanego
+  wyłącznie na większych ekranach i maskowanego do czerni,
 - autorski przekrój „Human Faultline” płynnie łączący finał filmu hero z
   Manifestem, z osobnymi lekkimi wariantami WebP dla desktopu i mobile,
 - instrukcja dodawania nowych projektów wraz z gotowym szablonem wpisu,
@@ -106,6 +111,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- poprawiono nazwę właściwości `fetchPriority` filmu hero, usuwając ostrzeżenie
+  Reacta z konsoli bez zmiany priorytetu pobierania,
 - mobilny pasek statystyk Manifestu układa się teraz w pełną siatkę 2 × 2 bez
   ucinania czwartej wartości,
 
