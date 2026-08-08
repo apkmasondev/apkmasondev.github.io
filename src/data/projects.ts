@@ -20,6 +20,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'apk-genesis',
+    title: 'APK://GENESIS',
+    description: {
+      pl: 'Cyfrowy manifest ApkMason.dev: sterowana scrollem opowieść o AI, obrazie i ruchu, zbudowana z wideo, typografii i dźwięku.',
+      en: 'A digital manifesto for ApkMason.dev: a scroll-driven story about AI, imagery and motion, built from video, typography and sound.',
+    },
+    image: '/genesis_mockup.webp',
+    link: 'https://apkmasondev.github.io/apk_genesis/',
+    tags: ['Scroll-driven', 'Cinematic', 'Manifesto'],
+    category: 'story',
+    featured: true,
+    accent: '#38bdf8',
+  },
+  {
     id: 'brixcore',
     title: 'BRIXCORE',
     description: {
@@ -102,20 +116,6 @@ export const projects: Project[] = [
     category: 'spatial',
     featured: true,
     accent: '#00e2b8',
-  },
-  {
-    id: 'sfera',
-    title: 'Sfera',
-    description: {
-      pl: 'Trójwymiarowa sfera wiedzy rozmieszczająca obrazy i ciekawostki algorytmem Fibonacciego.',
-      en: 'A three-dimensional knowledge sphere distributing imagery and facts with a Fibonacci algorithm.',
-    },
-    image: '/sfera_mockup.webp',
-    link: 'https://apkmasondev.github.io/sfera/',
-    tags: ['Three.js', 'WebGL', 'Fibonacci'],
-    category: 'spatial',
-    featured: true,
-    accent: '#34c7ff',
   },
   {
     id: 'fruit-energy',
@@ -287,17 +287,17 @@ export const projects: Project[] = [
     accent: '#ff5a36',
   },
   {
-    id: 'apk-genesis',
-    title: 'APK://GENESIS',
+    id: 'sfera',
+    title: 'Sfera',
     description: {
-      pl: 'Interaktywny manifest ApkMason.dev — sterowana scrollem podróż przez AI, Pixels i Kinetics, dopełniona obrazem, ruchem i dźwiękiem.',
-      en: 'An interactive manifesto for ApkMason.dev — a scroll-driven journey through AI, Pixels, and Kinetics, completed with imagery, motion, and sound.',
+      pl: 'Trójwymiarowa sfera wiedzy rozmieszczająca obrazy i ciekawostki algorytmem Fibonacciego.',
+      en: 'A three-dimensional knowledge sphere distributing imagery and facts with a Fibonacci algorithm.',
     },
-    image: '/genesis_mockup.webp',
-    link: 'https://apkmasondev.github.io/apk_genesis/',
-    tags: ['Scroll-driven', 'Cinematic', 'Manifesto'],
-    category: 'story',
-    accent: '#38bdf8',
+    image: '/sfera_mockup.webp',
+    link: 'https://apkmasondev.github.io/sfera/',
+    tags: ['Three.js', 'WebGL', 'Fibonacci'],
+    category: 'spatial',
+    accent: '#34c7ff',
   },
   {
     id: 'allergen-guard',

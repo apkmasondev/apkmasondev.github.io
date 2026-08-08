@@ -23,7 +23,7 @@ export function SiteFooter({ language }: { language: Language }) {
         <p className="eyebrow">{contact.overline}</p>
         <h2>
           {contact.titleLead}
-          <span className="accent-word">{contact.titleAccent}</span>
+          <span className="footer-title-accent">{contact.titleAccent}</span>
         </h2>
         <SignalCaption className="footer-signal-caption">{contact.body}</SignalCaption>
         <div className="contact-links">

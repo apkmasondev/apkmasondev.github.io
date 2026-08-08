@@ -1724,6 +1724,22 @@ video {
   max-width: 1020px;
 }
 
+.footer-title-accent {
+  background: linear-gradient(108deg, #cbc6bd 8%, #d9b6a8 58%, var(--signal) 100%);
+  background-clip: text;
+  color: #cbc6bd;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (forced-colors: active) {
+  .footer-title-accent {
+    background: none;
+    color: CanvasText;
+    -webkit-text-fill-color: CanvasText;
+  }
+}
+
 .footer-signal-caption {
   max-width: 650px;
   margin-top: 2rem;
