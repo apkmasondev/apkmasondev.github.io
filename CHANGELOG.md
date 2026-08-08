@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- wersjonowana nazwa nowej grafiki monolitu wymusza odświeżenie zasobu po
+  wdrożeniu i eliminuje wyświetlanie poprzedniej wersji z cache,
 - EDM Music Festival zastąpił THE IRIS wśród wyróżnionych realizacji; końcówkę
   archiwum uporządkowano jako Budżet Domowy, Top Seven i RecAI,
 - zastąpiono niejednoznaczny ślad monolitu zwartą, asymetryczną bryłą z

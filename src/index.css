@@ -784,7 +784,7 @@ video {
   }
 
   .section-index-note::before {
-    background-image: url('/monolith-trace.webp');
+    background-image: url('/monolith-trace-v2.webp');
     background-repeat: no-repeat;
     background-size: 125% auto;
     opacity: 0.9;
