@@ -277,8 +277,8 @@ export const projects: Project[] = [
     id: 'arc',
     title: 'APKMASON ARC',
     description: {
-      pl: 'Konceptualne, jednokadrowe doświadczenie produktowe głośnika przestrzennego ze sterowaniem scrollem i falowym polem akustycznym.',
-      en: 'A conceptual, single-screen spatial audio speaker experience driven by scroll and real-time acoustic wave fields.',
+      pl: 'Konceptualne doświadczenie produktowe głośnika przestrzennego ze sterowaniem scrollem, falowym polem akustycznym i interaktywnymi hotspotami.',
+      en: 'A conceptual spatial audio speaker experience driven by scroll, real-time acoustic wave fields, and interactive hotspots.',
     },
     image: '/arc_mockup.webp',
     link: 'https://apkmasondev.github.io/arc/',
