@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- niejasny, statyczny licznik „Product Platforms” zastąpiono dynamicznym
+  licznikiem „Product Apps”, wyliczanym z projektów aplikacyjnych,
 - fraza „na własny świat?” w sekcji kontaktowej otrzymała subtelny, statyczny
   gradient domykający motyw „nowych światów”, z zachowaniem trybu wymuszonych
   kolorów,
