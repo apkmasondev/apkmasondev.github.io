@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- delikatnie zwiększono czytelność materialnych śladów monolitu w notach
+  sekcji, zachowując gradientową ochronę kontrastu tekstu,
 - zaktualizowano pośrednią zależność `nanoid` do wersji bez podatności
   `GHSA-2v37-7h3g-55p8`; `npm audit` ponownie raportuje zero problemów,
 - zaktualizowano workflow GitHub Pages do akcji opartych na Node 24, wyrównano

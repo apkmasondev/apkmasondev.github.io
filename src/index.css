@@ -787,12 +787,12 @@ video {
     background-image: url('/monolith-trace.webp');
     background-repeat: no-repeat;
     background-size: 125% auto;
-    opacity: 0.78;
+    opacity: 0.9;
   }
 
   .section-index-note::after {
     background:
-      linear-gradient(90deg, var(--ink) 0%, rgba(7, 7, 7, 0.92) 48%, rgba(7, 7, 7, 0.18) 100%),
+      linear-gradient(90deg, var(--ink) 0%, rgba(7, 7, 7, 0.84) 48%, rgba(7, 7, 7, 0.1) 100%),
       linear-gradient(180deg, var(--ink) 0%, transparent 24%, transparent 74%, var(--ink) 100%);
   }
 
