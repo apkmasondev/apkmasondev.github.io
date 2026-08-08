@@ -157,19 +157,6 @@ export const projects: Project[] = [
     accent: '#8ed86b',
   },
   {
-    id: 'ascent',
-    title: 'ASCENT — The Human Journey',
-    description: {
-      pl: 'Symboliczna ewolucja człowieka opowiedziana obrazem, tempem i przewijaniem.',
-      en: 'A symbolic evolution of humanity told through imagery, pacing and scroll.',
-    },
-    image: '/ascent_human_journey_mockup.webp',
-    link: 'https://apkmasondev.github.io/ascent-human-journey/',
-    tags: ['Scroll-driven', 'Cinematic'],
-    category: 'story',
-    accent: '#d1a56d',
-  },
-  {
     id: 'evolution-phone',
     title: 'Evolution of the Phone',
     description: {
@@ -339,17 +326,30 @@ export const projects: Project[] = [
     accent: '#ff5a36',
   },
   {
-    id: 'suno',
-    title: 'Suno AI Music',
+    id: 'ascent',
+    title: 'ASCENT — The Human Journey',
     description: {
-      pl: 'Biblioteka muzycznych eksperymentów z generatywnym brzmieniem, wokalem i nowymi gatunkami.',
-      en: 'A library of music experiments with generative sound, vocals and new genres.',
+      pl: 'Symboliczna ewolucja człowieka opowiedziana obrazem, tempem i przewijaniem.',
+      en: 'A symbolic evolution of humanity told through imagery, pacing and scroll.',
     },
-    image: '/suno_mockup.webp',
-    link: 'https://suno.com/@kriss8812',
-    tags: ['AI music', 'Suno'],
+    image: '/ascent_human_journey_mockup.webp',
+    link: 'https://apkmasondev.github.io/ascent-human-journey/',
+    tags: ['Scroll-driven', 'Cinematic'],
+    category: 'story',
+    accent: '#d1a56d',
+  },
+  {
+    id: 'edm',
+    title: 'EDM Music Festival',
+    description: {
+      pl: 'Kinowy reveal fikcyjnego festiwalu EDM sterowany scrollem, łączący dynamiczne wideo, oprawę muzyczną i interaktywny line-up.',
+      en: 'A cinematic scroll-driven reveal for a fictional EDM festival, combining dynamic video, soundtrack and an interactive lineup.',
+    },
+    image: '/edm_mockup.webp',
+    link: 'https://apkmason.dev/edm/',
+    tags: ['Scroll-driven', 'Music Festival', 'Interactive'],
     category: 'experiment',
-    accent: '#b675ff',
+    accent: '#ff0055',
   },
 ];
 
