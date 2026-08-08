@@ -8,9 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- noty sekcji otrzymały nową grafikę monolitu zaprojektowaną jako materialne
-  tło pod tekstem, z czterostronnym wygaszeniem do czerni i wersjonowanym
-  adresem zasobu eliminującym poprzednie wersje z cache,
+- noty sekcji otrzymały pełnokadrową powierzchnię monolitu pod tekstem;
+  przyciemnienie i czterostronne wygaszenie do czerni są kontrolowane w CSS,
+  a wersjonowany adres zasobu eliminuje poprzednie wersje z cache,
 - wśród wyróżnionych EDM Music Festival zastąpił THE IRIS, a Skin Elixir
   przesunięto na piątą pozycję,
 - w archiwum zamieniono miejscami VIBE//SHIFT z APKMASON ARC oraz Allergen &
