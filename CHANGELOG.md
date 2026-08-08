@@ -8,6 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- nagłówek sekcji „O mnie” otrzymał znaczeniową hierarchię koloru: ciepłą biel
+  dla pracy dziennej, kamienny szary dla przejścia oraz statyczny gradient
+  prowadzący do firmowego pomarańczu na frazie „nowe światy”,
 - noty sekcji otrzymały pełnokadrową powierzchnię monolitu pod tekstem;
   przyciemnienie i czterostronne wygaszenie do czerni są kontrolowane w CSS,
   a wersjonowany adres zasobu eliminuje poprzednie wersje z cache,

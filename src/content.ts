@@ -28,7 +28,9 @@ type Copy = {
   };
   about: {
     overline: string;
-    titleLines: [string, string];
+    titleLead: string;
+    titleBridge: string;
+    titleAccent: string;
     p1: string;
     p2: string;
     capabilities: string[];
@@ -100,7 +102,9 @@ export const copy: Record<Language, Copy> = {
     },
     about: {
       overline: 'Human behind the system',
-      titleLines: ['W dzień buduję zespoły.', 'Po godzinach — nowe światy.'],
+      titleLead: 'W dzień buduję zespoły.',
+      titleBridge: 'Po godzinach',
+      titleAccent: '— nowe światy.',
       p1: 'Prowadzę duży zespół techniczny w e-commerce. Po pracy eksploruję moment, w którym kod, obraz i sztuczna inteligencja przestają być osobnymi dziedzinami.',
       p2: 'Buduję hobbystycznie, ale traktuję każdy projekt serio: jako produkt, eksperyment i kolejny dowód, że ciekawość połączona z dobrym warsztatem potrafi bardzo szybko materializować odważne pomysły.',
       capabilities: ['Creative direction', 'React / TypeScript', 'Android / Kotlin', 'Three.js / WebGL', 'AI media', 'Product thinking', 'System design', 'Motion design'],
@@ -186,7 +190,9 @@ export const copy: Record<Language, Copy> = {
     },
     about: {
       overline: 'Human behind the system',
-      titleLines: ['By day, I build teams.', 'After hours — new worlds.'],
+      titleLead: 'By day, I build teams.',
+      titleBridge: 'After hours',
+      titleAccent: '— new worlds.',
       p1: 'I lead a large technical team in e-commerce. After work, I explore the moment when code, imagery and artificial intelligence stop being separate disciplines.',
       p2: 'I build as a passion, but treat every project seriously: as a product, an experiment and another proof that curiosity paired with a solid craft can materialize bold ideas very quickly.',
       capabilities: ['Creative direction', 'React / TypeScript', 'Android / Kotlin', 'Three.js / WebGL', 'AI media', 'Product thinking', 'System design', 'Motion design'],
