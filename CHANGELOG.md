@@ -137,6 +137,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- skorygowano optyczne wycentrowanie strzałki w okrągłym przycisku głównych
+  kart na urządzeniach mobilnych,
 - poprawiono nazwę właściwości `fetchPriority` filmu hero, usuwając ostrzeżenie
   Reacta z konsoli bez zmiany priorytetu pobierania,
 - mobilny pasek statystyk Manifestu układa się teraz w pełną siatkę 2 × 2 bez
