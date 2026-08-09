@@ -4,7 +4,7 @@ import { copy } from '../content';
 
 export function Manifesto({ language }: { language: Language }) {
   const text = copy[language].intro;
-  const storyCount = projects.filter((project) => project.category === 'story').length;
+  const scrollStoryCount = projects.filter((project) => project.tags.includes('Scroll-driven')).length;
   const appCount = projects.filter((project) => project.category === 'app').length;
 
   return (
@@ -37,7 +37,7 @@ export function Manifesto({ language }: { language: Language }) {
         </div>
         <div className="proof-strip" aria-label="Portfolio statistics">
           <div><strong>{String(projects.length).padStart(2, '0')}</strong><span>Digital projects</span></div>
-          <div><strong>{String(storyCount).padStart(2, '0')}</strong><span>Scroll stories</span></div>
+          <div><strong>{String(scrollStoryCount).padStart(2, '0')}</strong><span>Scroll stories</span></div>
           <div><strong>{String(appCount).padStart(2, '0')}</strong><span>Product apps</span></div>
           <div><strong>∞</strong><span>Curiosity</span></div>
         </div>

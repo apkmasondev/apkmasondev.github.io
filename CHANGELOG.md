@@ -8,6 +8,14 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- dodano kategorię „Product / Commercial” dla konceptów produktowych i
+  prezentacji komercyjnych; przypisano do niej Skin Elixir, APKMASON ARC,
+  FRUIT ENERGY, Pure Form i Mechanikę Czasu oraz uporządkowano tagi pod kątem
+  trwałych cech doświadczenia zamiast szczegółów implementacyjnych; licznik
+  „Scroll Stories” jest teraz oparty na cesze projektu, a nie jego kategorii,
+- „ASCENT — The Human Journey” zastąpił „From Vertex to Reality” w archiwum,
+  a „APKMASON ARC” awansował do wyróżnionej siódemki w miejsce zachowanego w
+  archiwum projektu „PCVerse”,
 - niejasny, statyczny licznik „Product Platforms” zastąpiono dynamicznym
   licznikiem „Product Apps”, wyliczanym z projektów aplikacyjnych,
 - fraza „na własny świat?” w sekcji kontaktowej otrzymała subtelny, statyczny
