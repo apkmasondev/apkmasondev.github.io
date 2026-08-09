@@ -37,7 +37,7 @@ export const projects: Project[] = [
     id: 'brixcore',
     title: 'BRIXCORE',
     description: {
-      pl: 'Jednoekranowe, interaktywne kinowe doświadczenie wyboru — wybierz rdzeń FORGE lub EVOLVE i poznaj swoją ścieżkę.',
+      pl: 'Jednoekranowe doświadczenie wyboru o kinowej oprawie — wybierz rdzeń FORGE lub EVOLVE i poznaj swoją ścieżkę.',
       en: 'A one-screen, choice-driven cinematic experience — pick the FORGE or EVOLVE core to reveal your path.',
     },
     image: '/brixcore_mockup.webp',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     id: 'skincare',
     title: 'Skin Elixir',
     description: {
-      pl: 'Koncept luksusowej prezentacji kosmetyków, sterowanej scrollem i inercyjnym systemem ruchu.',
+      pl: 'Koncept luksusowej prezentacji kosmetyków z narracją sterowaną scrollem i inercyjnym ruchem.',
       en: 'A concept for a luxury skincare presentation, driven by scroll and an inertial motion system.',
     },
     image: '/skincare_mockup.webp',
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     id: 'arc',
     title: 'APKMASON ARC',
     description: {
-      pl: 'Konceptualne doświadczenie produktowe głośnika przestrzennego ze sterowaniem scrollem, falowym polem akustycznym i interaktywnymi hotspotami.',
+      pl: 'Konceptualna prezentacja głośnika z dźwiękiem przestrzennym, sterowaniem scrollem, falowym polem akustycznym i interaktywnymi hotspotami.',
       en: 'A conceptual spatial audio speaker experience driven by scroll, real-time acoustic wave fields, and interactive hotspots.',
     },
     image: '/arc_mockup.webp',
@@ -290,8 +290,8 @@ export const projects: Project[] = [
     id: 'sfera',
     title: 'Sfera',
     description: {
-      pl: 'Trójwymiarowa sfera wiedzy rozmieszczająca obrazy i ciekawostki algorytmem Fibonacciego.',
-      en: 'A three-dimensional knowledge sphere distributing imagery and facts with a Fibonacci algorithm.',
+      pl: 'Interaktywna sfera wiedzy, w której obrazy i ciekawostki rozmieszczono za pomocą algorytmu sfery Fibonacciego.',
+      en: 'An interactive knowledge sphere arranging images and facts with a Fibonacci-sphere algorithm.',
     },
     image: '/sfera_mockup.webp',
     link: 'https://apkmasondev.github.io/sfera/',

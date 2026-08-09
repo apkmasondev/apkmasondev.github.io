@@ -50,7 +50,7 @@ export function SiteFooter({ language }: { language: Language }) {
             ))}
           </span>
         </p>
-        <p>© {new Date().getFullYear()} ApkMason.dev. {footer.legal}</p>
+        <p>© {new Date().getFullYear()} APKMason.dev. {footer.legal}</p>
         <a href="#top">{footer.top} <ArrowUp aria-hidden="true" /></a>
       </div>
     </footer>

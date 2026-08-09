@@ -8,6 +8,14 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- przeprowadzono redakcję polskiej i angielskiej warstwy treści: poszerzono
+  narrację hero poza sam scroll, dopracowano sekcje procesu i autora oraz
+  wygładzono nagłówki i wybrane opisy projektów,
+- ujednolicono zapis marki do `APKMason.dev` w interfejsie, metadanych SEO,
+  manifeście i dokumentacji oraz zsynchronizowano opis i locale metadanych po
+  zmianie języka,
+- strzałka odnośnika „Do góry” w stopce otrzymała firmowy pomarańczowy
+  akcent,
 - noty sekcji wyróżnionych projektów i archiwum przekształcono w ciemne,
   zatopione tablice monolitu z wygasającą ramką oraz sygnaturą marki
   „A · P · K” wbudowaną w prawą dolną krawędź,
@@ -149,8 +157,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
-- skorygowano optyczne wycentrowanie strzałki w okrągłym przycisku głównych
-  kart na urządzeniach mobilnych,
+- usunięto mobilny odstęp flex przesuwający strzałkę w okrągłym przycisku
+  głównych kart i zastąpiono wcześniejsze korekty pozycyjne rzeczywistym
+  wycentrowaniem ikony,
 - poprawiono nazwę właściwości `fetchPriority` filmu hero, usuwając ostrzeżenie
   Reacta z konsoli bez zmiany priorytetu pobierania,
 - mobilny pasek statystyk Manifestu układa się teraz w pełną siatkę 2 × 2 bez

@@ -38,7 +38,7 @@ export function SiteHeader({ language, onLanguageChange }: SiteHeaderProps) {
 
   return (
     <header className={`site-header${compact ? ' is-compact' : ''}${menuOpen ? ' is-open' : ''}`}>
-      <a className="brand" href="#top" aria-label="ApkMason.dev">
+      <a className="brand" href="#top" aria-label="APKMason.dev">
         <img src="/logo.svg" alt="" width="38" height="38" />
         <span>APKMASON<em>.DEV</em></span>
       </a>

@@ -1,7 +1,7 @@
 {
-  "name": "ApkMason.dev Portfolio",
-  "short_name": "ApkMason",
-  "description": "AI Creator portfolio featuring interactive digital experiences, apps, 3D websites and multimedia.",
+  "name": "APKMason.dev Portfolio",
+  "short_name": "APKMason",
+  "description": "Krzysztof’s portfolio / APKMason.dev — interactive websites, applications and digital experiences crafted with code, motion design and AI.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#070707",
