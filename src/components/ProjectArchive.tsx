@@ -8,6 +8,7 @@ import {
   type Language,
   type ProjectCategory,
 } from '../data/projects';
+import { SectionIndexNote } from './SectionIndexNote';
 
 type Filter = 'all' | ProjectCategory;
 
@@ -31,10 +32,11 @@ export function ProjectArchive({ language }: { language: Language }) {
             <span className="accent-word">{text.titleAccent}</span>
           </h2>
         </div>
-        <div className="section-index-note">
-          <span>{String(featuredProjects.length + 1).padStart(2, '0')}—{String(projects.length).padStart(2, '0')}</span>
-          <p>{text.body}</p>
-        </div>
+        <SectionIndexNote
+          index={`${String(featuredProjects.length + 1).padStart(2, '0')}—${String(projects.length).padStart(2, '0')}`}
+        >
+          {text.body}
+        </SectionIndexNote>
       </header>
 
       <div

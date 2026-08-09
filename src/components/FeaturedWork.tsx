@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { copy } from '../content';
 import { featuredProjects, type Language } from '../data/projects';
+import { SectionIndexNote } from './SectionIndexNote';
 
 export function FeaturedWork({ language }: { language: Language }) {
   const text = copy[language].featured;
@@ -14,10 +15,9 @@ export function FeaturedWork({ language }: { language: Language }) {
           {text.titleLead}
           <span className="accent-word">{text.titleAccent}</span>
         </h2>
-        <div className="section-index-note">
-          <span>01—{String(featuredProjects.length).padStart(2, '0')}</span>
-          <p>{text.body}</p>
-        </div>
+        <SectionIndexNote index={`01—${String(featuredProjects.length).padStart(2, '0')}`}>
+          {text.body}
+        </SectionIndexNote>
       </header>
 
       <div className="featured-stack">

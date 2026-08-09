@@ -8,6 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- noty sekcji wyróżnionych projektów i archiwum przekształcono w ciemne,
+  zatopione tablice monolitu z wygasającą ramką oraz sygnaturą marki
+  „A · P · K” wbudowaną w prawą dolną krawędź,
 - zaktualizowano oprawę graficzną 3D dla projektu „ASCENT — The Human Journey” (ascent_human_journey_mockup.webp — obsydianowo-czarne tło ze złotą sylwetką idącego człowieka),
 - dodano kategorię „Product / Commercial” dla konceptów produktowych i
   prezentacji komercyjnych; przypisano do niej Skin Elixir, APKMASON ARC,
