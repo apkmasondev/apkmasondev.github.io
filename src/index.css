@@ -740,17 +740,31 @@ video {
 }
 
 .section-index-note {
+  --note-edge-signal: rgba(255, 77, 46, 0.12);
   position: relative;
   align-self: end;
-  width: min(100%, 390px);
-  max-width: 390px;
-  padding-top: 1.15rem;
-  border-top: 1px solid var(--line);
+  isolation: isolate;
+  width: min(100%, 430px);
+  max-width: 430px;
+  padding: 1.35rem 1.4rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background:
+    linear-gradient(145deg, rgba(18, 17, 15, 0.84), rgba(6, 6, 6, 0.95)) padding-box,
+    linear-gradient(125deg, rgba(218, 211, 201, 0.15), var(--note-edge-signal) 68%, rgba(218, 211, 201, 0.05)) border-box;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    inset 0 -28px 48px rgba(0, 0, 0, 0.28),
+    0 22px 60px rgba(0, 0, 0, 0.34);
 }
 
-.section-index-note > span {
+.featured .section-index-note {
+  --note-edge-signal: rgba(255, 77, 46, 0.18);
+}
+
+.section-index-note__index {
   display: block;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.55rem;
   color: var(--signal);
   font-family: var(--font-mono);
   font-size: 0.62rem;
@@ -765,13 +779,27 @@ video {
   text-wrap: pretty;
 }
 
+.section-index-note__signature {
+  position: absolute;
+  right: 1.15rem;
+  bottom: 0;
+  z-index: 1;
+  padding-inline: 0.55rem;
+  background: #080808;
+  color: color-mix(in srgb, var(--signal) 82%, #cbc6bd);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  transform: translateY(50%);
+  white-space: nowrap;
+}
+
 @media (min-width: 768px) {
   .section-index-note {
-    isolation: isolate;
-    min-height: 11.5rem;
-    overflow: hidden;
-    padding-right: 1.5rem;
-    padding-bottom: 1.25rem;
+    min-height: 12rem;
   }
 
   .section-index-note::before,
@@ -779,7 +807,8 @@ video {
     content: '';
     position: absolute;
     z-index: -1;
-    inset: 1px 0 0;
+    inset: 1px;
+    border-radius: 9px;
     pointer-events: none;
   }
 
@@ -787,14 +816,13 @@ video {
     background-image: url('/monolith-surface-v4.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.78;
+    opacity: 0.5;
   }
 
   .section-index-note::after {
     background:
-      linear-gradient(90deg, var(--ink) 0%, rgba(7, 7, 7, 0.24) 14%, rgba(7, 7, 7, 0.24) 86%, var(--ink) 100%),
-      linear-gradient(180deg, var(--ink) 0%, rgba(7, 7, 7, 0.12) 22%, rgba(7, 7, 7, 0.12) 78%, var(--ink) 100%),
-      linear-gradient(rgba(7, 7, 7, 0.24), rgba(7, 7, 7, 0.24));
+      linear-gradient(90deg, rgba(7, 7, 7, 0.92) 0%, rgba(7, 7, 7, 0.32) 20%, rgba(7, 7, 7, 0.42) 80%, rgba(7, 7, 7, 0.96) 100%),
+      linear-gradient(180deg, rgba(7, 7, 7, 0.82) 0%, rgba(7, 7, 7, 0.18) 28%, rgba(7, 7, 7, 0.3) 72%, rgba(7, 7, 7, 0.9) 100%);
   }
 
   .featured .section-index-note::before {
@@ -2127,11 +2155,15 @@ video {
   .section-index-note {
     width: min(100%, 430px);
     max-width: 430px;
-    padding-top: 0.9rem;
+    padding: 1rem 1rem 1.65rem;
   }
 
-  .section-index-note > span {
+  .section-index-note__index {
     margin-bottom: 0.9rem;
+  }
+
+  .section-index-note__signature {
+    right: 0.85rem;
   }
 
   .section-heading h2,
