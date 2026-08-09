@@ -27,10 +27,12 @@ function App() {
     document.title = 'APKMason.dev — AI · Pixels · Kinetics';
 
     const description = language === 'pl'
-      ? 'Portfolio Krzysztofa — AI Creatora projektującego interaktywne doświadczenia cyfrowe, aplikacje, strony 3D i multimedia.'
-      : 'Krzysztof’s portfolio — an AI Creator designing interactive digital experiences, apps, 3D websites and multimedia.';
+      ? 'Portfolio Krzysztofa / APKMason.dev — interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI.'
+      : 'Krzysztof’s portfolio / APKMason.dev — interactive websites, applications and digital experiences crafted with code, motion design and AI.';
     document.querySelector('meta[name="description"]')?.setAttribute('content', description);
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', description);
+    document.querySelector('meta[property="og:locale"]')?.setAttribute('content', language === 'pl' ? 'pl_PL' : 'en_US');
   }, [language]);
 
   const changeLanguage = (nextLanguage: Language) => {

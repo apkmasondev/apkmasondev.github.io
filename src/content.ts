@@ -50,15 +50,15 @@ export const copy: Record<Language, Copy> = {
       contact: 'Kontakt',
     },
     hero: {
-      eyebrow: 'ApkMason.dev — Independent digital creator',
+      eyebrow: 'APKMason.dev — Independent digital creator',
       titleLead: 'Pomysły przekuwam',
       titleAccent: 'w cyfrowe doświadczenia.',
-      subtitle: 'Interaktywne doświadczenia, aplikacje 3D i multimedia tworzone na styku kodu, motion designu i AI.',
+      subtitle: 'Interaktywne strony, aplikacje i multimedia tworzone na styku kodu, motion designu i AI.',
       scroll: 'Przewiń, aby uruchomić',
       stages: [
         { label: '01 / IDEA', title: 'Zaczyna się od impulsu.', body: 'Nie od frameworka. Nie od szablonu. Od pomysłu, który domaga się własnej formy.' },
         { label: '02 / SYSTEM', title: 'Nadaję mu strukturę.', body: 'Architektura, obraz, interakcja i technologia zaczynają pracować jak jeden mechanizm.' },
-        { label: '03 / MOTION', title: 'Ruch staje się językiem.', body: 'Scroll nie przesuwa strony. Prowadzi historię, zmienia perspektywę i buduje napięcie.' },
+        { label: '03 / MOTION', title: 'Ruch staje się językiem.', body: 'Ruch nie jest ozdobą. Prowadzi historię, zmienia perspektywę i buduje napięcie.' },
         { label: '04 / EXPERIENCE', title: 'Portal jest otwarty.', body: 'Wejdź do kolekcji eksperymentów, aplikacji i cyfrowych opowieści.' },
       ],
     },
@@ -93,7 +93,7 @@ export const copy: Record<Language, Copy> = {
     process: {
       overline: 'The making of',
       titleLines: ['AI przyspiesza.', 'Człowiek nadaje', 'kierunek.'],
-      body: 'Nie kolekcjonuję promptów. Buduję powtarzalny proces, w którym generatywne narzędzia są częścią warsztatu — nie substytutem myślenia.',
+      body: 'Prompt jest początkiem, nie produktem. Buduję powtarzalny proces, w którym narzędzia generatywne wspierają warsztat — nie zastępują myślenia.',
       steps: [
         { title: 'Kierunek', body: 'Definiuję historię, emocję, odbiorcę i jedną rzecz, którą projekt ma robić wyjątkowo dobrze.', meta: 'Concept / Story / UX' },
         { title: 'System', body: 'Dobieram architekturę, modele i media. Projektuję stan docelowy oraz bezpieczne warianty dla mobile i reduced motion.', meta: 'Architecture / AI stack' },
@@ -107,7 +107,7 @@ export const copy: Record<Language, Copy> = {
       titleBridge: 'Po godzinach',
       titleAccent: '— nowe światy.',
       p1: 'Prowadzę duży zespół techniczny w e-commerce. Po pracy eksploruję moment, w którym kod, obraz i sztuczna inteligencja przestają być osobnymi dziedzinami.',
-      p2: 'Buduję hobbystycznie, ale traktuję każdy projekt serio: jako produkt, eksperyment i kolejny dowód, że ciekawość połączona z dobrym warsztatem potrafi bardzo szybko materializować odważne pomysły.',
+      p2: 'To projekty niezależne, ale każdy traktuję serio — jako produkt, eksperyment i dowód, że ciekawość połączona z dobrym warsztatem potrafi zmieniać odważne pomysły w działające doświadczenia.',
       capabilities: ['Creative direction', 'React / TypeScript', 'Android / Kotlin', 'Three.js / WebGL', 'AI media', 'Product thinking', 'System design', 'Motion design'],
     },
     contact: {
@@ -139,15 +139,15 @@ export const copy: Record<Language, Copy> = {
       contact: 'Contact',
     },
     hero: {
-      eyebrow: 'ApkMason.dev — Independent digital creator',
+      eyebrow: 'APKMason.dev — Independent digital creator',
       titleLead: 'I forge ideas',
       titleAccent: 'into digital experiences.',
-      subtitle: 'Interactive experiences, 3D applications and multimedia created where code, motion design and AI meet.',
+      subtitle: 'Interactive websites, applications and multimedia created at the intersection of code, motion design and AI.',
       scroll: 'Scroll to activate',
       stages: [
         { label: '01 / IDEA', title: 'It begins with an impulse.', body: 'Not with a framework. Not with a template. With an idea that demands a form of its own.' },
         { label: '02 / SYSTEM', title: 'I give it structure.', body: 'Architecture, image, interaction and technology begin working as a single mechanism.' },
-        { label: '03 / MOTION', title: 'Movement becomes language.', body: 'Scroll does not move a page. It guides a story, changes perspective and builds tension.' },
+        { label: '03 / MOTION', title: 'Motion becomes a language.', body: 'Motion is not decoration. It guides the story, shifts perspective and builds tension.' },
         { label: '04 / EXPERIENCE', title: 'The portal is open.', body: 'Enter a collection of experiments, applications and digital stories.' },
       ],
     },
@@ -159,16 +159,16 @@ export const copy: Record<Language, Copy> = {
     },
     featured: {
       overline: 'Selected work',
-      titleLead: 'Projects that best define the ',
+      titleLead: 'Projects that best define my ',
       titleAccent: 'direction.',
       body: 'Selected projects. One shared principle: a digital product must have a voice of its own.',
       open: 'Open project',
     },
     archive: {
       overline: 'Project universe',
-      titleLead: 'Everything else is not ',
+      titleLead: 'The rest is not ',
       titleAccent: 'background.',
-      body: 'A living archive of experiments, tools and directions that shaped the craft I use today.',
+      body: 'A living archive of experiments, tools and directions that shaped how I work today.',
       open: 'View',
       filters: {
         all: 'All',
@@ -182,7 +182,7 @@ export const copy: Record<Language, Copy> = {
     process: {
       overline: 'The making of',
       titleLines: ['AI accelerates.', 'A human sets', 'the direction.'],
-      body: 'I do not collect prompts. I build a repeatable process in which generative tools are part of the craft — not a substitute for thinking.',
+      body: 'A prompt is a starting point, not the product. I build a repeatable process in which generative tools support the craft rather than replace judgment.',
       steps: [
         { title: 'Direction', body: 'I define the story, emotion, audience and the one thing the project must do exceptionally well.', meta: 'Concept / Story / UX' },
         { title: 'System', body: 'I select architecture, models and media, including deliberate mobile and reduced-motion variants.', meta: 'Architecture / AI stack' },
@@ -196,7 +196,7 @@ export const copy: Record<Language, Copy> = {
       titleBridge: 'After hours',
       titleAccent: '— new worlds.',
       p1: 'I lead a large technical team in e-commerce. After work, I explore the moment when code, imagery and artificial intelligence stop being separate disciplines.',
-      p2: 'I build as a passion, but treat every project seriously: as a product, an experiment and another proof that curiosity paired with a solid craft can materialize bold ideas very quickly.',
+      p2: 'These are independent projects, but I treat each one seriously — as a product, an experiment and proof that curiosity paired with solid craft can turn bold ideas into working experiences.',
       capabilities: ['Creative direction', 'React / TypeScript', 'Android / Kotlin', 'Three.js / WebGL', 'AI media', 'Product thinking', 'System design', 'Motion design'],
     },
     contact: {

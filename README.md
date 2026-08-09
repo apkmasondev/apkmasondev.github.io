@@ -1,6 +1,6 @@
-# ApkMason.dev Portfolio V2
+# APKMason.dev Portfolio V2
 
-Nowe portfolio Krzysztofa / ApkMason.dev. Strona została zaprojektowana jako
+Nowe portfolio Krzysztofa / APKMason.dev. Strona została zaprojektowana jako
 kinowe, scroll-driven doświadczenie prezentujące projekty webowe, 3D i
 aplikacje bez utraty czytelności na urządzeniach mobilnych.
 
