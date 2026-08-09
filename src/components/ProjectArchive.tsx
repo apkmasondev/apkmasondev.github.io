@@ -14,7 +14,7 @@ type Filter = 'all' | ProjectCategory;
 export function ProjectArchive({ language }: { language: Language }) {
   const [filter, setFilter] = useState<Filter>('all');
   const text = copy[language].archive;
-  const filters: Filter[] = ['all', 'story', 'spatial', 'app', 'experiment'];
+  const filters: Filter[] = ['all', 'story', 'spatial', 'app', 'experiment', 'product'];
 
   const visibleProjects = useMemo(
     () => filter === 'all' ? archiveProjects : archiveProjects.filter((project) => project.category === filter),
