@@ -8,6 +8,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zaktualizowano oprawę graficzną 3D dla projektu „ASCENT — The Human Journey” (ascent_human_journey_mockup.webp),
 - dodano kategorię „Product / Commercial” dla konceptów produktowych i
   prezentacji komercyjnych; przypisano do niej Skin Elixir, APKMASON ARC,
   FRUIT ENERGY, Pure Form i Mechanikę Czasu oraz uporządkowano tagi pod kątem
