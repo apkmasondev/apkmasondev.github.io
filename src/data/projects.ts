@@ -104,6 +104,20 @@ export const projects: Project[] = [
     accent: '#e8bfb3',
   },
   {
+    id: 'the-vault',
+    title: 'THE VAULT',
+    description: {
+      pl: 'Kinowe doświadczenie otwierania tajemniczej komory, łączące wideo sterowane scrollem, reaktywny dźwięk i finał renderowany w WebGL.',
+      en: 'A cinematic containment experience combining scroll-scrubbed video, reactive sound and a WebGL-rendered finale.',
+    },
+    image: '/the_vault_mockup.webp',
+    link: 'https://apkmason.dev/the_vault/',
+    tags: ['WebGL', 'Scroll-driven', 'Reactive audio'],
+    category: 'spatial',
+    featured: true,
+    accent: '#7cff45',
+  },
+  {
     id: 'arc',
     title: 'APKMASON ARC',
     description: {
@@ -114,7 +128,6 @@ export const projects: Project[] = [
     link: 'https://apkmasondev.github.io/arc/',
     tags: ['Spatial Audio', 'Scroll-driven', 'Interactive'],
     category: 'product',
-    featured: true,
     accent: '#00e5ff',
   },
   {
@@ -350,6 +363,32 @@ export const projects: Project[] = [
     tags: ['Android', 'Whisper', 'GPT'],
     category: 'app',
     accent: '#e76cff',
+  },
+  {
+    id: 'scrolldebt',
+    title: 'ScrollDebt',
+    description: {
+      pl: 'Prywatna aplikacja Android pomagająca ograniczyć doomscrolling przez analizę czasu, bezpośredni feedback i działanie w pełni offline.',
+      en: 'A privacy-first Android app that helps curb doomscrolling through time tracking, direct feedback and fully offline operation.',
+    },
+    image: '/scrolldebt_mockup.webp',
+    link: 'https://apkmasondev.github.io/scrolldebt-site/',
+    tags: ['Android', 'Kotlin', 'Offline'],
+    category: 'app',
+    accent: '#ff476f',
+  },
+  {
+    id: 'piatunio-w-korpo',
+    title: 'Piątunio w Korpo',
+    description: {
+      pl: 'Hyper-casualowa gra na Androida, w której przemierzasz labirynt biurek i próbujesz dotrwać do piątkowego popołudnia.',
+      en: 'A hyper-casual Android game where you navigate a maze of desks and try to survive until Friday afternoon.',
+    },
+    image: '/piatunio_mockup.webp',
+    link: 'https://apkmasondev.github.io/piatuniowkorpo/',
+    tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
+    category: 'app',
+    accent: '#4de7ff',
   },
 ];
 
