@@ -8,6 +8,10 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „THE VAULT” dodano jako siódmą wyróżnioną realizację w kategorii 3D / Spatial;
+  „APKMASON ARC” przeniesiono bez usuwania do początku archiwum, a na jego
+  końcu przywrócono projekty „ScrollDebt” i „Piątunio w Korpo” wraz z
+  zachowanymi grafikami, zredagowanymi opisami PL/EN i aktualnymi tagami,
 - przeprowadzono redakcję polskiej i angielskiej warstwy treści: poszerzono
   narrację hero poza sam scroll, dopracowano sekcje procesu i autora oraz
   wygładzono nagłówki i wybrane opisy projektów,
