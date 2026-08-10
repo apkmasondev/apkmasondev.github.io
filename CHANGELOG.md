@@ -8,6 +8,7 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- zaktualizowano grafikę 3D projektu „ScrollDebt” na nową oprawę smartfonową w pionowym kadrze z koralowo-czerwonym akcentem (scrolldebt_mockup.webp),
 - zaktualizowano grafikę 3D projektu „Piątunio w Korpo” na nową oprawę smartfonową w pionowym kadrze (piatunio_mockup.webp),
 - „THE VAULT” dodano jako siódmą wyróżnioną realizację w kategorii 3D / Spatial;
   „APKMASON ARC” przeniesiono bez usuwania do początku archiwum, a na jego
