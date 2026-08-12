@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- inicjały `A`, `P` i `K` w stopkowej sygnaturze „AI · Pixels · Kinetics”
+  otrzymały firmowy pomarańczowy kolor,
 - w archiwum zamieniono miejscami projekty „Space Scale” z „Sferą” oraz
   „Pure Form” z „VIBE//SHIFT”, bez zmian w ich opisach, tagach i kategoriach,
 - zaktualizowano grafikę 3D projektu „ScrollDebt” na nową oprawę smartfonową w pionowym kadrze z koralowo-czerwonym akcentem (scrolldebt_mockup.webp),

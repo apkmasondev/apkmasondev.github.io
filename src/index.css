@@ -1875,7 +1875,7 @@ video {
 }
 
 .footer-signature-word strong {
-  color: #b8b4ad;
+  color: var(--signal);
   font-weight: 500;
 }
 
