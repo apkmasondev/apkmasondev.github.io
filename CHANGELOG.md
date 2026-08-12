@@ -8,6 +8,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- w archiwum zamieniono miejscami projekty „Space Scale” z „Sferą” oraz
+  „Pure Form” z „VIBE//SHIFT”, bez zmian w ich opisach, tagach i kategoriach,
 - zaktualizowano grafikę 3D projektu „ScrollDebt” na nową oprawę smartfonową w pionowym kadrze z koralowo-czerwonym akcentem (scrolldebt_mockup.webp),
 - zaktualizowano grafikę 3D projektu „Piątunio w Korpo” na nową oprawę smartfonową w pionowym kadrze (piatunio_mockup.webp),
 - „THE VAULT” dodano jako siódmą wyróżnioną realizację w kategorii 3D / Spatial;
