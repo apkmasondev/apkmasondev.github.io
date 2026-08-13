@@ -150,6 +150,10 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- `public/CNAME` przypinający domenę `apkmason.dev` do repozytorium; wcześniej
+  istniała wyłącznie w ustawieniach GitHub Pages, poza kontrolą wersji, więc
+  jej utrata zerwałaby przekierowanie i unieważniła wszystkie adresy kanoniczne
+  oraz Open Graph,
 - dodano dyskretne „echo monolitu” w notach sekcji wyróżnionych projektów i
   archiwum: dwa odmienne kadry jednego lekkiego assetu WebP, ładowanego
   wyłącznie na większych ekranach i maskowanego do czerni,
