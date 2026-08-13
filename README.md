@@ -9,7 +9,8 @@ zmodyfikowana.
 
 ## Najważniejsze elementy
 
-- film hero sterowany przewijaniem z osobnym źródłem desktop i mobile,
+- film hero sterowany przewijaniem z osobnym źródłem dla desktopu, telefonu w
+  pionie i telefonu w poziomie,
 - statyczny fallback dla `prefers-reduced-motion`,
 - siedem wyróżnionych case studies i filtrowalne archiwum,
 - polska i angielska wersja treści,
@@ -43,10 +44,8 @@ npm run build
 
 Gotowe pliki znajdują się w katalogu `dist`. Repozytorium jest przygotowane do
 publikacji jako główna strona użytkownika GitHub Pages pod adresem
-`https://apkmasondev.github.io/`.
-
-Szczegółowy proces znajduje się w
-[`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
+`https://apkmasondev.github.io/`. Publikację wykonuje workflow
+`.github/workflows/deploy.yml` przy każdym pushu na `main`.
 
 ## Aktualizacja projektów
 
@@ -60,27 +59,29 @@ Dane projektów znajdują się w `src/data/projects.ts`. Każdy wpis zawiera:
 
 Zmiana treści nie wymaga modyfikowania komponentów.
 
-Pełna instrukcja i gotowy szablon wpisu:
-[`docs/ADDING_PROJECTS.md`](docs/ADDING_PROJECTS.md).
-
 Liczniki projektów, liczby przy filtrach i podział na sekcje są wyliczane
 automatycznie z tablicy `projects`.
 
 ## Film hero
 
 Źródłowy film został zachowany poza projektem. W katalogu `public` znajdują się
-dwie wersje zoptymalizowane do scrubbingu:
+trzy wersje zoptymalizowane do scrubbingu:
 
-- `hero-monolith-desktop.mp4`,
-- `hero-monolith-mobile.mp4`.
+- `hero-monolith-desktop.mp4` — 1280 × 720, 4,9 MB,
+- `hero-monolith-landscape.mp4` — 854 × 480, 3,0 MB, dla telefonów w poziomie
+  (`(max-height: 520px) and (pointer: coarse)`),
+- `hero-monolith-mobile.mp4` — 480 × 854, 3,0 MB, kadr pionowy
+  (`(max-width: 767px)`).
 
-Obie są pozbawione ścieżki audio, mają `faststart`, GOP=1 oraz grading koloru
-wypalony bezpośrednio w obraz, aby ograniczyć koszt renderowania hero.
+Wszystkie są pozbawione ścieżki audio, mają `faststart`, GOP=1 oraz grading
+koloru wypalony bezpośrednio w obraz, aby ograniczyć koszt renderowania hero.
+GOP=1 oznacza, że każda klatka jest kluczowa — to warunek płynnego scrubbingu i
+powód, dla którego pliki nie schodzą poniżej ~3 MB.
 
 ## Dokumentacja
 
-- [`CHANGELOG.md`](CHANGELOG.md) — historia zmian,
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — architektura i decyzje,
-- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — publikacja i kontrola po wdrożeniu,
-- [`docs/ASSETS.md`](docs/ASSETS.md) — pochodzenie mediów i prompt grafiki OG,
-- [`docs/ADDING_PROJECTS.md`](docs/ADDING_PROJECTS.md) — dodawanie realizacji.
+- [`CHANGELOG.md`](CHANGELOG.md) — historia zmian.
+
+Rozszerzone notatki (architektura, wdrożenie, pochodzenie mediów, dodawanie
+realizacji) leżą lokalnie w katalogu `docs/`, który jest wyłączony z
+wersjonowania.

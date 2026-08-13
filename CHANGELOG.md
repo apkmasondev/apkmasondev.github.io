@@ -8,6 +8,14 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- `README.md` nie linkuje już do plików w `docs/`, które są wyłączone z
+  wersjonowania, więc odnośniki były martwe dla każdego, kto sklonuje
+  repozytorium,
+- arkusz fontów Google jest ładowany bezpośrednio w `index.html` zamiast przez
+  `@import` w CSS, co skraca łańcuch blokujący renderowanie o jeden przeskok
+  sieciowy,
+- grafikę Open Graph zastąpiono wersją JPEG (`og.jpg`, 107 KB zamiast 948 KB),
+  aby podgląd linku mieścił się w limitach komunikatorów,
 - inicjały `A`, `P` i `K` w stopkowej sygnaturze „AI · Pixels · Kinetics”
   otrzymały firmowy pomarańczowy kolor,
 - w archiwum zamieniono miejscami projekty „Space Scale” z „Sferą” oraz
@@ -158,6 +166,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Removed
 
+- martwy zasób `src/assets/hero.png` pozostały po szablonie Vite oraz atrybut
+  `fetchPriority` na elemencie `video`, który nie jest przez przeglądarki
+  obsługiwany,
 - koncentryczne okręgi w Manifeście, które konkurowały z nowym motywem
   materiałowego przekroju,
 - nieużywane pliki demonstracyjne React/Vite pozostałe po inicjalizacji projektu,
@@ -167,13 +178,34 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- telefon w orientacji poziomej nie pobiera już pliku desktopowego: dodano
+  wariant `hero-monolith-landscape.mp4` (854 × 480, 3,0 MB zamiast 4,9 MB)
+  wybierany zapytaniem `(max-height: 520px) and (pointer: coarse)`; próg
+  `max-width: 767px` obejmował wyłącznie orientację pionową, więc obrócony
+  telefon trafiał na najcięższe źródło,
+- film hero jest teraz aktywnie buforowany krótkim żądaniem odtwarzania, dzięki
+  czemu przeglądarki mobilne przestają traktować `preload="auto"` na transmisji
+  komórkowej jako pobranie samych metadanych i scrubbing nie czeka na serię
+  pojedynczych zapytań zakresowych,
+- pozycja klatki filmu hero jest ponownie synchronizowana po zdarzeniu
+  `loadeddata`; wcześniej kadr zatrzymywał się na początku, jeśli materiał
+  dobuforował się w chwili, gdy użytkownik nie przewijał strony,
+- portret wideo w sekcji „O mnie” nie rywalizuje już o pasmo z filmem hero:
+  startuje z `preload="none"` i plakatem `profile.jpg`, a pobieranie rusza
+  dopiero przy zbliżeniu sekcji do widoku (1,3 MB mniej na starcie),
+- nieaktywne etapy hero są ukrywane właściwością `visibility`, więc czytniki
+  ekranu odczytują wyłącznie widoczny etap zamiast wszystkich czterech naraz,
+- odczyt i zapis języka w `localStorage` jest zabezpieczony przed wyjątkiem,
+  który w trybie prywatnym lub przy zablokowanym magazynie danych przerywał
+  start aplikacji,
+- manifest deklarował ikonę jako 512 × 512 i `maskable`, choć plik ma 256 × 256
+  bez marginesu bezpieczeństwa; rozmiar i przeznaczenie odpowiadają teraz
+  zasobowi,
 - usunięto mobilny odstęp flex przesuwający strzałkę w okrągłym przycisku
   głównych kart i zastąpiono wcześniejsze korekty pozycyjne rzeczywistym
   wycentrowaniem ikony,
-- poprawiono nazwę właściwości `fetchPriority` filmu hero, usuwając ostrzeżenie
-  Reacta z konsoli bez zmiany priorytetu pobierania,
 - mobilny pasek statystyk Manifestu układa się teraz w pełną siatkę 2 × 2 bez
-  ucinania czwartej wartości,
+  ucinania czwartej wartości.
 
 ### Planned
 
