@@ -14,8 +14,6 @@ type NavigatorWithConnection = Navigator & {
   };
 };
 
-const heroVideoPriority = { fetchPriority: 'high' } as const;
-
 function canLoadHeroVideo() {
   if (typeof window === 'undefined') return false;
 
@@ -73,13 +71,33 @@ export function HeroForge({ language }: HeroForgeProps) {
       requestUpdate();
     };
 
+    // Przeglądarki mobilne ignorują preload="auto" na transmisji komórkowej i pobierają
+    // wyłącznie metadane, więc scrubbing czeka na pojedyncze zapytania zakresowe.
+    // Krótkie żądanie odtwarzania przełącza film w tryb aktywnego buforowania.
+    const stopPlayback = () => {
+      if (!video.paused) video.pause();
+    };
+    const kickBuffering = () => {
+      const playback = video.play();
+      if (playback) playback.then(stopPlayback).catch(() => undefined);
+      else stopPlayback();
+    };
+
     update();
+    kickBuffering();
     video.addEventListener('loadedmetadata', primeVideo, { once: true });
+    video.addEventListener('loadeddata', requestUpdate);
+    video.addEventListener('playing', stopPlayback);
+    // Zapasowa ścieżka, gdy autoodtwarzanie jest zablokowane (np. tryb oszczędzania energii).
+    window.addEventListener('pointerdown', kickBuffering, { once: true, passive: true });
     window.addEventListener('scroll', requestUpdate, { passive: true });
     window.addEventListener('resize', requestUpdate, { passive: true });
 
     return () => {
       video.removeEventListener('loadedmetadata', primeVideo);
+      video.removeEventListener('loadeddata', requestUpdate);
+      video.removeEventListener('playing', stopPlayback);
+      window.removeEventListener('pointerdown', kickBuffering);
       window.removeEventListener('scroll', requestUpdate);
       window.removeEventListener('resize', requestUpdate);
       if (frameRef.current !== null) window.cancelAnimationFrame(frameRef.current);
@@ -95,7 +113,6 @@ export function HeroForge({ language }: HeroForgeProps) {
     >
       <div className="hero-sticky">
         <video
-          {...heroVideoPriority}
           ref={videoRef}
           className="hero-video"
           muted
@@ -108,6 +125,13 @@ export function HeroForge({ language }: HeroForgeProps) {
           {shouldLoadVideo && (
             <>
               <source media="(max-width: 767px)" src="/hero-monolith-mobile.mp4" type="video/mp4" />
+              {/* Telefon w poziomie: niski viewport i dotykowy wskaźnik. Bez tego wariantu
+                  taki ekran mieści się poza progiem 767px i pobiera plik desktopowy. */}
+              <source
+                media="(max-height: 520px) and (pointer: coarse)"
+                src="/hero-monolith-landscape.mp4"
+                type="video/mp4"
+              />
               <source src="/hero-monolith-desktop.mp4" type="video/mp4" />
             </>
           )}
