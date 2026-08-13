@@ -10,11 +10,24 @@ import { SiteHeader } from './components/SiteHeader';
 import { copy } from './content';
 import type { Language } from './data/projects';
 
+const LANGUAGE_KEY = 'apkmason-language';
+
+// Dostęp do localStorage rzuca wyjątkiem, gdy przeglądarka blokuje magazyn danych
+// (tryb prywatny, restrykcyjne ustawienia ciasteczek), więc nie może wywrócić startu aplikacji.
+function readStoredLanguage(): Language | null {
+  try {
+    const savedLanguage = window.localStorage.getItem(LANGUAGE_KEY);
+    return savedLanguage === 'pl' || savedLanguage === 'en' ? savedLanguage : null;
+  } catch {
+    return null;
+  }
+}
+
 function App() {
   const [language, setLanguage] = useState<Language>(() => {
-    const savedLanguage = window.localStorage.getItem('apkmason-language');
+    const savedLanguage = readStoredLanguage();
 
-    if (savedLanguage === 'pl' || savedLanguage === 'en') {
+    if (savedLanguage) {
       return savedLanguage;
     }
 
@@ -24,7 +37,6 @@ function App() {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = 'APKMason.dev — AI · Pixels · Kinetics';
 
     const description = language === 'pl'
       ? 'Portfolio Krzysztofa / APKMason.dev — interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI.'
@@ -37,7 +49,11 @@ function App() {
 
   const changeLanguage = (nextLanguage: Language) => {
     setLanguage(nextLanguage);
-    window.localStorage.setItem('apkmason-language', nextLanguage);
+    try {
+      window.localStorage.setItem(LANGUAGE_KEY, nextLanguage);
+    } catch {
+      // Wybór języka działa w tej sesji nawet bez zapisu w magazynie danych.
+    }
   };
 
   return (

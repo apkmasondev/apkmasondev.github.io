@@ -1,10 +1,27 @@
-import { useRef, type PointerEvent } from 'react';
+import { useEffect, useRef, type PointerEvent } from 'react';
 import { copy } from '../content';
 import type { Language } from '../data/projects';
 
 export function AboutSection({ language }: { language: Language }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const text = copy[language].about;
+
+  // Portret startuje z preload="none", żeby nie rywalizował o pasmo z filmem hero.
+  // Pobieranie rusza dopiero, gdy sekcja zbliża się do widoku.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      observer.disconnect();
+      video.preload = 'auto';
+      video.load();
+    }, { rootMargin: '300px' });
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   const playPortrait = () => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -46,7 +63,8 @@ export function AboutSection({ language }: { language: Language }) {
           <video
             ref={videoRef}
             src="/profile.mp4"
-            preload="auto"
+            poster="/profile.jpg"
+            preload="none"
             muted
             playsInline
             aria-hidden="true"

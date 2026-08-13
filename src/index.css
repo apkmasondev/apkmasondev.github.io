@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+/* Arkusz fontów jest ładowany bezpośrednio w index.html, aby nie wydłużać
+   łańcucha blokującego renderowanie o dodatkowy przeskok sieciowy. */
 
 :root {
   color-scheme: dark;
@@ -314,16 +315,22 @@ video {
   justify-content: center;
   width: var(--shell);
   margin-inline: auto;
+  visibility: hidden;
   opacity: 0;
   transform: translateY(2rem);
   pointer-events: none;
-  transition: opacity 700ms ease, transform 900ms var(--ease-out);
+  transition:
+    opacity 700ms ease,
+    transform 900ms var(--ease-out),
+    visibility 0s linear 900ms;
 }
 
 .hero-opening.is-active,
 .hero-stage.is-active {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0s;
 }
 
 .hero-forge.is-static {
@@ -336,6 +343,7 @@ video {
 }
 
 .hero-forge.is-static .hero-opening {
+  visibility: visible;
   opacity: 1;
   transform: none;
 }
@@ -2401,6 +2409,7 @@ video {
   }
 
   .hero-opening {
+    visibility: visible;
     opacity: 1;
     transform: none;
   }
