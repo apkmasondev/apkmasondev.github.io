@@ -8,6 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „CAN//FORM” zastąpił „ORIGIN — The Cycle of Becoming” na czwartej pozycji
+  wyróżnionej siódemki; ORIGIN otwiera teraz archiwum, a projekt „Mechanika
+  Czasu” usunięto z prezentowanej kolekcji bez kasowania zachowanego assetu,
 - `README.md` nie linkuje już do plików w `docs/`, które są wyłączone z
   wersjonowania, więc odnośniki były martwe dla każdego, kto sklonuje
   repozytorium,
