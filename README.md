@@ -42,10 +42,13 @@ Polecenie uruchamia lint, kontrolę typów i produkcyjny build.
 npm run build
 ```
 
-Gotowe pliki znajdują się w katalogu `dist`. Repozytorium jest przygotowane do
-publikacji jako główna strona użytkownika GitHub Pages pod adresem
-`https://apkmasondev.github.io/`. Publikację wykonuje workflow
-`.github/workflows/deploy.yml` przy każdym pushu na `main`.
+Gotowe pliki znajdują się w katalogu `dist`. Strona jest publikowana przez
+GitHub Pages pod adresem `https://apkmason.dev/` — domena własna ustawiona w
+konfiguracji repozytorium, na którą `apkmasondev.github.io` przekierowuje
+kodem 301. Wszystkie adresy kanoniczne, Open Graph, `sitemap.xml` i linki do
+projektów wskazują na domenę docelową, żeby nie generować dodatkowego
+przeskoku. Publikację wykonuje workflow `.github/workflows/deploy.yml` przy
+każdym pushu na `main`.
 
 ## Aktualizacja projektów
 
