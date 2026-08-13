@@ -178,6 +178,14 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- wszystkie adresy własne wskazują teraz na domenę docelową `apkmason.dev`
+  zamiast na `apkmasondev.github.io`, która przekierowuje na nią kodem 301:
+  `canonical`, `og:url`, `og:image`, `twitter:image` i dane schema.org w
+  `index.html`, `sitemap.xml`, `robots.txt` oraz 21 linków do projektów w
+  `src/data/projects.ts`; adres kanoniczny prowadzący przez przekierowanie
+  osłabiał sygnał dla wyszukiwarek, część scraperów nie podąża za
+  przekierowaniem przy pobieraniu grafiki podglądu, a każde otwarcie projektu
+  kosztowało dodatkowy przeskok sieciowy,
 - telefon w orientacji poziomej nie pobiera już pliku desktopowego: dodano
   wariant `hero-monolith-landscape.mp4` (854 × 480, 3,0 MB zamiast 4,9 MB)
   wybierany zapytaniem `(max-height: 520px) and (pointer: coarse)`; próg
