@@ -43,12 +43,15 @@ npm run build
 ```
 
 Gotowe pliki znajdują się w katalogu `dist`. Strona jest publikowana przez
-GitHub Pages pod adresem `https://apkmason.dev/` — domena własna ustawiona w
-konfiguracji repozytorium, na którą `apkmasondev.github.io` przekierowuje
-kodem 301. Wszystkie adresy kanoniczne, Open Graph, `sitemap.xml` i linki do
-projektów wskazują na domenę docelową, żeby nie generować dodatkowego
-przeskoku. Publikację wykonuje workflow `.github/workflows/deploy.yml` przy
-każdym pushu na `main`.
+GitHub Pages pod adresem `https://apkmason.dev/`, na który
+`apkmasondev.github.io` przekierowuje kodem 301. Wszystkie adresy kanoniczne,
+Open Graph, `sitemap.xml` i linki do projektów wskazują na domenę docelową,
+żeby nie generować dodatkowego przeskoku. Publikację wykonuje workflow
+`.github/workflows/deploy.yml` przy każdym pushu na `main`.
+
+Domena jest przypięta plikiem `public/CNAME`, który build kopiuje do `dist`.
+Ten plik musi zawierać dokładnie `apkmason.dev` i nie wolno go usuwać — bez
+niego domena własna istnieje wyłącznie w ustawieniach repozytorium.
 
 ## Aktualizacja projektów
 
