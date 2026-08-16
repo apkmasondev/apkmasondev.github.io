@@ -9,10 +9,10 @@ stosują [Semantic Versioning](https://semver.org/).
 ### Changed
 
 - „VOID DROP” zastąpił „Skin Elixir” na szóstej pozycji wyróżnionej
-  siódemki; Skin Elixir otwiera teraz archiwum, a na jego końcu przywrócono
-  „Mechanikę Czasu” i dodano „NEXUS-1”. Oba nowe projekty otrzymały opisy
-  PL/EN, zgodne z ich implementacją tagi oraz dedykowane, zoptymalizowane
-  mockupy WebP,
+  siódemki; NEXUS-1 otwiera teraz archiwum, Skin Elixir pozostaje tuż za nim,
+  a przywróconą „Mechanikę Czasu” umieszczono bezpośrednio po projekcie
+  „ASCENT — The Human Journey”. Nowe projekty otrzymały opisy PL/EN, zgodne
+  z ich implementacją tagi oraz dedykowane, zoptymalizowane mockupy WebP,
 - „CAN//FORM” zastąpił „ORIGIN — The Cycle of Becoming” na czwartej pozycji
   wyróżnionej siódemki; ORIGIN otwiera teraz archiwum, a projekt „Mechanika
   Czasu” usunięto z prezentowanej kolekcji bez kasowania zachowanego assetu,
