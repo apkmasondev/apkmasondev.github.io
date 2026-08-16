@@ -118,6 +118,19 @@ export const projects: Project[] = [
     accent: '#7cff45',
   },
   {
+    id: 'nexus-1',
+    title: 'NEXUS-1',
+    description: {
+      pl: 'Kinowa prezentacja modułowego urządzenia edge AI — od zewnętrznej formy po rdzeń neuronowy, chłodzenie i serwisowalne wnętrze.',
+      en: 'A cinematic presentation of a modular edge-AI device — from its outer form to the neural core, cooling system and serviceable interior.',
+    },
+    image: '/nexus_1_mockup.webp',
+    link: 'https://apkmason.dev/nexus-1/',
+    tags: ['Scroll-driven', 'Product story', 'AI hardware'],
+    category: 'product',
+    accent: '#86a8d8',
+  },
+  {
     id: 'skincare',
     title: 'Skin Elixir',
     description: {
@@ -287,6 +300,19 @@ export const projects: Project[] = [
     accent: '#d1a56d',
   },
   {
+    id: 'mechanika-czasu',
+    title: 'Mechanika Czasu',
+    description: {
+      pl: 'Kinowa prezentacja mechanicznego zegarka — od surowej formy po precyzyjny mechanizm ożywiany przewijaniem.',
+      en: 'A cinematic presentation of a mechanical watch — from raw form to a precise mechanism brought to life through scroll.',
+    },
+    image: '/mechanika_czasu_mockup.webp',
+    link: 'https://apkmason.dev/time/',
+    tags: ['Scroll-driven', 'Product story', 'Cinematic'],
+    category: 'product',
+    accent: '#ff5a36',
+  },
+  {
     id: 'poznaj-ai',
     title: 'Poznaj AI',
     description: {
@@ -402,32 +428,6 @@ export const projects: Project[] = [
     tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
     category: 'app',
     accent: '#4de7ff',
-  },
-  {
-    id: 'mechanika-czasu',
-    title: 'Mechanika Czasu',
-    description: {
-      pl: 'Kinowa prezentacja mechanicznego zegarka — od surowej formy po precyzyjny mechanizm ożywiany przewijaniem.',
-      en: 'A cinematic presentation of a mechanical watch — from raw form to a precise mechanism brought to life through scroll.',
-    },
-    image: '/mechanika_czasu_mockup.webp',
-    link: 'https://apkmason.dev/time/',
-    tags: ['Scroll-driven', 'Product story', 'Cinematic'],
-    category: 'product',
-    accent: '#ff5a36',
-  },
-  {
-    id: 'nexus-1',
-    title: 'NEXUS-1',
-    description: {
-      pl: 'Kinowa prezentacja modułowego urządzenia edge AI — od zewnętrznej formy po rdzeń neuronowy, chłodzenie i serwisowalne wnętrze.',
-      en: 'A cinematic presentation of a modular edge-AI device — from its outer form to the neural core, cooling system and serviceable interior.',
-    },
-    image: '/nexus_1_mockup.webp',
-    link: 'https://apkmason.dev/nexus-1/',
-    tags: ['Scroll-driven', 'Product story', 'AI hardware'],
-    category: 'product',
-    accent: '#86a8d8',
   },
 ];
 
