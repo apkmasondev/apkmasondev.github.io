@@ -8,12 +8,13 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- Dwadzieścia jeden mockupów projektów — APK://GENESIS, BRIXCORE, Beyond the Door,
+- Dwadzieścia trzy mockupy projektów — APK://GENESIS, BRIXCORE, Beyond the Door,
   CAN//FORM, EDM Music Festival, THE VAULT, Skin Elixir, APKMASON ARC,
   FRUIT ENERGY, Sfera, Evolution of the Phone, THE IRIS, Pure Form, From
   Sand to Silicon, Inside the Internet, SPARK, ASCENT, ORIGIN, Poznaj AI,
-  VIBE//SHIFT i PCVerse — zastąpiono kadrami przygotowanymi na podstawie
-  aktualnych assetów źródłowych i zapisanymi jako zoptymalizowane WebP; THE VAULT
+  VIBE//SHIFT, PCVerse, Budżet Domowy i Mechanika Czasu — zastąpiono kadrami
+  przygotowanymi na podstawie aktualnych assetów źródłowych i zapisanymi jako
+  zoptymalizowane WebP; THE VAULT
   pokazuje bieżącą, jednoczęściową płytę drzwi otwieraną w prawo, a EDM
   aktualną scenografię i identyfikację „BEYOND THE DROP.”,
 - „VOID DROP” zastąpił „Skin Elixir” na szóstej pozycji wyróżnionej
