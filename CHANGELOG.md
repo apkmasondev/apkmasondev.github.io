@@ -8,6 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- Skorygowano orientację tarczy zegarka w dolnym kadrze mockupu „Mechanika
+  Czasu”: indeks godziny 12, datownik, koronka i mała sekunda są teraz ustawione
+  zgodnie z rzeczywistą konstrukcją zegarka,
 - Dwadzieścia dziewięć mockupów projektów — APK://GENESIS, BRIXCORE, Beyond the Door,
   CAN//FORM, EDM Music Festival, THE VAULT, Skin Elixir, APKMASON ARC,
   FRUIT ENERGY, Sfera, Evolution of the Phone, THE IRIS, Pure Form, From
