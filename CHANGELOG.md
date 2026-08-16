@@ -8,6 +8,11 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- Dziesięć mockupów projektów — APK://GENESIS, BRIXCORE, Beyond the Door,
+  CAN//FORM, EDM Music Festival, THE VAULT, Skin Elixir, APKMASON ARC,
+  FRUIT ENERGY i Sfera — zastąpiono kadrami przygotowanymi na podstawie
+  aktualnych assetów źródłowych i zapisanymi jako zoptymalizowane WebP;
+  THE VAULT pokazuje bieżącą, jednoczęściową płytę drzwi otwieraną w prawo,
 - „VOID DROP” zastąpił „Skin Elixir” na szóstej pozycji wyróżnionej
   siódemki; NEXUS-1 otwiera teraz archiwum, Skin Elixir pozostaje tuż za nim,
   a przywróconą „Mechanikę Czasu” umieszczono bezpośrednio po projekcie
