@@ -8,6 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- Mockup „CAN//FORM” zastąpiono spójnym z wyróżnioną kolekcją kadrem
+  laptopowym, którego ekran prezentuje pełnoekranową kampanię puszki NOIR w
+  ciemnej, industrialnej scenografii zamiast podglądu interfejsu strony,
 - Do wyróżnionej siódemki dodano projekty „DUAL / CHOICE”, „VEIL” i
   „ARTIFACT SEED”, zastępując odpowiednio „Beyond the Door”, „EDM Music
   Festival” i „VOID DROP”; trzy dotychczasowe realizacje zachowano na początku
