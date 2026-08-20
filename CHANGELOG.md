@@ -15,9 +15,10 @@ stosują [Semantic Versioning](https://semver.org/).
 - Tło manifestu zastąpiono responsywną sceną wnętrza za otwartym portalem,
   która kontynuuje materiał, światło i narrację hero, a następnie naturalnie
   wygasa w czerń pod typografią,
-- Mockup „VOID DROP” otrzymał symetryczne, stonowane światło krawędziowe oraz
-  wycentrowany cień kontaktowy, eliminujące optyczne wrażenie przekrzywienia
-  telefonu bez zmiany jego perspektywy i interfejsu,
+- Mockup „VOID DROP” zbudowano od nowa jako osiowy, frontowy render telefonu
+  z równoległymi krawędziami, autentycznym ekranem aplikacji i neutralnym
+  studyjnym tłem, eliminującym optyczne zniekształcenia wcześniejszej
+  perspektywy,
 - Wewnętrzne tła not sekcji „Wybrane” i „Archiwum” rozdzielono na dwa kadry
   kontynuujące świat nowego hero: zamknięty bazalt z pojedynczą szczeliną oraz
   wygasające w czerni wnętrze portalu; rama i sygnatura `A · P · K` pozostały
