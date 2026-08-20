@@ -73,10 +73,10 @@ automatycznie z tablicy `projects`.
 Źródłowy film został zachowany poza projektem. W katalogu `public` znajdują się
 trzy wersje zoptymalizowane do scrubbingu:
 
-- `hero-monolith-desktop.mp4` — 1280 × 720, 4,9 MB,
-- `hero-monolith-landscape.mp4` — 854 × 480, 3,0 MB, dla telefonów w poziomie
+- `hero-monolith-desktop.mp4` — 1280 × 720, 4,7 MB,
+- `hero-monolith-landscape.mp4` — 854 × 480, 2,9 MB, dla telefonów w poziomie
   (`(max-height: 520px) and (pointer: coarse)`),
-- `hero-monolith-mobile.mp4` — 480 × 854, 3,0 MB, kadr pionowy
+- `hero-monolith-mobile.mp4` — 480 × 854, 2,9 MB, kadr pionowy
   (`(max-width: 767px)`).
 
 Wszystkie są pozbawione ścieżki audio, mają `faststart`, GOP=1 oraz grading

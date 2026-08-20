@@ -8,6 +8,10 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- Sekwencję hero zastąpiono materialnym, bazaltowym monolitem, który pęka i
+  otwiera się w ciemny portal. Przygotowano osobne kadry desktop, landscape i
+  mobile oraz nowy poster; wszystkie warianty zachowują GOP=1 i `faststart`,
+  nie zawierają dźwięku i są lżejsze od poprzedniego zestawu,
 - Mockup „CAN//FORM” zastąpiono spójnym z wyróżnioną kolekcją kadrem
   laptopowym, którego ekran prezentuje pełnoekranową kampanię puszki NOIR w
   ciemnej, industrialnej scenografii zamiast podglądu interfejsu strony,
