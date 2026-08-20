@@ -10,12 +10,12 @@ export function Manifesto({ language }: { language: Language }) {
   return (
     <section className="manifesto" aria-labelledby="manifesto-title">
       <picture className="manifesto-art" aria-hidden="true">
-        <source media="(max-width: 767px)" srcSet="/manifesto-faultline-mobile.webp" />
+        <source media="(max-width: 767px)" srcSet="/manifesto-threshold-mobile.webp" />
         <img
-          src="/manifesto-faultline-desktop.webp"
+          src="/manifesto-threshold-desktop.webp"
           alt=""
-          width="1664"
-          height="935"
+          width="1672"
+          height="941"
           loading="lazy"
           decoding="async"
         />

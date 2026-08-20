@@ -12,6 +12,9 @@ stosują [Semantic Versioning](https://semver.org/).
   otwiera się w ciemny portal. Przygotowano osobne kadry desktop, landscape i
   mobile oraz nowy poster; wszystkie warianty zachowują GOP=1 i `faststart`,
   nie zawierają dźwięku i są lżejsze od poprzedniego zestawu,
+- Tło manifestu zastąpiono responsywną sceną wnętrza za otwartym portalem,
+  która kontynuuje materiał, światło i narrację hero, a następnie naturalnie
+  wygasa w czerń pod typografią,
 - Mockup „CAN//FORM” zastąpiono spójnym z wyróżnioną kolekcją kadrem
   laptopowym, którego ekran prezentuje pełnoekranową kampanię puszki NOIR w
   ciemnej, industrialnej scenografii zamiast podglądu interfejsu strony,
