@@ -8,6 +8,11 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- Do wyróżnionej siódemki dodano projekty „DUAL / CHOICE”, „VEIL” i
+  „ARTIFACT SEED”, zastępując odpowiednio „Beyond the Door”, „EDM Music
+  Festival” i „VOID DROP”; trzy dotychczasowe realizacje zachowano na początku
+  archiwum. Kolekcja liczy teraz 34 projekty, a nowe pozycje otrzymały wierne
+  implementacji opisy PL/EN, tagi, kategorie i zoptymalizowane mockupy WebP,
 - Skorygowano orientację tarczy zegarka w dolnym kadrze mockupu „Mechanika
   Czasu”: indeks godziny 12, datownik, koronka i mała sekunda są teraz ustawione
   zgodnie z rzeczywistą konstrukcją zegarka,
