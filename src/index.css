@@ -821,23 +821,24 @@ video {
   }
 
   .section-index-note::before {
-    background-image: url('/monolith-surface-v4.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.76;
   }
 
   .section-index-note::after {
     background:
-      linear-gradient(90deg, rgba(7, 7, 7, 0.92) 0%, rgba(7, 7, 7, 0.32) 20%, rgba(7, 7, 7, 0.42) 80%, rgba(7, 7, 7, 0.96) 100%),
-      linear-gradient(180deg, rgba(7, 7, 7, 0.82) 0%, rgba(7, 7, 7, 0.18) 28%, rgba(7, 7, 7, 0.3) 72%, rgba(7, 7, 7, 0.9) 100%);
+      linear-gradient(90deg, rgba(7, 7, 7, 0.76) 0%, rgba(7, 7, 7, 0.18) 25%, rgba(7, 7, 7, 0.2) 78%, rgba(7, 7, 7, 0.58) 100%),
+      linear-gradient(180deg, rgba(7, 7, 7, 0.6) 0%, rgba(7, 7, 7, 0.08) 30%, rgba(7, 7, 7, 0.12) 70%, rgba(7, 7, 7, 0.64) 100%);
   }
 
   .featured .section-index-note::before {
+    background-image: url('/section-note-featured.webp');
     background-position: center 28%;
   }
 
   .archive .section-index-note::before {
+    background-image: url('/section-note-archive.webp');
     background-position: center 72%;
   }
 }

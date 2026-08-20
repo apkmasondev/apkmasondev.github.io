@@ -18,6 +18,10 @@ stosują [Semantic Versioning](https://semver.org/).
 - Mockup „VOID DROP” otrzymał symetryczne, stonowane światło krawędziowe oraz
   wycentrowany cień kontaktowy, eliminujące optyczne wrażenie przekrzywienia
   telefonu bez zmiany jego perspektywy i interfejsu,
+- Wewnętrzne tła not sekcji „Wybrane” i „Archiwum” rozdzielono na dwa kadry
+  kontynuujące świat nowego hero: zamknięty bazalt z pojedynczą szczeliną oraz
+  wygasające w czerni wnętrze portalu; rama i sygnatura `A · P · K` pozostały
+  bez zmian,
 - Mockup „CAN//FORM” zastąpiono spójnym z wyróżnioną kolekcją kadrem
   laptopowym, którego ekran prezentuje pełnoekranową kampanię puszki NOIR w
   ciemnej, industrialnej scenografii zamiast podglądu interfejsu strony,
