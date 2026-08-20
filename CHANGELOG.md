@@ -15,6 +15,9 @@ stosują [Semantic Versioning](https://semver.org/).
 - Tło manifestu zastąpiono responsywną sceną wnętrza za otwartym portalem,
   która kontynuuje materiał, światło i narrację hero, a następnie naturalnie
   wygasa w czerń pod typografią,
+- Mockup „VOID DROP” otrzymał symetryczne, stonowane światło krawędziowe oraz
+  wycentrowany cień kontaktowy, eliminujące optyczne wrażenie przekrzywienia
+  telefonu bez zmiany jego perspektywy i interfejsu,
 - Mockup „CAN//FORM” zastąpiono spójnym z wyróżnioną kolekcją kadrem
   laptopowym, którego ekran prezentuje pełnoekranową kampanię puszki NOIR w
   ciemnej, industrialnej scenografii zamiast podglądu interfejsu strony,
