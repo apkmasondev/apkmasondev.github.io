@@ -103,6 +103,20 @@ export const projects: Project[] = [
     accent: '#b56cff',
   },
   {
+    id: 'the-guide',
+    title: 'THE GUIDE',
+    description: {
+      pl: 'Trzydziestosekundowa, sterowana scrollem podróż przez archiwum przełomów, które nauczyły maszyny tworzyć obrazy.',
+      en: 'A thirty-second scroll-driven journey through an archive of breakthroughs that taught machines to create images.',
+    },
+    image: '/the_guide_mockup.webp',
+    link: 'https://apkmason.dev/the-guide/',
+    tags: ['Scroll-driven', 'Video scrubbing', 'AI history'],
+    category: 'story',
+    featured: true,
+    accent: '#9fe7ef',
+  },
+  {
     id: 'artifact-seed',
     title: 'ARTIFACT SEED',
     description: {
@@ -113,7 +127,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/artifact-seed/',
     tags: ['WebGL', 'Scroll-driven', 'Film compositing'],
     category: 'spatial',
-    featured: true,
     accent: '#d6b46d',
   },
   {
@@ -168,19 +181,6 @@ export const projects: Project[] = [
     tags: ['Android', 'OpenGL ES', 'Arcade'],
     category: 'app',
     accent: '#3fe0d0',
-  },
-  {
-    id: 'nexus-1',
-    title: 'NEXUS-1',
-    description: {
-      pl: 'Kinowa prezentacja modułowego urządzenia edge AI — od zewnętrznej formy po rdzeń neuronowy, chłodzenie i serwisowalne wnętrze.',
-      en: 'A cinematic presentation of a modular edge-AI device — from its outer form to the neural core, cooling system and serviceable interior.',
-    },
-    image: '/nexus_1_mockup.webp',
-    link: 'https://apkmason.dev/nexus-1/',
-    tags: ['Scroll-driven', 'Product story', 'AI hardware'],
-    category: 'product',
-    accent: '#86a8d8',
   },
   {
     id: 'skincare',
