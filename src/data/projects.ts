@@ -20,6 +20,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'spectrum',
+    title: 'SPECTRUM — Archive of Light',
+    description: {
+      pl: 'Minutowa, sterowana scrollem wystawa o tym, jak światło, trzy receptory i piksele składają się na 16 777 216 kolorów.',
+      en: 'A one-minute scroll-driven exhibit showing how light, three receptors and pixels become 16,777,216 colours.',
+    },
+    image: '/spectrum_mockup.webp',
+    link: 'https://apkmason.dev/spectrum/',
+    tags: ['Scroll-driven', 'Interactive exhibit', 'Video scrubbing'],
+    category: 'story',
+    featured: true,
+    accent: '#63e6d8',
+  },
+  {
     id: 'apk-genesis',
     title: 'APK://GENESIS',
     description: {
@@ -30,7 +44,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/apk_genesis/',
     tags: ['Scroll-driven', 'Cinematic', 'Manifesto'],
     category: 'story',
-    featured: true,
     accent: '#38bdf8',
   },
   {
@@ -337,19 +350,6 @@ export const projects: Project[] = [
     tags: ['Scroll-driven', 'Cinematic', 'AI video'],
     category: 'story',
     accent: '#d1a56d',
-  },
-  {
-    id: 'mechanika-czasu',
-    title: 'Mechanika Czasu',
-    description: {
-      pl: 'Kinowa prezentacja mechanicznego zegarka — od surowej formy po precyzyjny mechanizm ożywiany przewijaniem.',
-      en: 'A cinematic presentation of a mechanical watch — from raw form to a precise mechanism brought to life through scroll.',
-    },
-    image: '/mechanika_czasu_mockup.webp',
-    link: 'https://apkmason.dev/time/',
-    tags: ['Scroll-driven', 'Product story', 'Cinematic'],
-    category: 'product',
-    accent: '#ff5a36',
   },
   {
     id: 'poznaj-ai',
