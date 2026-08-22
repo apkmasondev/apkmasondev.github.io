@@ -10,8 +10,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 - „SPECTRUM — Archive of Light” otwiera teraz wyróżnioną siódemkę jako
   interaktywna, sterowana scrollem wystawa o percepcji koloru; projekt otrzymał
-  dedykowany mockup oparty na jego rzeczywistym kadrze, opis PL/EN i zgodne z
-  implementacją tagi. „APK://GENESIS” przeniesiono bez usuwania do archiwum,
+  dedykowany mockup oparty na jego rzeczywistym kadrze, z ekranem pozbawionym
+  typografii konkurującej z tytułem karty, opis PL/EN i zgodne z implementacją
+  tagi. „APK://GENESIS” przeniesiono bez usuwania do archiwum,
   a „Mechanikę Czasu” wycofano z prezentowanej kolekcji przy zachowaniu jej
   assetu źródłowego,
 - Sekwencję hero zastąpiono materialnym, bazaltowym monolitem, który pęka i
