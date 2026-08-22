@@ -8,6 +8,12 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „THE GUIDE” zastąpił „ARTIFACT SEED” na szóstej pozycji wyróżnionej
+  siódemki jako trzydziestosekundowa, sterowana scrollem opowieść o historii
+  maszynowego obrazu. Projekt otrzymał opis PL/EN, tagi zgodne z implementacją
+  i pozbawiony ekranowej typografii mockup zbudowany na rzeczywistym kadrze;
+  „ARTIFACT SEED” zachowano w archiwum, a „NEXUS-1” wycofano z prezentowanej
+  kolekcji bez usuwania jego assetu,
 - „SPECTRUM — Archive of Light” otwiera teraz wyróżnioną siódemkę jako
   interaktywna, sterowana scrollem wystawa o percepcji koloru; projekt otrzymał
   dedykowany mockup oparty na jego rzeczywistym kadrze, z ekranem pozbawionym
