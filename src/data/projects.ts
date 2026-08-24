@@ -75,6 +75,20 @@ export const projects: Project[] = [
     accent: '#75e8ff',
   },
   {
+    id: 'prime',
+    title: 'PRIME',
+    description: {
+      pl: 'Sterowana scrollem opowieść o liczbach pierwszych — od sita Eratostenesa i nieskończoności po spiralę Ulama, faktoryzację i kryptografię.',
+      en: 'A scroll-driven story of prime numbers — from the sieve of Eratosthenes and infinity to the Ulam spiral, factorisation and cryptography.',
+    },
+    image: '/prime_mockup.webp',
+    link: 'https://apkmason.dev/prime/',
+    tags: ['Scroll-driven', 'Mathematical story', 'Video scrubbing'],
+    category: 'story',
+    featured: true,
+    accent: '#d7b26d',
+  },
+  {
     id: 'can-form',
     title: 'CAN//FORM',
     description: {
@@ -85,7 +99,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/can_form/',
     tags: ['WebGL', 'Configurator', 'Scroll-driven'],
     category: 'product',
-    featured: true,
     accent: '#d6d2c9',
   },
   {
@@ -115,19 +128,6 @@ export const projects: Project[] = [
     category: 'story',
     featured: true,
     accent: '#9fe7ef',
-  },
-  {
-    id: 'artifact-seed',
-    title: 'ARTIFACT SEED',
-    description: {
-      pl: 'Film i WebGL spotykają się w jednej przestrzeni: świetlisty artefakt materializuje się między dłońmi i otwiera wraz z przewijaniem.',
-      en: 'Film and WebGL meet in one space as a luminous artefact materialises between the dancer\'s hands and opens through scroll.',
-    },
-    image: '/artifact_seed_mockup.webp',
-    link: 'https://apkmason.dev/artifact-seed/',
-    tags: ['WebGL', 'Scroll-driven', 'Film compositing'],
-    category: 'spatial',
-    accent: '#d6b46d',
   },
   {
     id: 'the-vault',

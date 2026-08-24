@@ -8,6 +8,13 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „PRIME” zastąpił „CAN//FORM” na czwartej pozycji wyróżnionej siódemki jako
+  sterowana scrollem opowieść o liczbach pierwszych — od sita Eratostenesa po
+  spiralę Ulama, faktoryzację i kryptografię. Projekt otrzymał opis PL/EN,
+  zgodne z implementacją tagi oraz mockup zbudowany z rzeczywistego profesora,
+  korytarza i papierowej stacji matematycznej; „CAN//FORM” zachowano w
+  archiwum, a „ARTIFACT SEED” wycofano z prezentowanej kolekcji bez usuwania
+  jego assetu,
 - „THE GUIDE” zastąpił „ARTIFACT SEED” na szóstej pozycji wyróżnionej
   siódemki jako trzydziestosekundowa, sterowana scrollem opowieść o historii
   maszynowego obrazu. Projekt otrzymał opis PL/EN, tagi zgodne z implementacją
