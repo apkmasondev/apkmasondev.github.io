@@ -8,6 +8,12 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „BUILT BY NATURE” zastąpił „VEIL” na piątej pozycji wyróżnionej siódemki
+  jako pełnoekranowy, filmowy esej o trzech biologicznych technologiach.
+  Projekt otrzymał opis PL/EN, tagi zgodne z implementacją i dedykowany mockup
+  oparty na rzeczywistych rozdziałach o kolibrze, mątwie i krewetce
+  modliszkowej. „VEIL” przeniesiono do archiwum w miejsce „ORIGIN”, a „ORIGIN”
+  wycofano z prezentowanej kolekcji bez usuwania jego assetu,
 - „PRIME” zastąpił „CAN//FORM” na czwartej pozycji wyróżnionej siódemki jako
   sterowana scrollem opowieść o liczbach pierwszych — od sita Eratostenesa po
   spiralę Ulama, faktoryzację i kryptografię. Projekt otrzymał opis PL/EN,
