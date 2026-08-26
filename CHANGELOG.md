@@ -8,6 +8,11 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- Mockup „BRIXCORE” przebudowano na podstawie aktualnej wersji doświadczenia:
+  centralny ekran zachowuje rzeczywisty wybór między rdzeniami FORGE i EVOLVE,
+  a scenografia dyskretnie pokazuje oba filmowe rezultaty — pomarańczowy monolit
+  oraz cyjanową, generatywną strukturę. Kompozycja pozostaje wolna od dodatkowej
+  typografii konkurującej z treścią karty portfolio,
 - „BUILT BY NATURE” zastąpił „VEIL” na piątej pozycji wyróżnionej siódemki
   jako pełnoekranowy, filmowy esej o trzech biologicznych technologiach.
   Projekt otrzymał opis PL/EN, tagi zgodne z implementacją i dedykowany mockup
