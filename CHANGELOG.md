@@ -8,6 +8,13 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „KSZTAŁT SIŁY” zastąpił „THE GUIDE” na szóstej pozycji wyróżnionej siódemki
+  jako interaktywny esej o magnetyzmie, dźwięku i elektryczności ujawnianych
+  przez materię. Projekt otrzymał opis PL/EN, tagi zgodne z implementacją oraz
+  dedykowany mockup oparty na rzeczywistych kadrach ferrocieczy, figury
+  Chladniego i rozgałęzionego wyładowania. „THE GUIDE” przeniesiono do archiwum
+  w miejsce „SPARK”, a „SPARK” wycofano z prezentowanej kolekcji bez usuwania
+  jego assetu,
 - Mockup „BRIXCORE” przebudowano na podstawie aktualnej wersji doświadczenia:
   centralny ekran zachowuje rzeczywisty wybór między rdzeniami FORGE i EVOLVE,
   a scenografia dyskretnie pokazuje oba filmowe rezultaty — pomarańczowy monolit
