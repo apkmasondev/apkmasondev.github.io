@@ -8,6 +8,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- dodano projekt „AURORA — Dwa Nieba” do wybranych realizacji w miejsce „DUAL / CHOICE”; „DUAL / CHOICE” przeniesiono na początek archiwum, a „ARTIFACT SEED” przywrócono bezpośrednio za nim,
+- wycofano z prezentowanej kolekcji projekty „VIBE//SHIFT” i „Poznaj AI” (ich zasoby pozostają w repozytorium), usunięto pustą kategorię „Eksperymenty” oraz przypisano BRIXCORE do Scroll / Story, a EDM Music Festival do Product / Commercial.
+
 - „KSZTAŁT SIŁY” zastąpił „THE GUIDE” na szóstej pozycji wyróżnionej siódemki
   jako interaktywny esej o magnetyzmie, dźwięku i elektryczności ujawnianych
   przez materię. Projekt otrzymał opis PL/EN, tagi zgodne z implementacją oraz

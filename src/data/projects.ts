@@ -1,5 +1,5 @@
 export type Language = 'pl' | 'en';
-export type ProjectCategory = 'story' | 'spatial' | 'product' | 'app' | 'experiment';
+export type ProjectCategory = 'story' | 'spatial' | 'product' | 'app';
 
 export interface LocalizedText {
   pl: string;
@@ -34,6 +34,32 @@ export const projects: Project[] = [
     accent: '#63e6d8',
   },
   {
+    id: 'dual-choice',
+    title: 'DUAL / CHOICE',
+    description: {
+      pl: 'Kinowe doświadczenie wyboru: przewiń do decydującego kadru, wskaż jeden z dwóch obiektów i zobacz, jak zmienia się w produkt.',
+      en: 'A cinematic choice experience: scroll to the decisive frame, select one of two objects and watch it transform into a product.',
+    },
+    image: '/dual_choice_mockup.webp',
+    link: 'https://apkmason.dev/dual_choice/',
+    tags: ['Choice-driven', 'Scroll-driven', 'Product story'],
+    category: 'product',
+    accent: '#75e8ff',
+  },
+  {
+    id: 'artifact-seed',
+    title: 'ARTIFACT SEED',
+    description: {
+      pl: 'Film i WebGL spotykają się w jednej przestrzeni: świetlisty artefakt materializuje się między dłońmi i otwiera wraz z przewijaniem.',
+      en: 'Film and WebGL meet in one space as a luminous artefact materialises between the dancer\'s hands and opens through scroll.',
+    },
+    image: '/artifact_seed_mockup.webp',
+    link: 'https://apkmason.dev/artifact-seed/',
+    tags: ['WebGL', 'Scroll-driven', 'Film compositing'],
+    category: 'spatial',
+    accent: '#d6b46d',
+  },
+  {
     id: 'apk-genesis',
     title: 'APK://GENESIS',
     description: {
@@ -56,23 +82,23 @@ export const projects: Project[] = [
     image: '/brixcore_mockup.webp',
     link: 'https://apkmason.dev/brixcore/',
     tags: ['Choice-driven', 'Interactive', 'Cinematic'],
-    category: 'experiment',
+    category: 'story',
     featured: true,
     accent: '#ff845d',
   },
   {
-    id: 'dual-choice',
-    title: 'DUAL / CHOICE',
+    id: 'aurora',
+    title: 'AURORA — Dwa Nieba',
     description: {
-      pl: 'Kinowe doświadczenie wyboru: przewiń do decydującego kadru, wskaż jeden z dwóch obiektów i zobacz, jak zmienia się w produkt.',
-      en: 'A cinematic choice experience: scroll to the decisive frame, select one of two objects and watch it transform into a product.',
+      pl: 'Czterorozdziałowe doświadczenie o zorzy północnej i południowej, łączące pełnoekranowy film z interaktywnymi diagramami światła i magnetosfery.',
+      en: 'A four-chapter experience about the northern and southern lights, combining fullscreen film with interactive diagrams of light and the magnetosphere.',
     },
-    image: '/dual_choice_mockup.webp',
-    link: 'https://apkmason.dev/dual_choice/',
-    tags: ['Choice-driven', 'Scroll-driven', 'Product story'],
-    category: 'product',
+    image: '/aurora_mockup.webp',
+    link: 'https://apkmason.dev/aurora/',
+    tags: ['Interactive essay', 'Scientific', 'Video-led'],
+    category: 'story',
     featured: true,
-    accent: '#75e8ff',
+    accent: '#60f2b1',
   },
   {
     id: 'prime',
@@ -166,7 +192,7 @@ export const projects: Project[] = [
     image: '/edm_mockup.webp',
     link: 'https://apkmason.dev/edm/',
     tags: ['Scroll-driven', 'Music Festival', 'Interactive'],
-    category: 'experiment',
+    category: 'product',
     accent: '#ff0055',
   },
   {
@@ -350,32 +376,6 @@ export const projects: Project[] = [
     tags: ['Scroll-driven', 'Cinematic', 'AI video'],
     category: 'story',
     accent: '#d1a56d',
-  },
-  {
-    id: 'poznaj-ai',
-    title: 'Poznaj AI',
-    description: {
-      pl: 'Interaktywny przewodnik dla osób rozpoczynających świadomą przygodę ze sztuczną inteligencją.',
-      en: 'An interactive guide for people beginning a thoughtful journey with artificial intelligence.',
-    },
-    image: '/poznaj_ai_mockup.webp',
-    link: 'https://apkmason.dev/poznaj_ai/',
-    tags: ['AI literacy', 'Educational', 'Interactive'],
-    category: 'experiment',
-    accent: '#7c83ff',
-  },
-  {
-    id: 'vibe-shift',
-    title: 'VIBE//SHIFT',
-    description: {
-      pl: 'Interaktywny manifest vibe codingu zbudowany na kinetycznej typografii i płynnym ruchu.',
-      en: 'An interactive vibe-coding manifesto built around kinetic typography and fluid motion.',
-    },
-    image: '/vibeshift_mockup.webp',
-    link: 'https://apkmason.dev/vibe_shift/',
-    tags: ['Kinetic type', 'Motion', 'Vibe coding'],
-    category: 'experiment',
-    accent: '#ff3f84',
   },
   {
     id: 'space-scale',

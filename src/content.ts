@@ -87,7 +87,6 @@ export const copy: Record<Language, Copy> = {
         spatial: '3D / Spatial',
         product: 'Product / Commercial',
         app: 'Aplikacje',
-        experiment: 'Eksperymenty',
       },
     },
     process: {
@@ -176,7 +175,6 @@ export const copy: Record<Language, Copy> = {
         spatial: '3D / Spatial',
         product: 'Product / Commercial',
         app: 'Apps',
-        experiment: 'Experiments',
       },
     },
     process: {
