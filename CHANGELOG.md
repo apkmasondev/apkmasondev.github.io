@@ -8,6 +8,25 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- nowy materiał hero (bazaltowy blok ze świecącymi szczelinami) o kompozycji
+  zaprojektowanej pod układ: lewa jedna trzecia kadru to niemal czysta czerń
+  zarezerwowana pod nagłówek. Zapętlony bezszwowo przez przenikanie ostatniego
+  pół sekundy na początek klipu — 9,5 s w pełnym 1080p waży 1,44 MB, czyli mniej
+  niż poprzednie 720p odtwarzane w przód i w tył,
+- dwa tryby kadru hero przełączane **proporcją okna**, nie szerokością: powyżej
+  6:5 film wypełnia ekran z kadrowaniem zakotwiczonym do lewej krawędzi, poniżej
+  staje się kadrem u góry ekranu z typografią pod nim na czystej czerni. Dzięki
+  temu tablet w pionie nie dostaje kompozycji rozjechanej przez przycięcie,
+  a telefon w poziomie dostaje pełny ekran,
+- `npm run mockup -- <plik> <id>` — przygotowuje grafikę projektu: kadr do
+  kwadratu, skala do 1254 px, automatyczny dobór jakości WebP pod limit 180 KB
+  i wypisanie gotowego wpisu do wklejenia,
+- `npm run validate` — sprawdza dane projektów względem plików na dysku:
+  istnienie i proporcje grafik, unikalność identyfikatorów, adresów i grafik,
+  poprawność kategorii i koloru, długość oraz przetłumaczenie opisów, jasność
+  akcentu na czarnym tle i osierocone grafiki w `public`. Wpięte w `npm run check`
+  oraz w workflow publikacji.
+
 - sekcja `02 / INDEX` — pełny katalog 34 realizacji jako jedno narzędzie:
   filtry kategorii z licznikami, wyszukiwarka po tytule, opisie, kategorii
   i tagach, wynik `n z 34` ogłaszany przez `aria-live`, przyklejony podgląd
