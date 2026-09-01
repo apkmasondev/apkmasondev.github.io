@@ -8,8 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
-    "check": "npm run lint && npm run typecheck && npm run build",
-    "preview": "vite preview"
+    "check": "npm run lint && npm run typecheck && npm run validate && npm run build",
+    "preview": "vite preview",
+    "validate": "node scripts/validate-projects.mjs",
+    "mockup": "node scripts/make-mockup.mjs"
   },
   "dependencies": {
     "react": "^19.2.6",
