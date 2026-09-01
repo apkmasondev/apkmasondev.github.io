@@ -54,8 +54,19 @@ niego domena własna istnieje wyłącznie w ustawieniach repozytorium.
 ## Aktualizacja projektów
 
 Dane projektów znajdują się w `src/data/projects.ts` — to jedyne źródło prawdy.
-Dodanie wpisu automatycznie aktualizuje liczniki, pasek indeksu, filtry,
-numerację i kolory. Szczegóły: [`docs/ADDING_PROJECTS.md`](docs/ADDING_PROJECTS.md).
+Dodanie projektu to trzy kroki:
+
+```bash
+npm run mockup -- zrzut.png nazwa-projektu   # grafika: kadr, skala, waga, gotowy wpis
+# wklej wypisany wpis do src/data/projects.ts
+npm run validate                              # sprawdzenie danych względem plików
+```
+
+Reszta dzieje się sama: liczniki w hero, pasek indeksu, filtry z licznikami,
+numeracja pozycji, kolor akcentu w podglądzie i na liście, obecność w wynikach
+wyszukiwania, a przy `featured: true` także kadr w sekcji wybranych prac.
+
+Szczegóły i pełna lista sprawdzeń: [`docs/ADDING_PROJECTS.md`](docs/ADDING_PROJECTS.md).
 
 ## Dokumentacja
 
