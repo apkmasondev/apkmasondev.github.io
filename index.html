@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#070707" />
+    <meta name="theme-color" content="#07070a" />
 
-    <title>APKMason.dev — AI · Pixels · Kinetics</title>
+    <title>APKMason.dev — interaktywne doświadczenia, aplikacje, AI</title>
     <meta
       name="description"
-      content="Portfolio Krzysztofa / APKMason.dev — interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI."
+      content="Portfolio Krzysztofa / APKMason.dev — 34 interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI."
     />
     <meta name="author" content="Krzysztof — APKMason.dev" />
     <meta name="creator" content="APKMason.dev" />
-    <meta name="application-name" content="APKMason.dev — AI · Pixels · Kinetics" />
+    <meta name="application-name" content="APKMason.dev" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://apkmason.dev/" />
 
@@ -22,22 +22,37 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_rounded.png?v=2" />
     <link rel="apple-touch-icon" href="/favicon_rounded.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" as="image" href="/hero-poster.jpg" fetchpriority="high" />
+
+    <!-- Plakat hero jest pierwszym pikselem strony: pobieramy go zanim ruszy wideo. -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hero-poster.jpg"
+      media="(min-width: 768px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/hero-poster-mobile.jpg"
+      media="(max-width: 767px)"
+      fetchpriority="high"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=DM+Mono:wght@300;400;500&display=swap"
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="APKMason.dev" />
     <meta property="og:locale" content="pl_PL" />
-    <meta property="og:title" content="APKMason.dev — AI · Pixels · Kinetics" />
+    <meta property="og:title" content="APKMason.dev — interaktywne doświadczenia, aplikacje, AI" />
     <meta
       property="og:description"
-      content="Portfolio Krzysztofa / APKMason.dev — interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI."
+      content="Portfolio Krzysztofa / APKMason.dev — 34 interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI."
     />
     <meta property="og:url" content="https://apkmason.dev/" />
     <meta property="og:image" content="https://apkmason.dev/og.jpg" />
@@ -47,10 +62,10 @@
     <meta property="og:image:alt" content="APKMason.dev — Code × Motion × Intelligence" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="APKMason.dev — AI · Pixels · Kinetics" />
+    <meta name="twitter:title" content="APKMason.dev — interaktywne doświadczenia, aplikacje, AI" />
     <meta
       name="twitter:description"
-      content="Portfolio Krzysztofa / APKMason.dev — interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI."
+      content="Portfolio Krzysztofa / APKMason.dev — 34 interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI."
     />
     <meta name="twitter:image" content="https://apkmason.dev/og.jpg" />
 

@@ -1,0 +1,66 @@
+/* Jedno źródło prawdy dla koloru, typografii, rytmu i ruchu.
+   Wszystkie komponenty korzystają wyłącznie z tych zmiennych. */
+
+:root {
+  color-scheme: dark;
+
+  /* Tło i powierzchnie — od najgłębszej czerni do paneli. */
+  --ink: #07070a;
+  --ink-raised: #0c0c10;
+  --ink-panel: #111116;
+  --ink-veil: rgba(7, 7, 10, 0.72);
+
+  /* Tekst */
+  --paper: #f3f0ea;
+  --paper-dim: #b7b3ac;
+  --paper-mute: #85817b;
+
+  /* Linie */
+  --line: rgba(243, 240, 234, 0.1);
+  --line-strong: rgba(243, 240, 234, 0.22);
+
+  /* Sygnał — jedyny akcent marki. --accent nadpisują pojedyncze projekty. */
+  --signal: #ff4d2e;
+  --signal-soft: #ff7a5d;
+  --accent: var(--signal);
+
+  /* Typografia */
+  --font-display: 'Archivo', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --step--1: clamp(0.78rem, 0.75rem + 0.15vw, 0.86rem);
+  --step-0: clamp(0.94rem, 0.9rem + 0.2vw, 1.05rem);
+  --step-1: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  --step-2: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+  --step-3: clamp(1.9rem, 1.5rem + 2vw, 3rem);
+  --step-4: clamp(2.5rem, 1.8rem + 3.4vw, 4.6rem);
+  --step-5: clamp(3rem, 1.9rem + 5.2vw, 7rem);
+
+  /* Rytm i siatka */
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --shell: min(100% - var(--gutter) * 2, 1560px);
+  --shell-narrow: min(100% - var(--gutter) * 2, 1180px);
+  --section-gap: clamp(6rem, 12vh, 11rem);
+  --nav-height: 4.5rem;
+
+  /* Ruch — trzy prędkości, jedna krzywa. */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur: 380ms;
+  --dur-slow: 720ms;
+
+  /* Postęp przewijania strony (0–1), aktualizowany raz na klatkę. */
+  --scroll-progress: 0;
+
+  font-family: var(--font-display);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-height: 5.25rem;
+  }
+}
