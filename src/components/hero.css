@@ -18,14 +18,30 @@
   z-index: -1;
 }
 
-.hero__media video,
-.hero__media img {
+.hero__poster,
+.hero__poster img,
+.hero__video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   /* Skala 1.08 daje zapas na dryf, dzięki czemu kadr nigdy nie odsłania krawędzi. */
   transform: scale(1.08) translate3d(0, calc(var(--hero-exit) * -4%), 0);
   object-fit: cover;
   will-change: transform;
+}
+
+.hero__poster {
+  transform: none;
+}
+
+.hero__video {
+  opacity: 0;
+  transition: opacity 900ms var(--ease);
+}
+
+.hero__video.is-ready {
+  opacity: 1;
 }
 
 .hero__scrim {
@@ -71,8 +87,15 @@
 }
 
 .hero__title {
-  max-width: 13ch;
+  max-width: min(13ch, 100%);
   font-size: var(--step-5);
+}
+
+/* Na wąskich ekranach szeroki krój nie mieści długich słów — zwężamy oś szerokości. */
+@media (max-width: 560px) {
+  .hero__title {
+    font-stretch: 106%;
+  }
 }
 
 .hero__title span {
@@ -280,8 +303,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__media video,
-  .hero__media img {
+  .hero__poster img,
+  .hero__video {
     transform: scale(1.02);
   }
 

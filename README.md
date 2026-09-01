@@ -1,23 +1,21 @@
-# APKMason.dev Portfolio V2
+# APKMason.dev Portfolio
 
-Nowe portfolio Krzysztofa / APKMason.dev. Strona została zaprojektowana jako
-kinowe, scroll-driven doświadczenie prezentujące projekty webowe, 3D i
-aplikacje bez utraty czytelności na urządzeniach mobilnych.
-
-Stara wersja znajduje się w sąsiednim katalogu `portfolio-site-stara-wersja` i nie została
-zmodyfikowana.
+Portfolio Krzysztofa / APKMason.dev. Strona jest pomyślana jako **katalog pracy**,
+a nie prezentacja o pracy: pierwszy ekran mówi, kim jest autor, a już drugi
+pokazuje projekty. Rdzeniem strony jest indeks wszystkich 34 realizacji — lista
+z filtrami, wyszukiwarką, obsługą klawiatury i podglądem, która na dotyku zamienia
+się w listę rozwijaną projektowaną pod kciuk.
 
 ## Najważniejsze elementy
 
-- film hero sterowany przewijaniem z osobnym źródłem dla desktopu, telefonu w
-  pionie i telefonu w poziomie,
-- statyczny fallback dla `prefers-reduced-motion`,
-- siedem wyróżnionych case studies i filtrowalne archiwum,
-- polska i angielska wersja treści,
-- semantyczny HTML, obsługa klawiatury i widoczne stany focus,
+- hero: jeden pełny kadr z filmem w pętli, licznikami dorobku i paskiem indeksu,
+- `SELECTED`: siedem prac w kwadratowych kadrach, oświetlonych własnym kolorem projektu,
+- `INDEX`: pełny katalog jako instrument — filtry, wyszukiwarka, `/`, `↑ ↓`, `Enter`,
+- polska i angielska wersja treści z zapisem wyboru,
+- semantyczny HTML, pułapka fokusa w menu, widoczne stany focus,
+- pełna obsługa `prefers-reduced-motion` i `Save-Data`,
 - kompletne metadane Open Graph, Twitter Card i schema.org,
-- responsywne grafiki ładowane leniwie poza pierwszym ekranem,
-- brak trackingu i zewnętrznych skryptów analitycznych.
+- brak trackingu, brak zewnętrznych skryptów, brak zależności runtime poza React.
 
 ## Uruchomienie
 
@@ -55,39 +53,13 @@ niego domena własna istnieje wyłącznie w ustawieniach repozytorium.
 
 ## Aktualizacja projektów
 
-Dane projektów znajdują się w `src/data/projects.ts`. Każdy wpis zawiera:
-
-- opis PL i EN,
-- kategorię używaną przez filtry,
-- listę technologii,
-- link i nazwę obrazu,
-- opcjonalny status `featured`.
-
-Zmiana treści nie wymaga modyfikowania komponentów.
-
-Liczniki projektów, liczby przy filtrach i podział na sekcje są wyliczane
-automatycznie z tablicy `projects`.
-
-## Film hero
-
-Źródłowy film został zachowany poza projektem. W katalogu `public` znajdują się
-trzy wersje zoptymalizowane do scrubbingu:
-
-- `hero-monolith-desktop.mp4` — 1280 × 720, 4,7 MB,
-- `hero-monolith-landscape.mp4` — 854 × 480, 2,9 MB, dla telefonów w poziomie
-  (`(max-height: 520px) and (pointer: coarse)`),
-- `hero-monolith-mobile.mp4` — 480 × 854, 2,9 MB, kadr pionowy
-  (`(max-width: 767px)`).
-
-Wszystkie są pozbawione ścieżki audio, mają `faststart`, GOP=1 oraz grading
-koloru wypalony bezpośrednio w obraz, aby ograniczyć koszt renderowania hero.
-GOP=1 oznacza, że każda klatka jest kluczowa — to warunek płynnego scrubbingu i
-powód, dla którego pliki nie schodzą poniżej ~3 MB.
+Dane projektów znajdują się w `src/data/projects.ts` — to jedyne źródło prawdy.
+Dodanie wpisu automatycznie aktualizuje liczniki, pasek indeksu, filtry,
+numerację i kolory. Szczegóły: [`docs/ADDING_PROJECTS.md`](docs/ADDING_PROJECTS.md).
 
 ## Dokumentacja
 
-- [`CHANGELOG.md`](CHANGELOG.md) — historia zmian.
-
-Rozszerzone notatki (architektura, wdrożenie, pochodzenie mediów, dodawanie
-realizacji) leżą lokalnie w katalogu `docs/`, który jest wyłączony z
-wersjonowania.
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — układ sekcji, pętla przewijania, dostępność, wydajność,
+- [`docs/ADDING_PROJECTS.md`](docs/ADDING_PROJECTS.md) — jak dodać projekt,
+- [`docs/ASSETS.md`](docs/ASSETS.md) — media, formaty i polecenia do ich przygotowania,
+- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — publikacja.

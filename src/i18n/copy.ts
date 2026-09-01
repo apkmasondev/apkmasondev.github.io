@@ -120,7 +120,7 @@ export const copy: Record<Language, Copy> = {
       titleLead: 'Reszta nie jest ',
       titleAccent: 'tłem.',
       lede:
-        'Żywe archiwum prób, narzędzi i kierunków, które ukształtowały mój warsztat. Wskaż pozycję, aby ją podejrzeć.',
+        'Żywe archiwum prób, narzędzi i kierunków, które ukształtowały mój warsztat. Filtruj, szukaj i wchodź w dowolną pozycję.',
       searchLabel: 'Szukaj w indeksie',
       searchPlaceholder: 'Nazwa, technologia…',
       clear: 'Wyczyść wyszukiwanie',
@@ -238,7 +238,7 @@ export const copy: Record<Language, Copy> = {
       titleLead: 'The rest is not ',
       titleAccent: 'background.',
       lede:
-        'A living archive of experiments, tools and directions that shaped how I work today. Point at an entry to preview it.',
+        'A living archive of experiments, tools and directions that shaped how I work today. Filter it, search it, open anything.',
       searchLabel: 'Search the index',
       searchPlaceholder: 'Name, technology…',
       clear: 'Clear search',

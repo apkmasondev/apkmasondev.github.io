@@ -81,10 +81,12 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.75rem 0.9rem;
+  padding: 0.75rem 0.85rem;
   background: linear-gradient(180deg, transparent, rgba(7, 7, 10, 0.85));
   color: var(--paper-dim);
-  font-size: 0.58rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 /* ── Tekst ─────────────────────────────────────────────────── */
