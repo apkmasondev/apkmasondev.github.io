@@ -30,6 +30,7 @@
 /* ── Marka ─────────────────────────────────────────────────── */
 
 .nav__brand {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -232,6 +233,8 @@
 }
 
 .nav__sheet-mail {
+  position: relative;
+  align-self: flex-start;
   color: var(--paper-dim);
   font-size: 0.75rem;
   text-transform: none;
@@ -263,5 +266,23 @@
   .nav__menu-button,
   .nav__sheet {
     display: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .nav__brand::before {
+    position: absolute;
+    inset: -0.7rem -0.4rem;
+    content: '';
+  }
+
+  .nav__lang {
+    padding-block: 0.6rem;
+  }
+
+  .nav__sheet-mail::before {
+    position: absolute;
+    inset: -0.75rem -0.6rem;
+    content: '';
   }
 }

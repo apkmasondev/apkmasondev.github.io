@@ -31,6 +31,7 @@
 }
 
 .contact__address {
+  position: relative;
   color: var(--paper-mute);
   font-size: 0.7rem;
   text-transform: none;
@@ -92,6 +93,7 @@
 }
 
 .contact__top {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -109,4 +111,13 @@
 
 .contact__top:hover svg {
   transform: translateY(-3px);
+}
+
+@media (pointer: coarse) {
+  .contact__address::before,
+  .contact__top::before {
+    position: absolute;
+    inset: -0.75rem -0.6rem;
+    content: '';
+  }
 }

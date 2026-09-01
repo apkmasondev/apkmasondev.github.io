@@ -147,13 +147,19 @@
 
 /* ── Pusty wynik ───────────────────────────────────────────── */
 
+ /* Pusty wynik nie może być tekstem zawieszonym w pustce — dostaje kreski
+    i wyśrodkowanie, żeby czytał się jak część tabeli. */
 .index__empty {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-block: clamp(3rem, 12vh, 6rem);
+  align-items: center;
+  gap: 1.25rem;
+  padding-block: clamp(3rem, 9vh, 5rem);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   color: var(--paper-dim);
+  text-align: center;
+  text-wrap: balance;
 }
 
 /* ── Widok stołu (desktop) ─────────────────────────────────── */
@@ -511,5 +517,32 @@
 @media (min-width: 1440px) {
   .index__layout {
     grid-template-columns: minmax(20rem, 27%) minmax(0, 1fr);
+  }
+}
+
+/* Na dotyku filtry i przycisk czyszczenia muszą być wygodne dla kciuka. */
+@media (pointer: coarse) {
+  .index__filters button {
+    padding-block: 0.7rem;
+  }
+
+  /* Wysokość pola bierze się z samego inputa, żeby całe wnętrze pigułki
+     było celem dotyku, a nie tylko 22 px linii tekstu. */
+  .index__search {
+    padding-block: 0;
+  }
+
+  .index__search input {
+    padding-block: 0.7rem;
+  }
+
+  .index__search button {
+    position: relative;
+  }
+
+  .index__search button::before {
+    position: absolute;
+    inset: -0.7rem;
+    content: '';
   }
 }

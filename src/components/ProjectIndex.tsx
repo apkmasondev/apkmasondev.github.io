@@ -380,7 +380,7 @@ export function ProjectIndex() {
       <div className="index__body shell">
         {visible.length === 0 ? (
           <div className="index__empty">
-            <p>{text.empty}</p>
+            <p>{text.empty(query.trim())}</p>
             <button type="button" className="link-underline" onClick={reset}>
               {text.emptyAction}
             </button>

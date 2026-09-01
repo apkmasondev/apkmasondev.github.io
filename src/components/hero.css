@@ -227,6 +227,7 @@
 }
 
 .hero__ticker-cta {
+  position: relative;
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
@@ -375,6 +376,14 @@
 @media (max-aspect-ratio: 6 / 5) and (min-width: 600px) {
   .hero__media {
     height: calc(var(--nav-height) + clamp(13rem, 30svh, 24rem));
+  }
+}
+
+@media (pointer: coarse) {
+  .hero__ticker-cta::before {
+    position: absolute;
+    inset: -0.75rem -0.6rem;
+    content: '';
   }
 }
 

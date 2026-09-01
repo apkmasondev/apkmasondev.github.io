@@ -1,12 +1,14 @@
 .reel {
   padding-block: var(--section-gap);
+  border-top: 1px solid var(--line);
 }
 
 .reel__header {
   display: flex;
   flex-direction: column;
   gap: clamp(1rem, 2.5vw, 1.75rem);
-  margin-bottom: clamp(3.5rem, 9vh, 7rem);
+  /* Zapas na konturowy numer pierwszej pozycji, który wychodzi ponad kadr. */
+  margin-bottom: clamp(4.5rem, 11vh, 8rem);
 }
 
 .reel__header h2 {
