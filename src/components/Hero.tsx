@@ -63,7 +63,7 @@ export function Hero() {
     <section className="hero" id="top" ref={sectionRef}>
       <div className="hero__media" aria-hidden="true">
         <picture className="hero__poster">
-          <source media="(max-width: 767px)" srcSet="/hero-poster-mobile.jpg" />
+          <source media="(max-aspect-ratio: 6 / 5)" srcSet="/hero-poster-mobile.jpg" />
           <img src="/hero-poster.jpg" alt="" width="1280" height="720" fetchPriority="high" />
         </picture>
         {videoMounted && (
@@ -77,7 +77,7 @@ export function Hero() {
             tabIndex={-1}
             onCanPlay={revealVideo}
           >
-            <source media="(max-width: 767px)" src="/hero-loop-mobile.mp4" type="video/mp4" />
+            <source media="(max-aspect-ratio: 6 / 5)" src="/hero-loop-mobile.mp4" type="video/mp4" />
             <source src="/hero-loop-desktop.mp4" type="video/mp4" />
           </video>
         )}
@@ -87,7 +87,12 @@ export function Hero() {
 
       <div className="hero__body shell">
         <div className="hero__lockup">
-          <p className="hero__eyebrow mono">{text.eyebrow}</p>
+          {/* Marka znika na telefonie — powtarzałaby wordmark z nawigacji
+              czterdzieści pikseli wyżej. */}
+          <p className="hero__eyebrow mono">
+            <span className="hero__eyebrow-brand">{text.eyebrowBrand} —</span>
+            {text.eyebrowRole}
+          </p>
           <h1 className="hero__title display">
             <span>{text.titleLead}</span>{' '}
             <span>{text.titleAccent}</span>

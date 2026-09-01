@@ -1,5 +1,9 @@
 .hero {
   --hero-exit: 0;
+  /* Punkt zakotwiczenia kadru. Na telefonie film jest już wykadrowany na kamieniu,
+     więc trzyma środek; od tabletu w górę trzymamy lewą krawędź, bo tam materiał ma
+     celowo pustą czerń pod nagłówek — przycięcie musi zjadać prawą stronę, nie lewą. */
+  --hero-anchor: 50%;
 
   position: relative;
   display: grid;
@@ -27,7 +31,9 @@
   height: 100%;
   /* Skala 1.08 daje zapas na dryf, dzięki czemu kadr nigdy nie odsłania krawędzi. */
   transform: scale(1.08) translate3d(0, calc(var(--hero-exit) * -4%), 0);
+  transform-origin: var(--hero-anchor) center;
   object-fit: cover;
+  object-position: var(--hero-anchor) 50%;
   will-change: transform;
 }
 
@@ -47,9 +53,18 @@
 .hero__scrim {
   position: absolute;
   inset: 0;
+  /* Trzy warstwy, każda z jednym zadaniem: czytelność nawigacji i paska indeksu
+     (pion), pole pod nagłówek (lewa) i pod liczniki (prawa). Środek kadru
+     zostaje odsłonięty — tam materiał ma pracować. */
   background:
-    linear-gradient(180deg, rgba(7, 7, 10, 0.82) 0%, rgba(7, 7, 10, 0.25) 34%, rgba(7, 7, 10, 0.94) 88%),
-    linear-gradient(90deg, rgba(7, 7, 10, 0.8) 0%, transparent 62%);
+    linear-gradient(180deg, rgba(7, 7, 10, 0.78) 0%, rgba(7, 7, 10, 0.2) 32%, rgba(7, 7, 10, 0.92) 90%),
+    linear-gradient(
+      90deg,
+      rgba(7, 7, 10, 0.88) 0%,
+      rgba(7, 7, 10, 0.62) 26%,
+      rgba(7, 7, 10, 0.12) 58%,
+      rgba(7, 7, 10, 0.55) 100%
+    );
 }
 
 /* Ziarno filmowe: jeden powtarzalny wzór SVG, bez dodatkowego pliku. */
@@ -81,9 +96,16 @@
 }
 
 .hero__eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
   color: var(--signal);
   font-size: clamp(0.6rem, 2.4vw, 0.72rem);
   letter-spacing: 0.16em;
+}
+
+.hero__eyebrow-brand {
+  display: none;
 }
 
 .hero__title {
@@ -272,7 +294,19 @@
 
 /* ── Duże ekrany ───────────────────────────────────────────── */
 
+@media (min-aspect-ratio: 6 / 5) {
+  /* W trybie pełnoekranowym kadrowanie musi zjadać prawą stronę, nie lewą —
+     tam materiał ma celowo pustą czerń pod nagłówek. */
+  .hero {
+    --hero-anchor: 0%;
+  }
+}
+
 @media (min-width: 768px) {
+  .hero__eyebrow-brand {
+    display: inline;
+  }
+
   .hero__body {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -299,6 +333,48 @@
   .hero__cue {
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* ── Wąskie proporcje: film jako kadr, nie tapeta ──────────── */
+
+/* Materiał jest kompozycją poziomą z celowo pustą lewą stroną. Wypełnienie nim
+   wysokiego okna wycina albo tę pustkę, albo świecącą szczelinę — dlatego o trybie
+   decyduje proporcja okna, nie szerokość. Poniżej 6:5 film dostaje własną ramę
+   u góry ekranu, a typografia siada pod nim na czystej czerni. To ten sam język,
+   którym strona pokazuje projekty. */
+@media (max-aspect-ratio: 6 / 5) {
+  .hero {
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .hero__media {
+    position: relative;
+    z-index: auto;
+    height: calc(var(--nav-height) + clamp(8rem, 22svh, 13rem));
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero__scrim {
+    background:
+      linear-gradient(180deg, rgba(7, 7, 10, 0.72) 0%, transparent 40%),
+      linear-gradient(180deg, transparent 58%, rgba(7, 7, 10, 0.55) 100%);
+  }
+
+  .hero__body {
+    gap: clamp(1.25rem, 3vh, 2rem);
+    padding-block: clamp(1.25rem, 3.5vh, 2rem);
+  }
+
+  .hero__lockup {
+    gap: clamp(0.7rem, 1.8vh, 1.15rem);
+  }
+}
+
+/* Na tablecie w pionie zostaje sporo miejsca — kadr może oddychać. */
+@media (max-aspect-ratio: 6 / 5) and (min-width: 600px) {
+  .hero__media {
+    height: calc(var(--nav-height) + clamp(13rem, 30svh, 24rem));
   }
 }
 
