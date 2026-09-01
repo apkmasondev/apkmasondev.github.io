@@ -44,7 +44,7 @@ interface Copy {
     searchPlaceholder: string;
     clear: string;
     hint: string;
-    empty: string;
+    empty: (query: string) => string;
     emptyAction: string;
     filtersLabel: string;
     filters: Record<'all' | ProjectCategory, string>;
@@ -128,7 +128,7 @@ export const copy: Record<Language, Copy> = {
       searchPlaceholder: 'Nazwa, technologia…',
       clear: 'Wyczyść wyszukiwanie',
       hint: 'Klawisz / — szukaj · ↑ ↓ — nawigacja · Enter — otwórz',
-      empty: 'Nic nie pasuje do tego zapytania.',
+      empty: (query) => (query ? `Nic nie pasuje do „${query}”.` : 'Brak pozycji w tej kategorii.'),
       emptyAction: 'Pokaż wszystkie',
       filtersLabel: 'Filtry kategorii',
       filters: {
@@ -248,7 +248,7 @@ export const copy: Record<Language, Copy> = {
       searchPlaceholder: 'Name, technology…',
       clear: 'Clear search',
       hint: 'Press / to search · ↑ ↓ to move · Enter to open',
-      empty: 'Nothing matches that query.',
+      empty: (query) => (query ? `Nothing matches “${query}”.` : 'No entries in this category.'),
       emptyAction: 'Show everything',
       filtersLabel: 'Category filters',
       filters: {

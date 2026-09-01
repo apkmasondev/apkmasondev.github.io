@@ -90,3 +90,13 @@
 .link-underline:hover svg {
   transform: translate(2px, -2px);
 }
+
+/* Na ekranach dotykowych drobne odnośniki dostają niewidoczne, powiększone pole
+   dotyku. Pseudoelement zamiast paddingu, żeby podkreślenie zostało przy tekście. */
+@media (pointer: coarse) {
+  .link-underline::before {
+    position: absolute;
+    inset: -0.7rem -0.6rem;
+    content: '';
+  }
+}
