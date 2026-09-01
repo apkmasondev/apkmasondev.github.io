@@ -19,7 +19,8 @@ export const HERO_CODE = '00 / SIGNAL';
 interface Copy {
   nav: Record<SectionId, string> & { menu: string; close: string; label: string; language: string };
   hero: {
-    eyebrow: string;
+    eyebrowBrand: string;
+    eyebrowRole: string;
     titleLead: string;
     titleAccent: string;
     lede: string;
@@ -100,7 +101,8 @@ export const copy: Record<Language, Copy> = {
       language: 'Switch language to English',
     },
     hero: {
-      eyebrow: 'APKMASON.DEV — INDEPENDENT DIGITAL CREATOR',
+      eyebrowBrand: 'APKMASON.DEV',
+      eyebrowRole: 'Independent digital creator',
       titleLead: 'Pomysły przekuwam',
       titleAccent: 'w cyfrowe doświadczenia.',
       lede: 'Interaktywne strony, aplikacje i multimedia na styku kodu, motion designu i AI.',
@@ -219,7 +221,8 @@ export const copy: Record<Language, Copy> = {
       language: 'Zmień język na polski',
     },
     hero: {
-      eyebrow: 'APKMASON.DEV — INDEPENDENT DIGITAL CREATOR',
+      eyebrowBrand: 'APKMASON.DEV',
+      eyebrowRole: 'Independent digital creator',
       titleLead: 'I forge ideas',
       titleAccent: 'into digital experiences.',
       lede: 'Interactive websites, applications and multimedia at the intersection of code, motion design and AI.',
