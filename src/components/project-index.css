@@ -267,6 +267,8 @@
 
 .index__rows {
   position: relative;
+  /* Zapas na dole listy: przyklejony podgląd zostaje w kadrze aż do końca sekcji. */
+  padding-bottom: clamp(1rem, 5vh, 4rem);
   /* Własny kontekst układania: kreska odczytu (z-index -1) zostaje pod wierszami,
      ale nad tłem strony. */
   isolation: isolate;
