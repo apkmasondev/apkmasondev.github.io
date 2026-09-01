@@ -72,10 +72,14 @@
 
 .method__bar-legend div {
   display: flex;
-  gap: 0.5rem;
+  /* Wartość nad etykietą — czyta się jak podpis pod wykresem i nie łamie się
+     na wąskich ekranach. */
+  flex-direction: column-reverse;
+  gap: 0.3rem;
 }
 
 .method__bar-legend div:last-child {
+  align-items: flex-end;
   text-align: right;
 }
 
@@ -86,6 +90,8 @@
 .method__bar-legend dd {
   margin: 0;
   color: var(--paper-dim);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
 }
 
 .method__bar-legend div:last-child dd {

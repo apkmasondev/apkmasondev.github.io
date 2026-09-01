@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState, type SyntheticEvent } from 'react';
 import { projects } from '../data/projects';
 import { useCopy } from '../i18n/language-context';
 import { useAllowsHeavyMedia } from '../lib/hooks';
@@ -6,10 +6,35 @@ import { onScrollFrame } from '../lib/scrollFrame';
 import { ArrowDown, ArrowUpRight } from './Icon';
 import './hero.css';
 
+/** Film wchodzi dopiero, gdy ma gotową klatkę — nigdy nie odsłania czarnego prostokąta. */
+function revealVideo(event: SyntheticEvent<HTMLVideoElement>) {
+  event.currentTarget.classList.add('is-ready');
+}
+
 export function Hero() {
   const text = useCopy().hero;
   const allowsVideo = useAllowsHeavyMedia();
   const sectionRef = useRef<HTMLElement>(null);
+  const [videoMounted, setVideoMounted] = useState(false);
+
+  // Pierwszym kadrem strony jest lekki plakat. Film dociąga się dopiero po
+  // zakończeniu ładowania reszty, więc nie konkuruje o pasmo z treścią.
+  useEffect(() => {
+    if (!allowsVideo) return;
+
+    let timer = 0;
+    const schedule = () => {
+      timer = window.setTimeout(() => setVideoMounted(true), 150);
+    };
+
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule, { once: true });
+
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener('load', schedule);
+    };
+  }, [allowsVideo]);
 
   const stats = useMemo(
     () =>
@@ -37,25 +62,24 @@ export function Hero() {
   return (
     <section className="hero" id="top" ref={sectionRef}>
       <div className="hero__media" aria-hidden="true">
-        {allowsVideo ? (
+        <picture className="hero__poster">
+          <source media="(max-width: 767px)" srcSet="/hero-poster-mobile.jpg" />
+          <img src="/hero-poster.jpg" alt="" width="1280" height="720" fetchPriority="high" />
+        </picture>
+        {videoMounted && (
           <video
             className="hero__video"
             autoPlay
             loop
             muted
             playsInline
-            preload="metadata"
-            poster="/hero-poster.jpg"
+            preload="auto"
             tabIndex={-1}
+            onCanPlay={revealVideo}
           >
             <source media="(max-width: 767px)" src="/hero-loop-mobile.mp4" type="video/mp4" />
             <source src="/hero-loop-desktop.mp4" type="video/mp4" />
           </video>
-        ) : (
-          <picture>
-            <source media="(max-width: 767px)" srcSet="/hero-poster-mobile.jpg" />
-            <img src="/hero-poster.jpg" alt="" width="1280" height="720" fetchPriority="high" />
-          </picture>
         )}
         <span className="hero__scrim" />
         <span className="hero__grain" />
