@@ -17,7 +17,7 @@ export type SectionId = (typeof SECTIONS)[number]['id'];
 export const HERO_CODE = '00 / SIGNAL';
 
 interface Copy {
-  nav: Record<SectionId, string> & { menu: string; close: string; language: string };
+  nav: Record<SectionId, string> & { menu: string; close: string; label: string; language: string };
   hero: {
     eyebrow: string;
     titleLead: string;
@@ -96,6 +96,7 @@ export const copy: Record<Language, Copy> = {
       contact: 'Kontakt',
       menu: 'Otwórz menu',
       close: 'Zamknij menu',
+      label: 'Menu główne',
       language: 'Switch language to English',
     },
     hero: {
@@ -214,6 +215,7 @@ export const copy: Record<Language, Copy> = {
       contact: 'Contact',
       menu: 'Open menu',
       close: 'Close menu',
+      label: 'Main menu',
       language: 'Zmień język na polski',
     },
     hero: {

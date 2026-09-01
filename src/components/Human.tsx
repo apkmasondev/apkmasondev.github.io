@@ -88,7 +88,7 @@ export function Human() {
         <div className="human__copy" data-reveal ref={copyRef}>
           <p className="section-mark mono">{SECTION_CODE}</p>
           <h2 className="display" id="human-title">
-            <span>{text.titleLead}</span>
+            <span>{text.titleLead}</span>{' '}
             <span className="human__title-accent">{text.titleAccent}</span>
           </h2>
           <div className="human__narrative">

@@ -89,7 +89,7 @@ export function Hero() {
         <div className="hero__lockup">
           <p className="hero__eyebrow mono">{text.eyebrow}</p>
           <h1 className="hero__title display">
-            <span>{text.titleLead}</span>
+            <span>{text.titleLead}</span>{' '}
             <span>{text.titleAccent}</span>
           </h1>
           <p className="hero__lede">{text.lede}</p>

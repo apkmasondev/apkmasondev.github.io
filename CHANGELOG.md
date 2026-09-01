@@ -6,6 +6,63 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- sekcja `02 / INDEX` — pełny katalog 34 realizacji jako jedno narzędzie:
+  filtry kategorii z licznikami, wyszukiwarka po tytule, opisie, kategorii
+  i tagach, wynik `n z 34` ogłaszany przez `aria-live`, przyklejony podgląd
+  z przenikaniem i kreską odczytu podążającą za wyborem. Na desktopie działa
+  klawiatura: `/` otwiera wyszukiwarkę, `↑ ↓` przechodzą między pozycjami,
+  `Esc` czyści zapytanie. Poniżej 1024 px ten sam zestaw danych renderuje
+  osobny widok dotykowy — lista rozwijana z obrazem, opisem i odnośnikiem,
+- sekcja `01 / SELECTED` — siedem wyróżnionych prac w kwadratowych kadrach
+  galerii, naprzemiennie z lewej i prawej strony, z kolorem `accent` projektu
+  użytym jako światło sceny i kolor ramki,
+- pasek indeksu w hero: wszystkie tytuły przesuwają się jak napisy końcowe
+  i zatrzymują pod kursorem; wejście do katalogu prowadzi przez jeden stały
+  odnośnik, więc żaden cel kliknięcia się nie porusza,
+- proporcja 80/20 w sekcji `03 / METHOD` narysowana jako pasek — ilustruje
+  zdanie o „ostatnich 20%” zamiast je dekorować,
+- licznik rolki w nawigacji (`02 / INDEX`) oraz włosowy pasek postępu strony,
+- znak zamykający `APKMASON` skalowany zapytaniem kontenerowym tak, aby przy
+  każdej szerokości okna wypełniał wiersz co do piksela.
+
+### Changed
+
+- **przebudowa strony**: układ `hero → manifest → wybrane → archiwum → proces →
+  o mnie → kontakt` zastąpiony sekwencją `00 SIGNAL → 01 SELECTED → 02 INDEX →
+  03 METHOD → 04 HUMAN → 05 CONTACT`. Pierwszy projekt jest widoczny po jednym
+  ekranie przewijania zamiast po siedmiu; całość strony skróciła się z ~24 do
+  ~13 ekranów,
+- hero skrócone z sześciu ekranów sterowanych scrollem do jednego pełnego kadru.
+  Film monolitu odtwarza się jako bezszwowa pętla (materiał w przód i w tył)
+  zamiast być przewijany scrollem — znika kolizja napisów etapów z nagłówkiem
+  i zależność pierwszego wrażenia od buforowania wideo,
+- typografia: `Manrope` zastąpiony zmiennym krojem `Archivo` z osią szerokości
+  (nagłówki w szerokości 118–125%), `DM Mono` pozostaje jako krój techniczny,
+- teksty przeniesione z `src/content.ts` do `src/i18n/`, język udostępniany
+  kontekstem zamiast przekazywany przez propsy; kolejność i kody sekcji opisuje
+  jedna tablica `SECTIONS`,
+- style rozbite z jednego pliku 2427 linii na tokeny, bazę, kontrolki
+  i po jednym arkuszu na sekcję,
+- wideo hero przekodowane: 4,7 MB → 1,7 MB (desktop) i 2,9 MB → 0,65 MB
+  (telefon); katalog `public` zmniejszony z 16 MB do 7,4 MB,
+- film hero montowany dopiero po zdarzeniu `load` i ujawniany po pierwszej
+  gotowej klatce — pierwszym kadrem strony jest plakat 25 KB (18 KB na telefonie),
+- cała strona korzysta z jednej pętli `requestAnimationFrame`; pozycje do
+  paralaksy mierzone przez `ResizeObserver`, nigdy w trakcie przewijania,
+- skala typograficzna dobrana pod najdłuższe polskie słowa — nagłówki nie są
+  przycinane przy 320 px.
+
+### Removed
+
+- `lucide-react` — sześć używanych ikon wstawiono bezpośrednio w kodzie;
+  poza React nie ma już zależności runtime,
+- sekcja manifestu i osobna sekcja archiwum (ich rolę przejął `INDEX`),
+- generatywny obiekt Canvas 2D w sekcji procesu i pierścienie orbity
+  w stopce — dekoracje bez związku z treścią, kosztujące osobną pętlę animacji,
+- grafiki `manifesto-threshold-*` i `section-note-*` po usuniętych sekcjach.
+
 ### Changed
 
 - dodano projekt „AURORA — Dwa Nieba” do wybranych realizacji w miejsce „DUAL / CHOICE”; „DUAL / CHOICE” przeniesiono na początek archiwum, a „ARTIFACT SEED” przywrócono bezpośrednio za nim,

@@ -17,7 +17,7 @@ export function Method() {
         <header className="method__intro" data-reveal ref={headerRef}>
           <p className="section-mark mono">{SECTION_CODE}</p>
           <h2 className="display" id="method-title">
-            <span>{text.titleLines[0]}</span>
+            <span>{text.titleLines[0]}</span>{' '}
             <span className="method__title-accent">{text.titleLines[1]}</span>
           </h2>
         </header>

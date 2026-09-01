@@ -119,7 +119,7 @@ export function SiteNav({ activeSection }: SiteNavProps) {
       </div>
 
       <div className="nav__sheet" id="site-menu" hidden={!sheetOpen} ref={menuRef}>
-        <nav className="nav__sheet-links" aria-label={text.nav.menu}>
+        <nav className="nav__sheet-links" aria-label={text.nav.label}>
           {SECTIONS.map((section, index) => (
             <a key={section.id} href={`#${section.id}`} onClick={() => setMenuOpen(false)}>
               <span className="mono">{String(index + 1).padStart(2, '0')}</span>
