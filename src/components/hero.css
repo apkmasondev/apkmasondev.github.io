@@ -1,0 +1,301 @@
+.hero {
+  --hero-exit: 0;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ── Kadr ──────────────────────────────────────────────────── */
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero__media video,
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  /* Skala 1.08 daje zapas na dryf, dzięki czemu kadr nigdy nie odsłania krawędzi. */
+  transform: scale(1.08) translate3d(0, calc(var(--hero-exit) * -4%), 0);
+  object-fit: cover;
+  will-change: transform;
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 7, 10, 0.82) 0%, rgba(7, 7, 10, 0.25) 34%, rgba(7, 7, 10, 0.94) 88%),
+    linear-gradient(90deg, rgba(7, 7, 10, 0.8) 0%, transparent 62%);
+}
+
+/* Ziarno filmowe: jeden powtarzalny wzór SVG, bez dodatkowego pliku. */
+.hero__grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* ── Treść ─────────────────────────────────────────────────── */
+
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: clamp(2rem, 5vh, 3.5rem);
+  padding-block: calc(var(--nav-height) + 2rem) clamp(2rem, 5vh, 3rem);
+}
+
+.hero__lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1rem, 2.4vh, 1.75rem);
+  max-width: min(100%, 54rem);
+}
+
+.hero__eyebrow {
+  color: var(--signal);
+  font-size: clamp(0.6rem, 2.4vw, 0.72rem);
+  letter-spacing: 0.16em;
+}
+
+.hero__title {
+  max-width: 13ch;
+  font-size: var(--step-5);
+}
+
+.hero__title span {
+  display: block;
+}
+
+.hero__title span:last-child {
+  color: var(--paper-dim);
+}
+
+.hero__lede {
+  max-width: 34ch;
+  color: var(--paper-dim);
+  font-size: var(--step-1);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+/* ── Liczniki ──────────────────────────────────────────────── */
+
+.hero__aside {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.hero__stats {
+  display: flex;
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.hero__stats div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.3rem;
+}
+
+.hero__stats dt {
+  color: var(--paper-mute);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+}
+
+.hero__stats dd {
+  margin: 0;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 600;
+  font-stretch: 112%;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.hero__cue {
+  display: none;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--paper-mute);
+  font-size: 0.64rem;
+}
+
+.hero__cue-line {
+  position: relative;
+  width: 1px;
+  height: 3.5rem;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.hero__cue-line::after {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 45%;
+  background: var(--signal);
+  animation: hero-cue 2.6s var(--ease-inout) infinite;
+  content: '';
+}
+
+@keyframes hero-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  60%,
+  100% {
+    transform: translateY(240%);
+  }
+}
+
+/* ── Pasek indeksu ─────────────────────────────────────────── */
+
+.hero__ticker {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: 0.9rem var(--gutter);
+  border-top: 1px solid var(--line);
+  background: rgba(7, 7, 10, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero__ticker-cta {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--paper);
+  font-size: 0.66rem;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.hero__ticker-cta:hover {
+  color: var(--signal);
+}
+
+.hero__ticker-window {
+  flex: 1;
+  /* Bez min-width:0 element flex rozciągnąłby się do szerokości taśmy z tytułami. */
+  min-width: 0;
+  overflow: hidden;
+  /* Wygaszenie krawędzi sprawia, że napisy wjeżdżają i znikają, zamiast się ucinać. */
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.hero__ticker-track {
+  display: flex;
+  width: max-content;
+  animation: hero-ticker 150s linear infinite;
+}
+
+.hero__ticker:hover .hero__ticker-track,
+.hero__ticker:focus-within .hero__ticker-track {
+  animation-play-state: paused;
+}
+
+.hero__ticker-track ul {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.hero__ticker-track li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--paper-mute);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero__ticker-track i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+@keyframes hero-ticker {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ── Duże ekrany ───────────────────────────────────────────── */
+
+@media (min-width: 768px) {
+  .hero__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: clamp(2rem, 6vw, 6rem);
+  }
+
+  .hero__aside {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: clamp(2rem, 6vh, 4rem);
+  }
+
+  .hero__stats {
+    flex-direction: column;
+    gap: clamp(1rem, 2.6vh, 1.75rem);
+    text-align: right;
+  }
+
+  .hero__stats div {
+    align-items: flex-end;
+  }
+
+  .hero__cue {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__media video,
+  .hero__media img {
+    transform: scale(1.02);
+  }
+
+  .hero__ticker-window {
+    overflow-x: auto;
+  }
+
+  .hero__ticker-track {
+    animation: none;
+  }
+
+  .hero__cue-line::after {
+    animation: none;
+    height: 100%;
+    opacity: 0.5;
+  }
+}
