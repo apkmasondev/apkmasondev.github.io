@@ -56,7 +56,7 @@ stosują [Semantic Versioning](https://semver.org/).
   wyznaczają kierunek”,
 - dokumentację wskazaną w `README.md` włączono do repozytorium zamiast
   pozostawiać martwe odnośniki; na urządzeniach mobilnych filtr indeksu dostał
-  zawijany układ pokazujący wszystkie kategorie bez przewijania, a mobilną
+  zwartą matrycę 3 × 2 z krótkimi etykietami (na tabletach jeden rząd), a mobilną
   nawigację uproszczono do elastycznego paska, w którym przycisk menu nie może
   zostać wypchnięty poza ekran,
 - zablokowano poziome przewijanie dokumentu na poziomie elementu głównego i
