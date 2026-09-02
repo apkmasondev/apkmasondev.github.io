@@ -13,7 +13,7 @@ import { join } from 'node:path';
 import { projects } from '../src/data/projects.ts';
 
 const PUBLIC_DIR = 'public';
-const CATEGORIES = new Set(['story', 'spatial', 'product', 'app']);
+const CATEGORIES = new Set(['story', 'spatial', 'product', 'app', 'experiment']);
 const MAX_IMAGE_KB = 260;
 const MAX_TAGS = 4;
 const SQUARE_TOLERANCE = 0.02;

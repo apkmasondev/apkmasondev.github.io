@@ -137,6 +137,7 @@ export const copy: Record<Language, Copy> = {
         spatial: '3D / Spatial',
         product: 'Product / Commercial',
         app: 'Aplikacje',
+        experiment: 'Eksperymenty',
       },
       listLabel: 'Indeks projektów',
       results: (visible, total) => `${visible} z ${total}`,
@@ -149,8 +150,8 @@ export const copy: Record<Language, Copy> = {
       titleLines: ['AI przyspiesza.', 'Człowiek nadaje kierunek.'],
       lede:
         'Prompt jest początkiem, nie produktem. Buduję powtarzalny proces, w którym narzędzia generatywne wspierają warsztat — nie zastępują myślenia.',
-      ratioAi: 'AI — prędkość',
-      ratioHuman: 'Człowiek — ostatnie 20%',
+      ratioAi: 'AI — przyspieszenie i iteracja',
+      ratioHuman: 'Człowiek — kierunek, selekcja, odpowiedzialność',
       steps: [
         {
           title: 'Kierunek',
@@ -168,7 +169,7 @@ export const copy: Record<Language, Copy> = {
           meta: 'Code / Motion / Integration',
         },
         {
-          title: 'Ostatnie 20%',
+          title: 'Dopracowanie',
           body: 'Testuję, upraszczam i optymalizuję. To tutaj efektowny prototyp staje się wiarygodnym produktem.',
           meta: 'QA / Performance / Delivery',
         },
@@ -257,6 +258,7 @@ export const copy: Record<Language, Copy> = {
         spatial: '3D / Spatial',
         product: 'Product / Commercial',
         app: 'Apps',
+        experiment: 'Experiments',
       },
       listLabel: 'Project index',
       results: (visible, total) => `${visible} of ${total}`,
@@ -269,8 +271,8 @@ export const copy: Record<Language, Copy> = {
       titleLines: ['AI accelerates.', 'A human sets the direction.'],
       lede:
         'A prompt is a starting point, not the product. I build a repeatable process in which generative tools support the craft rather than replace judgment.',
-      ratioAi: 'AI — velocity',
-      ratioHuman: 'Human — the last 20%',
+      ratioAi: 'AI — acceleration and iteration',
+      ratioHuman: 'Human — direction, curation, accountability',
       steps: [
         {
           title: 'Direction',
@@ -288,7 +290,7 @@ export const copy: Record<Language, Copy> = {
           meta: 'Code / Motion / Integration',
         },
         {
-          title: 'The final 20%',
+          title: 'Refinement',
           body: 'I test, simplify and optimize. This is where an impressive prototype becomes a credible product.',
           meta: 'QA / Performance / Delivery',
         },

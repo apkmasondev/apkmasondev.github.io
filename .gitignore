@@ -13,5 +13,6 @@ dist/
 Thumbs.db
 .idea/
 .vscode/
-docs/
-
+docs/*
+!docs/archive-assets/
+!docs/archive-assets/**

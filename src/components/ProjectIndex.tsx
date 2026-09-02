@@ -22,7 +22,7 @@ import { ArrowUpRight, Close, Search } from './Icon';
 import './project-index.css';
 
 const SECTION_CODE = SECTIONS[1].code;
-const FILTERS = ['all', 'story', 'spatial', 'app', 'product'] as const;
+const FILTERS = ['all', 'story', 'spatial', 'app', 'product', 'experiment'] as const;
 
 type Filter = (typeof FILTERS)[number];
 
