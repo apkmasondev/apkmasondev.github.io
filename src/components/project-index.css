@@ -139,40 +139,28 @@
   color: rgba(7, 7, 10, 0.55);
 }
 
-/* Na układzie dotykowym rząd zachowuje się jak świadomy, poziomy instrument:
-   mieści się w widoku, zatrzymuje kolejne pigułki i wygasa na krawędzi, więc
-   ucięta następna pozycja czytelnie sygnalizuje możliwość przesunięcia. */
+/* Na układzie dotykowym wszystkie kategorie są widoczne bez dodatkowego gestu.
+   Toolbar nie przykleja się do ekranu, bo trzy rzędy filtrów zajmowałyby zbyt
+   dużo miejsca nad rozwijaną listą. */
 @media (max-width: 1023px) {
+  .index__toolbar-wrap {
+    position: relative;
+    top: auto;
+  }
+
   .index__toolbar {
     min-width: 0;
   }
 
   .index__filters {
-    flex: 0 0 calc(100% + var(--gutter) * 2);
-    width: calc(100% + var(--gutter) * 2);
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    width: 100%;
     min-width: 0;
-    padding-inline: var(--gutter) max(var(--gutter), 3rem);
-    overscroll-behavior-inline: contain;
-    scroll-padding-inline: var(--gutter);
-    scroll-snap-type: inline proximity;
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      transparent 0,
-      #000 var(--gutter),
-      #000 calc(100% - 2.5rem),
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      90deg,
-      transparent 0,
-      #000 var(--gutter),
-      #000 calc(100% - 2.5rem),
-      transparent 100%
-    );
-  }
-
-  .index__filters button {
-    scroll-snap-align: start;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow: visible;
   }
 
   .index__results {
