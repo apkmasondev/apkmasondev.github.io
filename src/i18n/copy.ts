@@ -48,6 +48,7 @@ interface Copy {
     emptyAction: string;
     filtersLabel: string;
     filters: Record<'all' | ProjectCategory, string>;
+    filtersCompact: Record<'all' | ProjectCategory, string>;
     listLabel: string;
     results: (visible: number, total: number) => string;
     selectedMark: string;
@@ -138,6 +139,14 @@ export const copy: Record<Language, Copy> = {
         product: 'Product / Commercial',
         app: 'Aplikacje',
         experiment: 'Eksperymenty',
+      },
+      filtersCompact: {
+        all: 'ALL',
+        story: 'STORY',
+        spatial: '3D',
+        product: 'PRODUCT',
+        app: 'APPS',
+        experiment: 'LAB',
       },
       listLabel: 'Indeks projektów',
       results: (visible, total) => `${visible} z ${total}`,
@@ -259,6 +268,14 @@ export const copy: Record<Language, Copy> = {
         product: 'Product / Commercial',
         app: 'Apps',
         experiment: 'Experiments',
+      },
+      filtersCompact: {
+        all: 'ALL',
+        story: 'STORY',
+        spatial: '3D',
+        product: 'PRODUCT',
+        app: 'APPS',
+        experiment: 'LAB',
       },
       listLabel: 'Project index',
       results: (visible, total) => `${visible} of ${total}`,

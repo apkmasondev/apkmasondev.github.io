@@ -363,9 +363,10 @@ export function ProjectIndex() {
               type="button"
               className={filter === item ? 'is-active' : ''}
               aria-pressed={filter === item}
+              aria-label={`${text.filters[item]}: ${counts[item] ?? 0}`}
               onClick={() => setFilter(item)}
             >
-              {text.filters[item]}
+              {isDesktop ? text.filters[item] : text.filtersCompact[item]}
               <span className="mono">{String(counts[item] ?? 0).padStart(2, '0')}</span>
             </button>
           ))}

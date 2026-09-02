@@ -139,9 +139,8 @@
   color: rgba(7, 7, 10, 0.55);
 }
 
-/* Na układzie dotykowym wszystkie kategorie są widoczne bez dodatkowego gestu.
-   Toolbar nie przykleja się do ekranu, bo trzy rzędy filtrów zajmowałyby zbyt
-   dużo miejsca nad rozwijaną listą. */
+/* Na mobile sześć technicznych skrótów tworzy zwartą matrycę 3 × 2. Wszystkie
+   kategorie pozostają widoczne bez poziomego gestu, a toolbar nie zasłania listy. */
 @media (max-width: 1023px) {
   .index__toolbar-wrap {
     position: relative;
@@ -153,9 +152,9 @@
   }
 
   .index__filters {
-    display: flex;
+    display: grid;
     flex: 1 1 100%;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
     min-width: 0;
     margin-inline: 0;
@@ -163,10 +162,31 @@
     overflow: visible;
   }
 
+  .index__filters button {
+    width: 100%;
+    min-width: 0;
+    justify-content: space-between;
+    gap: 0.35rem;
+    padding-inline: 0.65rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.045em;
+  }
+
+  .index__filters button span {
+    flex: 0 0 auto;
+    font-size: 0.58rem;
+  }
+
   .index__results {
     flex: 1 1 100%;
     margin-left: 0;
     text-align: right;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  .index__filters {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
