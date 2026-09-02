@@ -31,7 +31,7 @@
   margin-bottom: clamp(1.75rem, 4vh, 2.75rem);
 }
 
-/* ── Proporcja ─────────────────────────────────────────────── */
+/* ── Przepływ: iteracja wspierana przez AI → ludzka decyzja ── */
 
 .method__bar {
   display: flex;
@@ -48,7 +48,7 @@
 }
 
 .method__bar-ai {
-  flex: 0 0 80%;
+  flex: 1;
   background: repeating-linear-gradient(
     90deg,
     var(--line-strong) 0 2px,
@@ -57,7 +57,7 @@
 }
 
 .method__bar-human {
-  flex: 1;
+  flex: 0 0 clamp(5rem, 18%, 8rem);
   background: var(--signal);
 }
 
@@ -72,10 +72,7 @@
 
 .method__bar-legend div {
   display: flex;
-  /* Wartość nad etykietą — czyta się jak podpis pod wykresem i nie łamie się
-     na wąskich ekranach. */
-  flex-direction: column-reverse;
-  gap: 0.3rem;
+  max-width: 31ch;
 }
 
 .method__bar-legend div:last-child {
@@ -85,17 +82,6 @@
 
 .method__bar-legend dt {
   color: inherit;
-}
-
-.method__bar-legend dd {
-  margin: 0;
-  color: var(--paper-dim);
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-}
-
-.method__bar-legend div:last-child dd {
-  color: var(--signal);
 }
 
 /* ── Kroki ─────────────────────────────────────────────────── */

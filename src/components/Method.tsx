@@ -24,7 +24,7 @@ export function Method() {
 
         <div className="method__ratio" data-reveal ref={ratioRef}>
           <p className="lede method__lede">{text.lede}</p>
-          {/* Proporcja z tekstu obok, narysowana: prędkość maszyny i ostatnie 20% rzemiosła. */}
+          {/* Przepływ od szybkiej iteracji do ludzkiej decyzji — bez sugerowania proporcji autorstwa. */}
           <div className="method__bar" aria-hidden="true">
             <span className="method__bar-ai" />
             <span className="method__bar-human" />
@@ -32,11 +32,9 @@ export function Method() {
           <dl className="method__bar-legend mono">
             <div>
               <dt>{text.ratioAi}</dt>
-              <dd>80%</dd>
             </div>
             <div>
               <dt>{text.ratioHuman}</dt>
-              <dd>20%</dd>
             </div>
           </dl>
         </div>

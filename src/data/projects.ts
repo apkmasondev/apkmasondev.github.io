@@ -1,5 +1,5 @@
 export type Language = 'pl' | 'en';
-export type ProjectCategory = 'story' | 'spatial' | 'product' | 'app';
+export type ProjectCategory = 'story' | 'spatial' | 'product' | 'app' | 'experiment';
 
 export interface LocalizedText {
   pl: string;
@@ -376,6 +376,32 @@ export const projects: Project[] = [
     tags: ['Scroll-driven', 'Cinematic', 'AI video'],
     category: 'story',
     accent: '#d1a56d',
+  },
+  {
+    id: 'poznaj-ai',
+    title: 'Poznaj AI 2.0',
+    description: {
+      pl: 'Interaktywny, oparty na źródłach artykuł o drodze od promptu do odpowiedzi modelu — od tokenów i reprezentacji po generowanie i wiarygodność.',
+      en: 'An interactive, source-led article tracing the path from a prompt to a model answer — from tokens and representations to generation and reliability.',
+    },
+    image: '/poznaj_ai_mockup.webp',
+    link: 'https://apkmason.dev/poznaj_ai/',
+    tags: ['Interactive article', 'AI literacy', 'Source-led'],
+    category: 'experiment',
+    accent: '#5ed8e8',
+  },
+  {
+    id: 'vibe-shift',
+    title: 'VIBE//SHIFT',
+    description: {
+      pl: 'Interaktywny manifest vibe codingu zbudowany na kinetycznej typografii i płynnym ruchu.',
+      en: 'An interactive vibe-coding manifesto built around kinetic typography and fluid motion.',
+    },
+    image: '/vibeshift_mockup.webp',
+    link: 'https://apkmason.dev/vibe_shift/',
+    tags: ['Kinetic type', 'Motion', 'Vibe coding'],
+    category: 'experiment',
+    accent: '#ff3f84',
   },
   {
     id: 'space-scale',

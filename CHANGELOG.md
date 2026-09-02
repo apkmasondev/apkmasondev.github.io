@@ -48,6 +48,19 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- przywrócono do indeksu „VIBE//SHIFT” oraz całkowicie przebudowany projekt
+  „Poznaj AI 2.0”, który otrzymał nowy opis, kategorię i mockup oparty na
+  rzeczywistym artykule o tokenach, reprezentacjach, generowaniu i
+  wiarygodności; wraz z nimi wrócił filtr „Eksperymenty”, a kolekcja liczy
+  teraz 36 projektów bez zmian w wyróżnionej siódemce,
+- sekcja metody nie przedstawia już pracy jako proporcji 80/20. Pasek opisuje
+  przepływ od przyspieszonej iteracji do ludzkiej decyzji, selekcji i
+  odpowiedzialności, a etap „Ostatnie 20%” zastąpiono neutralnym
+  „Dopracowaniem” / „Refinement”,
+- pięć nieużywanych mockupów wycofanych projektów przeniesiono z `public/` do
+  `docs/archive-assets/`: historia pozostaje w repozytorium, ale pliki nie są
+  już kopiowane do produkcyjnego buildu,
+
 - **przebudowa strony**: układ `hero → manifest → wybrane → archiwum → proces →
   o mnie → kontakt` zastąpiony sekwencją `00 SIGNAL → 01 SELECTED → 02 INDEX →
   03 METHOD → 04 HUMAN → 05 CONTACT`. Pierwszy projekt jest widoczny po jednym
