@@ -56,8 +56,12 @@ stosują [Semantic Versioning](https://semver.org/).
   wyznaczają kierunek”,
 - dokumentację wskazaną w `README.md` włączono do repozytorium zamiast
   pozostawiać martwe odnośniki; na urządzeniach mobilnych filtr indeksu dostał
-  kontrolowaną szerokość, przewijanie z przyciąganiem oraz wygaszenie krawędzi,
-  a przycisk menu ma jawnie zabezpieczony rozmiar i nie może zostać ściśnięty,
+  zawijany układ pokazujący wszystkie kategorie bez przewijania, a mobilną
+  nawigację uproszczono do elastycznego paska, w którym przycisk menu nie może
+  zostać wypchnięty poza ekran,
+- zablokowano poziome przewijanie dokumentu na poziomie elementu głównego i
+  sekcji wybranych prac; światła wychodzące poza kadry pozostają dekoracją, ale
+  nie powiększają już obszaru przewijania na urządzeniach mobilnych,
 
 - przywrócono do indeksu „VIBE//SHIFT” oraz całkowicie przebudowany projekt
   „Poznaj AI 2.0”, który otrzymał nowy opis, kategorię i mockup oparty na

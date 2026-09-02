@@ -7,6 +7,8 @@
 }
 
 html {
+  overflow-x: hidden;
+  overflow-x: clip;
   background: var(--ink);
   scroll-behavior: smooth;
   /* Kotwice nie mogą chować się pod przyklejoną nawigacją. */
@@ -17,6 +19,7 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
+  overflow-x: clip;
   background: var(--ink);
   color: var(--paper);
   font-size: var(--step-0);

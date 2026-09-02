@@ -6,10 +6,9 @@
 
 .nav__bar {
   position: relative;
-  display: grid;
-  /* Na wąskich ekranach istnieją tylko dwie kolumny: marka i akcje. */
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: clamp(0.75rem, 3vw, 2.5rem);
   width: 100%;
   min-width: 0;
@@ -34,6 +33,8 @@
 .nav__brand {
   position: relative;
   display: flex;
+  flex: 0 1 auto;
+  min-width: 0;
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
@@ -51,6 +52,11 @@
 .nav__brand em {
   color: var(--signal);
   font-style: normal;
+}
+
+.nav__brand span {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ── Licznik rolki ─────────────────────────────────────────── */
@@ -118,6 +124,7 @@
   flex: 0 0 auto;
   align-items: center;
   gap: 0.5rem;
+  margin-left: auto;
   justify-self: end;
 }
 
@@ -265,6 +272,7 @@
   }
 
   .nav__bar {
+    display: grid;
     grid-template-columns: auto 1fr auto auto;
   }
 
