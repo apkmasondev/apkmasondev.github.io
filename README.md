@@ -2,7 +2,7 @@
 
 Portfolio Krzysztofa / APKMason.dev. Strona jest pomyślana jako **katalog pracy**,
 a nie prezentacja o pracy: pierwszy ekran mówi, kim jest autor, a już drugi
-pokazuje projekty. Rdzeniem strony jest indeks wszystkich 36 realizacji — lista
+pokazuje projekty. Rdzeniem strony jest indeks wszystkich 37 realizacji — lista
 z filtrami, wyszukiwarką, obsługą klawiatury i podglądem, która na dotyku zamienia
 się w listę rozwijaną projektowaną pod kciuk.
 

@@ -113,7 +113,7 @@ export const copy: Record<Language, Copy> = {
       stats: ['Projekty', 'Scroll stories', 'Aplikacje'],
     },
     selected: {
-      title: 'Prace, które ustawiają kierunek.',
+      title: 'Prace, które wyznaczają kierunek.',
       lede:
         'Każda z nich sprawdza inny pomysł na to, czym może być strona: wystawą, filmem, instrumentem albo produktem.',
       open: 'Otwórz projekt',

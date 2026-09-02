@@ -378,6 +378,19 @@ export const projects: Project[] = [
     accent: '#d1a56d',
   },
   {
+    id: 'ai-model',
+    title: 'AI ≠ MODEL',
+    description: {
+      pl: 'Interaktywna lekcja wizualna rozdzielająca model, system AI, workflow i agenta — z modułami, quizem i źródłami pokazującymi także koszt autonomii.',
+      en: 'An interactive visual lesson separating the model, AI system, workflow and agent — with hands-on modules, a quiz and sources that also reveal the cost of autonomy.',
+    },
+    image: '/ai_model_mockup.webp',
+    link: 'https://apkmason.dev/ai-model/',
+    tags: ['Interactive lesson', 'AI literacy', 'Source-led'],
+    category: 'experiment',
+    accent: '#72d8ee',
+  },
+  {
     id: 'poznaj-ai',
     title: 'Poznaj AI 2.0',
     description: {
