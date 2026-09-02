@@ -52,6 +52,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „Skin Elixir” przejął pozycję „BRIXCORE” w wyróżnionej siódemce, a BRIXCORE
+  pozostaje w portfolio na dotychczasowym miejscu Skin Elixir w archiwum,
 - polski nagłówek sekcji wybranych prac brzmi teraz naturalniej: „Prace, które
   wyznaczają kierunek”,
 - dokumentację wskazaną w `README.md` włączono do repozytorium zamiast
