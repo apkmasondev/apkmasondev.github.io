@@ -11,6 +11,8 @@
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(0.75rem, 3vw, 2.5rem);
+  width: 100%;
+  min-width: 0;
   min-height: var(--nav-height);
   padding-inline: var(--gutter);
   transition:
@@ -113,6 +115,7 @@
 
 .nav__actions {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: 0.5rem;
   justify-self: end;
@@ -146,12 +149,14 @@
 
 .nav__menu-button {
   display: grid;
+  flex: 0 0 2.6rem;
   place-items: center;
   width: 2.6rem;
   height: 2.6rem;
   border: 1px solid var(--line);
   border-radius: 99px;
   color: var(--paper);
+  overflow: visible;
   transition: border-color var(--dur-fast) var(--ease);
 }
 

@@ -8,6 +8,10 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- projekt „AI ≠ MODEL” w kategorii Eksperymenty: interaktywna lekcja o
+  różnicach między modelem, systemem AI, workflow i agentem, z dedykowanym
+  mockupem opartym na rzeczywistym interfejsie; indeks liczy teraz 37 prac,
+
 - nowy materiał hero (bazaltowy blok ze świecącymi szczelinami) o kompozycji
   zaprojektowanej pod układ: lewa jedna trzecia kadru to niemal czysta czerń
   zarezerwowana pod nagłówek. Zapętlony bezszwowo przez przenikanie ostatniego
@@ -47,6 +51,13 @@ stosują [Semantic Versioning](https://semver.org/).
   każdej szerokości okna wypełniał wiersz co do piksela.
 
 ### Changed
+
+- polski nagłówek sekcji wybranych prac brzmi teraz naturalniej: „Prace, które
+  wyznaczają kierunek”,
+- dokumentację wskazaną w `README.md` włączono do repozytorium zamiast
+  pozostawiać martwe odnośniki; na urządzeniach mobilnych filtr indeksu dostał
+  kontrolowaną szerokość, przewijanie z przyciąganiem oraz wygaszenie krawędzi,
+  a przycisk menu ma jawnie zabezpieczony rozmiar i nie może zostać ściśnięty,
 
 - przywrócono do indeksu „VIBE//SHIFT” oraz całkowicie przebudowany projekt
   „Poznaj AI 2.0”, który otrzymał nowy opis, kategorię i mockup oparty na
