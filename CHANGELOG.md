@@ -8,9 +8,12 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- „AERIS — Ponad chmurami” i „Atelier — mieszkanie z ogrodem” do archiwum,
+  z mockupami przygotowanymi na podstawie rzeczywistych interfejsów; indeks
+  liczy teraz 39 prac,
 - projekt „AI ≠ MODEL” w kategorii Eksperymenty: interaktywna lekcja o
   różnicach między modelem, systemem AI, workflow i agentem, z dedykowanym
-  mockupem opartym na rzeczywistym interfejsie; indeks liczy teraz 37 prac,
+  mockupem opartym na rzeczywistym interfejsie,
 
 - nowy materiał hero (bazaltowy blok ze świecącymi szczelinami) o kompozycji
   zaprojektowanej pod układ: lewa jedna trzecia kadru to niemal czysta czerń
@@ -52,6 +55,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „VIBE//SHIFT” otrzymał aktualny opis, tagi, akcent kolorystyczny i nowy mockup
+  zgodny z przebudowanym przewodnikiem „Z pomysłu. Do rzeczy.”,
 - naprawiono przycisk `X` w wyszukiwarce indeksu: filtry nie nachodzą już na
   jego obszar klikalny, który dodatkowo został powiększony,
 - „Skin Elixir” przejął pozycję „BRIXCORE” w wyróżnionej siódemce, a BRIXCORE
