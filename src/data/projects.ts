@@ -170,6 +170,32 @@ export const projects: Project[] = [
     accent: '#7cff45',
   },
   {
+    id: 'aeris',
+    title: 'AERIS — Ponad chmurami',
+    description: {
+      pl: 'Przeglądarkowa gra zręcznościowa o podniebnym kurierze, łącząca automatyczne odbicia, proceduralną trasę i pięć zmieniających się krain.',
+      en: 'A browser arcade game about a sky courier, combining automatic bounces, a procedural route and five evolving realms.',
+    },
+    image: '/aeris_mockup.webp',
+    link: 'https://apkmason.dev/aeris/',
+    tags: ['Canvas 2D', 'Procedural', 'Arcade'],
+    category: 'app',
+    accent: '#8cccf0',
+  },
+  {
+    id: 'atelier',
+    title: 'Atelier — mieszkanie z ogrodem',
+    description: {
+      pl: 'Interaktywna scena architektoniczna w Three.js: dziewięć kadrów, swobodny spacer po mieszkaniu i ogrodzie oraz światło przechodzące od dnia do zmierzchu.',
+      en: 'An interactive Three.js architectural scene with nine directed views, free exploration of the apartment and garden, and light shifting from day to dusk.',
+    },
+    image: '/atelier_mockup.webp',
+    link: 'https://apkmason.dev/atelier/',
+    tags: ['Three.js', 'Interactive 3D', 'Free walk'],
+    category: 'spatial',
+    accent: '#d4b07c',
+  },
+  {
     id: 'beyond-the-door',
     title: 'Beyond the Door',
     description: {
@@ -407,14 +433,14 @@ export const projects: Project[] = [
     id: 'vibe-shift',
     title: 'VIBE//SHIFT',
     description: {
-      pl: 'Interaktywny manifest vibe codingu zbudowany na kinetycznej typografii i płynnym ruchu.',
-      en: 'An interactive vibe-coding manifesto built around kinetic typography and fluid motion.',
+      pl: 'Interaktywny przewodnik po tworzeniu z AI: siedem decyzji prowadzi od nieuporządkowanego pomysłu do przetestowanej miniaplikacji „Dziś”.',
+      en: 'An interactive guide to building with AI: seven decisions lead from an unstructured idea to the tested “Today” mini-app.',
     },
     image: '/vibeshift_mockup.webp',
     link: 'https://apkmason.dev/vibe_shift/',
-    tags: ['Kinetic type', 'Motion', 'Vibe coding'],
+    tags: ['Interactive guide', 'AI workflow', 'Product thinking'],
     category: 'experiment',
-    accent: '#ff3f84',
+    accent: '#7c91ff',
   },
   {
     id: 'space-scale',
