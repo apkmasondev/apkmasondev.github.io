@@ -8,9 +8,11 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- „Zamek Tajemnic Rzeczywistości” oraz „The Cipher Office — NEXUS” z opisami
+  i mockupami przygotowanymi na podstawie aktualnych publicznych wersji;
+  indeks liczy teraz 41 prac,
 - „AERIS — Ponad chmurami” i „Atelier — mieszkanie z ogrodem” do archiwum,
-  z mockupami przygotowanymi na podstawie rzeczywistych interfejsów; indeks
-  liczy teraz 39 prac,
+  z mockupami przygotowanymi na podstawie rzeczywistych interfejsów,
 - projekt „AI ≠ MODEL” w kategorii Eksperymenty: interaktywna lekcja o
   różnicach między modelem, systemem AI, workflow i agentem, z dedykowanym
   mockupem opartym na rzeczywistym interfejsie,
@@ -55,6 +57,8 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- „Zamek Tajemnic Rzeczywistości” zastąpił „THE VAULT” na siódmej pozycji
+  wyróżnionych prac; THE VAULT pozostaje dostępny w pełnym indeksie,
 - „VIBE//SHIFT” otrzymał aktualny opis, tagi, akcent kolorystyczny i nowy mockup
   zgodny z przebudowanym przewodnikiem „Z pomysłu. Do rzeczy.”,
 - naprawiono przycisk `X` w wyszukiwarce indeksu: filtry nie nachodzą już na
