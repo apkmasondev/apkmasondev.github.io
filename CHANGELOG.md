@@ -57,8 +57,9 @@ stosują [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- „Zamek Tajemnic Rzeczywistości” zastąpił „THE VAULT” na siódmej pozycji
-  wyróżnionych prac; THE VAULT pozostaje dostępny w pełnym indeksie,
+- „Zamek Tajemnic Rzeczywistości” oraz „The Cipher Office — NEXUS” zajmują
+  teraz dwie pierwsze pozycje wyróżnionych prac; „BUILT BY NATURE” i THE VAULT
+  pozostają dostępne w pełnym indeksie,
 - „VIBE//SHIFT” otrzymał aktualny opis, tagi, akcent kolorystyczny i nowy mockup
   zgodny z przebudowanym przewodnikiem „Z pomysłu. Do rzeczy.”,
 - naprawiono przycisk `X` w wyszukiwarce indeksu: filtry nie nachodzą już na
