@@ -20,6 +20,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'zamek-tajemnic-rzeczywistosci',
+    title: 'Zamek Tajemnic Rzeczywistości',
+    description: {
+      pl: 'Interaktywna wystawa 3D w zamku nad jeziorem: dziesięć komnat prowadzi od światła i czasu po życie i sztuczną inteligencję.',
+      en: 'An interactive 3D exhibition in a lakeside castle, where ten chambers lead from light and time to life and artificial intelligence.',
+    },
+    image: '/zamek_mockup.webp',
+    link: 'https://apkmason.dev/zamek/',
+    tags: ['Three.js', 'Interactive exhibit', 'Scientific'],
+    category: 'spatial',
+    featured: true,
+    accent: '#d2b47a',
+  },
+  {
+    id: 'nexus-game',
+    title: 'The Cipher Office — NEXUS',
+    description: {
+      pl: 'Pierwszoosobowa gra logiczna 3D prowadząca przez biuro, mieszkanie i dział nadzoru NEXUS, z zagadkami środowiskowymi i zapisywanym postępem.',
+      en: 'A first-person 3D puzzle game spanning the NEXUS office, apartment and oversight division, with environmental puzzles and saved progress.',
+    },
+    image: '/nexus_game_mockup.webp',
+    link: 'https://apkmason.dev/nexus-game/',
+    tags: ['Three.js', 'First-person', 'Puzzle game'],
+    category: 'spatial',
+    featured: true,
+    accent: '#c7aa6a',
+  },
+  {
     id: 'spectrum',
     title: 'SPECTRUM — Archive of Light',
     description: {
@@ -138,7 +166,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/nature/',
     tags: ['Interactive essay', 'Video-led', 'Scientific'],
     category: 'story',
-    featured: true,
     accent: '#54d7cb',
   },
   {
@@ -167,33 +194,6 @@ export const projects: Project[] = [
     tags: ['WebGL', 'Scroll-driven', 'Reactive audio'],
     category: 'spatial',
     accent: '#7cff45',
-  },
-  {
-    id: 'zamek-tajemnic-rzeczywistosci',
-    title: 'Zamek Tajemnic Rzeczywistości',
-    description: {
-      pl: 'Interaktywna wystawa 3D w zamku nad jeziorem: dziesięć komnat prowadzi od światła i czasu po życie i sztuczną inteligencję.',
-      en: 'An interactive 3D exhibition in a lakeside castle, where ten chambers lead from light and time to life and artificial intelligence.',
-    },
-    image: '/zamek_mockup.webp',
-    link: 'https://apkmason.dev/zamek/',
-    tags: ['Three.js', 'Interactive exhibit', 'Scientific'],
-    category: 'spatial',
-    featured: true,
-    accent: '#d2b47a',
-  },
-  {
-    id: 'nexus-game',
-    title: 'The Cipher Office — NEXUS',
-    description: {
-      pl: 'Pierwszoosobowa gra logiczna 3D prowadząca przez biuro, mieszkanie i dział nadzoru NEXUS, z zagadkami środowiskowymi i zapisywanym postępem.',
-      en: 'A first-person 3D puzzle game spanning the NEXUS office, apartment and oversight division, with environmental puzzles and saved progress.',
-    },
-    image: '/nexus_game_mockup.webp',
-    link: 'https://apkmason.dev/nexus-game/',
-    tags: ['Three.js', 'First-person', 'Puzzle game'],
-    category: 'spatial',
-    accent: '#c7aa6a',
   },
   {
     id: 'aeris',
