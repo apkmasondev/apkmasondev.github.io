@@ -287,19 +287,6 @@ export const projects: Project[] = [
     accent: '#b56cff',
   },
   {
-    id: 'arc',
-    title: 'APKMASON ARC',
-    description: {
-      pl: 'Konceptualna prezentacja głośnika z dźwiękiem przestrzennym, sterowaniem scrollem, falowym polem akustycznym i interaktywnymi hotspotami.',
-      en: 'A conceptual spatial audio speaker experience driven by scroll, real-time acoustic wave fields, and interactive hotspots.',
-    },
-    image: '/arc_mockup.webp',
-    link: 'https://apkmason.dev/arc/',
-    tags: ['Spatial Audio', 'Scroll-driven', 'Interactive'],
-    category: 'product',
-    accent: '#00e5ff',
-  },
-  {
     id: 'fruit-energy',
     title: 'FRUIT ENERGY',
     description: {
@@ -365,17 +352,17 @@ export const projects: Project[] = [
     accent: '#34c7ff',
   },
   {
-    id: 'pcverse',
-    title: 'PCVerse',
+    id: 'pcverse-v2',
+    title: 'PCVerse v2 — Atlas maszyny',
     description: {
-      pl: 'Interaktywny przewodnik 3D po podzespołach komputera, pokazujący ich rozmieszczenie i wzajemne połączenia.',
-      en: 'An interactive 3D guide to PC components, showing how they are arranged and connected.',
+      pl: 'Interaktywny atlas komputera w 3D: poznaj siedem podzespołów, prześledź drogę danych i sprawdź ich działanie w laboratorium.',
+      en: 'An interactive 3D PC atlas: explore seven components, trace the data path and test how they work in the lab.',
     },
-    image: '/pcverse_mockup.webp',
-    link: 'https://apkmason.dev/pcverse/',
-    tags: ['Interactive 3D', 'Three.js', 'Hardware'],
+    image: '/pcverse_v2_mockup.webp',
+    link: 'https://apkmason.dev/pcverse-v2/',
+    tags: ['Three.js', 'Interactive 3D', 'Hardware'],
     category: 'spatial',
-    accent: '#00e2b8',
+    accent: '#ff722e',
   },
   {
     id: 'inside-the-internet',
