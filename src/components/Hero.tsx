@@ -3,6 +3,7 @@ import { projects } from '../data/projects';
 import { useCopy } from '../i18n/language-context';
 import { useAllowsHeavyMedia } from '../lib/hooks';
 import { onScrollFrame } from '../lib/scrollFrame';
+import { navigateToSection } from '../lib/sectionNavigation';
 import { ArrowDown, ArrowUpRight } from './Icon';
 import './hero.css';
 
@@ -129,7 +130,24 @@ export function Hero() {
       {/* Pasek indeksu: wszystkie tytuły przesuwają się jak napisy końcowe.
           Tekst jest dekoracją, wejście do katalogu prowadzi przez jeden stały odnośnik. */}
       <div className="hero__ticker">
-        <a className="hero__ticker-cta mono" href="#index">
+        <a
+          className="hero__ticker-cta mono"
+          href="#index"
+          onClick={(event) => {
+            if (
+              event.button !== 0 ||
+              event.metaKey ||
+              event.ctrlKey ||
+              event.shiftKey ||
+              event.altKey
+            ) {
+              return;
+            }
+
+            event.preventDefault();
+            void navigateToSection('index');
+          }}
+        >
           {text.tickerLabel}
           <ArrowUpRight size={14} />
         </a>
