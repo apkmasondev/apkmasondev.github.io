@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type MouseEvent } from 'react';
 import { HERO_CODE, SECTIONS } from '../i18n/copy';
 import { useCopy, useLanguage } from '../i18n/language-context';
 import { useFocusTrap, useMediaQuery, useScrollLock } from '../lib/hooks';
+import { navigateToSection } from '../lib/sectionNavigation';
 import { onScrollFrame } from '../lib/scrollFrame';
 import { Close, MenuLines } from './Icon';
 import './site-nav.css';
@@ -63,10 +64,18 @@ export function SiteNav({ activeSection }: SiteNavProps) {
   const activeCode =
     SECTIONS.find((section) => section.id === activeSection)?.code ?? HERO_CODE;
 
+  const openSection = (event: MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    event.preventDefault();
+    setMenuOpen(false);
+    void navigateToSection(sectionId);
+  };
+
   return (
     <header className={`nav${compact ? ' is-compact' : ''}${sheetOpen ? ' is-open' : ''}`}>
       <div className="nav__bar" ref={barRef}>
-        <a className="nav__brand" href="#top" onClick={() => setMenuOpen(false)}>
+        <a className="nav__brand" href="#top" onClick={(event) => openSection(event, 'top')}>
           <img src="/logo.svg" alt="" width="30" height="30" />
           <span>
             APKMASON<em>.DEV</em>
@@ -85,6 +94,7 @@ export function SiteNav({ activeSection }: SiteNavProps) {
               key={section.id}
               href={`#${section.id}`}
               aria-current={activeSection === section.id ? 'true' : undefined}
+              onClick={(event) => openSection(event, section.id)}
             >
               {text.nav[section.id]}
             </a>
@@ -121,7 +131,11 @@ export function SiteNav({ activeSection }: SiteNavProps) {
       <div className="nav__sheet" id="site-menu" hidden={!sheetOpen} ref={menuRef}>
         <nav className="nav__sheet-links" aria-label={text.nav.label}>
           {SECTIONS.map((section, index) => (
-            <a key={section.id} href={`#${section.id}`} onClick={() => setMenuOpen(false)}>
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              onClick={(event) => openSection(event, section.id)}
+            >
               <span className="mono">{String(index + 1).padStart(2, '0')}</span>
               {text.nav[section.id]}
             </a>

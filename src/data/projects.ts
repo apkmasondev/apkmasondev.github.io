@@ -62,6 +62,19 @@ export const projects: Project[] = [
     accent: '#63e6d8',
   },
   {
+    id: 'pinball',
+    title: 'Japanese Night Garden · Pinball',
+    description: {
+      pl: 'Autorski pinball w nocnym japońskim ogrodzie: fizyka 240 Hz, trzy kule, multiball, jackpoty oraz własna oprawa światła i dźwięku.',
+      en: 'An original pinball game set in a Japanese night garden, with 240 Hz physics, three balls, multiball, jackpots and custom light and sound.',
+    },
+    image: '/pinball_mockup.webp',
+    link: 'https://apkmason.dev/pinball/',
+    tags: ['Canvas 2D', 'Physics', 'Arcade'],
+    category: 'app',
+    accent: '#d9aa62',
+  },
+  {
     id: 'dual-choice',
     title: 'DUAL / CHOICE',
     description: {
