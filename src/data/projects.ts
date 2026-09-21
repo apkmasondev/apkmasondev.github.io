@@ -128,6 +128,20 @@ export const projects: Project[] = [
     accent: '#e8bfb3',
   },
   {
+    id: 'ostoja',
+    title: 'OSTOJA — Dom nad jeziorem',
+    description: {
+      pl: 'Interaktywny spacer 3D po domu z drewna i kamienia nad jeziorem. Filmowe wejście prowadzi do swobodnego zwiedzania wnętrza, tarasu i otoczenia o zachodzie słońca.',
+      en: 'An interactive 3D walk through a timber-and-stone lakeside house, with a cinematic entrance leading into free exploration of the interior, terrace and sunset landscape.',
+    },
+    image: '/ostoja_mockup.webp',
+    link: 'https://apkmason.dev/ostoja/',
+    tags: ['Three.js', 'Interactive tour', 'Spatial'],
+    category: 'spatial',
+    featured: true,
+    accent: '#d9a36a',
+  },
+  {
     id: 'aurora',
     title: 'AURORA — Dwa Nieba',
     description: {
@@ -138,7 +152,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/aurora/',
     tags: ['Interactive essay', 'Scientific', 'Video-led'],
     category: 'story',
-    featured: true,
     accent: '#60f2b1',
   },
   {
