@@ -76,14 +76,14 @@ export const projects: Project[] = [
   },
   {
     id: 'tsukimi-pinball-3d',
-    title: '月見 TSUKIMI — Moonlit Koi Garden',
+    title: 'TSUKIMI · RYŪJIN · INARI — 3D Pinball',
     description: {
-      pl: 'Trójwymiarowy pinball w nocnym ogrodzie koi: autorska fizyka 2400 Hz, rampy i druciane tory, Moon Multiball, jackpoty oraz adaptacyjna muzyka.',
-      en: 'A 3D pinball game set in a moonlit koi garden, with custom 2400 Hz physics, ramps and wireforms, Moon Multiball, jackpots and adaptive music.',
+      pl: 'Kolekcja trzech pinballowych stołów 3D: księżycowy ogród koi, pałac Smoczego Króla i złoty las lisów. Każdy ma własny układ, zasady, muzykę oraz tabelę rekordów.',
+      en: 'A collection of three 3D pinball tables: a moonlit koi garden, the Dragon King’s palace and a golden fox forest. Each has its own layout, rules, music and high-score table.',
     },
     image: '/tsukimi_pinball_mockup.webp',
     link: 'https://apkmason.dev/pinball-3d/',
-    tags: ['Three.js', '3D pinball', 'Custom physics'],
+    tags: ['Three.js', 'Three tables', 'Custom physics'],
     category: 'app',
     accent: '#e0a645',
   },
