@@ -48,6 +48,20 @@ export const projects: Project[] = [
     accent: '#c7aa6a',
   },
   {
+    id: 'apkmason-watch',
+    title: 'APKMASON Watch — Czas wyrzeźbiony w stali',
+    description: {
+      pl: 'Premiumowa prezentacja zegarka 3D: filmowe intro przechodzi w model renderowany na żywo, a scroll odsłania konstrukcję, makro bransolety, warianty tarczy i konfigurator.',
+      en: 'A premium 3D watch presentation where a cinematic intro dissolves into a real-time model, while scrolling reveals its construction, bracelet details, dial variants and configurator.',
+    },
+    image: '/apkmason_watch_mockup.webp',
+    link: 'https://apkmason.dev/time-v2/',
+    tags: ['Three.js', 'Scroll-driven', 'Configurator'],
+    category: 'product',
+    featured: true,
+    accent: '#c9c8c3',
+  },
+  {
     id: 'spectrum',
     title: 'SPECTRUM — Archive of Light',
     description: {
@@ -58,7 +72,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/spectrum/',
     tags: ['Scroll-driven', 'Interactive exhibit', 'Video scrubbing'],
     category: 'story',
-    featured: true,
     accent: '#63e6d8',
   },
   {
