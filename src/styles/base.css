@@ -56,6 +56,10 @@
 }
 
 html {
+  /* Bez szarego/niebieskiego prostokąta przy dotknięciu — elementy mają własne
+     stany (:active, :focus-visible). Efekty najechania są włączane tylko przy
+     prawdziwym kursorze: `@media (hover: hover)`, żeby nie „przyklejały się” po tapnięciu. */
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-padding-top: calc(var(--nav-h) + 8px);
@@ -166,8 +170,10 @@ ol {
   border-radius: 999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(239 233 223 / 0.34);
+@media (hover: hover) {
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(239 233 223 / 0.34);
+  }
 }
 
 ::-webkit-scrollbar-thumb:active {
@@ -396,12 +402,16 @@ em {
   transition: transform 0.45s var(--ease-out);
 }
 
-.btn:hover svg {
-  transform: translate(2px, -2px);
+@media (hover: hover) {
+  .btn:hover svg {
+    transform: translate(2px, -2px);
+  }
 }
 
-.btn--down:hover svg {
-  transform: translateY(3px);
+@media (hover: hover) {
+  .btn--down:hover svg {
+    transform: translateY(3px);
+  }
 }
 
 .btn--ember {
@@ -434,8 +444,10 @@ em {
   background: rgb(239 233 223 / 0.08);
 }
 
-.btn:hover::before {
-  transform: none;
+@media (hover: hover) {
+  .btn:hover::before {
+    transform: none;
+  }
 }
 
 .btn:active {
@@ -470,9 +482,11 @@ em {
     border-color 0.3s var(--ease-out);
 }
 
-.icon-btn:hover {
-  background: rgb(239 233 223 / 0.08);
-  border-color: var(--ink-3);
+@media (hover: hover) {
+  .icon-btn:hover {
+    background: rgb(239 233 223 / 0.08);
+    border-color: var(--ink-3);
+  }
 }
 
 .icon-btn:disabled {

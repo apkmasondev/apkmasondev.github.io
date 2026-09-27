@@ -162,8 +162,10 @@
   transition: transform 1.2s var(--ease-out);
 }
 
-.chapter__media:hover .chapter__frame img {
-  transform: scale(1.03);
+@media (hover: hover) {
+  .chapter__media:hover .chapter__frame img {
+    transform: scale(1.03);
+  }
 }
 
 .chapter__glow {
