@@ -1,13 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import { LanguageProvider } from './i18n/LanguageProvider.tsx';
-import './index.css';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+// Styl bazowy musi wejść przed arkuszami komponentów, żeby mogły go nadpisywać.
+import './styles/base.css';
+import App from './App';
+import { LanguageProvider } from './i18n/language';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
     <LanguageProvider>
       <App />
     </LanguageProvider>
-  </React.StrictMode>,
+  </StrictMode>,
 );

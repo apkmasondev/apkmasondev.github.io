@@ -10,12 +10,15 @@ export interface Project {
   id: string;
   title: string;
   description: LocalizedText;
+  /** Klucz grafiki: `public/work/<image>-{480,800,1254}.webp`. */
   image: string;
   link: string;
   tags: string[];
   category: ProjectCategory;
   featured?: boolean;
   accent: string;
+  /** Żywy ekran na ścianie hero: `public/work/<image>-live-480.mp4`. */
+  live?: boolean;
 }
 
 export const projects: Project[] = [
@@ -26,12 +29,13 @@ export const projects: Project[] = [
       pl: 'Interaktywna wystawa 3D w zamku nad jeziorem: dziesięć komnat prowadzi od światła i czasu po życie i sztuczną inteligencję.',
       en: 'An interactive 3D exhibition in a lakeside castle, where ten chambers lead from light and time to life and artificial intelligence.',
     },
-    image: '/zamek_mockup.webp',
+    image: 'zamek',
     link: 'https://apkmason.dev/zamek/',
     tags: ['Three.js', 'Interactive exhibit', 'Scientific'],
     category: 'spatial',
     featured: true,
     accent: '#d2b47a',
+    live: true,
   },
   {
     id: 'nexus-game',
@@ -40,12 +44,13 @@ export const projects: Project[] = [
       pl: 'Pierwszoosobowa gra logiczna 3D prowadząca przez biuro, mieszkanie i dział nadzoru NEXUS, z zagadkami środowiskowymi i zapisywanym postępem.',
       en: 'A first-person 3D puzzle game spanning the NEXUS office, apartment and oversight division, with environmental puzzles and saved progress.',
     },
-    image: '/nexus_game_mockup.webp',
+    image: 'nexus_game',
     link: 'https://apkmason.dev/nexus-game/',
     tags: ['Three.js', 'First-person', 'Puzzle game'],
     category: 'spatial',
     featured: true,
     accent: '#c7aa6a',
+    live: true,
   },
   {
     id: 'apkmason-watch',
@@ -54,12 +59,13 @@ export const projects: Project[] = [
       pl: 'Premiumowa prezentacja zegarka 3D: filmowe intro przechodzi w model renderowany na żywo, a scroll odsłania konstrukcję, makro bransolety, warianty tarczy i konfigurator.',
       en: 'A premium 3D watch presentation where a cinematic intro dissolves into a real-time model, while scrolling reveals its construction, bracelet details, dial variants and configurator.',
     },
-    image: '/apkmason_watch_mockup.webp',
+    image: 'apkmason_watch',
     link: 'https://apkmason.dev/time-v2/',
     tags: ['Three.js', 'Scroll-driven', 'Configurator'],
     category: 'product',
     featured: true,
     accent: '#c9c8c3',
+    live: true,
   },
   {
     id: 'spectrum',
@@ -68,11 +74,12 @@ export const projects: Project[] = [
       pl: 'Minutowa, sterowana scrollem wystawa o tym, jak światło, trzy receptory i piksele składają się na 16 777 216 kolorów.',
       en: 'A one-minute scroll-driven exhibit showing how light, three receptors and pixels become 16,777,216 colours.',
     },
-    image: '/spectrum_mockup.webp',
+    image: 'spectrum',
     link: 'https://apkmason.dev/spectrum/',
     tags: ['Scroll-driven', 'Interactive exhibit', 'Video scrubbing'],
     category: 'story',
     accent: '#63e6d8',
+    live: true,
   },
   {
     id: 'pinball',
@@ -81,7 +88,7 @@ export const projects: Project[] = [
       pl: 'Autorski pinball w nocnym japońskim ogrodzie: fizyka 240 Hz, trzy kule, multiball, jackpoty oraz własna oprawa światła i dźwięku.',
       en: 'An original pinball game set in a Japanese night garden, with 240 Hz physics, three balls, multiball, jackpots and custom light and sound.',
     },
-    image: '/pinball_mockup.webp',
+    image: 'pinball',
     link: 'https://apkmason.dev/pinball/',
     tags: ['Canvas 2D', 'Physics', 'Arcade'],
     category: 'app',
@@ -94,11 +101,12 @@ export const projects: Project[] = [
       pl: 'Kolekcja trzech pinballowych stołów 3D: księżycowy ogród koi, pałac Smoczego Króla i złoty las lisów. Każdy ma własny układ, zasady, muzykę oraz tabelę rekordów.',
       en: 'A collection of three 3D pinball tables: a moonlit koi garden, the Dragon King’s palace and a golden fox forest. Each has its own layout, rules, music and high-score table.',
     },
-    image: '/tsukimi_pinball_mockup.webp',
+    image: 'tsukimi_pinball',
     link: 'https://apkmason.dev/pinball-3d/',
     tags: ['Three.js', 'Three tables', 'Custom physics'],
     category: 'app',
     accent: '#e0a645',
+    live: true,
   },
   {
     id: 'dual-choice',
@@ -107,11 +115,12 @@ export const projects: Project[] = [
       pl: 'Kinowe doświadczenie wyboru: przewiń do decydującego kadru, wskaż jeden z dwóch obiektów i zobacz, jak zmienia się w produkt.',
       en: 'A cinematic choice experience: scroll to the decisive frame, select one of two objects and watch it transform into a product.',
     },
-    image: '/dual_choice_mockup.webp',
+    image: 'dual_choice',
     link: 'https://apkmason.dev/dual_choice/',
     tags: ['Choice-driven', 'Scroll-driven', 'Product story'],
     category: 'product',
     accent: '#75e8ff',
+    live: true,
   },
   {
     id: 'artifact-seed',
@@ -120,7 +129,7 @@ export const projects: Project[] = [
       pl: 'Film i WebGL spotykają się w jednej przestrzeni: świetlisty artefakt materializuje się między dłońmi i otwiera wraz z przewijaniem.',
       en: 'Film and WebGL meet in one space as a luminous artefact materialises between the dancer\'s hands and opens through scroll.',
     },
-    image: '/artifact_seed_mockup.webp',
+    image: 'artifact_seed',
     link: 'https://apkmason.dev/artifact-seed/',
     tags: ['WebGL', 'Scroll-driven', 'Film compositing'],
     category: 'spatial',
@@ -133,7 +142,7 @@ export const projects: Project[] = [
       pl: 'Cyfrowy manifest APKMason.dev: sterowana scrollem opowieść o AI, obrazie i ruchu, zbudowana z wideo, typografii i dźwięku.',
       en: 'A digital manifesto for APKMason.dev: a scroll-driven story about AI, imagery and motion, built from video, typography and sound.',
     },
-    image: '/genesis_mockup.webp',
+    image: 'genesis',
     link: 'https://apkmason.dev/apk_genesis/',
     tags: ['Scroll-driven', 'Cinematic', 'Manifesto'],
     category: 'story',
@@ -146,12 +155,13 @@ export const projects: Project[] = [
       pl: 'Koncept luksusowej prezentacji kosmetyków z narracją sterowaną scrollem i inercyjnym ruchem.',
       en: 'A concept for a luxury skincare presentation, driven by scroll and an inertial motion system.',
     },
-    image: '/skincare_mockup.webp',
+    image: 'skincare',
     link: 'https://apkmason.dev/skincare_demo/',
     tags: ['Scroll-driven', 'Luxury UI', 'Motion'],
     category: 'product',
     featured: true,
     accent: '#e8bfb3',
+    live: true,
   },
   {
     id: 'ostoja',
@@ -160,12 +170,13 @@ export const projects: Project[] = [
       pl: 'Interaktywny spacer 3D po domu z drewna i kamienia nad jeziorem. Filmowe wejście prowadzi do swobodnego zwiedzania wnętrza, tarasu i otoczenia o zachodzie słońca.',
       en: 'An interactive 3D walk through a timber-and-stone lakeside house, with a cinematic entrance leading into free exploration of the interior, terrace and sunset landscape.',
     },
-    image: '/ostoja_mockup.webp',
+    image: 'ostoja',
     link: 'https://apkmason.dev/ostoja/',
     tags: ['Three.js', 'Interactive tour', 'Spatial'],
     category: 'spatial',
     featured: true,
     accent: '#d9a36a',
+    live: true,
   },
   {
     id: 'aurora',
@@ -174,11 +185,12 @@ export const projects: Project[] = [
       pl: 'Czterorozdziałowe doświadczenie o zorzy północnej i południowej, łączące pełnoekranowy film z interaktywnymi diagramami światła i magnetosfery.',
       en: 'A four-chapter experience about the northern and southern lights, combining fullscreen film with interactive diagrams of light and the magnetosphere.',
     },
-    image: '/aurora_mockup.webp',
+    image: 'aurora',
     link: 'https://apkmason.dev/aurora/',
     tags: ['Interactive essay', 'Scientific', 'Video-led'],
     category: 'story',
     accent: '#60f2b1',
+    live: true,
   },
   {
     id: 'prime',
@@ -187,12 +199,13 @@ export const projects: Project[] = [
       pl: 'Sterowana scrollem opowieść o liczbach pierwszych — od sita Eratostenesa i nieskończoności po spiralę Ulama, faktoryzację i kryptografię.',
       en: 'A scroll-driven story of prime numbers — from the sieve of Eratosthenes and infinity to the Ulam spiral, factorisation and cryptography.',
     },
-    image: '/prime_mockup.webp',
+    image: 'prime',
     link: 'https://apkmason.dev/prime/',
     tags: ['Scroll-driven', 'Mathematical story', 'Video scrubbing'],
     category: 'story',
     featured: true,
     accent: '#d7b26d',
+    live: true,
   },
   {
     id: 'can-form-v2',
@@ -201,7 +214,7 @@ export const projects: Project[] = [
       pl: 'Kinowe doświadczenie produktowe łączące film sterowany scrollem, model puszki w Three.js i studio materiałów z własną etykietą oraz eksportem packshotu.',
       en: 'A cinematic product experience combining scroll-driven film, a Three.js can model and a material studio with custom label artwork and packshot export.',
     },
-    image: '/canform_v2_mockup.webp',
+    image: 'canform_v2',
     link: 'https://apkmason.dev/can_form_2/',
     tags: ['Three.js', 'Material studio', 'Scroll-driven'],
     category: 'product',
@@ -214,7 +227,7 @@ export const projects: Project[] = [
       pl: 'Pełnoekranowy esej o trzech technologiach natury: odwracającym się skrzydle kolibra, skórze mątwy sterowanej neuronami i skanującym oku krewetki modliszkowej.',
       en: 'A fullscreen essay about three natural technologies: the hummingbird’s inverting wing, the cuttlefish’s neurally controlled skin and the mantis shrimp’s scanning eye.',
     },
-    image: '/nature_mockup.webp',
+    image: 'nature',
     link: 'https://apkmason.dev/nature/',
     tags: ['Interactive essay', 'Video-led', 'Scientific'],
     category: 'story',
@@ -227,7 +240,7 @@ export const projects: Project[] = [
       pl: 'Trzy pełnoekranowe rozdziały pokazują niewidzialne siły przez materię: ferrociecz, figury Chladniego i rozgałęzione wyładowanie w gazie.',
       en: 'Three fullscreen chapters reveal invisible forces through matter: ferrofluid, Chladni patterns and a branching electrical discharge in gas.',
     },
-    image: '/ksztalt_sily_mockup.webp',
+    image: 'ksztalt_sily',
     link: 'https://apkmason.dev/ksztalt-sily/',
     tags: ['Interactive essay', 'Physics', 'Video-led'],
     category: 'story',
@@ -241,11 +254,12 @@ export const projects: Project[] = [
       pl: 'Kinowe doświadczenie otwierania tajemniczej komory, łączące wideo sterowane scrollem, reaktywny dźwięk i finał renderowany w WebGL.',
       en: 'A cinematic containment experience combining scroll-scrubbed video, reactive sound and a WebGL-rendered finale.',
     },
-    image: '/the_vault_mockup.webp',
+    image: 'the_vault',
     link: 'https://apkmason.dev/the_vault/',
     tags: ['WebGL', 'Scroll-driven', 'Reactive audio'],
     category: 'spatial',
     accent: '#7cff45',
+    live: true,
   },
   {
     id: 'aeris',
@@ -254,7 +268,7 @@ export const projects: Project[] = [
       pl: 'Przeglądarkowa gra zręcznościowa o podniebnym kurierze, łącząca automatyczne odbicia, proceduralną trasę i pięć zmieniających się krain.',
       en: 'A browser arcade game about a sky courier, combining automatic bounces, a procedural route and five evolving realms.',
     },
-    image: '/aeris_mockup.webp',
+    image: 'aeris',
     link: 'https://apkmason.dev/aeris/',
     tags: ['Canvas 2D', 'Procedural', 'Arcade'],
     category: 'app',
@@ -267,7 +281,7 @@ export const projects: Project[] = [
       pl: 'Interaktywna scena architektoniczna w Three.js: dziewięć kadrów, swobodny spacer po mieszkaniu i ogrodzie oraz światło przechodzące od dnia do zmierzchu.',
       en: 'An interactive Three.js architectural scene with nine directed views, free exploration of the apartment and garden, and light shifting from day to dusk.',
     },
-    image: '/atelier_mockup.webp',
+    image: 'atelier',
     link: 'https://apkmason.dev/atelier/',
     tags: ['Three.js', 'Interactive 3D', 'Free walk'],
     category: 'spatial',
@@ -280,7 +294,7 @@ export const projects: Project[] = [
       pl: 'Interaktywna podróż przez trzy tajemnicze ścieżki, łącząca film, dźwięk i wybory użytkownika w jedno doświadczenie.',
       en: 'An interactive journey through three mysterious paths, uniting film, sound and user choice in one experience.',
     },
-    image: '/btd_mockup.webp',
+    image: 'btd',
     link: 'https://apkmason.dev/btd/',
     tags: ['Immersive', 'Scroll-driven', 'Sound'],
     category: 'story',
@@ -293,7 +307,7 @@ export const projects: Project[] = [
       pl: 'Kinowa prezentacja fikcyjnego festiwalu EDM sterowana scrollem, łącząca dynamiczne wideo, oprawę muzyczną i interaktywny line-up.',
       en: 'A cinematic, scroll-driven presentation for a fictional EDM festival, combining dynamic video, soundtrack and an interactive lineup.',
     },
-    image: '/edm_mockup.webp',
+    image: 'edm',
     link: 'https://apkmason.dev/edm/',
     tags: ['Scroll-driven', 'Music Festival', 'Interactive'],
     category: 'product',
@@ -306,7 +320,7 @@ export const projects: Project[] = [
       pl: 'Natywna gra zręcznościowa na Androida: swobodny spadek przez ewoluujący tunel, własny renderer OpenGL i rozgrywka sterowana jednym kciukiem.',
       en: 'A native Android arcade game: an endless descent through an evolving tunnel, powered by a custom OpenGL renderer and one-thumb controls.',
     },
-    image: '/void_drop_mockup.webp',
+    image: 'void_drop',
     link: 'https://apkmason.dev/void-drop-landing/',
     tags: ['Android', 'OpenGL ES', 'Arcade'],
     category: 'app',
@@ -319,7 +333,7 @@ export const projects: Project[] = [
       pl: 'Jednoekranowe doświadczenie wyboru o kinowej oprawie — wybierz rdzeń FORGE lub EVOLVE i poznaj swoją ścieżkę.',
       en: 'A one-screen, choice-driven cinematic experience — pick the FORGE or EVOLVE core to reveal your path.',
     },
-    image: '/brixcore_mockup.webp',
+    image: 'brixcore',
     link: 'https://apkmason.dev/brixcore/',
     tags: ['Choice-driven', 'Interactive', 'Cinematic'],
     category: 'story',
@@ -332,11 +346,12 @@ export const projects: Project[] = [
       pl: 'Jednokadrowa, filmowa podróż przez głębię, przemianę i dotarcie do światła, której globalną osią czasu steruje przewijanie.',
       en: 'A single-frame cinematic passage through depth, transformation and arrival, with its global timeline controlled by scroll.',
     },
-    image: '/veil_mockup.webp',
+    image: 'veil',
     link: 'https://apkmason.dev/veil/',
     tags: ['Scroll-driven', 'Cinematic', 'Video scrubbing'],
     category: 'story',
     accent: '#b56cff',
+    live: true,
   },
   {
     id: 'fruit-energy',
@@ -345,7 +360,7 @@ export const projects: Project[] = [
       pl: 'Kinowa prezentacja fikcyjnego napoju energetycznego, łącząca narrację produktową, reżyserię ruchu i sterowanie scrollem.',
       en: 'A cinematic presentation for a fictional energy drink, combining product storytelling, motion direction and scroll control.',
     },
-    image: '/fruit_mockup.webp',
+    image: 'fruit',
     link: 'https://apkmason.dev/fruit/',
     tags: ['Scroll-driven', 'Product story', 'AI video'],
     category: 'product',
@@ -358,7 +373,7 @@ export const projects: Project[] = [
       pl: 'Trzydziestosekundowa, sterowana scrollem podróż przez archiwum przełomów, które nauczyły maszyny tworzyć obrazy.',
       en: 'A thirty-second scroll-driven journey through an archive of breakthroughs that taught machines to create images.',
     },
-    image: '/the_guide_mockup.webp',
+    image: 'the_guide',
     link: 'https://apkmason.dev/the-guide/',
     tags: ['Scroll-driven', 'Video scrubbing', 'AI history'],
     category: 'story',
@@ -371,7 +386,7 @@ export const projects: Project[] = [
       pl: 'Jednokadrowe doświadczenie filmowe, w którym trzy sekwencje tworzą sterowany scrollem mechanizm optyczny.',
       en: 'A single-shot cinematic experience where three sequences form an optical mechanism controlled by scroll.',
     },
-    image: '/iris_mockup.webp',
+    image: 'iris',
     link: 'https://apkmason.dev/iris/',
     tags: ['Cinematic', 'Video scrubbing', 'Scroll-driven'],
     category: 'story',
@@ -384,7 +399,7 @@ export const projects: Project[] = [
       pl: 'Ewolucja mobilnych technologii od lat 90. po spekulatywną przyszłość.',
       en: 'The evolution of mobile technology from the 1990s to a speculative future.',
     },
-    image: '/evo_phone_mockup.webp',
+    image: 'evo_phone',
     link: 'https://apkmason.dev/evo_phone/',
     tags: ['Timeline', 'Video scrubbing', 'Technology history'],
     category: 'story',
@@ -397,7 +412,7 @@ export const projects: Project[] = [
       pl: 'Interaktywna sfera wiedzy, w której obrazy i ciekawostki rozmieszczono za pomocą algorytmu sfery Fibonacciego.',
       en: 'An interactive knowledge sphere arranging images and facts with a Fibonacci-sphere algorithm.',
     },
-    image: '/sfera_mockup.webp',
+    image: 'sfera',
     link: 'https://apkmason.dev/sfera/',
     tags: ['Three.js', 'WebGL', 'Fibonacci'],
     category: 'spatial',
@@ -410,7 +425,7 @@ export const projects: Project[] = [
       pl: 'Interaktywny atlas komputera w 3D: poznaj siedem podzespołów, prześledź drogę danych i sprawdź ich działanie w laboratorium.',
       en: 'An interactive 3D PC atlas: explore seven components, trace the data path and test how they work in the lab.',
     },
-    image: '/pcverse_v2_mockup.webp',
+    image: 'pcverse_v2',
     link: 'https://apkmason.dev/pcverse-v2/',
     tags: ['Three.js', 'Interactive 3D', 'Hardware'],
     category: 'spatial',
@@ -423,7 +438,7 @@ export const projects: Project[] = [
       pl: 'Wizualizacja podróży pakietu danych przez cyfrową infrastrukturę — abstrakcyjna sieć staje się namacalną przestrzenią.',
       en: 'A visualization of a data packet travelling through digital infrastructure — turning an abstract network into a tangible space.',
     },
-    image: '/inside_the_internet_mockup.webp',
+    image: 'inside_the_internet',
     link: 'https://apkmason.dev/inside-the-internet/',
     tags: ['GSAP', 'Interactive', 'Data story'],
     category: 'story',
@@ -436,7 +451,7 @@ export const projects: Project[] = [
       pl: 'Proces przemiany ziaren piasku w mikroprocesor przedstawiony jako sterowana scrollem podróż.',
       en: 'The transformation of sand into a microprocessor, presented as a scroll-controlled journey.',
     },
-    image: '/sand_to_silicon_mockup.webp',
+    image: 'sand_to_silicon',
     link: 'https://apkmason.dev/sand_to_silicon/',
     tags: ['GSAP', 'Educational', 'Scroll-driven'],
     category: 'story',
@@ -449,7 +464,7 @@ export const projects: Project[] = [
       pl: 'Luksusowa, sterowana scrollem prezentacja fikcyjnego zapachu APKMASON — PURE FORM.',
       en: 'A luxury scroll-driven showcase of the fictional fragrance APKMASON — PURE FORM.',
     },
-    image: '/pure_form_mockup.webp',
+    image: 'pure_form',
     link: 'https://apkmason.dev/Pure_form/',
     tags: ['Scroll-driven', 'Luxury UI', 'Motion'],
     category: 'product',
@@ -462,7 +477,7 @@ export const projects: Project[] = [
       pl: 'Symboliczna ewolucja człowieka opowiedziana obrazem, tempem i przewijaniem.',
       en: 'A symbolic evolution of humanity told through imagery, pacing and scroll.',
     },
-    image: '/ascent_human_journey_mockup.webp',
+    image: 'ascent_human_journey',
     link: 'https://apkmason.dev/ascent-human-journey/',
     tags: ['Scroll-driven', 'Cinematic', 'AI video'],
     category: 'story',
@@ -475,7 +490,7 @@ export const projects: Project[] = [
       pl: 'Interaktywna lekcja wizualna rozdzielająca model, system AI, workflow i agenta — z modułami, quizem i źródłami pokazującymi także koszt autonomii.',
       en: 'An interactive visual lesson separating the model, AI system, workflow and agent — with hands-on modules, a quiz and sources that also reveal the cost of autonomy.',
     },
-    image: '/ai_model_mockup.webp',
+    image: 'ai_model',
     link: 'https://apkmason.dev/ai-model/',
     tags: ['Interactive lesson', 'AI literacy', 'Source-led'],
     category: 'experiment',
@@ -488,7 +503,7 @@ export const projects: Project[] = [
       pl: 'Interaktywny, oparty na źródłach artykuł o drodze od promptu do odpowiedzi modelu — od tokenów i reprezentacji po generowanie i wiarygodność.',
       en: 'An interactive, source-led article tracing the path from a prompt to a model answer — from tokens and representations to generation and reliability.',
     },
-    image: '/poznaj_ai_mockup.webp',
+    image: 'poznaj_ai',
     link: 'https://apkmason.dev/poznaj_ai/',
     tags: ['Interactive article', 'AI literacy', 'Source-led'],
     category: 'experiment',
@@ -501,7 +516,7 @@ export const projects: Project[] = [
       pl: 'Interaktywny przewodnik po tworzeniu z AI: siedem decyzji prowadzi od nieuporządkowanego pomysłu do przetestowanej miniaplikacji „Dziś”.',
       en: 'An interactive guide to building with AI: seven decisions lead from an unstructured idea to the tested “Today” mini-app.',
     },
-    image: '/vibeshift_mockup.webp',
+    image: 'vibeshift',
     link: 'https://apkmason.dev/vibe_shift/',
     tags: ['Interactive guide', 'AI workflow', 'Product thinking'],
     category: 'experiment',
@@ -514,7 +529,7 @@ export const projects: Project[] = [
       pl: 'Interaktywna podróż przez 42 rzędy wielkości — od protonu po obserwowalny Wszechświat, z 28 modelami 3D.',
       en: 'An interactive journey across 42 orders of magnitude — from a proton to the observable Universe, with 28 3D models.',
     },
-    image: '/spacescale_mockup.webp',
+    image: 'spacescale',
     link: 'https://space-scale-explorer.krzychu1988.chatgpt.site/',
     tags: ['Three.js', 'WebGL', 'PWA'],
     category: 'spatial',
@@ -527,7 +542,7 @@ export const projects: Project[] = [
       pl: 'Prywatna aplikacja Android analizująca skład produktów względem profilu alergenów. Dane i historia pozostają offline.',
       en: 'A privacy-first Android app checking product ingredients against a personal allergen profile. Data and history stay offline.',
     },
-    image: '/allergen_mockup.webp',
+    image: 'allergen',
     link: 'https://apkmason.dev/AllergenGuard/',
     tags: ['Android', 'Kotlin Compose', 'Offline'],
     category: 'app',
@@ -540,7 +555,7 @@ export const projects: Project[] = [
       pl: 'Błyskawiczna aplikacja desktopowa offline-first do budżetowania metodą zero-based.',
       en: 'A fast, offline-first desktop app for zero-based budgeting.',
     },
-    image: '/budzet_mockup.webp',
+    image: 'budzet',
     link: 'https://apkmason.dev/budzet_domowy/',
     tags: ['Tauri', 'Rust', 'SQLite'],
     category: 'app',
@@ -553,7 +568,7 @@ export const projects: Project[] = [
       pl: 'Aplikacja edukacyjna z 147 faktami, fiszkami i interaktywnym słowniczkiem.',
       en: 'An educational app with 147 facts, flashcards and an interactive glossary.',
     },
-    image: '/top_seven_mockup.webp',
+    image: 'top_seven',
     link: 'https://apkmason.dev/topseven/',
     tags: ['Android', 'Material 3'],
     category: 'app',
@@ -566,7 +581,7 @@ export const projects: Project[] = [
       pl: 'Prywatny dyktafon z transkrypcją Whisper i automatycznymi podsumowaniami.',
       en: 'A private voice recorder with Whisper transcription and automatic summaries.',
     },
-    image: '/recai_mockup.webp',
+    image: 'recai',
     link: 'https://apkmason.dev/recai_landing_page/',
     tags: ['Android', 'Whisper', 'GPT'],
     category: 'app',
@@ -579,7 +594,7 @@ export const projects: Project[] = [
       pl: 'Prywatna aplikacja Android pomagająca ograniczyć doomscrolling przez analizę czasu, bezpośredni feedback i działanie w pełni offline.',
       en: 'A privacy-first Android app that helps curb doomscrolling through time tracking, direct feedback and fully offline operation.',
     },
-    image: '/scrolldebt_mockup.webp',
+    image: 'scrolldebt',
     link: 'https://apkmason.dev/scrolldebt-site/',
     tags: ['Android', 'Kotlin', 'Offline'],
     category: 'app',
@@ -592,7 +607,7 @@ export const projects: Project[] = [
       pl: 'Hyper-casualowa gra na Androida, w której przemierzasz labirynt biurek i próbujesz dotrwać do piątkowego popołudnia.',
       en: 'A hyper-casual Android game where you navigate a maze of desks and try to survive until Friday afternoon.',
     },
-    image: '/piatunio_mockup.webp',
+    image: 'piatunio',
     link: 'https://apkmason.dev/piatuniowkorpo/',
     tags: ['Android', 'Kotlin Compose', 'Pixel Art'],
     category: 'app',
@@ -600,5 +615,40 @@ export const projects: Project[] = [
   },
 ];
 
+export type Platform = 'web' | 'android' | 'desktop';
+
+export const CATEGORIES: ProjectCategory[] = ['story', 'spatial', 'product', 'app', 'experiment'];
+
+export const IMAGE_WIDTHS = [480, 800, 1254] as const;
+
+export function imageSrc(project: Project, width: (typeof IMAGE_WIDTHS)[number] = 800) {
+  return `/work/${project.image}-${width}.webp`;
+}
+
+export function liveSrc(project: Project) {
+  return project.live ? `/work/${project.image}-live-480.mp4` : null;
+}
+
+export function imageSrcSet(project: Project) {
+  return IMAGE_WIDTHS.map((width) => `${imageSrc(project, width)} ${width}w`).join(', ');
+}
+
+export function platformOf(project: Project): Platform {
+  if (project.tags.includes('Android')) return 'android';
+  if (project.tags.includes('Tauri')) return 'desktop';
+  return 'web';
+}
+
+export function hostOf(project: Project) {
+  const url = new URL(project.link);
+  return (url.host + url.pathname).replace(/\/$/, '');
+}
+
 export const featuredProjects = projects.filter((project) => project.featured);
-export const archiveProjects = projects.filter((project) => !project.featured);
+
+export const stats = {
+  total: projects.length,
+  stories: projects.filter((project) => project.tags.includes('Scroll-driven')).length,
+  spatial: projects.filter((project) => project.category === 'spatial').length,
+  apps: projects.filter((project) => project.category === 'app').length,
+};

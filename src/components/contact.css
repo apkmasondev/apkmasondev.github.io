@@ -1,123 +1,262 @@
 .contact {
   position: relative;
-  /* Kontener dla znaku zamykającego, żeby liczył szerokość bez paska przewijania. */
-  container-type: inline-size;
-  padding-top: var(--section-gap);
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: max(100svh, 760px);
+  overflow: clip;
+  isolation: isolate;
+  background: #050505;
+}
+
+/* ─── Monolit: ten sam materiał co znak marki — kamień i żar ─── */
+.contact__media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.contact__media img,
+.contact__media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% 50%;
+}
+
+.contact__media video {
+  opacity: 0;
+  transition: opacity 1.4s var(--ease-out);
+}
+
+.contact__media video.is-ready {
+  opacity: 1;
+}
+
+.contact__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--bg) 0%, rgb(11 10 9 / 0) 22%),
+    linear-gradient(90deg, #050505 0%, rgb(5 5 5 / 0.9) 34%, rgb(5 5 5 / 0.35) 58%, transparent 80%),
+    linear-gradient(0deg, #050505 0%, transparent 26%);
+}
+
+.contact__inner {
+  align-self: center;
+  padding-top: clamp(140px, 16vw, 220px);
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+
+.contact__title {
+  margin-top: 28px;
+  font-size: clamp(3rem, 7vw, 8.25rem);
+  max-width: 15ch;
+}
+
+.contact__inner .lede {
+  margin-top: 32px;
+}
+
+.contact__mail {
+  margin-top: clamp(40px, 6vw, 80px);
+}
+
+.contact__email {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 24px);
+  max-width: 100%;
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 5.6vw, 6.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.contact__email-text {
+  position: relative;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding-bottom: 0.08em;
+  background:
+    linear-gradient(var(--ember), var(--ember)) 0 100% / 0 2px no-repeat,
+    linear-gradient(var(--line-strong), var(--line-strong)) 0 100% / 100% 1px no-repeat;
+  transition:
+    background-size 0.8s var(--ease-out),
+    color 0.4s;
+}
+
+.contact__email:hover .contact__email-text {
+  background-size:
+    100% 2px,
+    100% 1px;
+}
+
+.contact__email-icon {
+  position: relative;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: clamp(48px, 5vw, 88px);
+  aspect-ratio: 1;
+  border: 1.5px solid var(--ember);
+  border-radius: 50%;
+  color: var(--ember);
+  isolation: isolate;
   overflow: hidden;
+  transition:
+    color 0.45s var(--ease-out),
+    box-shadow 0.6s var(--ease-out);
 }
 
-.contact__main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: clamp(1rem, 2.5vw, 1.75rem);
+/* Żar wypełnia koło od środka po najechaniu — w spoczynku zostaje sama obwódka. */
+.contact__email-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--ember);
+  transform: scale(0);
+  transition: transform 0.55s var(--ease-out);
 }
 
-.contact__main h2 {
-  max-width: 17ch;
-  font-size: var(--step-4);
+.contact__email-icon svg {
+  transition: transform 0.6s var(--ease-spring);
 }
 
-.contact__title-accent {
-  color: var(--paper-mute);
+.contact__email:hover .contact__email-icon,
+.contact__email:focus-visible .contact__email-icon {
+  color: var(--ember-ink);
+  box-shadow: 0 0 40px -6px rgb(255 106 61 / 0.55);
+}
+
+.contact__email:hover .contact__email-icon::before,
+.contact__email:focus-visible .contact__email-icon::before {
+  transform: scale(1);
+}
+
+.contact__email:hover .contact__email-icon svg,
+.contact__email:focus-visible .contact__email-icon svg {
+  transform: translate(2px, -2px);
 }
 
 .contact__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.75rem;
+  gap: 12px;
+  margin-top: 32px;
 }
 
-.contact__address {
-  position: relative;
-  color: var(--paper-mute);
-  font-size: 0.7rem;
-  text-transform: none;
-  transition: color var(--dur-fast) var(--ease);
+.contact__actions .btn {
+  min-height: 48px;
+  backdrop-filter: blur(8px);
 }
 
-.contact__address:hover {
-  color: var(--signal);
-}
-
-/* Nazwa jako ostatnia klatka: wypełnia szerokość i wychodzi poza dolną krawędź. */
-.contact__wordmark {
-  margin-block: clamp(3rem, 10vh, 7rem) 0;
-  padding-inline: var(--gutter);
-  color: transparent;
-  /* Wyraz „APKMASON" w Archivo 800 / szerokości 125% zajmuje 7,3 em.
-     Dzielenie dostępnej szerokości przez tę wartość wypełnia wiersz co do piksela. */
-  font-size: calc((100cqw - var(--gutter) * 2) / 7.3);
-  font-weight: 800;
-  font-stretch: 125%;
-  letter-spacing: -0.05em;
-  line-height: 0.82;
-  white-space: nowrap;
-  -webkit-text-stroke: 1px rgba(243, 240, 234, 0.14);
-  user-select: none;
-}
-
-.contact__wordmark span {
-  -webkit-text-stroke-color: rgba(255, 77, 46, 0.45);
-}
-
-.contact__bottom {
+/* ─── Stopka ─── */
+.contact__bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem 2rem;
-  margin-top: clamp(2rem, 5vh, 3.5rem);
-  padding-block: 1.5rem;
+  gap: 16px 32px;
+  padding-block: 26px max(26px, env(safe-area-inset-bottom));
   border-top: 1px solid var(--line);
-  color: var(--paper-mute);
-  font-size: 0.64rem;
+  font-size: 14px;
+  color: var(--ink-3);
 }
 
-.contact__signature {
+.contact__brand {
   display: flex;
-  gap: 0.55rem;
-  font-size: inherit;
-}
-
-.contact__signature strong {
-  color: var(--signal);
-  font-weight: 500;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink-2);
 }
 
 .contact__legal {
-  font-size: inherit;
-  text-transform: none;
+  color: var(--ink-3);
 }
 
+.contact__sig {
+  display: flex;
+  align-items: baseline;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--ink-2);
+}
+
+.contact__sig-initial {
+  color: var(--ember);
+}
+
+.contact__sig-dot {
+  margin-inline: 0.9em;
+  color: var(--ink-4);
+}
+
+.contact__end {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.contact__lang,
 .contact__top {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: inherit;
-  transition: color var(--dur-fast) var(--ease);
+  gap: 8px;
+  min-height: 44px;
+  color: var(--ink-3);
+  transition: color 0.3s;
 }
 
+.contact__lang:hover,
 .contact__top:hover {
-  color: var(--paper);
+  color: var(--ink);
 }
 
-.contact__top svg {
-  transition: transform var(--dur) var(--ease);
+@media (max-width: 1000px) {
+  .contact__sig {
+    order: -1;
+    flex-basis: 100%;
+  }
 }
 
-.contact__top:hover svg {
-  transform: translateY(-3px);
-}
+@media (max-width: 720px) {
+  .contact {
+    min-height: 0;
+    grid-template-rows: auto 1fr auto;
+  }
 
-@media (pointer: coarse) {
-  .contact__address::before,
-  .contact__top::before {
-    position: absolute;
-    inset: -0.75rem -0.6rem;
-    content: '';
+  .contact__media {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    z-index: 0;
+  }
+
+  .contact__media img,
+  .contact__media video {
+    object-position: 50% 50%;
+  }
+
+  .contact__shade {
+    background:
+      linear-gradient(180deg, var(--bg) 0%, transparent 30%),
+      linear-gradient(0deg, #050505 0%, transparent 45%);
+  }
+
+  .contact__inner {
+    position: relative;
+    margin-top: -18vw;
+    padding-top: 0;
+  }
+
+  .contact__actions .btn {
+    flex: 1 1 auto;
+  }
+
+  .contact__legal {
+    display: none;
   }
 }

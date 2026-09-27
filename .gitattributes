@@ -1,0 +1,2 @@
+# Skrypty powłoki muszą mieć końce linii LF — inaczej bash na Windows ich nie uruchomi.
+*.sh text eol=lf

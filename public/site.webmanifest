@@ -4,8 +4,8 @@
   "description": "Krzysztof’s portfolio / APKMason.dev — interactive websites, applications and digital experiences crafted with code, motion design and AI.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#07070a",
-  "theme_color": "#07070a",
+  "background_color": "#0b0a09",
+  "theme_color": "#0b0a09",
   "icons": [
     {
       "src": "/favicon_rounded.png",

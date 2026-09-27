@@ -5,18 +5,12 @@ dist/
 .env.*
 !.env.example
 
-*.local
 *.log
 *.tsbuildinfo
+__pycache__/
+.mask-*.png
 
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
-docs/*
-!docs/ADDING_PROJECTS.md
-!docs/ARCHITECTURE.md
-!docs/ASSETS.md
-!docs/DEPLOYMENT.md
-!docs/archive-assets/
-!docs/archive-assets/**

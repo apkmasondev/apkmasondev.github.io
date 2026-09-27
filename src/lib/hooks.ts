@@ -1,230 +1,174 @@
-import { useEffect, useRef, useState, type RefObject } from 'react';
-import { onScrollFrame } from './scrollFrame';
+import { useEffect, useRef, useState, useSyncExternalStore, type RefObject } from 'react';
 
-const REVEALED_CLASS = 'is-revealed';
-
-let revealObserver: IntersectionObserver | null = null;
-
-function getRevealObserver(): IntersectionObserver {
-  revealObserver ??= new IntersectionObserver(
-    (entries, observer) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        entry.target.classList.add(REVEALED_CLASS);
-        observer.unobserve(entry.target);
-      }
+export function useMediaQuery(query: string) {
+  return useSyncExternalStore(
+    (notify) => {
+      const list = window.matchMedia(query);
+      list.addEventListener('change', notify);
+      return () => list.removeEventListener('change', notify);
     },
-    { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
+    () => window.matchMedia(query).matches,
+    () => false,
   );
+}
 
-  return revealObserver;
+export const useReducedMotion = () => useMediaQuery('(prefers-reduced-motion: reduce)');
+export const useFinePointer = () => useMediaQuery('(hover: hover) and (pointer: fine)');
+
+/** Film i ciężkie dekoracje: wyłączone przy reduced motion i Save-Data. */
+export function useAllowsHeavyMedia() {
+  const reduced = useReducedMotion();
+  const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+  return !reduced && connection?.saveData !== true;
 }
 
 /**
- * Jeden współdzielony IntersectionObserver ujawnia wszystkie elementy oznaczone
- * `data-reveal` i przestaje je śledzić zaraz po pierwszym wejściu w kadr.
+ * Wspólny obserwator ujawniania treści: każdy `[data-reveal]` dostaje klasę
+ * `is-in` przy pierwszym wejściu w kadr i przestaje być śledzony.
  */
-export function useReveal<T extends HTMLElement>(): RefObject<T | null> {
+let revealObserver: IntersectionObserver | null = null;
+
+function getRevealObserver() {
+  revealObserver ??= new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px -10% 0px', threshold: 0.01 },
+  );
+  return revealObserver;
+}
+
+export function useReveal(root: RefObject<HTMLElement | null>, key?: unknown) {
+  useEffect(() => {
+    const scope = root.current;
+    if (!scope) return;
+    const observer = getRevealObserver();
+    const targets = [
+      ...(scope.matches('[data-reveal]') ? [scope] : []),
+      ...scope.querySelectorAll('[data-reveal]'),
+    ];
+    targets.forEach((target) => {
+      if (!target.classList.contains('is-in')) observer.observe(target);
+    });
+    return () => targets.forEach((target) => observer.unobserve(target));
+  }, [root, key]);
+}
+
+/** Czy element jest (w przybliżeniu) w kadrze — do montowania i pauzowania filmów. */
+export function useInView<T extends Element>(rootMargin = '0px') {
   const ref = useRef<T>(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-
-    const observer = getRevealObserver();
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { rootMargin });
     observer.observe(element);
-    return () => observer.unobserve(element);
-  }, []);
-
-  return ref;
-}
-
-export function useMediaQuery(query: string): boolean {
-  const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(query);
-    const update = () => setMatches(mediaQuery.matches);
-
-    update();
-    mediaQuery.addEventListener('change', update);
-    return () => mediaQuery.removeEventListener('change', update);
-  }, [query]);
-
-  return matches;
-}
-
-export function usePrefersReducedMotion(): boolean {
-  return useMediaQuery('(prefers-reduced-motion: reduce)');
-}
-
-type NavigatorWithConnection = Navigator & { connection?: { saveData?: boolean } };
-
-/**
- * Ciężkie media (wideo hero, portret) uruchamiamy tylko wtedy, gdy użytkownik
- * ich chce i za nie nie płaci: bez reduced-motion i bez trybu oszczędzania danych.
- */
-export function useAllowsHeavyMedia(): boolean {
-  const reducedMotion = usePrefersReducedMotion();
-  const [saveData] = useState(
-    () => (navigator as NavigatorWithConnection).connection?.saveData === true,
-  );
-
-  return !reducedMotion && !saveData;
-}
-
-/** Zwraca id sekcji aktualnie zajmującej środek ekranu. */
-export function useActiveSection(sectionIds: readonly string[]): string {
-  const [activeId, setActiveId] = useState(sectionIds[0] ?? '');
-
-  useEffect(() => {
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((element): element is HTMLElement => element !== null);
-
-    if (sections.length === 0) return;
-
-    const visibility = new Map<string, number>();
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          visibility.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
-        }
-
-        let best = '';
-        let bestRatio = 0;
-        for (const [id, ratio] of visibility) {
-          if (ratio > bestRatio) {
-            best = id;
-            bestRatio = ratio;
-          }
-        }
-
-        if (best) setActiveId(best);
-      },
-      { threshold: [0, 0.15, 0.35, 0.6, 0.9], rootMargin: '-20% 0px -35% 0px' },
-    );
-
-    for (const section of sections) observer.observe(section);
     return () => observer.disconnect();
-  }, [sectionIds]);
+  }, [rootMargin]);
 
-  return activeId;
+  return [ref, inView] as const;
 }
 
-/**
- * Blokuje przewijanie tła bez skoku layoutu (kompensuje szerokość paska).
- */
-export function useScrollLock(locked: boolean): void {
+// Elementy z `tabindex="-1"` (np. dekoracyjne kadry-linki) nie biorą udziału w
+// nawigacji klawiaturą — nie mogą więc wyznaczać granic pułapki fokusa.
+const FOCUSABLE = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]',
+]
+  .map((selector) => `${selector}:not([tabindex="-1"])`)
+  .join(', ');
+
+/** Pułapka fokusa dla dialogów i menu; przywraca fokus po zamknięciu. */
+export function useFocusTrap(active: boolean, container: RefObject<HTMLElement | null>) {
   useEffect(() => {
-    if (!locked) return;
-
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    const previousPadding = document.body.style.paddingRight;
-
-    document.body.classList.add('is-locked');
-    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
-
-    return () => {
-      document.body.classList.remove('is-locked');
-      document.body.style.paddingRight = previousPadding;
-    };
-  }, [locked]);
-}
-
-/** Przytrzymuje fokus wewnątrz otwartej warstwy (menu mobilne). */
-export function useFocusTrap<T extends HTMLElement>(active: boolean): RefObject<T | null> {
-  const ref = useRef<T>(null);
-
-  useEffect(() => {
-    const container = ref.current;
-    if (!active || !container) return;
-
-    const selector =
-      'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
-
-    const focusables = () =>
-      Array.from(container.querySelectorAll<HTMLElement>(selector)).filter(
-        (element) => element.offsetParent !== null,
-      );
-
-    focusables()[0]?.focus();
+    if (!active) return;
+    const node = container.current;
+    if (!node) return;
+    const previous = document.activeElement as HTMLElement | null;
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') return;
-
-      const elements = focusables();
-      if (elements.length === 0) return;
-
-      const first = elements[0];
-      const last = elements[elements.length - 1];
-      const current = document.activeElement;
-
-      if (event.shiftKey && current === first) {
+      const items = [...node.querySelectorAll<HTMLElement>(FOCUSABLE)].filter(
+        (item) => item.getClientRects().length > 0,
+      );
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      // Fokus poza listą (np. na samym dialogu tuż po otwarciu albo poza nim):
+      // Tab idzie do pierwszego elementu, Shift+Tab do ostatniego — nigdy na stronę pod spodem.
+      if (!items.includes(document.activeElement as HTMLElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
         last.focus();
-      } else if (!event.shiftKey && current === last) {
+      } else if (!event.shiftKey && document.activeElement === last) {
         event.preventDefault();
         first.focus();
       }
     };
 
-    container.addEventListener('keydown', onKeyDown);
-    return () => container.removeEventListener('keydown', onKeyDown);
-  }, [active]);
-
-  return ref;
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      previous?.focus?.({ preventScroll: true });
+    };
+  }, [active, container]);
 }
 
 /**
- * Delikatna paralaksa kadru. Pozycja elementu jest mierzona tylko przy zmianie
- * rozmiaru, więc w trakcie przewijania nie ma żadnego odczytu layoutu — do CSS
- * trafia jedna liczba z zakresu mniej więcej [-1, 1].
+ * Blokada przewijania dokumentu z kompensacją paska przewijania. Liczy
+ * aktywne blokady, więc menu i panel projektu nie zdejmą jej sobie nawzajem.
  */
-export function useParallax<T extends HTMLElement>(enabled: boolean): RefObject<T | null> {
-  const ref = useRef<T>(null);
+let scrollLocks = 0;
+
+export function useScrollLock(active: boolean) {
+  useEffect(() => {
+    if (!active) return;
+    const root = document.documentElement;
+    if (scrollLocks === 0) {
+      root.style.setProperty('--scrollbar-gap', `${window.innerWidth - root.clientWidth}px`);
+      root.classList.add('is-locked');
+    }
+    scrollLocks += 1;
+    return () => {
+      scrollLocks -= 1;
+      if (scrollLocks === 0) {
+        root.classList.remove('is-locked');
+        root.style.removeProperty('--scrollbar-gap');
+      }
+    };
+  }, [active]);
+}
+
+/** Aktywna sekcja: ta, która przecina linię na 40% wysokości okna. */
+export function useActiveSection(ids: readonly string[]) {
+  const [active, setActive] = useState<string>(ids[0]);
 
   useEffect(() => {
-    const element = ref.current;
-    if (!element || !enabled) return;
-
-    let documentTop = 0;
-    let height = 0;
-    let visible = false;
-
-    const measure = () => {
-      const rect = element.getBoundingClientRect();
-      documentTop = rect.top + window.scrollY;
-      height = rect.height;
-    };
-
-    const resizeObserver = new ResizeObserver(measure);
-    resizeObserver.observe(element);
-
-    const visibilityObserver = new IntersectionObserver(
-      ([entry]) => {
-        visible = entry.isIntersecting;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
       },
-      { rootMargin: '15% 0px' },
+      { rootMargin: '-40% 0px -59% 0px' },
     );
-    visibilityObserver.observe(element);
-
-    measure();
-
-    const stop = onScrollFrame((scrollY) => {
-      if (!visible) return;
-      const viewport = window.innerHeight;
-      const distance = documentTop + height / 2 - scrollY - viewport / 2;
-      element.style.setProperty('--parallax', (distance / viewport).toFixed(3));
+    ids.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
     });
+    return () => observer.disconnect();
+  }, [ids]);
 
-    return () => {
-      resizeObserver.disconnect();
-      visibilityObserver.disconnect();
-      stop();
-      element.style.removeProperty('--parallax');
-    };
-  }, [enabled]);
-
-  return ref;
+  return active;
 }

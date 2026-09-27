@@ -4,7 +4,45 @@ Wszystkie istotne zmiany w projekcie są dokumentowane w tym pliku. Format jest
 zgodny z [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), a wersje
 stosują [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [4.0.0] — 2026-09-27
+
+Nowa wersja portfolio zbudowana od podstaw. Poprzednie wersje są zachowane
+w historii i oznaczone tagami: `v1-bento`, `v2-monolith`, `v3-opus5`.
+
+### Added
+
+- hero ze ścianą wszystkich prac na pochylonej płaszczyźnie (CSS 3D), z paralaksą
+  kursora i 12 „żywymi ekranami” — nagraniami działających projektów wpasowanymi
+  w ekrany laptopów na mockupach; filmy ładują się po wczytaniu strony i grają
+  wyłącznie w widocznej części ściany,
+- sekcja „Prace”: wybrane realizacje jako pełnoekranowe rozdziały, które
+  nakładają się przy przewijaniu, oświetlone kolorem projektu,
+- archiwum: kategorie z licznikami, wyszukiwarka bez względu na polskie znaki
+  (skrót `/`), widok listy z podglądem przy kursorze albo siatki (zapamiętywany),
+- panel szczegółów projektu z własnym adresem `#/p/<id>`, przełączaniem `←` `→`,
+  obsługą `Esc` i przycisku „wstecz”,
+- sekcje „Proces” (etapy zapalane na linii odczytu) i „O mnie” (portret wideo,
+  liczby z poprawną odmianą, warsztat),
+- kontakt z monolitem wideo, kopiowaniem adresu e-mail i rozwinięciem nazwy
+  APK: AI · Pixels · Kinetics,
+- grafiki projektów w trzech rozmiarach (480 / 800 / 1254 px) z `srcset`,
+- `npm run work-image` (grafika projektu w trzech rozmiarach) i rozszerzony
+  `npm run validate` (warianty grafik, żywe ekrany, osierocone pliki),
+- `tools/live-screens/` — przepis i narzędzia do nagrywania żywych ekranów.
+
+### Changed
+
+- identyfikacja: Instrument Serif + Geist + Geist Mono, ciepła czerń, kość
+  i jeden kolor marki (żar z logotypu); cienki pasek przewijania w stylu strony,
+- dane projektów (`src/data/projects.ts`) przeniesione bez zmian treści;
+  grafiki przeniesione z `public/*.webp` do `public/work/`, media do `public/media/`.
+
+### Removed
+
+- komponenty, style i dokumentacja wersji v3 (dostępne pod tagiem `v3-opus5`),
+- `scripts/make-mockup.mjs` (zastąpiony przez `scripts/work-image.mjs`).
+
+## [3.x] — wersja Opus 5 (tag `v3-opus5`)
 
 ### Added
 

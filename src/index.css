@@ -1,6 +1,0 @@
-/* Arkusz fontów jest ładowany bezpośrednio w index.html, aby nie wydłużać
-   łańcucha blokującego renderowanie o dodatkowy przeskok sieciowy. */
-
-@import './styles/tokens.css';
-@import './styles/base.css';
-@import './styles/controls.css';

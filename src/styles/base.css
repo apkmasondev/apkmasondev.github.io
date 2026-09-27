@@ -1,5 +1,54 @@
-/* Reset, elementy globalne i wspólne prymitywy typograficzne. */
+/* ─────────────────────────────────────────────────────────────
+   Tokeny
+   Ciepła czerń bazaltu, kość zamiast bieli, żar z logotypu jako
+   jedyny kolor marki. Kolory projektów pojawiają się wyłącznie
+   jako światło wokół ich własnych kadrów.
+   ───────────────────────────────────────────────────────────── */
+/* Uwaga dla przyszłych zmian: `backdrop-filter` pisz bez prefiksu `-webkit-`.
+   Minifikator CSS sam dodaje prefiks; ręczna para z prefiksem na końcu sprawiała,
+   że w buildzie zostawała tylko wersja `-webkit-`, której nie rozumie Chrome. */
+:root {
+  color-scheme: dark;
 
+  --bg: #0b0a09;
+  --bg-raise: #131211;
+  --bg-sunk: #070606;
+  --ink: #efe9df;
+  /* Kontrast na tle --bg: ink-2 ≈ 9:1, ink-3 ≈ 5,8:1 (minimum dla każdego
+     tekstu z informacją), ink-4 ≈ 3,3:1 — tylko linie, kropki i duże cyfry. */
+  --ink-2: rgb(239 233 223 / 0.72);
+  --ink-3: rgb(239 233 223 / 0.58);
+  --ink-4: rgb(239 233 223 / 0.42);
+  --line: rgb(239 233 223 / 0.1);
+  --line-strong: rgb(239 233 223 / 0.2);
+  --ember: #ff6a3d;
+  --ember-soft: #ff9a66;
+  --ember-ink: #1a0a04;
+
+  --serif: 'Instrument Serif', 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: 'Geist', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+
+  --gutter: clamp(20px, 4.2vw, 72px);
+  --max: 1680px;
+  --nav-h: 76px;
+  --radius: 16px;
+  --radius-sm: 10px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 720px) {
+  :root {
+    --nav-h: 64px;
+  }
+}
+
+/* ─────────────────────────── Reset ─────────────────────────── */
 *,
 *::before,
 *::after {
@@ -7,45 +56,49 @@
 }
 
 html {
-  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--nav-h) + 8px);
   overflow-x: clip;
-  background: var(--ink);
-  scroll-behavior: smooth;
-  /* Kotwice nie mogą chować się pod przyklejoną nawigacją. */
-  scroll-padding-top: calc(var(--nav-height) + 1rem);
+  background: var(--bg);
+}
+
+html.is-locked {
+  overflow: hidden;
+  padding-right: var(--scrollbar-gap, 0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
   margin: 0;
-  min-width: 320px;
-  overflow-x: hidden;
-  overflow-x: clip;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: var(--step-0);
+  min-height: 100svh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
   line-height: 1.6;
+  font-feature-settings: 'ss01', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
-body.is-locked {
-  overflow: hidden;
-  overscroll-behavior: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-ul,
-ol {
-  margin: 0;
-}
-
-ul,
-ol {
-  padding: 0;
-  list-style: none;
+/* Delikatne ziarno na całej stronie — łączy mockupy i typografię w jeden materiał. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  background-image: var(--grain);
+  opacity: 0.05;
+  mix-blend-mode: overlay;
 }
 
 img,
@@ -55,9 +108,21 @@ svg {
   max-width: 100%;
 }
 
-img,
-video {
+img {
   height: auto;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
 }
 
 a {
@@ -65,103 +130,72 @@ a {
   text-decoration: none;
 }
 
-button {
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
   margin: 0;
+}
+
+ul,
+ol {
   padding: 0;
-  border: 0;
-  background: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
+  list-style: none;
 }
 
-input {
-  font: inherit;
-  color: inherit;
-}
-
-a,
-button,
-input {
-  -webkit-tap-highlight-color: transparent;
-}
-
-::selection {
-  background: var(--signal);
-  color: #fff;
-}
-
-:focus-visible {
-  outline: 2px solid var(--signal-soft);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-/* Pasek przewijania zredukowany do cienkiej kreski — widoczny, ale nieinwazyjny. */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(243, 240, 234, 0.2) transparent;
-}
-
+/* ─────────────────────── Pasek przewijania ───────────────────────
+   Chrome, Edge i Safari: cienki kamienny pasek, który przy chwyceniu
+   rozżarza się kolorem marki. Firefox: standardowe `scrollbar-*`. */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 99px;
-  background: rgba(243, 240, 234, 0.18);
+  background: rgb(239 233 223 / 0.18);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(243, 240, 234, 0.32);
+  background: rgb(239 233 223 / 0.34);
 }
 
-/* ── Prymitywy ─────────────────────────────────────────────── */
-
-.shell {
-  width: var(--shell);
-  margin-inline: auto;
+::-webkit-scrollbar-thumb:active {
+  background: var(--ember);
 }
 
-.shell-narrow {
-  width: var(--shell-narrow);
-  margin-inline: auto;
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
-.mono {
-  font-family: var(--font-mono);
-  font-size: var(--step--1);
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+@supports not selector(::-webkit-scrollbar) {
+  html,
+  .sheet__body,
+  .sheet__panel {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(239 233 223 / 0.22) transparent;
+  }
 }
 
-.display {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-stretch: 118%;
-  letter-spacing: -0.035em;
-  line-height: 0.95;
-  text-wrap: balance;
+::selection {
+  background: var(--ember);
+  color: var(--ember-ink);
 }
 
-.lede {
-  max-width: 46ch;
-  color: var(--paper-dim);
-  font-size: var(--step-1);
-  line-height: 1.55;
-  text-wrap: pretty;
-}
-
-.rule {
-  height: 1px;
-  border: 0;
-  background: var(--line);
+:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 .sr-only {
@@ -169,80 +203,292 @@ input {
   width: 1px;
   height: 1px;
   padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
+  border: 0;
+}
+
+/* Cel linku „przejdź do treści” dostaje fokus programowo — bez ramki wokół całej treści. */
+main:focus {
+  outline: none;
 }
 
 .skip-link {
   position: fixed;
-  top: 0.75rem;
-  left: 0.75rem;
-  z-index: 200;
-  padding: 0.75rem 1rem;
-  transform: translateY(-250%);
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  top: 12px;
+  left: 12px;
+  z-index: 300;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--ember);
+  color: var(--ember-ink);
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform 0.3s var(--ease-out);
 }
 
 .skip-link:focus-visible {
-  transform: translateY(0);
-}
-
-/* Znacznik sekcji: „02 / INDEX" — wspólny język całej strony. */
-.section-mark {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: var(--signal);
-}
-
-.section-mark::after {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, var(--line-strong), transparent);
-  content: '';
-}
-
-/* ── Ujawnianie treści przy przewijaniu ────────────────────── */
-
-[data-reveal] {
-  opacity: 0;
-  transform: translate3d(0, 18px, 0);
-  transition:
-    opacity var(--dur-slow) var(--ease),
-    transform var(--dur-slow) var(--ease);
-  transition-delay: calc(var(--reveal-delay, 0) * 70ms);
-}
-
-[data-reveal].is-revealed {
-  opacity: 1;
   transform: none;
 }
 
-/* ── Redukcja ruchu ────────────────────────────────────────── */
+/* ─────────────────────────── Układ ─────────────────────────── */
+.shell {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+.section {
+  position: relative;
+  padding-block: clamp(96px, 14vw, 200px);
+}
+
+/* ───────────────────────── Typografia ──────────────────────── */
+.mono {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+em {
+  font-style: italic;
+}
+
+.display,
+.h2,
+.h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-kerning: normal;
+}
+
+.display {
+  font-size: clamp(3.3rem, 8.6vw, 10.5rem);
+  line-height: 0.9;
+}
+
+.h2 {
+  font-size: clamp(2.75rem, 6.4vw, 7.25rem);
+  line-height: 0.93;
+}
+
+.h3 {
+  font-size: clamp(2.25rem, 4.2vw, 4.75rem);
+  line-height: 0.95;
+}
+
+.display em,
+.h2 em,
+.h3 em {
+  color: var(--ember-soft);
+}
+
+.lede {
+  font-size: clamp(1.06rem, 1.25vw, 1.25rem);
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 38ch;
+  text-wrap: pretty;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.kicker__no {
+  color: var(--ember);
+}
+
+.kicker__rule {
+  width: 40px;
+  height: 1px;
+  background: var(--line-strong);
+  transform-origin: left;
+}
+
+/* Linie nagłówka wysuwane spod maski. Dodatkowy margines w dół chroni
+   ogonki kursywy i polskie znaki przed przycięciem. */
+.lines__row {
+  display: block;
+  overflow: clip;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+  padding-right: 0.08em;
+}
+
+.lines__inner {
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .lines__inner {
+    transform: translateY(105%);
+    transition: transform 1.15s var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 90ms + var(--delay, 0ms));
   }
 
-  [data-reveal] {
+  .js .lines.is-in .lines__inner {
+    transform: none;
+  }
+
+  .js [data-reveal]:not(.lines) {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 1s var(--ease-out),
+      transform 1.1s var(--ease-out);
+    transition-delay: var(--delay, 0ms);
+  }
+
+  .js [data-reveal].is-in:not(.lines) {
     opacity: 1;
     transform: none;
-    transition: none;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+  .js .kicker[data-reveal] .kicker__rule {
+    transform: scaleX(0);
+    transition: transform 1.2s var(--ease-out) 0.2s;
   }
+
+  .js .kicker[data-reveal].is-in .kicker__rule {
+    transform: none;
+  }
+}
+
+/* ───────────────────────── Kontrolki ───────────────────────── */
+.btn {
+  --btn-bg: transparent;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    color 0.4s var(--ease-out),
+    border-color 0.4s var(--ease-out),
+    transform 0.4s var(--ease-out);
+}
+
+.btn svg {
+  transition: transform 0.45s var(--ease-out);
+}
+
+.btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.btn--down:hover svg {
+  transform: translateY(3px);
+}
+
+.btn--ember {
+  --btn-bg: var(--ember);
+  color: var(--ember-ink);
+}
+
+/* Wypełnienie wjeżdżające od dołu — odpowiedź na hover bez zmiany geometrii. */
+.btn--ember::before,
+.btn--ghost::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  transform: translateY(101%);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.btn--ember::before {
+  background: var(--ink);
+}
+
+.btn--ghost {
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+}
+
+.btn--ghost::before {
+  background: rgb(239 233 223 / 0.08);
+}
+
+.btn:hover::before {
+  transform: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink);
+  transition:
+    background-color 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out);
+}
+
+.icon-btn:hover {
+  background: rgb(239 233 223 / 0.08);
+  border-color: var(--ink-3);
+}
+
+.icon-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* Obraz projektu z bazowym tłem, dopóki nie załaduje się plik. */
+.shot {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-raise);
+}
+
+.shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

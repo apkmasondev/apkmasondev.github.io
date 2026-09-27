@@ -1,409 +1,387 @@
 .hero {
-  --hero-exit: 0;
-  /* Punkt zakotwiczenia kadru. Na telefonie film jest już wykadrowany na kamieniu,
-     więc trzyma środek; od tabletu w górę trzymamy lewą krawędź, bo tam materiał ma
-     celowo pustą czerń pod nagłówek — przycięcie musi zjadać prawą stronę, nie lewą. */
-  --hero-anchor: 50%;
-
+  --exit: 0;
+  /* Siła efektu wyjścia; w trybie ograniczonego ruchu zerowana. */
+  --exit-zoom: 0.3;
+  --exit-shift: -90px;
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: 1fr auto;
-  min-height: 100svh;
-  overflow: hidden;
+  min-height: max(100svh, 680px);
+  overflow: clip;
   isolation: isolate;
 }
 
-/* ── Kadr ──────────────────────────────────────────────────── */
-
-.hero__media {
+/* ───────────────────────────── Ściana ───────────────────────────── */
+.hero__wall {
   position: absolute;
   inset: 0;
   z-index: -1;
-}
-
-.hero__poster,
-.hero__poster img,
-.hero__video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  /* Skala 1.08 daje zapas na dryf, dzięki czemu kadr nigdy nie odsłania krawędzi. */
-  transform: scale(1.08) translate3d(0, calc(var(--hero-exit) * -4%), 0);
-  transform-origin: var(--hero-anchor) center;
-  object-fit: cover;
-  object-position: var(--hero-anchor) 50%;
-  will-change: transform;
-}
-
-.hero__poster {
-  transform: none;
-}
-
-.hero__video {
-  opacity: 0;
-  transition: opacity 900ms var(--ease);
-}
-
-.hero__video.is-ready {
-  opacity: 1;
-}
-
-.hero__scrim {
-  position: absolute;
-  inset: 0;
-  /* Trzy warstwy, każda z jednym zadaniem: czytelność nawigacji i paska indeksu
-     (pion), pole pod nagłówek (lewa) i pod liczniki (prawa). Środek kadru
-     zostaje odsłonięty — tam materiał ma pracować. */
-  background:
-    linear-gradient(180deg, rgba(7, 7, 10, 0.78) 0%, rgba(7, 7, 10, 0.2) 32%, rgba(7, 7, 10, 0.92) 90%),
-    linear-gradient(
-      90deg,
-      rgba(7, 7, 10, 0.88) 0%,
-      rgba(7, 7, 10, 0.62) 26%,
-      rgba(7, 7, 10, 0.12) 58%,
-      rgba(7, 7, 10, 0.55) 100%
-    );
-}
-
-/* Ziarno filmowe: jeden powtarzalny wzór SVG, bez dodatkowego pliku. */
-.hero__grain {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  opacity: 0.05;
-  mix-blend-mode: overlay;
   pointer-events: none;
 }
 
-/* ── Treść ─────────────────────────────────────────────────── */
-
-.hero__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: clamp(2rem, 5vh, 3.5rem);
-  padding-block: calc(var(--nav-height) + 2rem) clamp(2rem, 5vh, 3rem);
+.wall {
+  --mx: 0;
+  --my: 0;
+  position: absolute;
+  inset: 0;
+  perspective: 1800px;
+  perspective-origin: 70% 40%;
 }
 
-.hero__lockup {
+.wall__plane {
+  --tile: clamp(150px, 13vw, 250px);
+  --gap: clamp(12px, 1.1vw, 20px);
+  position: absolute;
+  top: 50%;
+  left: 64%;
+  display: flex;
+  gap: var(--gap);
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotateX(calc(34deg + var(--my) * -3deg))
+    rotateY(calc(var(--mx) * 4deg)) rotateZ(calc(-19deg + var(--mx) * 1.5deg))
+    scale(calc(1.04 + var(--exit) * var(--exit-zoom)));
+  opacity: calc(1 - var(--exit) * 0.75);
+  will-change: transform;
+}
+
+.wall__col {
+  width: var(--tile);
+  height: 180vh;
+  overflow: hidden;
+}
+
+.wall__track {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: clamp(1rem, 2.4vh, 1.75rem);
-  max-width: min(100%, 54rem);
+  gap: var(--gap);
+  animation: wall-drift var(--dur) linear infinite;
+  animation-direction: var(--dir);
+}
+
+/* Kafle wchodzą kolumnami, od środka płaszczyzny na zewnątrz. */
+.wall__col {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: wall-in 1.8s var(--ease-out) forwards;
+  animation-delay: calc(0.1s + var(--c) * 0.09s);
+}
+
+.wall__tile {
+  position: relative;
+  flex-shrink: 0;
+  width: var(--tile);
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #151412;
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 0.06),
+    0 30px 60px -30px rgb(0 0 0 / 0.9);
+}
+
+.wall__tile img,
+.wall__tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wall__tile video {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-out);
+}
+
+.wall__tile video.is-ready {
+  opacity: 1;
+}
+
+/* Tafla szkła: subtelny odblask góra-lewo na każdym kaflu. */
+.wall__tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.07), transparent 40%);
+}
+
+@keyframes wall-drift {
+  to {
+    transform: translateY(calc(-50% - var(--gap) / 2));
+  }
+}
+
+@keyframes wall-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero[data-motion='off'] .wall__track,
+.hero[data-motion='off'] .wall__col {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+/* Cieniowanie: pełna czerń pod typografią po lewej, ściana oddycha po prawej. */
+.hero__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--bg) 0%, rgb(11 10 9 / 0.93) 26%, rgb(11 10 9 / 0.5) 50%, rgb(11 10 9 / 0.05) 78%),
+    linear-gradient(0deg, var(--bg) 0%, rgb(11 10 9 / 0.6) 16%, transparent 38%),
+    linear-gradient(180deg, rgb(11 10 9 / 0.85) 0%, transparent 20%),
+    radial-gradient(60% 50% at 8% 88%, rgb(255 106 61 / 0.1), transparent 70%);
+}
+
+/* ───────────────────────────── Treść ───────────────────────────── */
+.hero__content {
+  align-self: end;
+  padding-top: calc(var(--nav-h) + 40px);
+  padding-bottom: clamp(40px, 6vh, 72px);
+  transform: translateY(calc(var(--exit) * var(--exit-shift)));
+  opacity: calc(1 - var(--exit) * 1.4);
 }
 
 .hero__eyebrow {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4em;
-  color: var(--signal);
-  font-size: clamp(0.6rem, 2.4vw, 0.72rem);
-  letter-spacing: 0.16em;
+  align-items: center;
+  gap: 6px 14px;
+  margin-bottom: clamp(20px, 3vh, 32px);
+  color: var(--ink-2);
 }
 
-.hero__eyebrow-brand {
-  display: none;
+.hero__role {
+  color: var(--ink-3);
 }
 
-.hero__title {
-  max-width: min(13ch, 100%);
-  font-size: var(--step-5);
+.hero__role::before {
+  content: '/';
+  margin-right: 14px;
+  color: var(--ink-4);
 }
 
-/* Na wąskich ekranach szeroki krój nie mieści długich słów — zwężamy oś szerokości. */
-@media (max-width: 560px) {
-  .hero__title {
-    font-stretch: 106%;
+.hero__pulse {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ember);
+  box-shadow: 0 0 12px var(--ember);
+}
+
+.hero__pulse::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px solid var(--ember);
+  opacity: 0;
+  animation: pulse 2.6s var(--ease-out) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
   }
 }
 
-.hero__title span {
-  display: block;
+.hero__title {
+  width: fit-content;
 }
 
-.hero__title span:last-child {
-  color: var(--paper-dim);
+.hero__title .lines__inner {
+  --delay: 200ms;
 }
 
-.hero__lede {
-  max-width: 34ch;
-  color: var(--paper-dim);
-  font-size: var(--step-1);
-  line-height: 1.5;
-  text-wrap: pretty;
+.hero__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px 48px;
+  margin-top: clamp(28px, 4.5vh, 48px);
+  max-width: 1040px;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.25rem;
+  gap: 12px;
 }
 
-/* ── Liczniki ──────────────────────────────────────────────── */
-
-.hero__aside {
+.hero__foot {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 20px;
+  padding-block: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  opacity: calc(1 - var(--exit) * 3);
 }
 
-.hero__stats {
+.hero__foot p {
   display: flex;
-  gap: clamp(1.5rem, 5vw, 3.5rem);
+  align-items: baseline;
+  gap: 10px;
 }
 
-.hero__stats div {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 0.3rem;
-}
-
-.hero__stats dt {
-  color: var(--paper-mute);
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-}
-
-.hero__stats dd {
-  margin: 0;
-  font-size: clamp(1.6rem, 5vw, 2.4rem);
-  font-weight: 600;
-  font-stretch: 112%;
-  letter-spacing: -0.04em;
+.hero__count {
+  font-family: var(--serif);
+  font-size: 28px;
   line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
 }
 
 .hero__cue {
-  display: none;
+  display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  color: var(--paper-mute);
-  font-size: 0.64rem;
+  gap: 14px;
+  min-height: 44px;
+  color: var(--ink-3);
+  transition: color 0.3s;
+}
+
+.hero__cue:hover {
+  color: var(--ink);
 }
 
 .hero__cue-line {
   position: relative;
-  width: 1px;
-  height: 3.5rem;
+  width: 56px;
+  height: 1px;
+  background: var(--line-strong);
   overflow: hidden;
-  background: var(--line);
 }
 
 .hero__cue-line::after {
-  position: absolute;
-  inset: 0 0 auto;
-  height: 45%;
-  background: var(--signal);
-  animation: hero-cue 2.6s var(--ease-inout) infinite;
   content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ember);
+  transform: translateX(-100%);
+  animation: cue 2.4s var(--ease-io) infinite;
 }
 
-@keyframes hero-cue {
-  0% {
-    transform: translateY(-100%);
+@keyframes cue {
+  50% {
+    transform: none;
   }
-  60%,
   100% {
-    transform: translateY(240%);
+    transform: translateX(100%);
   }
 }
 
-/* ── Pasek indeksu ─────────────────────────────────────────── */
-
-.hero__ticker {
-  display: flex;
-  align-items: center;
-  gap: clamp(1rem, 3vw, 2rem);
-  padding: 0.9rem var(--gutter);
-  border-top: 1px solid var(--line);
-  background: rgba(7, 7, 10, 0.55);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.hero__ticker-cta {
-  position: relative;
-  display: inline-flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--paper);
-  font-size: 0.66rem;
-  transition: color var(--dur-fast) var(--ease);
-}
-
-.hero__ticker-cta:hover {
-  color: var(--signal);
-}
-
-.hero__ticker-window {
-  flex: 1;
-  /* Bez min-width:0 element flex rozciągnąłby się do szerokości taśmy z tytułami. */
-  min-width: 0;
-  overflow: hidden;
-  /* Wygaszenie krawędzi sprawia, że napisy wjeżdżają i znikają, zamiast się ucinać. */
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-}
-
-.hero__ticker-track {
-  display: flex;
-  width: max-content;
-  animation: hero-ticker 150s linear infinite;
-}
-
-.hero__ticker:hover .hero__ticker-track,
-.hero__ticker:focus-within .hero__ticker-track {
-  animation-play-state: paused;
-}
-
-.hero__ticker-track ul {
-  display: flex;
-  align-items: center;
-  gap: 2.25rem;
-  padding-right: 2.25rem;
-}
-
-.hero__ticker-track li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--paper-mute);
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.hero__ticker-track i {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  opacity: 0.85;
-}
-
-@keyframes hero-ticker {
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-/* ── Duże ekrany ───────────────────────────────────────────── */
-
-@media (min-aspect-ratio: 6 / 5) {
-  /* W trybie pełnoekranowym kadrowanie musi zjadać prawą stronę, nie lewą —
-     tam materiał ma celowo pustą czerń pod nagłówek. */
-  .hero {
-    --hero-anchor: 0%;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__eyebrow-brand {
-    display: inline;
+/* ───────────────────────────── Tablet ───────────────────────────── */
+@media (max-width: 1100px) {
+  .wall__plane {
+    left: 60%;
+    top: 42%;
   }
 
-  .hero__body {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-    gap: clamp(2rem, 6vw, 6rem);
-  }
-
-  .hero__aside {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: clamp(2rem, 6vh, 4rem);
-  }
-
-  .hero__stats {
-    flex-direction: column;
-    gap: clamp(1rem, 2.6vh, 1.75rem);
-    text-align: right;
-  }
-
-  .hero__stats div {
-    align-items: flex-end;
-  }
-
-  .hero__cue {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/* ── Wąskie proporcje: film jako kadr, nie tapeta ──────────── */
-
-/* Materiał jest kompozycją poziomą z celowo pustą lewą stroną. Wypełnienie nim
-   wysokiego okna wycina albo tę pustkę, albo świecącą szczelinę — dlatego o trybie
-   decyduje proporcja okna, nie szerokość. Poniżej 6:5 film dostaje własną ramę
-   u góry ekranu, a typografia siada pod nim na czystej czerni. To ten sam język,
-   którym strona pokazuje projekty. */
-@media (max-aspect-ratio: 6 / 5) {
-  .hero {
-    grid-template-rows: auto 1fr auto;
-  }
-
-  .hero__media {
-    position: relative;
-    z-index: auto;
-    height: calc(var(--nav-height) + clamp(8rem, 22svh, 13rem));
-    border-bottom: 1px solid var(--line);
-  }
-
-  .hero__scrim {
+  .hero__shade {
     background:
-      linear-gradient(180deg, rgba(7, 7, 10, 0.72) 0%, transparent 40%),
-      linear-gradient(180deg, transparent 58%, rgba(7, 7, 10, 0.55) 100%);
-  }
-
-  .hero__body {
-    gap: clamp(1.25rem, 3vh, 2rem);
-    padding-block: clamp(1.25rem, 3.5vh, 2rem);
-  }
-
-  .hero__lockup {
-    gap: clamp(0.7rem, 1.8vh, 1.15rem);
+      linear-gradient(0deg, var(--bg) 0%, rgb(11 10 9 / 0.94) 34%, rgb(11 10 9 / 0.4) 62%, rgb(11 10 9 / 0.15) 100%),
+      linear-gradient(180deg, rgb(11 10 9 / 0.8) 0%, transparent 18%),
+      radial-gradient(70% 40% at 10% 90%, rgb(255 106 61 / 0.1), transparent 70%);
   }
 }
 
-/* Na tablecie w pionie zostaje sporo miejsca — kadr może oddychać. */
-@media (max-aspect-ratio: 6 / 5) and (min-width: 600px) {
-  .hero__media {
-    height: calc(var(--nav-height) + clamp(13rem, 30svh, 24rem));
+/* Tablet w pionie: większe kafle, płaszczyzna w górnej połowie kadru. */
+@media (max-width: 1100px) and (min-width: 721px) and (max-aspect-ratio: 1 / 1) {
+  .wall__plane {
+    --tile: 21vw;
+    --gap: 14px;
+    top: 30%;
+    left: 50%;
+  }
+
+  .wall__col {
+    height: 120vh;
   }
 }
 
-@media (pointer: coarse) {
-  .hero__ticker-cta::before {
-    position: absolute;
-    inset: -0.75rem -0.6rem;
-    content: '';
+/* ───────────────────────────── Telefon ───────────────────────────── */
+@media (max-width: 720px) {
+  .hero {
+    min-height: max(100svh, 620px);
+  }
+
+  .wall__plane {
+    --tile: 34vw;
+    --gap: 10px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(30deg) rotateZ(-16deg) scale(calc(1.05 + var(--exit) * var(--exit-zoom)));
+  }
+
+  .wall__col {
+    height: 130vh;
+  }
+
+  .hero__shade {
+    background:
+      linear-gradient(0deg, var(--bg) 0%, rgb(11 10 9 / 0.96) 46%, rgb(11 10 9 / 0.55) 70%, rgb(11 10 9 / 0.2) 100%),
+      linear-gradient(180deg, rgb(11 10 9 / 0.85) 0%, transparent 14%),
+      radial-gradient(90% 40% at 0% 80%, rgb(255 106 61 / 0.12), transparent 70%);
+  }
+
+  .hero__role {
+    display: none;
+  }
+
+  .hero__row {
+    margin-top: 22px;
+    gap: 26px;
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 auto;
+  }
+
+  .hero__foot .hero__cue {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__actions .btn {
+    padding-inline: 18px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__poster img,
-  .hero__video {
-    transform: scale(1.02);
-  }
-
-  .hero__ticker-window {
-    overflow-x: auto;
-  }
-
-  .hero__ticker-track {
-    animation: none;
-  }
-
+  .wall__track,
+  .wall__col,
+  .hero__pulse::after,
   .hero__cue-line::after {
     animation: none;
-    height: 100%;
-    opacity: 0.5;
+  }
+
+  .wall__col {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Bez przybliżania i przesuwania przy scrollu; kąt ściany zostaje z układu. */
+  .hero {
+    --exit-zoom: 0;
+    --exit-shift: 0px;
   }
 }
