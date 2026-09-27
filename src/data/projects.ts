@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'pole',
+    title: 'POLE / 01 — Laboratorium ruchu',
+    description: {
+      pl: 'Interaktywna pracownia elektrodynamiki: rozłóż silnik prądu stałego, odkryj jego pola i przejdź siedem etapów od napięcia do ruchu. Autorski model 3D, sterowanie obwodem i bilans energii.',
+      en: 'An interactive electrodynamics lab: take apart a DC motor, explore its fields and follow seven stages from voltage to motion. An original 3D model, circuit controls and an energy balance.',
+    },
+    image: 'pole',
+    link: 'https://apkmason.dev/pole/',
+    tags: ['Three.js', 'Blender', 'Interactive exhibit'],
+    category: 'spatial',
+    accent: '#c9b57d',
+  },
+  {
     id: 'zamek-tajemnic-rzeczywistosci',
     title: 'Zamek Tajemnic Rzeczywistości',
     description: {

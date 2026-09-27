@@ -180,6 +180,9 @@ export function Archive({ onOpen }: { onOpen: (id: string) => void }) {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return;
+      // Otwarte menu albo panel projektu (blokada przewijania) zasłaniają wyszukiwarkę —
+      // skrót nie może przenieść fokusu pod nakładkę.
+      if (document.documentElement.classList.contains('is-locked')) return;
       const target = event.target as HTMLElement;
       if (target.closest('input, textarea, [contenteditable="true"], [role="dialog"]')) return;
       event.preventDefault();
