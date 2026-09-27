@@ -46,8 +46,8 @@ export function Contact() {
     <footer className="contact" id="contact" ref={sectionRef} aria-labelledby="contact-title">
       <div className="contact__media" ref={mediaRef} aria-hidden="true">
         <picture>
-          <source media="(max-aspect-ratio: 6 / 5)" srcSet="/media/hero-poster-mobile.jpg" />
-          <img src="/media/hero-poster.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+          <source media="(max-aspect-ratio: 6 / 5)" srcSet="/media/contact-poster-mobile.jpg" />
+          <img src="/media/contact-poster.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async" />
         </picture>
         {mounted && (
           <video
@@ -60,8 +60,8 @@ export function Contact() {
             tabIndex={-1}
             onCanPlay={() => setReady(true)}
           >
-            <source media="(max-aspect-ratio: 6 / 5)" src="/media/hero-loop-mobile.mp4" type="video/mp4" />
-            <source src="/media/hero-loop-desktop.mp4" type="video/mp4" />
+            <source media="(max-aspect-ratio: 6 / 5)" src="/media/contact-loop-mobile.mp4" type="video/mp4" />
+            <source src="/media/contact-loop-desktop.mp4" type="video/mp4" />
           </video>
         )}
         <span className="contact__shade" />

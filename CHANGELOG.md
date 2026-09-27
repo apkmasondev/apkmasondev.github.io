@@ -23,7 +23,8 @@ w historii i oznaczone tagami: `v1-bento`, `v2-monolith`, `v3-opus5`.
   obsługą `Esc` i przycisku „wstecz”,
 - sekcje „Proces” (etapy zapalane na linii odczytu) i „O mnie” (portret wideo,
   liczby z poprawną odmianą, warsztat),
-- kontakt z monolitem wideo, kopiowaniem adresu e-mail i rozwinięciem nazwy
+- kontakt z nowym filmem: bazaltowy monolit, z którego pęknięć spływa
+  rozżarzony kod (0 i 1); kopiowanie adresu e-mail i rozwinięcie nazwy
   APK: AI · Pixels · Kinetics,
 - grafiki projektów w trzech rozmiarach (480 / 800 / 1254 px) z `srcset`,
 - `npm run work-image` (grafika projektu w trzech rozmiarach) i rozszerzony
