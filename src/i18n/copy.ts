@@ -121,7 +121,7 @@ export const EMAIL = 'apkmason.dev@gmail.com';
 export const copy: Record<Language, Copy> = {
   pl: {
     nav: {
-      work: 'Prace',
+      work: 'Wybrane',
       archive: 'Archiwum',
       process: 'Proces',
       about: 'O mnie',
@@ -264,7 +264,7 @@ export const copy: Record<Language, Copy> = {
 
   en: {
     nav: {
-      work: 'Work',
+      work: 'Selected',
       archive: 'Archive',
       process: 'Process',
       about: 'About',
