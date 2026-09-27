@@ -273,6 +273,7 @@ export const projects: Project[] = [
     tags: ['Canvas 2D', 'Procedural', 'Arcade'],
     category: 'app',
     accent: '#8cccf0',
+    live: true,
   },
   {
     id: 'atelier',
@@ -338,6 +339,7 @@ export const projects: Project[] = [
     tags: ['Choice-driven', 'Interactive', 'Cinematic'],
     category: 'story',
     accent: '#ff845d',
+    live: true,
   },
   {
     id: 'veil',

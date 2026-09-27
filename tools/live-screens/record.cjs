@@ -20,7 +20,21 @@ const clickThenScroll = (label, px) => async (page, t) => {
   await scroll(px)(page, t - 1.5);
 };
 
+// Sesja ręczna: skrypt tylko nagrywa, a w oknie gra człowiek.
+const manual = async () => {};
+
 const PLANS = {
+  aeris: { url: 'https://apkmason.dev/aeris/', w: 1440, h: 900, warm: 20000, seconds: 45, nth: 2, act: manual },
+  brixcore: {
+    url: 'https://apkmason.dev/brixcore/', w: 1270, h: 900, warm: 3000, seconds: 30, quality: 80,
+    // Intro z klockami, potem wybór rdzenia FORGE (pomarańczowy, lewy przycisk).
+    act: async (page) => {
+      await page.waitForTimeout(9000);
+      await page.mouse.move(560, 470);
+      await page.waitForTimeout(600);
+      await page.mouse.click(560, 470);
+    },
+  },
   dual: { url: 'https://apkmason.dev/dual_choice/', w: 1370, h: 900, warm: 5000, seconds: 15, act: clickThenScroll('CONTINUE MUTED', 2000) },
   vault: { url: 'https://apkmason.dev/the_vault/', w: 1380, h: 900, warm: 5000, seconds: 14, act: clickThenScroll('ENTER MUTED', 1150) },
   watch: { url: 'https://apkmason.dev/time-v2/', w: 1494, h: 900, warm: 9000, seconds: 10, act: scroll(2200) },
@@ -61,11 +75,15 @@ const PLANS = {
   },
 };
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+// Każda operacja na przeglądarce przy zamykaniu ma limit — nic nie może zawiesić zapisu.
+const withTimeout = (promise, ms) => Promise.race([promise.catch(() => undefined), sleep(ms)]);
+
 (async () => {
   const [name, outDir] = process.argv.slice(2);
   const plan = PLANS[name];
-  fs.rmSync(outDir, { recursive: true, force: true });
   fs.mkdirSync(outDir, { recursive: true });
+  for (const file of fs.readdirSync(outDir)) fs.unlinkSync(path.join(outDir, file));
 
   const browser = await chromium.launch({
     // Zainstalowany Chrome (kodeki H.264, GPU); inną ścieżkę podaj w CHROME_PATH.
@@ -83,32 +101,50 @@ const PLANS = {
   const context = await browser.newContext({ viewport: { width: plan.w, height: plan.h }, deviceScaleFactor: 1 });
   const page = await context.newPage();
   await page.goto(plan.url, { waitUntil: 'load', timeout: 90000 });
-  await page.waitForTimeout(plan.warm);
 
+  // Odliczanie na pasku tytułu okna — widać je w oknie, ale nie ma go w nagraniu.
+  const setTitle = (text) => page.evaluate((t) => { document.title = t; }, text).catch(() => undefined);
+  for (let left = Math.round(plan.warm / 1000); left > 0; left--) {
+    await setTitle(`○ START ZA ${left} s — przygotuj się`);
+    await sleep(1000);
+  }
+
+  // Klatki trafiają na dysk od razu — w pamięci nie zbiera się nic.
+  const times = [];
+  let recording = true;
   const cdp = await context.newCDPSession(page);
-  const frames = [];
-  cdp.on('Page.screencastFrame', async ({ data, metadata, sessionId }) => {
-    frames.push({ data, t: metadata.timestamp });
-    try { await cdp.send('Page.screencastFrameAck', { sessionId }); } catch {}
+  cdp.on('Page.screencastFrame', ({ data, metadata, sessionId }) => {
+    if (recording) {
+      fs.writeFileSync(path.join(outDir, `f${String(times.length).padStart(5, '0')}.jpg`), Buffer.from(data, 'base64'));
+      times.push(metadata.timestamp);
+    }
+    cdp.send('Page.screencastFrameAck', { sessionId }).catch(() => undefined);
   });
-  await cdp.send('Page.startScreencast', { format: 'jpeg', quality: 92, maxWidth: plan.w, maxHeight: plan.h, everyNthFrame: plan.nth || 1 });
+  await cdp.send('Page.startScreencast', { format: 'jpeg', quality: plan.quality || 92, maxWidth: plan.w, maxHeight: plan.h, everyNthFrame: plan.nth || 1 });
+
   const started = Date.now();
-  await plan.act(page, plan.seconds);
-  const left = plan.seconds * 1000 - (Date.now() - started);
-  if (left > 0) await page.waitForTimeout(left);
-  await cdp.send('Page.stopScreencast');
-  await browser.close();
+  const actDone = withTimeout(plan.act(page, plan.seconds), plan.seconds * 1000);
+  while (Date.now() - started < plan.seconds * 1000) {
+    const left = Math.ceil((plan.seconds * 1000 - (Date.now() - started)) / 1000);
+    await setTitle(`● REC 0:${String(left).padStart(2, '0')}`);
+    await sleep(500);
+  }
+  recording = false;
+  await withTimeout(actDone, 1000);
+  await setTitle('■ KONIEC — dziękuję!');
+  await withTimeout(cdp.send('Page.stopScreencast'), 3000);
+  await sleep(800);
+  await withTimeout(browser.close(), 5000);
 
   // Klatki mają nieregularne odstępy — zapisujemy je z czasami trwania do demuxera concat.
   let list = '';
-  frames.forEach((frame, i) => {
-    const file = `f${String(i).padStart(5, '0')}.jpg`;
-    fs.writeFileSync(path.join(outDir, file), Buffer.from(frame.data, 'base64'));
-    const next = frames[i + 1]?.t ?? frame.t + 1 / 30;
-    list += `file '${file}'\nduration ${(next - frame.t).toFixed(4)}\n`;
+  times.forEach((t, i) => {
+    const next = times[i + 1] ?? t + 1 / 30;
+    list += `file 'f${String(i).padStart(5, '0')}.jpg'\nduration ${(next - t).toFixed(4)}\n`;
   });
-  list += `file 'f${String(frames.length - 1).padStart(5, '0')}.jpg'\n`;
+  if (times.length) list += `file 'f${String(times.length - 1).padStart(5, '0')}.jpg'\n`;
   fs.writeFileSync(path.join(outDir, 'list.txt'), list);
-  const span = frames.length ? frames.at(-1).t - frames[0].t : 0;
-  console.log(`${name}: ${frames.length} klatek w ${span.toFixed(1)} s (${(frames.length / span).toFixed(1)} fps)`);
+  const span = times.length ? times.at(-1) - times[0] : 0;
+  console.log(`${name}: ${times.length} klatek w ${span.toFixed(1)} s (${(times.length / span).toFixed(1)} fps)`);
+  process.exit(0);
 })();

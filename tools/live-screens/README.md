@@ -47,6 +47,8 @@ oraz Playwright uruchamianego z dowolnego katalogu roboczego (`npm i playwright`
 | veil            | 1404 × 900 | 0–8,6 s (scroll)    | 193, 314, 882, 565 (crf 33)     |
 | skincare        | 1404 × 900 | 0–8 s (scroll)      | 229, 282, 795, 510              |
 | the_vault       | 1380 × 900 | 2–14 s (klik „ENTER MUTED” + wolny scroll) | 232, 302, 813, 530 (crf 31) |
+| aeris           | 1440 × 900 | 12,5–22,5 s (**sesja ręczna** — gra człowiek; kadr 1440×872) | 229, 332, 803, 486 |
+| brixcore        | 1270 × 900 | 8–23 s (klik FORGE; kadr 1270×864, crf 33) | 266, 333, 724, 492 |
 | dual_choice     | 1370 × 900 | 2–13,5 s (klik „CONTINUE MUTED” + scroll) | **compose-quad.sh**: 193,311 1042,311 189,874 1054,874 |
 
 Nie nadają się (produkt lub kolaż wychodzi poza ekran albo laptop pod kątem):
@@ -54,15 +56,20 @@ KSZTAŁT SIŁY, CAN//FORM, FRUIT ENERGY, Pure Form, Pinball 2D, Sfera, Beyond th
 
 ## Budżet
 
-Na ścianie jest 12 żywych ekranów (~1,45 MB łącznie, 50–200 KB każdy). Filmy mają
+Na ścianie jest 14 żywych ekranów (~1,7 MB łącznie, 50–200 KB każdy). Filmy mają
 `preload="none"` i startują dopiero, gdy kafel wjedzie w jasną część ściany —
-na desktopie gra ich naraz ok. 7, na telefonie maksymalnie 4 (pierwsze z listy).
+na desktopie gra ich naraz ok. 8–9, na telefonie maksymalnie 4 (ściana telefonu
+zawsze zawiera co najmniej 4 żywe kafle, nawet gdy stoją daleko na liście).
 Więcej niż ~12 nie ma sensu: ściana zaczyna migotać, a ruch przestaje przyciągać wzrok.
 
 Najlepiej sprawdzają się mockupy z frontalnym laptopem (ekran jest prostokątem).
 Gdy ekran jest lekko trapezowy (laptop minimalnie pod kątem, jasny ekran na
 ciemnej ramce), użyj `compose-quad.sh` z czterema narożnikami — nagranie jest
 przekształcane perspektywicznie i przycinane maską o zaokrąglonych rogach.
+
+Sesja ręczna (`act: manual`): skrypt otwiera okno, odlicza start na pasku
+tytułu (`○ START ZA 10 s`, potem `● REC 0:30`) i tylko nagrywa — w oknie gra
+człowiek. Klatki trafiają na dysk na bieżąco, a nagranie kończy się samo.
 
 Gry 3D (WebGL) nagrywaj z `nth: 2` — pełne 60 kl./s przy długich nagraniach
 potrafi zablokować rekorder, a na kaflu i tak wystarcza 24 kl./s.
