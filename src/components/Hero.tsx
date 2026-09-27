@@ -12,11 +12,30 @@ import './hero.css';
  * Kolumny przesuwają się naprzemiennie w górę i w dół. Całość jest dekoracją
  * (aria-hidden, bez celów kliknięcia) — pełny katalog jest niżej, w archiwum.
  */
+/** Minimalna liczba żywych ekranów na ścianie, która mieści tylko część listy (telefon). */
+const MIN_LIVE_ON_WALL = 4;
+
+/**
+ * Kafle na ścianę: pierwsze `size` prac z listy. Jeśli żywych ekranów jest wśród
+ * nich za mało (nowe projekty dopisywane na górę listy spychają je dalej), ostatnie
+ * statyczne kafle ustępują miejsca żywym spoza tego zakresu.
+ */
+function wallPool(size: number) {
+  const pool = projects.slice(0, size);
+  const missing = MIN_LIVE_ON_WALL - pool.filter((project) => project.live).length;
+  if (missing <= 0) return pool;
+  const extras = projects.slice(size).filter((project) => project.live).slice(0, missing);
+  for (let index = pool.length - 1; index >= 0 && extras.length; index--) {
+    if (!pool[index].live) pool[index] = extras.shift()!;
+  }
+  return pool;
+}
+
 function buildColumns(count: number, perColumn: number) {
   const columns: Project[][] = Array.from({ length: count }, () => []);
   // Przeplot z przesunięciem, żeby sąsiednie kafle nie powtarzały sąsiadów z listy.
   // Krok musi być względnie pierwszy z liczbą kolumn — inaczej część kolumn zostałaby pusta.
-  const pool = projects.slice(0, count * perColumn);
+  const pool = wallPool(count * perColumn);
   const stride = count % 3 === 0 ? 1 : 3;
   pool.forEach((project, index) => {
     columns[(index * stride) % count].push(project);
