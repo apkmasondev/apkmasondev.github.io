@@ -1,0 +1,27 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 180;
+  pointer-events: none;
+}
+
+.cursor span {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  margin: -46px 0 0 -46px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  scale: 0;
+  transition: scale 0.5s var(--ease-out);
+}
+
+.cursor[data-visible='true'] span {
+  scale: 1;
+}

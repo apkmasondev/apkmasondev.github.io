@@ -1,7 +1,7 @@
 {
-  "name": "apkmason-portfolio-v2",
+  "name": "apkmason-portfolio",
   "private": true,
-  "version": "2.0.0",
+  "version": "4.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,7 @@
     "check": "npm run lint && npm run typecheck && npm run validate && npm run build",
     "preview": "vite preview",
     "validate": "node scripts/validate-projects.mjs",
-    "mockup": "node scripts/make-mockup.mjs"
+    "work-image": "node scripts/work-image.mjs"
   },
   "dependencies": {
     "react": "^19.2.6",
