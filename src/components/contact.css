@@ -69,7 +69,7 @@
   gap: clamp(12px, 1.5vw, 24px);
   max-width: 100%;
   font-family: var(--serif);
-  font-size: clamp(1.75rem, 5.6vw, 6.25rem);
+  font-size: clamp(1.6rem, 5vw, 5.6rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -98,10 +98,13 @@
   display: grid;
   flex-shrink: 0;
   place-items: center;
-  width: clamp(48px, 5vw, 88px);
+  width: clamp(44px, 4.5vw, 80px);
   aspect-ratio: 1;
   border: 1.5px solid var(--ember);
   border-radius: 50%;
+  /* Ciemne, rozmyte wnętrze: spływające cyfry z filmu nie prześwitują przez strzałkę. */
+  background: rgb(11 10 9 / 0.55);
+  backdrop-filter: blur(6px);
   color: var(--ember);
   isolation: isolate;
   overflow: hidden;
@@ -216,6 +219,15 @@
   color: var(--ink);
 }
 
+.contact__top svg {
+  color: var(--ember);
+  transition: transform 0.4s var(--ease-out);
+}
+
+.contact__top:hover svg {
+  transform: translateY(-3px);
+}
+
 @media (max-width: 1000px) {
   .contact__sig {
     order: -1;
@@ -243,7 +255,7 @@
   .contact__shade {
     background:
       linear-gradient(180deg, var(--bg) 0%, transparent 30%),
-      linear-gradient(0deg, #050505 0%, transparent 45%);
+      linear-gradient(0deg, #050505 0%, rgb(5 5 5 / 0.85) 24%, transparent 62%);
   }
 
   .contact__inner {
