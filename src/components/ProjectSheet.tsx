@@ -74,6 +74,11 @@ export function ProjectSheet({ id, onClose, onNavigate }: SheetProps) {
         aria-labelledby="sheet-title"
         tabIndex={-1}
       >
+        {/* Zamknij jest dzieckiem całego panelu: na telefonie (gdzie przewija się cały
+            arkusz) zostaje przyklejony do górnej krawędzi, na desktopie stoi w rogu. */}
+        <button className="icon-btn sheet__close" type="button" onClick={onClose} aria-label={text.sheet.close}>
+          <Close size={18} />
+        </button>
         <div className="sheet__media">
           <span className="sheet__glow" aria-hidden="true" />
           <a
@@ -103,9 +108,6 @@ export function ProjectSheet({ id, onClose, onNavigate }: SheetProps) {
             <p className="mono sheet__counter">
               <span>{String(index + 1).padStart(2, '0')}</span> / {projects.length}
             </p>
-            <button className="icon-btn" type="button" onClick={onClose} aria-label={text.sheet.close}>
-              <Close size={18} />
-            </button>
           </div>
 
           <div className="sheet__content" key={project.id}>

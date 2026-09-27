@@ -114,7 +114,14 @@
 .sheet__top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  min-height: 44px;
+}
+
+.sheet__close {
+  position: absolute;
+  top: 22px;
+  right: clamp(22px, 2.6vw, 36px);
+  z-index: 3;
 }
 
 .sheet__counter {
@@ -343,8 +350,19 @@
     position: absolute;
     top: 12px;
     left: 20px;
-    right: 12px;
     z-index: 2;
+  }
+
+  /* Arkusz przewija się w całości — przycisk przykleja się do jego górnej krawędzi.
+     Ujemny dolny margines: nie zajmuje miejsca w układzie, kadr jest pod nim. */
+  .sheet__close {
+    position: sticky;
+    top: 12px;
+    right: auto;
+    justify-self: end;
+    margin: 12px 12px -56px 0;
+    background: rgb(11 10 9 / 0.62);
+    backdrop-filter: blur(10px);
   }
 
   .sheet__content {
