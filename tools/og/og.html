@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400..600&family=Instrument+Serif:ital@0;1&display=block" />
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: #0b0a09; }
+  body { position: relative; font-family: Geist, sans-serif; color: #efe9df; }
+
+  .wall { position: absolute; inset: 0; perspective: 1600px; perspective-origin: 72% 40%; }
+  .plane {
+    position: absolute; top: 50%; left: 70%;
+    display: flex; gap: 12px;
+    transform: translate(-50%, -50%) rotateX(34deg) rotateZ(-19deg) scale(1.05);
+    transform-style: preserve-3d;
+  }
+  .col { display: flex; flex-direction: column; gap: 12px; }
+  .col:nth-child(odd) { transform: translateY(-90px); }
+  .tile {
+    width: 150px; height: 150px; border-radius: 10px; overflow: hidden; background: #151412;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / .06), 0 24px 48px -24px rgb(0 0 0 / .9);
+  }
+  .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .shade {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, #0b0a09 0%, rgb(11 10 9 / .94) 30%, rgb(11 10 9 / .55) 52%, rgb(11 10 9 / .08) 78%),
+      linear-gradient(0deg, #0b0a09 0%, transparent 22%),
+      linear-gradient(180deg, rgb(11 10 9 / .7) 0%, transparent 18%),
+      radial-gradient(55% 55% at 6% 96%, rgb(255 106 61 / .14), transparent 70%);
+  }
+  .grain {
+    position: absolute; inset: 0; opacity: .06; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .content { position: absolute; left: 64px; top: 58px; bottom: 52px; display: flex; flex-direction: column; }
+  .brand { display: flex; align-items: center; gap: 14px; font-size: 22px; font-weight: 600; letter-spacing: -.02em; }
+  .brand b { font-weight: 600; }
+  .brand span { color: rgb(239 233 223 / .5); font-weight: 400; }
+  .eyebrow {
+    margin-top: auto; display: flex; align-items: center; gap: 12px;
+    font-family: 'Geist Mono', monospace; font-size: 15px; letter-spacing: .12em; text-transform: uppercase;
+    color: rgb(239 233 223 / .66);
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #ff6a3d; box-shadow: 0 0 14px #ff6a3d; }
+  h1 {
+    margin-top: 22px; font-family: 'Instrument Serif', serif; font-weight: 400;
+    font-size: 88px; line-height: .92; letter-spacing: -.02em;
+  }
+  h1 em { color: #ff9a66; }
+  .foot {
+    margin-top: 34px; display: flex; align-items: center; gap: 22px;
+    font-family: 'Geist Mono', monospace; font-size: 15px; letter-spacing: .16em; text-transform: uppercase;
+    color: rgb(239 233 223 / .72);
+  }
+  .foot i { font-style: normal; color: #ff6a3d; }
+  .foot .sep { color: rgb(239 233 223 / .35); }
+  .foot .count { font-family: 'Instrument Serif', serif; font-size: 30px; letter-spacing: 0; color: #efe9df; text-transform: none; }
+</style>
+</head>
+<body>
+  <div class="wall"><div class="plane" id="plane"></div></div>
+  <div class="shade"></div>
+  <div class="grain"></div>
+
+  <div class="content">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="g" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#f43f5e"/><stop offset="50%" stop-color="#fb923c"/><stop offset="100%" stop-color="#e11d48"/>
+          </linearGradient>
+          <mask id="m"><rect width="100" height="100" fill="white"/>
+            <line x1="57.5" y1="0" x2="7.5" y2="100" stroke="black" stroke-width="2.5"/>
+            <line x1="0" y1="61" x2="59" y2="61" stroke="black" stroke-width="1.5"/>
+            <line x1="0" y1="65" x2="61" y2="65" stroke="black" stroke-width="1.5"/></mask>
+        </defs>
+        <path d="M47.5 16 52.5 16 85 81 71 81 64.5 68 35.5 68 29 81 19 81 19 73ZM50 39 40.5 58 59.5 58Z" fill="url(#g)" mask="url(#m)"/>
+      </svg>
+      <b>APKMason<span>.dev</span></b>
+    </div>
+
+    <p class="eyebrow"><span class="dot"></span>Krzysztof — APKMason.dev</p>
+    <h1>Pomysły przekuwam<br />w cyfrowe<br /><em>doświadczenia.</em></h1>
+    <p class="foot">
+      <span>apkmason.dev</span>
+      <span class="sep">/</span>
+      <span><i>A</i>I · <i>P</i>ixels · <i>K</i>inetics</span>
+    </p>
+  </div>
+
+<script>
+  // Ścieżka względna do grafik projektów (plik otwierany lokalnie z tools/og/).
+  const WORK = '../../public/work/';
+  const images = ["zamek","nexus_game","apkmason_watch","spectrum","pinball","tsukimi_pinball","dual_choice","artifact_seed","genesis","skincare","ostoja","aurora","prime","canform_v2","nature","ksztalt_sily","the_vault","aeris","atelier","btd","edm","void_drop","brixcore","veil","fruit","the_guide","iris","evo_phone","sfera","pcverse_v2","inside_the_internet","sand_to_silicon","pure_form","ascent_human_journey","ai_model","poznaj_ai","vibeshift","spacescale","allergen","budzet","top_seven","recai","scrolldebt","piatunio"];
+  // Te same kafle co na ścianie hero; jasne i charakterystyczne bliżej środka kadru.
+  const plane = document.getElementById('plane');
+  const cols = 7, rows = 6;
+  for (let c = 0; c < cols; c++) {
+    const col = document.createElement('div');
+    col.className = 'col';
+    for (let r = 0; r < rows; r++) {
+      const key = images[(c * 5 + r * 3) % images.length];
+      const tile = document.createElement('div');
+      tile.className = 'tile';
+      tile.innerHTML = `<img src="${WORK}${key}-480.webp">`;
+      col.appendChild(tile);
+    }
+    plane.appendChild(col);
+  }
+</script>
+</body>
+</html>

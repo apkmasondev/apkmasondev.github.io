@@ -254,8 +254,10 @@
   transition: color 0.3s;
 }
 
-.hero__cue:hover {
-  color: var(--ink);
+@media (hover: hover) {
+  .hero__cue:hover {
+    color: var(--ink);
+  }
 }
 
 .hero__cue-line {

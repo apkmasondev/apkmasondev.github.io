@@ -87,10 +87,12 @@
     color 0.4s;
 }
 
-.contact__email:hover .contact__email-text {
-  background-size:
-    100% 2px,
-    100% 1px;
+@media (hover: hover) {
+  .contact__email:hover .contact__email-text {
+    background-size:
+      100% 2px,
+      100% 1px;
+  }
 }
 
 .contact__email-icon {
@@ -129,20 +131,36 @@
   transition: transform 0.6s var(--ease-spring);
 }
 
-.contact__email:hover .contact__email-icon,
 .contact__email:focus-visible .contact__email-icon {
   color: var(--ember-ink);
   box-shadow: 0 0 40px -6px rgb(255 106 61 / 0.55);
 }
 
-.contact__email:hover .contact__email-icon::before,
+@media (hover: hover) {
+  .contact__email:hover .contact__email-icon {
+    color: var(--ember-ink);
+    box-shadow: 0 0 40px -6px rgb(255 106 61 / 0.55);
+  }
+}
+
 .contact__email:focus-visible .contact__email-icon::before {
   transform: scale(1);
 }
 
-.contact__email:hover .contact__email-icon svg,
+@media (hover: hover) {
+  .contact__email:hover .contact__email-icon::before {
+    transform: scale(1);
+  }
+}
+
 .contact__email:focus-visible .contact__email-icon svg {
   transform: translate(2px, -2px);
+}
+
+@media (hover: hover) {
+  .contact__email:hover .contact__email-icon svg {
+    transform: translate(2px, -2px);
+  }
 }
 
 .contact__actions {
@@ -214,9 +232,11 @@
   transition: color 0.3s;
 }
 
-.contact__lang:hover,
-.contact__top:hover {
-  color: var(--ink);
+@media (hover: hover) {
+  .contact__lang:hover,
+  .contact__top:hover {
+    color: var(--ink);
+  }
 }
 
 .contact__top svg {
@@ -224,8 +244,10 @@
   transition: transform 0.4s var(--ease-out);
 }
 
-.contact__top:hover svg {
-  transform: translateY(-3px);
+@media (hover: hover) {
+  .contact__top:hover svg {
+    transform: translateY(-3px);
+  }
 }
 
 @media (max-width: 1000px) {

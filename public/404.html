@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0a09" />
+    <meta name="robots" content="noindex" />
+    <title>Nie znaleziono — APKMason.dev</title>
+    <link rel="icon" type="image/svg+xml" href="/logo.svg?v=3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap"
+    />
+    <!--
+      Strona 404 serwowana przez GitHub Pages dla każdego nieistniejącego adresu,
+      także zagnieżdżonego — dlatego wszystkie ścieżki są bezwzględne (/…).
+      Samodzielny plik: bez Reacta i bez buildu, tylko kilka linijek skryptu języka.
+    -->
+    <style>
+      :root {
+        --bg: #0b0a09;
+        --ink: #efe9df;
+        --ink-2: rgb(239 233 223 / 0.72);
+        --ink-3: rgb(239 233 223 / 0.58);
+        --line: rgb(239 233 223 / 0.14);
+        --ember: #ff6a3d;
+        --ember-soft: #ff9a66;
+        --ember-ink: #1a0a04;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+        --gutter: clamp(20px, 4.2vw, 72px);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-tap-highlight-color: transparent;
+        background: var(--bg);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100svh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        /* Bez tła na body — tło daje html, a warstwa .media (z-index -1) musi być widoczna. */
+        color: var(--ink);
+        font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: clip;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--ember);
+        outline-offset: 3px;
+        border-radius: 6px;
+      }
+
+      /* Tło: ten sam monolit z rozżarzonym kodem co w kontakcie. */
+      .media {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+      }
+
+      .media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 72% 50%;
+        opacity: 0.9;
+      }
+
+      .media::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, var(--bg) 0%, rgb(11 10 9 / 0.92) 34%, rgb(11 10 9 / 0.35) 62%, transparent 85%),
+          linear-gradient(0deg, var(--bg) 0%, transparent 30%),
+          linear-gradient(180deg, rgb(11 10 9 / 0.8) 0%, transparent 25%);
+      }
+
+      header,
+      main,
+      footer {
+        padding-inline: var(--gutter);
+      }
+
+      header {
+        padding-block: 22px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 44px;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .brand b {
+        font-weight: 600;
+      }
+
+      .brand span {
+        color: var(--ink-3);
+        font-weight: 400;
+      }
+
+      main {
+        align-self: center;
+        padding-block: 40px 64px;
+      }
+
+      .code {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin: 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+      }
+
+      .code b {
+        color: var(--ember);
+        font-weight: 500;
+      }
+
+      .code i {
+        width: 40px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      h1 {
+        margin: 26px 0 0;
+        max-width: 12ch;
+        font-family: 'Instrument Serif', 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: clamp(3rem, 8vw, 8.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+      }
+
+      h1 em {
+        color: var(--ember-soft);
+      }
+
+      .lede {
+        margin: 28px 0 0;
+        max-width: 40ch;
+        font-size: clamp(1.02rem, 1.2vw, 1.2rem);
+        line-height: 1.6;
+        color: var(--ink-2);
+      }
+
+      .path {
+        display: inline-block;
+        max-width: 100%;
+        margin-top: 18px;
+        padding: 6px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 13px;
+        color: var(--ink-3);
+        overflow-wrap: anywhere;
+      }
+
+      .path:empty {
+        display: none;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 40px;
+      }
+
+      .btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0 24px;
+        border-radius: 999px;
+        font-size: 15px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        isolation: isolate;
+        transition: transform 0.4s var(--ease);
+      }
+
+      .btn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: inherit;
+        transform: translateY(101%);
+        transition: transform 0.5s var(--ease);
+      }
+
+      .btn--ember {
+        background: var(--ember);
+        color: var(--ember-ink);
+      }
+
+      .btn--ember::before {
+        background: var(--ink);
+      }
+
+      .btn--ghost {
+        border: 1px solid rgb(239 233 223 / 0.24);
+        backdrop-filter: blur(8px);
+      }
+
+      .btn--ghost::before {
+        background: rgb(239 233 223 / 0.08);
+      }
+
+      .btn svg {
+        transition: transform 0.45s var(--ease);
+      }
+
+      .btn:active {
+        transform: scale(0.98);
+      }
+
+      @media (hover: hover) {
+        .btn:hover::before {
+          transform: none;
+        }
+
+        .btn--ember:hover svg {
+          transform: translateX(-3px);
+        }
+
+        .btn--ghost:hover svg {
+          transform: translate(2px, -2px);
+        }
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding-block: 22px max(22px, env(safe-area-inset-bottom));
+        border-top: 1px solid var(--line);
+        font-family: 'Geist Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-2);
+      }
+
+      footer i {
+        font-style: normal;
+        color: var(--ember);
+      }
+
+      /* Wejście: treść wysuwa się delikatnie — bez ruchu przy ograniczonym ruchu. */
+      @media (prefers-reduced-motion: no-preference) {
+        main > * {
+          animation: rise 1s var(--ease) both;
+        }
+
+        main > :nth-child(2) {
+          animation-delay: 0.08s;
+        }
+
+        main > :nth-child(3) {
+          animation-delay: 0.16s;
+        }
+
+        main > :nth-child(n + 4) {
+          animation-delay: 0.24s;
+        }
+
+        @keyframes rise {
+          from {
+            opacity: 0;
+            transform: translateY(18px);
+          }
+        }
+      }
+
+      @media (max-width: 720px) {
+        .media img {
+          object-position: 62% 50%;
+          opacity: 0.55;
+        }
+
+        .media::after {
+          background:
+            linear-gradient(0deg, var(--bg) 0%, rgb(11 10 9 / 0.85) 55%, rgb(11 10 9 / 0.5) 100%);
+        }
+
+        .actions .btn {
+          flex: 1 1 auto;
+        }
+
+        footer span:first-child {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media" aria-hidden="true">
+      <picture>
+        <source media="(max-aspect-ratio: 6 / 5)" srcset="/media/contact-poster-mobile.jpg" />
+        <img src="/media/contact-poster.jpg" alt="" width="1280" height="720" />
+      </picture>
+    </div>
+
+    <header>
+      <a class="brand" href="/" aria-label="APKMason.dev">
+        <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#f43f5e" />
+              <stop offset="50%" stop-color="#fb923c" />
+              <stop offset="100%" stop-color="#e11d48" />
+            </linearGradient>
+            <mask id="m">
+              <rect width="100" height="100" fill="white" />
+              <line x1="57.5" y1="0" x2="7.5" y2="100" stroke="black" stroke-width="2.5" />
+              <line x1="0" y1="61" x2="59" y2="61" stroke="black" stroke-width="1.5" />
+              <line x1="0" y1="65" x2="61" y2="65" stroke="black" stroke-width="1.5" />
+            </mask>
+          </defs>
+          <path
+            d="M47.5 16 52.5 16 85 81 71 81 64.5 68 35.5 68 29 81 19 81 19 73ZM50 39 40.5 58 59.5 58Z"
+            fill="url(#g)"
+            mask="url(#m)"
+          />
+        </svg>
+        <b>APKMason<span>.dev</span></b>
+      </a>
+    </header>
+
+    <main>
+      <p class="code"><b>404</b><i></i><span data-t="code">Nie znaleziono</span></p>
+      <h1 data-t="title">Ta ścieżka <em>jeszcze</em> nie&nbsp;istnieje.</h1>
+      <p class="lede" data-t="lede">
+        Może to literówka w adresie, a może projekt dopiero powstaje. Wszystkie gotowe prace czekają w archiwum.
+      </p>
+      <p class="path" id="path"></p>
+      <div class="actions">
+        <a class="btn btn--ember" href="/">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4M10 6l-6 6 6 6" /></svg>
+          <span data-t="home">Strona główna</span>
+        </a>
+        <a class="btn btn--ghost" href="/#archive">
+          <span data-t="archive">Zobacz archiwum</span>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <span>© APKMason.dev</span>
+      <span><i>A</i>I · <i>P</i>ixels · <i>K</i>inetics</span>
+    </footer>
+
+    <script>
+      // Ścieżka, której szukał gość (tylko do wyświetlenia — tekst, nie HTML).
+      var shown = location.pathname;
+      try {
+        shown = decodeURI(shown);
+      } catch (error) {
+        /* uszkodzony adres — pokazujemy go w surowej postaci */
+      }
+      document.getElementById('path').textContent = shown.slice(0, 120);
+
+      // Język jak na stronie głównej: zapisany wybór, potem język przeglądarki.
+      var lang = 'pl';
+      try {
+        var stored = localStorage.getItem('apkmason-language');
+        lang = stored === 'en' || stored === 'pl' ? stored : navigator.language.toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en';
+      } catch (error) {
+        lang = navigator.language.toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en';
+      }
+
+      if (lang === 'en') {
+        var en = {
+          code: 'Not found',
+          title: 'This path doesn’t <em>exist</em> yet.',
+          lede: 'Maybe it’s a typo in the address, or maybe the project is still being built. Every finished piece is waiting in the archive.',
+          home: 'Home',
+          archive: 'See the archive',
+        };
+        document.documentElement.lang = 'en';
+        document.title = 'Not found — APKMason.dev';
+        document.querySelectorAll('[data-t]').forEach(function (node) {
+          node.innerHTML = en[node.getAttribute('data-t')];
+        });
+      }
+    </script>
+  </body>
+</html>

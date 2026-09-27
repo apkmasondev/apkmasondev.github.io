@@ -76,9 +76,14 @@
   transition: color 0.3s var(--ease-out);
 }
 
-.nav__links a:hover,
 .nav__links a[aria-current='location'] {
   color: var(--ink);
+}
+
+@media (hover: hover) {
+  .nav__links a:hover {
+    color: var(--ink);
+  }
 }
 
 .nav__links a[aria-current='location'] sup {
@@ -98,10 +103,16 @@
   transition: transform 0.5s var(--ease-out);
 }
 
-.nav__links a:hover::after,
 .nav__links a[aria-current='location']::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+@media (hover: hover) {
+  .nav__links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 
 .nav__end {
@@ -123,8 +134,10 @@
   color: var(--ink);
 }
 
-.nav__lang:hover {
-  color: var(--ink-2);
+@media (hover: hover) {
+  .nav__lang:hover {
+    color: var(--ink-2);
+  }
 }
 
 .nav__cta {
@@ -143,10 +156,12 @@
     border-color 0.35s var(--ease-out);
 }
 
-.nav__cta:hover {
-  background: var(--ember);
-  border-color: var(--ember);
-  color: var(--ember-ink);
+@media (hover: hover) {
+  .nav__cta:hover {
+    background: var(--ember);
+    border-color: var(--ember);
+    color: var(--ember-ink);
+  }
 }
 
 .nav__burger {
