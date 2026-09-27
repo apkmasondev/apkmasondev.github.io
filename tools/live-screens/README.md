@@ -38,7 +38,7 @@ oraz Playwright uruchamianego z dowolnego katalogu roboczego (`npm i playwright`
 | -------- | ------------- | -------- | --------------------------------------------- |
 | aurora   | 1466 × 1000   | 0–10 s   | 221, 345, 813, 555                             |
 | zamek    | 1484 × 900    | 0–11 s   | 179, 310, 894, 542                             |
-| spectrum | 1440 × 898    | 0–10 s   | 224, 327, 800, 499                             |
+| spectrum | 1440 × 898    | 0–10,8 s (**sesja ręczna** — scroll człowieka) | 224, 327, 800, 499 |
 | apkmason_watch  | 1494 × 900 | 2,5–12,5 s (scroll) | 122, 198, 1012, 610             |
 | ostoja          | 1438 × 900 | 0–12 s (samo)       | 163, 265, 928, 581 (crf 32)     |
 | nexus_game      | 1316 × 900 | 1–10 s (samo, nth 2) | 230, 298, 797, 545             |
