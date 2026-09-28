@@ -54,8 +54,8 @@ export const projects: Project[] = [
     id: 'maluch',
     title: 'Polski Fiat 126p — Studium małego samochodu',
     description: {
-      pl: 'Cyfrowa ekspozycja Malucha z 1976 roku. Poznaj nadwozie, wnętrze, silnik i podwozie w autorskim modelu 3D — otwieraj drzwi i pokrywy, włączaj światła i zmieniaj lakier.',
-      en: 'A digital exhibition of the 1976 Polski Fiat 126p. Explore the body, interior, engine and chassis of an original 3D model — open doors and covers, switch on the lights and change the paint.',
+      pl: 'Cyfrowa ekspozycja Malucha z 1976 roku. Poznaj nadwozie, wnętrze, silnik i podwozie w autorskim modelu 3D — otwieraj drzwi i pokrywy, włączaj światła, zmieniaj lakier i usiądź za kierownicą.',
+      en: 'A digital exhibition of the 1976 Polski Fiat 126p. Explore the body, interior, engine and chassis of an original 3D model — open doors and covers, switch on the lights, change the paint and take the driver’s seat.',
     },
     image: 'maluch',
     link: 'https://apkmason.dev/maluch/',
