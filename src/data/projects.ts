@@ -51,6 +51,20 @@ export const projects: Project[] = [
     live: true,
   },
   {
+    id: 'maluch',
+    title: 'Polski Fiat 126p — Studium małego samochodu',
+    description: {
+      pl: 'Cyfrowa ekspozycja Malucha z 1976 roku. Poznaj nadwozie, wnętrze, silnik i podwozie w autorskim modelu 3D — otwieraj drzwi i pokrywy, włączaj światła, zmieniaj lakier i usiądź za kierownicą.',
+      en: 'A digital exhibition of the 1976 Polski Fiat 126p. Explore the body, interior, engine and chassis of an original 3D model — open doors and covers, switch on the lights, change the paint and take the driver’s seat.',
+    },
+    image: 'maluch',
+    link: 'https://apkmason.dev/maluch/',
+    tags: ['Three.js', 'Blender', 'Interactive exhibit'],
+    category: 'spatial',
+    featured: true,
+    accent: '#ef7669',
+  },
+  {
     id: 'nexus-game',
     title: 'The Cipher Office — NEXUS',
     description: {
@@ -61,7 +75,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/nexus-game/',
     tags: ['Three.js', 'First-person', 'Puzzle game'],
     category: 'spatial',
-    featured: true,
     accent: '#c7aa6a',
     live: true,
   },
