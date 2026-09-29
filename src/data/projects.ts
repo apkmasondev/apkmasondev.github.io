@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'mechanika-kina',
+    title: 'Mechanika kina — Projektor 35 mm',
+    description: {
+      pl: 'Filmowe intro prowadzi do interaktywnej kabiny projekcyjnej 3D. Poznaj drogę taśmy i światła, obejrzyj mechanizm w zwolnieniu i rozłóż projektor 35 mm na części — w sześciu trybach ekspozycji.',
+      en: 'A cinematic intro leads into an interactive 3D projection booth. Trace the paths of film and light, watch the mechanism in slow motion and take apart a 35 mm projector across six exhibit modes.',
+    },
+    image: 'mechanika_kina',
+    link: 'https://apkmason.dev/mechanika-kina/',
+    tags: ['Three.js', 'Blender', 'Interactive exhibit'],
+    category: 'spatial',
+    accent: '#e4b777',
+  },
+  {
     id: 'pole',
     title: 'POLE / 01 — Laboratorium ruchu',
     description: {
