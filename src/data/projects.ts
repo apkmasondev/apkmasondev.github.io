@@ -188,6 +188,20 @@ export const projects: Project[] = [
     accent: '#38bdf8',
   },
   {
+    id: 'morn',
+    title: 'MORN — Kawa dla pierwszego światła',
+    description: {
+      pl: 'Kampania fikcyjnej marki kawy premium, opowiedziana w siedmiu rozdziałach jednego poranka. Wschód słońca otwiera film sterowany scrollem, a prezentacja opakowania prowadzi do interaktywnego rytuału parzenia i konfiguratora kawy.',
+      en: 'A campaign for a fictional premium coffee brand, told in seven chapters of a single morning. Sunrise opens a scroll-driven film, while the packaging showcase leads to an interactive brewing ritual and coffee configurator.',
+    },
+    image: 'morn',
+    link: 'https://apkmason.dev/morn/',
+    tags: ['Scroll-driven', 'Video scrubbing', 'Brand experience'],
+    category: 'product',
+    featured: true,
+    accent: '#dfb276',
+  },
+  {
     id: 'skincare',
     title: 'Skin Elixir',
     description: {
@@ -198,7 +212,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/skincare_demo/',
     tags: ['Scroll-driven', 'Luxury UI', 'Motion'],
     category: 'product',
-    featured: true,
     accent: '#e8bfb3',
     live: true,
   },
