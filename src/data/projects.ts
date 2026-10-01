@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'ball',
+    title: 'Czerwona kula',
+    description: {
+      pl: 'Film i interaktywna gra 3D splatają się w jedną podróż. Prowadź czerwoną kulę przez podziemną katedrę, budź pięć rezonatorów światłem i dźwiękiem, a stylem gry kształtuj jedno z dwóch zakończeń.',
+      en: 'Film and an interactive 3D game intertwine in a single journey. Guide a red ball through an underground cathedral, awaken five resonators with light and sound, and shape one of two endings through your style of play.',
+    },
+    image: 'ball',
+    link: 'https://apkmason.dev/ball/',
+    tags: ['Three.js', 'Blender', 'Adaptive audio'],
+    category: 'spatial',
+    accent: '#ef7669',
+  },
+  {
     id: 'mechanika-kina',
     title: 'Mechanika kina — Projektor 35 mm',
     description: {
