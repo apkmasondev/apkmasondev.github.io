@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'super-clipboard',
+    title: 'Super Clipboard',
+    description: {
+      pl: 'Lokalny menedżer schowka dla Windows 11: historia tekstów i obrazów, biblioteka snippetów z szablonami oraz szybkie wklejanie pod Ctrl+Shift+V. Wyszukiwanie, transformacje tekstu i szyfrowane dane — bez konta i chmury.',
+      en: 'A local clipboard manager for Windows 11: text and image history, a snippet library with templates, and quick paste via Ctrl+Shift+V. Search, text transformations and encrypted storage — without an account or cloud service.',
+    },
+    image: 'super_clipboard',
+    link: 'https://apkmason.dev/clipboard-website/',
+    tags: ['Tauri', 'React', 'Rust / SQLite'],
+    category: 'app',
+    accent: '#88d5c3',
+  },
+  {
     id: 'ball',
     title: 'Czerwona kula',
     description: {
