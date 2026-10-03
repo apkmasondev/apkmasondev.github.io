@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'odruch',
+    title: 'ODRUCH',
+    description: {
+      pl: 'Platformówka 2D z 21 poziomami w trzech rozdziałach. Prowadź koralowego bohatera przez papierowy świat, w którym skok, nawrót i bezruch zmieniają reguły trasy. Precyzyjne sterowanie, szybkie powtórki i duch własnego rekordu zachęcają do jeszcze jednej próby.',
+      en: 'A 2D platformer with 21 levels across three chapters. Guide a coral hero through a paper world where jumping, turning back and standing still change the rules of the route. Precise controls, quick restarts and a ghost of your personal best invite you to try just once more.',
+    },
+    image: 'odruch',
+    link: 'https://apkmason.dev/odruch/',
+    tags: ['Canvas 2D', 'Platformer', 'Web Audio'],
+    category: 'app',
+    accent: '#ef8769',
+  },
+  {
     id: 'winda',
     title: 'The Elevator',
     description: {
