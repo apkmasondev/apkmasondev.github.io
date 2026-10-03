@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'winda',
+    title: 'The Elevator',
+    description: {
+      pl: 'Atmosferyczna podróż 3D z perspektywy pierwszej osoby. Zjedź windą do monumentalnej hali, przemierzaj wiszące schody i odkrywaj miejsca spoza planów budynku. Wpisy konserwatora odsłaniają historię, a zapis postępu pozwala wrócić do odkrytych pięter. Gra na komputer z klawiaturą i myszą.',
+      en: 'An atmospheric first-person 3D journey. Descend by elevator into a monumental hall, traverse suspended stairways and discover places absent from the building plans. A caretaker’s entries reveal the story, while saved progress lets you return to unlocked floors. Played on a computer with a keyboard and mouse.',
+    },
+    image: 'winda',
+    link: 'https://apkmason.dev/winda/',
+    tags: ['Three.js', 'First-person', 'Atmospheric exploration'],
+    category: 'spatial',
+    accent: '#b6c6d6',
+  },
+  {
     id: 'super-clipboard',
     title: 'Super Clipboard',
     description: {
@@ -169,7 +182,7 @@ export const projects: Project[] = [
     image: 'tsukimi_pinball',
     link: 'https://apkmason.dev/pinball-3d/',
     tags: ['Three.js', 'Three tables', 'Custom physics'],
-    category: 'app',
+    category: 'spatial',
     accent: '#e0a645',
     live: true,
   },
