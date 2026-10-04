@@ -307,7 +307,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/prime/',
     tags: ['Scroll-driven', 'Mathematical story', 'Video scrubbing'],
     category: 'story',
-    featured: true,
     accent: '#d7b26d',
     live: true,
   },
@@ -348,7 +347,6 @@ export const projects: Project[] = [
     link: 'https://apkmason.dev/ksztalt-sily/',
     tags: ['Interactive essay', 'Physics', 'Video-led'],
     category: 'story',
-    featured: true,
     accent: '#c7b8ff',
   },
   {
