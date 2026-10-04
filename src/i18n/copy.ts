@@ -230,7 +230,7 @@ export const copy: Record<Language, Copy> = {
       ],
       stats: [
         ['Praca w archiwum', 'Prace w archiwum', 'Prac w archiwum'],
-        ['Scroll story', 'Scroll stories', 'Scroll stories'],
+        ['Scroll / Story', 'Scroll / Story', 'Scroll / Story'],
         ['Świat 3D', 'Światy 3D', 'Światów 3D'],
         ['Aplikacja', 'Aplikacje', 'Aplikacji'],
       ],
@@ -373,7 +373,7 @@ export const copy: Record<Language, Copy> = {
       ],
       stats: [
         ['Work in the archive', 'Works in the archive', 'Works in the archive'],
-        ['Scroll story', 'Scroll stories', 'Scroll stories'],
+        ['Scroll / Story', 'Scroll / Story', 'Scroll / Story'],
         ['3D world', '3D worlds', '3D worlds'],
         ['App', 'Apps', 'Apps'],
       ],

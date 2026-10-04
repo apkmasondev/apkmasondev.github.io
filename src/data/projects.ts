@@ -752,7 +752,8 @@ export const featuredProjects = projects.filter((project) => project.featured);
 
 export const stats = {
   total: projects.length,
-  stories: projects.filter((project) => project.tags.includes('Scroll-driven')).length,
+  // Liczone z kategorii — tak jak filtry archiwum, żeby liczby w „O mnie” dało się sprawdzić filtrem.
+  stories: projects.filter((project) => project.category === 'story').length,
   spatial: projects.filter((project) => project.category === 'spatial').length,
   apps: projects.filter((project) => project.category === 'app').length,
 };
