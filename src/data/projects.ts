@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'tempsheet',
+    title: 'TempSheet',
+    description: {
+      pl: 'Lekki, tymczasowy arkusz do szybkich obliczeń w przeglądarce. Formuły, formatowanie, konwersje jednostek i eksport CSV/XLSX — bez konta i automatycznego zapisu. Dane pozostają w pamięci karty, a pracę można zachować w edytowalnym pliku TempSheet.',
+      en: 'A lightweight, temporary spreadsheet for quick calculations in your browser. Formulas, formatting, unit conversions and CSV/XLSX export — without an account or automatic saving. Data stays in the tab’s memory, and your work can be kept in an editable TempSheet file.',
+    },
+    image: 'tempsheet',
+    link: 'https://apkmason.dev/tempsheet/',
+    tags: ['React', 'TypeScript', 'Formula engine'],
+    category: 'app',
+    accent: '#88c9aa',
+  },
+  {
     id: 'odruch',
     title: 'ODRUCH',
     description: {
