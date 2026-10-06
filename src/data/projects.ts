@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'whistletype',
+    title: 'WhistleType',
+    description: {
+      pl: 'Lokalne dyktowanie dla Windows: przytrzymaj klawisz, mów i puść, aby wstawić tekst pod kursorem. Whistle na CPU lub Whisper z opcjonalnym przyspieszeniem NVIDIA, własny słownik i przywracanie schowka. Po pobraniu modeli działa offline, bez konta i chmurowego API mowy.',
+      en: 'Local dictation for Windows: hold a key, speak and release to insert text at the cursor. Whistle on the CPU or Whisper with optional NVIDIA acceleration, custom vocabulary and clipboard restoration. Works offline after downloading models, without an account or a cloud speech API.',
+    },
+    image: 'whistletype',
+    link: 'https://apkmason.dev/whistle-type-site/',
+    tags: ['Windows', 'Rust / Win32', 'Whistle / Whisper'],
+    category: 'app',
+    accent: '#8bacff',
+  },
+  {
     id: 'tempsheet',
     title: 'TempSheet',
     description: {
@@ -752,7 +765,7 @@ export function imageSrcSet(project: Project) {
 
 export function platformOf(project: Project): Platform {
   if (project.tags.includes('Android')) return 'android';
-  if (project.tags.includes('Tauri')) return 'desktop';
+  if (project.tags.includes('Tauri') || project.tags.includes('Windows')) return 'desktop';
   return 'web';
 }
 
