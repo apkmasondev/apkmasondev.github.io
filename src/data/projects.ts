@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'eclipse',
+    title: 'ECLIPSE — Warcaby 3D',
+    description: {
+      pl: 'Warcaby 3D z autorskim wariantem Eclipse: para portali zmienia drogi pionów i przenosi się co cztery rundy. Zagraj z komputerem na trzech poziomach trudności lub z drugą osobą przy jednym urządzeniu. Obracana plansza, podpowiedzi i cofanie ruchów.',
+      en: '3D checkers with the original Eclipse variant: a pair of portals changes the paths of pieces and relocates every four rounds. Play against the computer at three difficulty levels or share one device with a friend. Rotate the board, request hints and undo moves.',
+    },
+    image: 'eclipse',
+    link: 'https://apkmason.dev/eclipse/',
+    tags: ['Three.js', 'Minimax AI', 'Local multiplayer'],
+    category: 'spatial',
+    accent: '#d0bd86',
+  },
+  {
     id: 'whistletype',
     title: 'WhistleType',
     description: {
@@ -651,19 +664,6 @@ export const projects: Project[] = [
     tags: ['Interactive guide', 'AI workflow', 'Product thinking'],
     category: 'experiment',
     accent: '#7c91ff',
-  },
-  {
-    id: 'space-scale',
-    title: 'Space Scale',
-    description: {
-      pl: 'Interaktywna podróż przez 42 rzędy wielkości — od protonu po obserwowalny Wszechświat, z 28 modelami 3D.',
-      en: 'An interactive journey across 42 orders of magnitude — from a proton to the observable Universe, with 28 3D models.',
-    },
-    image: 'spacescale',
-    link: 'https://space-scale-explorer.krzychu1988.chatgpt.site/',
-    tags: ['Three.js', 'WebGL', 'PWA'],
-    category: 'spatial',
-    accent: '#4fa7ff',
   },
   {
     id: 'allergen-guard',
