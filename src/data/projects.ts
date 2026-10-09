@@ -26,8 +26,8 @@ export const projects: Project[] = [
     id: 'alphaforge',
     title: 'AlphaForge',
     description: {
-      pl: 'Lokalny zestaw narzędzi graficznych dla Windows: usuwanie tła AI z przezroczystością, ręczne poprawki wycięć, powiększanie 2×/4× i eksport PNG, JPG, WebP oraz AVIF. Łącz operacje w zapisane zestawy i przetwarzaj całe foldery — bez wysyłania zdjęć do chmury.',
-      en: 'A local image toolkit for Windows: AI background removal with transparency, manual cutout refinement, 2×/4× upscaling and PNG, JPG, WebP or AVIF export. Combine operations into saved presets and process entire folders without uploading your photos to the cloud.',
+      pl: 'Od zdjęcia do gotowej grafiki — lokalnie na Windows. Usuwaj tło AI, dodawaj nowe tła, rozmycie uwzględniające głębię, cienie i obrysy naklejek. Poprawiaj wycięcia, powiększaj obrazy 2×/4× i eksportuj do PNG, JPG, WebP lub AVIF. Zapisuj zestawy operacji i przetwarzaj całe foldery bez wysyłania zdjęć do chmury.',
+      en: 'From photo to finished graphic, locally on Windows. Remove backgrounds with AI, add new backdrops, depth-aware blur, shadows and sticker outlines. Refine cutouts, upscale 2×/4× and export to PNG, JPG, WebP or AVIF. Save processing presets and batch-process entire folders without uploading photos to the cloud.',
     },
     image: 'alphaforge',
     link: 'https://apkmason.dev/alphaforge-site/',
