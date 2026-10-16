@@ -23,6 +23,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'level-evil',
+    title: 'LEVEL EVIL',
+    description: {
+      pl: 'Platformówka 2D, w której poziom jest przeciwnikiem: podłogi się zapadają, drzwi uciekają, a grawitacja zmienia reguły gry. 24 poziomy w czterech światach, szybkie powtórki i Oko, które komentuje każdą porażkę, by w finale stanąć do walki. Klawiatura, gamepad i dotyk, z zapisem postępu.',
+      en: 'A 2D platformer where the level is your enemy: floors collapse, doors run away and gravity changes the rules. 24 levels across four worlds, quick retries and an Eye that mocks every failure before facing you in the finale. Keyboard, gamepad and touch controls, with saved progress.',
+    },
+    image: 'level_evil',
+    link: 'https://apkmason.dev/level-evil/',
+    tags: ['Canvas 2D', 'Platformer', 'Web Audio'],
+    category: 'app',
+    accent: '#f28b70',
+  },
+  {
     id: 'alphaforge',
     title: 'AlphaForge',
     description: {
