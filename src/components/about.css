@@ -364,6 +364,25 @@
   color: var(--ink-3);
 }
 
+/* Wąskie laptopy (dwie kolumny sekcji, ale wąska kolumna treści): odrobinę mniejszy
+   tekst warsztatu, żeby żadna pozycja nie łamała się na dwie linie. */
+@media (min-width: 961px) and (max-width: 1180px) {
+  .about__craft li {
+    font-size: 15px;
+  }
+
+  .about__craft ul {
+    column-gap: 24px;
+  }
+}
+
+/* Najwęższe laptopy: kolumna treści jest zbyt wąska na dwie kolumny warsztatu. */
+@media (min-width: 961px) and (max-width: 1020px) {
+  .about__craft ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 960px) {
   .about__grid {
     grid-template-columns: minmax(0, 1fr);
