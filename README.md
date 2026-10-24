@@ -1,6 +1,6 @@
 # APKMason.dev — portfolio
 
-Portfolio Krzysztofa / APKMason.dev: interaktywne strony, aplikacje i multimedia
+Portfolio APKMason.dev: interaktywne strony, aplikacje i multimedia
 na styku kodu, motion designu i AI. Strona działa pod adresem
 [apkmason.dev](https://apkmason.dev/).
 
@@ -24,8 +24,8 @@ szczelinami.
 | 01 | Prace    | wybrane prace jako kinowe rozdziały nakładające się przy przewijaniu       |
 | 02 | Archiwum | pełny katalog: kategorie, wyszukiwarka (`/`), lista z podglądem lub siatka |
 | 03 | Proces   | cztery etapy zapalające się na linii odczytu                               |
-| 04 | O mnie   | portret wideo, liczby, warsztat                                            |
-| 05 | Kontakt  | e-mail z kopiowaniem, GitHub, rozwinięcie APK: AI · Pixels · Kinetics      |
+| 04 | O mnie   | maskotka APKMason, kanał Simple as AI, liczby, warsztat                    |
+| 05 | Kontakt  | e-mail z kopiowaniem, GitHub, YouTube, rozwinięcie APK: AI · Pixels · Kinetics |
 
 Każdy projekt ma panel szczegółów z własnym adresem, np. `/#/p/ostoja`
 (przełączanie `←` `→`, zamykanie `Esc` lub przyciskiem „wstecz”).
@@ -78,7 +78,7 @@ Gotowy plik `public/work/<klucz>-live-480.mp4` + `live: true` przy projekcie.
 - `src/lib/route.ts` — adresy panelu projektu,
 - `src/lib/text.ts` — tytuły, wyszukiwanie bez polskich znaków, odmiana liczebników,
 - `public/work/` — grafiki projektów (480 / 800 / 1254 px) i żywe ekrany,
-- `public/media/` — filmy i portret,
+- `public/media/` — filmy i maskotka APKMason (wycięta z tła, WebP z przezroczystością),
 - `scripts/` — walidator danych i generator grafik,
 - `tools/live-screens/` — nagrywanie żywych ekranów (narzędzie robocze, poza buildem).
 

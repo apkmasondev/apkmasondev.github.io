@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
-import { EMAIL } from '../i18n/copy';
+import { EMAIL, YOUTUBE_URL } from '../i18n/copy';
 import { useCopy, useLanguage } from '../i18n/language';
 import { useAllowsHeavyMedia, useInView, useReveal } from '../lib/hooks';
-import { ArrowUp, ArrowUpRight, Check, Copy, Github, Kicker, Lines, Mark } from './ui';
+import { ArrowUp, ArrowUpRight, Check, Copy, Github, Kicker, Lines, Mark, Youtube } from './ui';
 import './contact.css';
 
 export function Contact() {
@@ -89,6 +89,11 @@ export function Contact() {
             <a className="btn btn--ghost" href={text.githubUrl} target="_blank" rel="noopener">
               <Github size={16} />
               {text.github}
+              <ArrowUpRight size={15} />
+            </a>
+            <a className="btn btn--ghost" href={YOUTUBE_URL} target="_blank" rel="noopener">
+              <Youtube size={16} />
+              {text.youtube}
               <ArrowUpRight size={15} />
             </a>
           </div>

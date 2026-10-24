@@ -51,10 +51,13 @@ export function Nav({ active }: { active: string }) {
   }, [open]);
 
   const langButton = (
-    <button className="nav__lang mono" type="button" onClick={toggle} aria-label={text.language}>
+    // Nazwa przycisku zaczyna się od widocznego „PL / EN” (sterowanie głosem: „kliknij PL / EN”),
+    // a pełne wyjaśnienie dla czytników ekranu jest dopisane jako ukryty tekst.
+    <button className="nav__lang mono" type="button" onClick={toggle}>
       <span data-active={lang === 'pl'}>PL</span>
-      <span aria-hidden="true">/</span>
+      <span>/</span>
       <span data-active={lang === 'en'}>EN</span>
+      <span className="sr-only"> — {text.language}</span>
     </button>
   );
 

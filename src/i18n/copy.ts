@@ -63,7 +63,8 @@ interface Copy {
     reset: string;
     featured: string;
     listLabel: string;
-    open: (title: string) => string;
+    /** Ukryty początek nazwy wiersza dla czytników; reszta nazwy to widoczny tekst. */
+    openPrefix: string;
     cursor: string;
     columns: [string, string, string, string];
   };
@@ -93,8 +94,18 @@ interface Copy {
     craft: string;
     capabilities: string[];
     stats: [PluralForms, PluralForms, PluralForms, PluralForms];
-    caption: [string, string];
-    portraitAlt: string;
+    mascot: {
+      alt: string;
+      hello: string;
+      label: string;
+    };
+    channel: {
+      label: string;
+      name: string;
+      handle: string;
+      cta: string;
+      newTab: string;
+    };
   };
   contact: {
     kicker: string;
@@ -105,6 +116,7 @@ interface Copy {
     copied: string;
     github: string;
     githubUrl: string;
+    youtube: string;
     top: string;
     legal: string;
     /** Rozwinięcie skrótu APK: pierwsza litera każdego słowa jest wyróżniona. */
@@ -117,6 +129,7 @@ interface Copy {
 }
 
 export const EMAIL = 'apkmason.dev@gmail.com';
+export const YOUTUBE_URL = 'https://www.youtube.com/@SimpleasAI';
 
 export const copy: Record<Language, Copy> = {
   pl: {
@@ -134,7 +147,7 @@ export const copy: Record<Language, Copy> = {
       home: 'APKMason.dev — strona główna',
     },
     hero: {
-      eyebrow: 'Krzysztof — APKMason.dev',
+      eyebrow: 'APKMason.dev',
       role: 'Niezależny twórca cyfrowy',
       title: ['Pomysły przekuwam', 'w cyfrowe', '*doświadczenia.*'],
       lede: 'Interaktywne strony, aplikacje i multimedia na styku kodu, motion designu i AI.',
@@ -169,7 +182,7 @@ export const copy: Record<Language, Copy> = {
       reset: 'Pokaż wszystko',
       featured: 'Wybrane',
       listLabel: 'Archiwum projektów',
-      open: (title) => `Szczegóły projektu ${title}`,
+      openPrefix: 'Szczegóły projektu:',
       cursor: 'Podgląd',
       columns: ['Nr', 'Projekt', 'Kategoria', 'Platforma'],
     },
@@ -234,8 +247,18 @@ export const copy: Record<Language, Copy> = {
         ['Świat 3D', 'Światy 3D', 'Światów 3D'],
         ['Aplikacja', 'Aplikacje', 'Aplikacji'],
       ],
-      caption: ['Krzysztof', 'APKMason.dev'],
-      portraitAlt: 'Portret: Krzysztof — APKMason.dev',
+      mascot: {
+        alt: 'APKMason — maskotka marki: uśmiechnięty biało-czarny robot z czerwonymi światłami, machający na powitanie',
+        hello: 'Cześć, tu APKMason!',
+        label: 'Maskotka · prowadzący kanału',
+      },
+      channel: {
+        label: 'Kanał na YouTube',
+        name: 'Simple as AI',
+        handle: '@SimpleasAI',
+        cta: 'Oglądaj',
+        newTab: '(otwiera się w nowej karcie)',
+      },
     },
     contact: {
       kicker: 'Kontakt',
@@ -246,6 +269,7 @@ export const copy: Record<Language, Copy> = {
       copied: 'Skopiowano',
       github: 'GitHub',
       githubUrl: 'https://github.com/apkmasondev',
+      youtube: 'YouTube',
       top: 'Do góry',
       legal: 'Wszelkie prawa zastrzeżone.',
       signature: ['AI', 'Pixels', 'Kinetics'],
@@ -277,7 +301,7 @@ export const copy: Record<Language, Copy> = {
       home: 'APKMason.dev — home',
     },
     hero: {
-      eyebrow: 'Krzysztof — APKMason.dev',
+      eyebrow: 'APKMason.dev',
       role: 'Independent digital creator',
       title: ['I forge ideas', 'into digital', '*experiences.*'],
       lede: 'Interactive websites, applications and multimedia at the intersection of code, motion design and AI.',
@@ -312,7 +336,7 @@ export const copy: Record<Language, Copy> = {
       reset: 'Show everything',
       featured: 'Selected',
       listLabel: 'Project archive',
-      open: (title) => `Details for ${title}`,
+      openPrefix: 'Project details:',
       cursor: 'Preview',
       columns: ['No.', 'Project', 'Category', 'Platform'],
     },
@@ -377,8 +401,18 @@ export const copy: Record<Language, Copy> = {
         ['3D world', '3D worlds', '3D worlds'],
         ['App', 'Apps', 'Apps'],
       ],
-      caption: ['Krzysztof', 'APKMason.dev'],
-      portraitAlt: 'Portrait: Krzysztof — APKMason.dev',
+      mascot: {
+        alt: 'APKMason — the brand mascot: a smiling white-and-black robot with red lights, waving hello',
+        hello: 'Hi, APKMason here!',
+        label: 'Mascot · channel host',
+      },
+      channel: {
+        label: 'YouTube channel',
+        name: 'Simple as AI',
+        handle: '@SimpleasAI',
+        cta: 'Watch',
+        newTab: '(opens in a new tab)',
+      },
     },
     contact: {
       kicker: 'Contact',
@@ -389,6 +423,7 @@ export const copy: Record<Language, Copy> = {
       copied: 'Copied',
       github: 'GitHub',
       githubUrl: 'https://github.com/apkmasondev',
+      youtube: 'YouTube',
       top: 'Back to top',
       legal: 'All rights reserved.',
       signature: ['AI', 'Pixels', 'Kinetics'],
@@ -410,13 +445,13 @@ export const META: Record<Language, { title: string; description: string; locale
   pl: {
     title: 'APKMason.dev — interaktywne doświadczenia, aplikacje, AI',
     description:
-      'Portfolio Krzysztofa / APKMason.dev — interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI.',
+      'Portfolio APKMason.dev — interaktywne strony, aplikacje i cyfrowe doświadczenia tworzone z kodu, motion designu i AI.',
     locale: 'pl_PL',
   },
   en: {
     title: 'APKMason.dev — interactive experiences, apps, AI',
     description:
-      'Krzysztof’s portfolio / APKMason.dev — interactive websites, applications and digital experiences crafted with code, motion design and AI.',
+      'APKMason.dev portfolio — interactive websites, applications and digital experiences crafted with code, motion design and AI.',
     locale: 'en_US',
   },
 };

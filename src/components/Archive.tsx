@@ -316,9 +316,9 @@ export function Archive({ onOpen }: { onOpen: (id: string) => void }) {
                     onClick={(event) => open(event, project.id)}
                     onPointerEnter={() => setHovered(project.id)}
                     onFocus={() => setHovered(project.id)}
-                    aria-label={text.archive.open(project.title)}
                     style={{ '--accent': project.accent } as CSSProperties}
                   >
+                    <span className="sr-only">{text.archive.openPrefix} </span>
                     <span className="row__no mono">{numberOf.get(project.id)}</span>
                     <span className="row__thumb shot" aria-hidden="true">
                       <img src={imageSrc(project, 480)} alt="" width="480" height="480" loading="lazy" decoding="async" />
@@ -347,10 +347,10 @@ export function Archive({ onOpen }: { onOpen: (id: string) => void }) {
                   className="card"
                   href={projectHref(project.id)}
                   onClick={(event) => open(event, project.id)}
-                  aria-label={text.archive.open(project.title)}
                   style={{ '--accent': project.accent } as CSSProperties}
                   data-cursor={text.archive.cursor}
                 >
+                  <span className="sr-only">{text.archive.openPrefix} </span>
                   <span className="card__media shot">
                     <img
                       src={imageSrc(project, 800)}

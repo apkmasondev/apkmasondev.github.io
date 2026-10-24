@@ -67,29 +67,66 @@
         border-radius: 6px;
       }
 
-      /* Tło: ten sam monolit z rozżarzonym kodem co w kontakcie. */
+      /* Tło: maskotka APKMason rozkłada ręce — „tej strony tu nie ma” — i unosi się nad czerwoną poświatą. */
       .media {
         position: fixed;
         inset: 0;
         z-index: -1;
+        overflow: hidden;
+        background:
+          radial-gradient(40% 55% at 74% 46%, rgb(255 70 60 / 0.16), transparent 70%),
+          var(--bg);
       }
 
-      .media img {
+      .robot {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        width: min(34vw, 480px);
+        transform: translateY(-54%);
+      }
+
+      .robot img {
+        display: block;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 72% 50%;
-        opacity: 0.9;
+        height: auto;
+        filter: drop-shadow(0 30px 40px rgb(0 0 0 / 0.6));
       }
 
-      .media::after {
+      .robot::after {
         content: '';
         position: absolute;
-        inset: 0;
-        background:
-          linear-gradient(90deg, var(--bg) 0%, rgb(11 10 9 / 0.92) 34%, rgb(11 10 9 / 0.35) 62%, transparent 85%),
-          linear-gradient(0deg, var(--bg) 0%, transparent 30%),
-          linear-gradient(180deg, rgb(11 10 9 / 0.8) 0%, transparent 25%);
+        left: 50%;
+        bottom: -9%;
+        width: 52%;
+        height: 9%;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, rgb(255 60 50 / 0.7), rgb(255 60 50 / 0.15) 55%, transparent);
+        transform: translateX(-50%);
+        filter: blur(6px);
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .robot img {
+          animation: float 6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+
+        .robot::after {
+          animation: breathe 6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+
+        @keyframes float {
+          50% {
+            transform: translateY(-16px);
+          }
+        }
+
+        @keyframes breathe {
+          50% {
+            opacity: 0.6;
+            transform: translateX(-50%) scale(0.82);
+          }
+        }
       }
 
       header,
@@ -306,17 +343,29 @@
         }
       }
 
-      @media (max-width: 720px) {
-        .media img {
-          object-position: 62% 50%;
-          opacity: 0.55;
-        }
-
-        .media::after {
+      /* Wąski ekran: robot nad tekstem, mniejszy i przygaszony, żeby nie walczył z nagłówkiem. */
+      @media (max-width: 900px) {
+        .media {
           background:
-            linear-gradient(0deg, var(--bg) 0%, rgb(11 10 9 / 0.85) 55%, rgb(11 10 9 / 0.5) 100%);
+            radial-gradient(70% 35% at 50% 18%, rgb(255 70 60 / 0.16), transparent 70%),
+            var(--bg);
         }
 
+        .robot {
+          right: auto;
+          left: 50%;
+          top: 76px;
+          width: min(46vw, 260px);
+          transform: translateX(-50%);
+          opacity: 0.9;
+        }
+
+        main {
+          padding-top: min(52vw, 300px);
+        }
+      }
+
+      @media (max-width: 720px) {
         .actions .btn {
           flex: 1 1 auto;
         }
@@ -329,10 +378,9 @@
   </head>
   <body>
     <div class="media" aria-hidden="true">
-      <picture>
-        <source media="(max-aspect-ratio: 6 / 5)" srcset="/media/contact-poster-mobile.jpg" />
-        <img src="/media/contact-poster.jpg" alt="" width="1280" height="720" />
-      </picture>
+      <div class="robot">
+        <img src="/media/mascot-open-560.webp" srcset="/media/mascot-open-560.webp 560w, /media/mascot-open-960.webp 960w" sizes="(max-width: 900px) 260px, 34vw" alt="" width="560" height="515" />
+      </div>
     </div>
 
     <header>
