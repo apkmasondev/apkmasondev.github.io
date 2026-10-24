@@ -157,30 +157,40 @@ export const Youtube = ({ size = 16, className }: IconProps) => (
   </svg>
 );
 
-/** Znak marki — ten sam kształt co favicon, bez tła. */
+/** Znak marki — emblemat z klatki maskotki APKMason (tarcza, romb, M). Wersja płaska, ostra od 16 px. */
 export function Mark({ size = 28 }: { size?: number }) {
   const uid = useId().replace(/:/g, '');
-  const grad = `mark-grad-${uid}`;
-  const cuts = `mark-cuts-${uid}`;
+  const armor = `mark-armor-${uid}`;
+  const ruby = `mark-ruby-${uid}`;
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+    <svg width={size} height={size} viewBox="44 44 312 312" aria-hidden="true" focusable="false">
       <defs>
-        <linearGradient id={grad} x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#f43f5e" />
-          <stop offset="50%" stopColor="#fb923c" />
-          <stop offset="100%" stopColor="#e11d48" />
+        <linearGradient id={armor} x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#2b2b2e" />
+          <stop offset="100%" stopColor="#141416" />
         </linearGradient>
-        <mask id={cuts}>
-          <rect x="0" y="0" width="100" height="100" fill="white" />
-          <line x1="57.5" y1="0" x2="7.5" y2="100" stroke="black" strokeWidth="2.5" />
-          <line x1="0" y1="61" x2="59" y2="61" stroke="black" strokeWidth="1.5" />
-          <line x1="0" y1="65" x2="61" y2="65" stroke="black" strokeWidth="1.5" />
-        </mask>
+        <linearGradient id={ruby} x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#ff6b52" />
+          <stop offset="50%" stopColor="#ff2a15" />
+          <stop offset="100%" stopColor="#cc0f00" />
+        </linearGradient>
       </defs>
       <path
-        d="M47.5 16 52.5 16 85 81 71 81 64.5 68 35.5 68 29 81 19 81 19 73ZM50 39 40.5 58 59.5 58Z"
-        fill={`url(#${grad})`}
-        mask={`url(#${cuts})`}
+        d="M165 65Q200 50 235 65L335 280Q345 305 320 320L265 345 240 285 200 325 160 285 135 345 80 320Q55 305 65 280Z"
+        fill={`url(#${armor})`}
+        stroke="#0a0a0c"
+        strokeWidth="6"
+        strokeLinejoin="round"
+      />
+      <path d="M200 95 242 165 200 220 158 165Z" fill="#0d0d0f" />
+      <polygon points="200,105 236,165 200,213 164,165" fill={`url(#${ruby})`} />
+      <polygon points="200,115 226,165 200,203 174,165" fill="#ff7b66" opacity="0.4" />
+      <path
+        d="M90 295 150 175 200 240 250 175 310 295 265 312 235 242 200 285 165 242 135 312Z"
+        fill="#f7f7f9"
+        stroke="#e0e0e5"
+        strokeWidth="2"
+        strokeLinejoin="round"
       />
     </svg>
   );
