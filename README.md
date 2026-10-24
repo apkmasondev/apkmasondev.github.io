@@ -12,16 +12,20 @@ ekrany laptopów „żyją”: to nagrania działających projektów wpasowane w
 
 **Kamień i żar.** Szeryfowy Instrument Serif (litery jak wykute w kamieniu),
 Geist do interfejsu, Geist Mono do oznaczeń. Ciepła czerń, kość zamiast bieli
-i jeden kolor marki — żar z logotypu. Kolory projektów pojawiają się tylko jako
-światło wokół ich kadrów. Stronę domyka bazaltowy monolit ze świecącymi
-szczelinami.
+i jeden kolor akcentu — pomarańczowy żar. Kolory projektów pojawiają się tylko
+jako światło wokół ich kadrów. Stronę domyka bazaltowy monolit, z którego pęknięć
+spływa rozżarzony kod.
+
+**Marka.** Twarzą strony jest maskotka APKMason — prowadzący kanał
+[Simple as AI](https://www.youtube.com/@SimpleasAI). Znak marki to emblemat z jej
+klatki: ciemna tarcza, czerwony romb i białe M.
 
 ## Sekcje
 
 | Nr | Sekcja   | Zawartość                                                                  |
 | -- | -------- | -------------------------------------------------------------------------- |
 | 00 | Hero     | ściana wszystkich prac (CSS 3D), żywe ekrany, nagłówek odsłaniany liniami  |
-| 01 | Prace    | wybrane prace jako kinowe rozdziały nakładające się przy przewijaniu       |
+| 01 | Wybrane  | pięć wybranych prac jako kinowe rozdziały nakładające się przy scrollu     |
 | 02 | Archiwum | pełny katalog: kategorie, wyszukiwarka (`/`), lista z podglądem lub siatka |
 | 03 | Proces   | cztery etapy zapalające się na linii odczytu                               |
 | 04 | O mnie   | maskotka APKMason, kanał Simple as AI, liczby, warsztat                    |
@@ -54,7 +58,7 @@ npm run preview    # podgląd buildu produkcyjnego
 
 2. Wklej wpis do `src/data/projects.ts` — to jedyne źródło prawdy. Kolejność
    na liście jest kolejnością w archiwum; `featured: true` dodaje rozdział
-   w sekcji „Prace”.
+   w sekcji „Wybrane” (zalecane: pięć wyróżnionych prac).
 
 3. `npm run validate` — sprawdza pliki, wymiary, wagę, duplikaty, tłumaczenia,
    kontrast akcentu i osierocone grafiki.
@@ -78,9 +82,12 @@ Gotowy plik `public/work/<klucz>-live-480.mp4` + `live: true` przy projekcie.
 - `src/lib/route.ts` — adresy panelu projektu,
 - `src/lib/text.ts` — tytuły, wyszukiwanie bez polskich znaków, odmiana liczebników,
 - `public/work/` — grafiki projektów (480 / 800 / 1254 px) i żywe ekrany,
-- `public/media/` — filmy i maskotka APKMason (wycięta z tła, WebP z przezroczystością),
+- `public/media/` — filmy i maskotka APKMason (WebP z przezroczystością),
+- `public/logo.svg` + komponent `Mark` w `src/components/ui.tsx` — znak marki
+  (wersja płaska, ostra od 16 px); `public/favicon_rounded.png` — ta sama w PNG,
 - `scripts/` — walidator danych i generator grafik,
-- `tools/live-screens/` — nagrywanie żywych ekranów (narzędzie robocze, poza buildem).
+- `tools/live-screens/` — nagrywanie żywych ekranów (narzędzie robocze, poza buildem),
+- `tools/og/` — źródło obrazka do udostępniania linku (`public/og.jpg`).
 
 ## Jakość
 

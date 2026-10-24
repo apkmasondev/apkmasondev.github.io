@@ -251,7 +251,7 @@ export const copy: Record<Language, Copy> = {
       ],
       mascot: {
         alt: 'APKMason — maskotka marki: uśmiechnięty biało-czarny robot z czerwonymi światłami, machający na powitanie',
-        hello: 'Cześć, tu APKMason!',
+        hello: 'Cześć! Miło Cię tu widzieć!',
         label: 'Maskotka · prowadzący kanału',
       },
       channel: {
@@ -405,7 +405,7 @@ export const copy: Record<Language, Copy> = {
       ],
       mascot: {
         alt: 'APKMason — the brand mascot: a smiling white-and-black robot with red lights, waving hello',
-        hello: 'Hi, APKMason here!',
+        hello: 'Hi! Nice to see you here!',
         label: 'Mascot · channel host',
       },
       channel: {
