@@ -99,13 +99,6 @@ interface Copy {
       hello: string;
       label: string;
     };
-    channel: {
-      label: string;
-      name: string;
-      handle: string;
-      cta: string;
-      newTab: string;
-    };
   };
   contact: {
     kicker: string;
@@ -116,7 +109,6 @@ interface Copy {
     copied: string;
     github: string;
     githubUrl: string;
-    youtube: string;
     top: string;
     legal: string;
     /** Rozwinięcie skrótu APK: pierwsza litera każdego słowa jest wyróżniona. */
@@ -129,7 +121,6 @@ interface Copy {
 }
 
 export const EMAIL = 'apkmason.dev@gmail.com';
-export const YOUTUBE_URL = 'https://www.youtube.com/@SimpleasAI';
 
 export const copy: Record<Language, Copy> = {
   pl: {
@@ -252,14 +243,7 @@ export const copy: Record<Language, Copy> = {
       mascot: {
         alt: 'APKMason — maskotka marki: uśmiechnięty biało-czarny robot z czerwonymi światłami, machający na powitanie',
         hello: 'Cześć! Miło Cię tu widzieć!',
-        label: 'Maskotka · prowadzący kanału',
-      },
-      channel: {
-        label: 'Kanał na YouTube',
-        name: 'Simple as AI',
-        handle: '@SimpleasAI',
-        cta: 'Oglądaj',
-        newTab: '(otwiera się w nowej karcie)',
+        label: 'Maskotka marki APKMason',
       },
     },
     contact: {
@@ -271,7 +255,6 @@ export const copy: Record<Language, Copy> = {
       copied: 'Skopiowano',
       github: 'GitHub',
       githubUrl: 'https://github.com/apkmasondev',
-      youtube: 'YouTube',
       top: 'Do góry',
       legal: 'Wszelkie prawa zastrzeżone.',
       signature: ['AI', 'Pixels', 'Kinetics'],
@@ -406,14 +389,7 @@ export const copy: Record<Language, Copy> = {
       mascot: {
         alt: 'APKMason — the brand mascot: a smiling white-and-black robot with red lights, waving hello',
         hello: 'Hi! Nice to see you here!',
-        label: 'Mascot · channel host',
-      },
-      channel: {
-        label: 'YouTube channel',
-        name: 'Simple as AI',
-        handle: '@SimpleasAI',
-        cta: 'Watch',
-        newTab: '(opens in a new tab)',
+        label: 'APKMason brand mascot',
       },
     },
     contact: {
@@ -425,7 +401,6 @@ export const copy: Record<Language, Copy> = {
       copied: 'Copied',
       github: 'GitHub',
       githubUrl: 'https://github.com/apkmasondev',
-      youtube: 'YouTube',
       top: 'Back to top',
       legal: 'All rights reserved.',
       signature: ['AI', 'Pixels', 'Kinetics'],

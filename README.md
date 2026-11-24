@@ -16,8 +16,7 @@ i jeden kolor akcentu — pomarańczowy żar. Kolory projektów pojawiają się 
 jako światło wokół ich kadrów. Stronę domyka bazaltowy monolit, z którego pęknięć
 spływa rozżarzony kod.
 
-**Marka.** Twarzą strony jest maskotka APKMason — prowadzący kanał
-[Simple as AI](https://www.youtube.com/@SimpleasAI). Znak marki to emblemat z jej
+**Marka.** Twarzą strony jest maskotka APKMason. Znak marki to emblemat z jej
 klatki: ciemna tarcza, czerwony romb i białe M.
 
 ## Sekcje
@@ -28,8 +27,8 @@ klatki: ciemna tarcza, czerwony romb i białe M.
 | 01 | Wybrane  | pięć wybranych prac jako kinowe rozdziały nakładające się przy scrollu     |
 | 02 | Archiwum | pełny katalog: kategorie, wyszukiwarka (`/`), lista z podglądem lub siatka |
 | 03 | Proces   | cztery etapy zapalające się na linii odczytu                               |
-| 04 | O mnie   | maskotka APKMason, kanał Simple as AI, liczby, warsztat                    |
-| 05 | Kontakt  | e-mail z kopiowaniem, GitHub, YouTube, rozwinięcie APK: AI · Pixels · Kinetics |
+| 04 | O mnie   | maskotka APKMason, liczby, warsztat                                        |
+| 05 | Kontakt  | e-mail z kopiowaniem, GitHub, rozwinięcie APK: AI · Pixels · Kinetics      |
 
 Każdy projekt ma panel szczegółów z własnym adresem, np. `/#/p/ostoja`
 (przełączanie `←` `→`, zamykanie `Esc` lub przyciskiem „wstecz”).

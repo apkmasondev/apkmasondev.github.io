@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { stats } from '../data/projects';
-import { YOUTUBE_URL } from '../i18n/copy';
 import { useCopy, useLanguage } from '../i18n/language';
 import { useAllowsHeavyMedia, useFinePointer, useReveal } from '../lib/hooks';
 import { plural } from '../lib/text';
-import { ArrowUpRight, Kicker, Lines, Youtube } from './ui';
+import { Kicker, Lines } from './ui';
 import './about.css';
 
 /**
@@ -104,21 +103,6 @@ export function About() {
       <div className="about__grid shell">
         <div className="about__aside" data-reveal>
           <MascotStage {...text.mascot} />
-          <a className="channel" href={YOUTUBE_URL} target="_blank" rel="noopener">
-            <span className="channel__icon" aria-hidden="true">
-              <Youtube size={22} />
-            </span>
-            <span className="channel__text">
-              <span className="channel__label mono">{text.channel.label}</span>
-              <span className="channel__name">{text.channel.name}</span>
-              <span className="channel__handle mono">{text.channel.handle}</span>
-            </span>
-            <span className="channel__cta mono">
-              {text.channel.cta}
-              <ArrowUpRight size={14} />
-            </span>
-            <span className="sr-only"> {text.channel.newTab}</span>
-          </a>
         </div>
 
         <div className="about__body">

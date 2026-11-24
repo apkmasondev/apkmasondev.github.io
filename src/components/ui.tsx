@@ -148,15 +148,6 @@ export const Github = ({ size = 16, className }: IconProps) => (
   </svg>
 );
 
-export const Youtube = ({ size = 16, className }: IconProps) => (
-  <svg className={className} width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-    <path
-      fill="currentColor"
-      d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"
-    />
-  </svg>
-);
-
 /** Znak marki — emblemat z klatki maskotki APKMason (tarcza, romb, M). Wersja płaska, ostra od 16 px. */
 export function Mark({ size = 28 }: { size?: number }) {
   const uid = useId().replace(/:/g, '');
